@@ -13,7 +13,3 @@ Local build and run:
     bash tools/assemble.sh site && cd site && python3 -m http.server 8080
 
 X_ITE 16.4.3 is fetched from npm at build time (pinned), not vendored.
-
-## Before turning Pages on
-GitHub Pages sites are reachable by anyone with the URL, even when the repository is private
-(private Pages needs GitHub Enterprise Cloud). Pages is enabled in Settings > Pages > Source: GitHub Actions.
