@@ -64,6 +64,12 @@
     var t = (performance.now() - tourT0) / 1000, d = T.duration || 40;
     var u = (t % d) / d, e = u < .5 ? 2 * u * u : 1 - 2 * (1 - u) * (1 - u);          /* ease in/out over one pass */
     var k = T.loop === 'pingpong' ? (Math.floor(t / d) % 2 ? 1 - e : e) : e;
+    if (T.kind === 'path') {                                   /* straight-on dolly or tilt: camera p0 to p1, target t0 to t1 */
+      var lp = function (a, b) { return [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k]; };
+      var pp = lp(T.p0, T.p1), oo = lookAt(pp, lp(T.t0, T.t1));
+      try { tourVp.position = new X3D.SFVec3f(pp[0], pp[1], pp[2]); tourVp.orientation = new X3D.SFRotation(oo[0], oo[1], oo[2], oo[3]); } catch (e3) {}
+      tourRaf = requestAnimationFrame(tourStep); return;
+    }
     var r = T.r0 + (T.r1 - T.r0) * k, el = (T.e0 + (T.e1 - T.e0) * k) * Math.PI / 180;
     var az = (T.a0 || 0) * Math.PI / 180 + t * (T.spin || 0.12);
     var c = T.center, pos = [c[0] + r * Math.cos(el) * Math.sin(az), c[1] + r * Math.sin(el), c[2] + r * Math.cos(el) * Math.cos(az)];
@@ -75,9 +81,11 @@
     var T = PX.cfg.tour; if (!T) return;
     var scene = PX.el.browser.currentScene;
     try { tourVp = T.vp ? scene.getNamedNode(T.vp) : null; } catch (e) { tourVp = null; }
+    if (!tourVp && scene.__pxVp) tourVp = scene.__pxVp;
     if (!tourVp) {                                         /* scenes without a suitable viewpoint get one made here */
-      tourVp = scene.createNode('Viewpoint'); tourVp.description = 'Tour'; tourVp.fieldOfView = T.fov || 0.8; scene.addRootNode(tourVp);
+      tourVp = scene.createNode('Viewpoint'); tourVp.description = 'Tour'; tourVp.fieldOfView = T.fov || 0.8; scene.addRootNode(tourVp); scene.__pxVp = tourVp;
     }
+    if (T.fov) { try { tourVp.fieldOfView = T.fov; } catch (e4) {} }
     try { tourVp.set_bind = true; } catch (e3) {}
     PX.tourOn = true; tourT0 = performance.now(); cancelAnimationFrame(tourRaf); tourRaf = requestAnimationFrame(tourStep);
     var b = $('#btn-tour'); if (b) { b.classList.add('on'); b.textContent = 'Pause tour'; }
@@ -99,11 +107,10 @@
   function spooky(on) {
     document.body.classList.toggle('lights-out', on);
     var b = $('#btn-dark'); if (b) { b.classList.toggle('on', on); b.textContent = on ? 'Lights on' : 'Lights out'; }
-    try { localStorage.setItem('px-dark', on ? '1' : '0'); } catch (e) {}
   }
   function spookyInit(def) {
-    var stage = $('#stage'), saved = null; try { saved = localStorage.getItem('px-dark'); } catch (e) {}
-    spooky(saved === null ? def : saved === '1');
+    var stage = $('#stage');
+    spooky(def);
     stage.addEventListener('pointermove', function (ev) { var r = stage.getBoundingClientRect(); stage.style.setProperty('--mx', (ev.clientX - r.left) + 'px'); stage.style.setProperty('--my', (ev.clientY - r.top) + 'px'); });
     var g = $('.grain'); if (g) { var c = document.createElement('canvas'); c.width = c.height = 128; var x = c.getContext('2d'), d = x.createImageData(128, 128);
       for (var i = 0; i < d.data.length; i += 4) { var v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 40; } x.putImageData(d, 0, 0); g.style.backgroundImage = 'url(' + c.toDataURL() + ')'; }
@@ -165,6 +172,12 @@
     cb.addEventListener('click', function () { clean(!$('#stage').classList.contains('clean')); });
     document.addEventListener('keydown', function (ev) { if (ev.key === 'h' && !ev.metaKey && !ev.ctrlKey) clean(!$('#stage').classList.contains('clean')); });
     var tb = $('#btn-tour'); if (tb) tb.addEventListener('click', function () { PX.tourOn ? tourStop() : tourStart(); });
+    (cfg.tours || []).forEach(function (t, i) {
+      var b = document.createElement('button'); b.className = 'chip tourchip' + (i ? '' : ' on'); b.textContent = t.label;
+      b.addEventListener('click', function () { document.querySelectorAll('.tourchip').forEach(function (x) { x.classList.toggle('on', x === b); }); PX.cfg.tour = t; tourStop(); tourStart(); });
+      $('#vps').appendChild(b);
+    });
+    if (cfg.tours && cfg.tours.length) cfg.tour = cfg.tours[0];
     (cfg.viewpoints || []).forEach(function (v) {
       var b = document.createElement('button'); b.className = 'chip vp'; b.textContent = v[1]; b.dataset.vp = v[0];
       b.addEventListener('click', function () { bindVp(v[0]); }); $('#vps').appendChild(b);

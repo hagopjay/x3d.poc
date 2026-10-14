@@ -61,6 +61,8 @@ def page(fn, d):
     cfg = d['cfg']
     poster = '<img class="poster" alt="" src="%s">' % d['poster'] if d.get('poster') else ''
     cta = d.get('cta', '')
+    if d.get('links'):
+        cta += '<p style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap">%s</p>' % ''.join('<a class="chip on" target="_blank" rel="noopener" href="%s">%s</a>' % (esc(u), esc(t)) for t, u in d['links'])
     parts = [HEAD % {'title': esc(d['title']), 'desc': esc(d['tag'])}]
     parts.append(STAGE % {'poster': poster, 'kicker': esc(d['kicker']), 'h1': d['h1'], 'tag': esc(d['tag']), 'cta': cta, 'nav': nav(fn),
                           'buttons': (BTNS if cfg.get('tour') else BTNS_NOTOUR), 'hint': esc(d.get('hint', 'Drag to orbit · scroll to zoom'))})
@@ -115,25 +117,28 @@ DEMOS['gobbler.html'] = dict(
 DEMOS['pantheon.html'] = dict(
     title='Pantheon, 500,000 splats', kicker='Demo 2 · Gaussian splats · X3D 4.1 draft', h1='Under the <em>oculus</em>',
     tag='A generated Pantheon, half a million Gaussians, parsed from X3D in your browser.',
-    poster='gifts/pantheon-poster.jpg', hint='Look up. The oculus is the first viewpoint.',
+    poster='gifts/pantheon-poster.jpg', hint='The camera tilts up from the doors to the oculus. Pick a viewpoint for a fixed view.',
     say='Blender 5.3 reads splats from four formats and writes them to none. Our add-on writes them to X3D 4.1.',
     lead='The splats are plain XML in the draft GaussianSplats node, written by the Blender add-on and decoded losslessly from SPZ v3. The stage around them adds a backdrop, viewpoints and a slow camera, all in the same scene file.',
     facts=gfacts(2, ['Pantheon', 'Bytes per splat', 'Quaternion', 'Validator', 'Limit']) or gfacts(2),
     cardTitle='Two worlds, one draft node',
-    cfg=dict(parts=DATA['splats']['pantheon']['parts'], stage=DATA['splats']['pantheon']['stage'], splats=500000, mb=19.5, look=dict(toneMapping='NONE', maxScale=1.25), darkDefault=True,
-             viewpoints=[['Oculus', 'Oculus'], ['PantheonEye', 'Doors'], ['Tour', 'Tour']], loadLabel='500,000 splats live'),
+    cfg=dict(parts=DATA['splats']['pantheon']['parts'], stage=DATA['splats']['pantheon']['stage'], splats=500000, mb=19.5, look=dict(toneMapping='NONE', maxScale=1.25), darkDefault=False, autoClean=12000,
+             viewpoints=[['Oculus', 'Oculus'], ['PantheonEye', 'Doors']], loadLabel='500,000 splats live',
+             tours=[dict(label='Tilt to the oculus', kind='path', duration=26, loop='pingpong', fov=1.15, p0=[0, 0, 0], p1=[0, 0, 0], t0=[0, 0.2, -10], t1=[0, 10, -1.2]),
+                    dict(label='Slow turn', kind='path', duration=40, loop='pingpong', fov=1.2, p0=[0, 0, 0], p1=[0, 0, 0], t0=[-10, 2.5, -6], t1=[10, 2.5, -6])]),
 )
 
 DEMOS['giza.html'] = dict(
     title='Khufu, 970,654 splats', kicker='Demo 3 · Giza · nearly a million splats', h1='<em>Khufu</em>, laid stone by stone',
-    tag='The Great Pyramid as 970,654 synthetic Gaussians, one cluster per masonry block, orbiting from above.',
-    poster='gifts/giza-poster.jpg', hint='A bird\'s-eye pass over the plateau. Touch to orbit.',
+    tag='The Great Pyramid as 970,654 synthetic Gaussians, one cluster per masonry block, approached down its own axis.',
+    poster='gifts/giza-poster.jpg', hint='A straight-on dolly up the axis, one-point perspective. Switch to the orbit for a bird\'s-eye pass.',
     say='One million Gaussians you can only look at; six thousand triangles you can relight. The scene graph lets them agree.',
     lead='This is the biggest scene on the site: 129 MB of XML that your browser fetches as 31 MB, unpacks and parses live. The splats are synthetic, laid per masonry block from survey numbers, not a photo capture.',
     facts=gfacts(2, ['Khufu', 'Bytes per splat', 'Quaternion', 'Limit']),
     cardTitle='Two worlds, one draft node',
-    cfg=dict(parts=DATA['splats']['khufu']['parts'], splats=970654, mb=31.4, look=dict(toneMapping='NONE', maxScale=1.0), darkDefault=True,
-             tour=dict(center=[0, 50, 0], target=[0, 58, 0], r0=400, r1=215, e0=34, e1=8, duration=48, spin=0.07, loop='pingpong', fov=0.9),
+    cfg=dict(parts=DATA['splats']['khufu']['parts'], splats=970654, mb=31.4, look=dict(toneMapping='NONE', maxScale=1.0), darkDefault=False, autoClean=12000,
+             tours=[dict(label='Kubrick dolly', kind='path', duration=46, loop='pingpong', fov=0.85, p0=[0, 10, -820], p1=[0, 22, -330], t0=[0, 74, 0], t1=[0, 74, 0]),
+                    dict(label='Bird\'s-eye orbit', center=[0, 50, 0], target=[0, 58, 0], r0=400, r1=215, e0=34, e1=8, duration=48, spin=0.07, loop='pingpong', fov=0.9)],
              loadLabel='970,654 splats live'),
     foot=DEFAULT_FOOT + ' The Sphinx and the Shaft of Osiris are not in this build; they arrive with the next set of files.',
 )
@@ -142,6 +147,7 @@ DEMOS['powers-of-ten.html'] = dict(
     title='Powers of ten', kicker='Demo 4 · Scriptless · 18 powers of ten', h1='From Burruss Hall to <em>the stars</em>',
     tag='One continuous zoom from one metre to 978 real stars, for the opening day of Web3D 2026 in Doha.',
     poster='gifts/stars/poster.png', hint='The zoom is one TimeSensor driving every interpolator. No Script.',
+    links=[('Open the full page with the scrubber ↗', 'https://claude.ai/artifact/MgCNbxgBmzbAz68aGud485')],
     say=G[8]['say'], lead=G[8]['line'], facts=G[8]['facts'], cardTitle=G[8].get('cardTitle', 'Catalogue card'),
     cfg=dict(scene='gifts/stars/planet-zoom.x3d', look=dict(toneMapping='NONE'), darkDefault=False,
              viewpoints=[['VP_zoom', 'Zoom'], ['VP_burruss', 'Burruss Hall']]),
@@ -181,6 +187,7 @@ DEMOS['materials.html'] = dict(
     title='Materials from nothing', kicker='Demo 7 · Synthetic textures · PhysicalMaterial', h1='Materials from <em>nothing</em>',
     tag='Gold leaf, Hokie Stone, marble, silk and walnut, each generated as a texture and worn by X3D PhysicalMaterial.',
     poster='gifts/materials/poster.png', hint='Shadowed lights, normal maps, all standard nodes.',
+    links=[('Watch the film made from this scene ↗', 'https://claude.ai/artifact/2haGH8DR71XrPHRVorVHYq')],
     say=G[6]['say'], lead=G[6]['line'], facts=G[6]['facts'], cardTitle=G[6].get('cardTitle', 'Catalogue card'),
     cfg=dict(scene='gifts/materials/materials.x3d', look=dict(toneMapping='KHR_PBR_NEUTRAL', exposure=1.5),
              viewpoints=[['Shelf', 'Shelf'], ['Close', 'Close']],
@@ -226,18 +233,20 @@ CARDS = [
     ('two-renderers.html', 'gifts/synthsplat/compare.png', '06', 'One scene, two renderers', 'Blender Cycles against X_ITE: SSIM 0.905 for the mesh, 0.977 for splats.', ['Blender', 'Measured']),
     ('materials.html', 'gifts/materials/poster.png', '07', 'Materials from nothing', 'Synthetic textures on standard PhysicalMaterial nodes.', ['PhysicalMaterial', 'Synthetic']),
     ('spec-questions.html', 'gifts/repros/profile-tables.png', '08', 'Questions for the spec', 'Six click-to-load repro pairs, framed as questions.', ['Validator', 'For the group']),
+    ('https://claude.ai/artifact/2haGH8DR71XrPHRVorVHYq', 'gifts/materials/poster.png', '09', 'A Material Odyssey', 'The film made from the Materials scene: a slow, symmetrical camera through synthetic gold, stone and silk.', ['Film', 'Opens in a new tab']),
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
 idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
-                    'tag': 'Eight demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
+                    'tag': 'Nine demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
                     'nav': nav('index.html'), 'buttons': BTNS, 'hint': 'Lights are out. Move the pointer to find it.'}.copy())
-idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Eight demos</h2><div class="grid">')
+idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Nine demos</h2><div class="grid">')
 for h, img, n, t, p, tags in CARDS:
-    idx.append('<a class="card" href="%s"><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %
-               (h, img, n, esc(t), esc(p), ''.join('<span class="pill">%s</span>' % esc(x) for x in tags)))
+    ext = ' target="_blank" rel="noopener"' if h.startswith('http') else ''
+    idx.append('<a class="card" href="%s"%s><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %
+               (h, ext, img, n, esc(t), esc(p), ''.join('<span class="pill">%s</span>' % esc(x) for x in tags)))
 for t, p in SOON:
     idx.append('<div class="card soon"><div class="img"></div><div class="tx"><div class="n">Next set of files</div><h3>%s</h3><p>%s</p></div></div>' % (esc(t), esc(p)))
 idx.append('</div></div></section>')
