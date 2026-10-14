@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='title' content='splat-url'/>
+    <meta name='description' content='Repro for a spec question: the X3D 4.1 draft GaussianSplats node holds its data inline. X_ITE 16.4.3 also loads a 3D Gaussian splatting PLY through a plain Inline url. knot-splats.ply holds a gold trefoil knot with an arrow pointing to +Y in the PLY frame. Left: the PLY by Inline url, as X_ITE loads it (it adds a 180 degree turn about X, the y-down convention of 3DGS training data, so the arrow points down). Right: the same Inline inside a Transform that turns it back. A standard X3D tool sees an Inline to a file of a non-X3D type.'/>
+    <meta name='creator' content='HagopJay'/>
+    <meta name='generator' content='hand-written Python generator, PolyXandria landing-v2 gift 7'/>
+  </head>
+  <Scene>
+    <NavigationInfo type='"EXAMINE" "ANY"' headlight='false'/>
+    <Background skyColor='0.012 0.010 0.008 0.045 0.033 0.024 0.10 0.068 0.042' skyAngle='1.25 1.57' groundColor='0.008 0.006 0.005 0.030 0.022 0.016 0.10 0.068 0.042' groundAngle='1.35 1.57'/>
+    <Viewpoint DEF='Front' position='0 0.55 7.4' orientation='1 0 0 -0.05' fieldOfView='0.62'/>
+    <DirectionalLight DEF='Key' direction='-0.45 -0.8 -0.4' color='1 0.93 0.82' intensity='2.4' shadows='true' shadowIntensity='0.55'/>
+    <PointLight DEF='WarmFill' location='3.5 1.5 3' color='0.898 0.459 0.122' intensity='0.9' radius='14' attenuation='1 0 0.02'/>
+    <PointLight DEF='MaroonRim' location='-3 2.5 -3' color='0.525 0.122 0.255' intensity='1.8' radius='14' attenuation='1 0 0.02'/>
+    <DirectionalLight DEF='Soft' direction='0.3 -0.2 -1' color='0.85 0.8 0.75' intensity='0.35'/>
+    <Transform DEF='Plinth' translation='0 -1.780 0'>
+      <Shape>
+        <Appearance><Material diffuseColor='0.055 0.045 0.038' specularColor='0.25 0.2 0.14' shininess='0.35'/></Appearance>
+        <Cylinder height='0.06' radius='2.9'/>
+      </Shape>
+      <Transform translation='0 -0.012 0'>
+        <Shape>
+          <Appearance><Material diffuseColor='0.30 0.22 0.11' emissiveColor='0.10 0.07 0.03' specularColor='0.9 0.75 0.45' shininess='0.6'/></Appearance>
+          <Cylinder height='0.04' radius='2.960'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform DEF='AsLoaded' translation='-1.3 0 0'>
+      <Inline DEF='KnotPLY' url='"knot-splats.ply"'/>
+    </Transform>
+    <Transform DEF='TurnedBack' translation='1.3 0 0' rotation='1 0 0 3.141593'>
+      <Inline USE='KnotPLY'/>
+    </Transform>
+    <Transform translation='-1.3 1.85 0'>
+      <Shape>
+        <Appearance><Material diffuseColor='0 0 0' emissiveColor='0.706 0.586 0.354'/></Appearance>
+        <Text string='"Inline url" "as loaded"'><FontStyle family='"SANS"' style='BOLD' size='0.15' justify='"MIDDLE" "MIDDLE"' spacing='1.15'/></Text>
+      </Shape>
+    </Transform>
+    <Transform translation='1.3 1.85 0'>
+      <Shape>
+        <Appearance><Material diffuseColor='0 0 0' emissiveColor='0.706 0.586 0.354'/></Appearance>
+        <Text string='"Inline url inside" "rotation 1 0 0 3.14159"'><FontStyle family='"SANS"' style='BOLD' size='0.15' justify='"MIDDLE" "MIDDLE"' spacing='1.15'/></Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 2.35 0'>
+      <Shape>
+        <Appearance><Material diffuseColor='0 0 0' emissiveColor='0.763 0.390 0.104'/></Appearance>
+        <Text string='"the arrow points to +Y in the PLY file"'><FontStyle family='"SANS"' style='BOLD' size='0.13' justify='"MIDDLE" "MIDDLE"' spacing='1.15'/></Text>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

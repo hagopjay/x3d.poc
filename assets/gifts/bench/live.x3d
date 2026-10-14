@@ -1,0 +1,195 @@
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component level='1' name='HAnim'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Waving HAnim Figure'/>
+    <Background skyColor='0.2 0.2 0.3'/>
+    <Viewpoint description='Front View' position='0 1.0 3.0'/>
+
+    <DirectionalLight direction='0 -0.5 -1' intensity='1.0'/>
+    <DirectionalLight direction='0 0.5 1' intensity='0.6'/>
+
+    <TimeSensor DEF='WaveTimer' cycleInterval='2.0' loop='false'/>
+    <OrientationInterpolator DEF='ShoulderWave' key='0 0.2 0.4 0.6 0.8 1' keyValue='0 0 1 0, 0 0 1 -2.2, 0 0 1 -2.6, 0 0 1 -2.2, 0 0 1 -2.6, 0 0 1 0'/>
+    <OrientationInterpolator DEF='ElbowWave' key='0 0.2 0.4 0.6 0.8 1' keyValue='0 0 1 0, 0 0 1 -0.8, 0 0 1 -0.2, 0 0 1 -0.8, 0 0 1 -0.2, 0 0 1 0'/>
+
+    <TouchSensor DEF='FigureTouch' description='Touch to wave'/>
+
+    <HAnimHumanoid name='WaveFigure' version='2.0'>
+      <HAnimJoint DEF='hanim_HumanoidRoot' containerField='skeleton' name='HumanoidRoot' center='0 0.9 0'>
+        <HAnimSegment name='sacrum'>
+          <Transform translation='0 0.9 0'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='0.2 0.3 0.6'/>
+              </Appearance>
+              <Box size='0.25 0.15 0.18'/>
+            </Shape>
+          </Transform>
+        </HAnimSegment>
+
+        <HAnimJoint name='r_hip' center='-0.09 0.85 0'>
+          <HAnimSegment name='r_thigh'>
+            <Transform translation='-0.09 0.6 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='0.2 0.2 0.2'/>
+                </Appearance>
+                <Cylinder height='0.45' radius='0.06'/>
+              </Shape>
+            </Transform>
+          </HAnimSegment>
+          <HAnimJoint name='r_knee' center='-0.09 0.4 0'>
+            <HAnimSegment name='r_calf'>
+              <Transform translation='-0.09 0.2 0'>
+                <Shape>
+                  <Appearance>
+                    <Material diffuseColor='0.2 0.2 0.2'/>
+                  </Appearance>
+                  <Cylinder height='0.4' radius='0.05'/>
+                </Shape>
+              </Transform>
+            </HAnimSegment>
+          </HAnimJoint>
+        </HAnimJoint>
+
+        <HAnimJoint name='l_hip' center='0.09 0.85 0'>
+          <HAnimSegment name='l_thigh'>
+            <Transform translation='0.09 0.6 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='0.2 0.2 0.2'/>
+                </Appearance>
+                <Cylinder height='0.45' radius='0.06'/>
+              </Shape>
+            </Transform>
+          </HAnimSegment>
+          <HAnimJoint name='l_knee' center='0.09 0.4 0'>
+            <HAnimSegment name='l_calf'>
+              <Transform translation='0.09 0.2 0'>
+                <Shape>
+                  <Appearance>
+                    <Material diffuseColor='0.2 0.2 0.2'/>
+                  </Appearance>
+                  <Cylinder height='0.4' radius='0.05'/>
+                </Shape>
+              </Transform>
+            </HAnimSegment>
+          </HAnimJoint>
+        </HAnimJoint>
+
+        <HAnimJoint name='vl5' center='0 0.98 0'>
+          <HAnimSegment name='pelvis'>
+            <Transform translation='0 1.05 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='0.8 0.3 0.2'/>
+                </Appearance>
+                <Cylinder height='0.2' radius='0.12'/>
+              </Shape>
+            </Transform>
+          </HAnimSegment>
+
+          <HAnimJoint name='vt1' center='0 1.15 0'>
+            <HAnimSegment name='chest'>
+              <Transform translation='0 1.25 0'>
+                <Shape>
+                  <Appearance>
+                    <Material diffuseColor='0.8 0.3 0.2'/>
+                  </Appearance>
+                  <Box size='0.3 0.25 0.18'/>
+                </Shape>
+              </Transform>
+            </HAnimSegment>
+
+            <HAnimJoint name='skullbase' center='0 1.4 0'>
+              <HAnimSegment name='skull'>
+                <Transform translation='0 1.52 0'>
+                  <Shape>
+                    <Appearance>
+                      <Material diffuseColor='0.9 0.75 0.65'/>
+                    </Appearance>
+                    <Sphere radius='0.12'/>
+                  </Shape>
+                </Transform>
+              </HAnimSegment>
+            </HAnimJoint>
+
+            <HAnimJoint name='l_shoulder' center='0.2 1.35 0'>
+              <HAnimSegment name='l_upperarm'>
+                <Transform translation='0.2 1.2 0'>
+                  <Shape>
+                    <Appearance>
+                      <Material diffuseColor='0.8 0.3 0.2'/>
+                    </Appearance>
+                    <Cylinder height='0.28' radius='0.045'/>
+                  </Shape>
+                </Transform>
+              </HAnimSegment>
+              <HAnimJoint name='l_elbow' center='0.2 1.05 0'>
+                <HAnimSegment name='l_forearm'>
+                  <Transform translation='0.2 0.92 0'>
+                    <Shape>
+                      <Appearance>
+                        <Material diffuseColor='0.9 0.75 0.65'/>
+                      </Appearance>
+                      <Cylinder height='0.25' radius='0.04'/>
+                    </Shape>
+                  </Transform>
+                </HAnimSegment>
+              </HAnimJoint>
+            </HAnimJoint>
+
+            <HAnimJoint DEF='hanim_r_shoulder' name='r_shoulder' center='-0.2 1.35 0'>
+              <HAnimSegment name='r_upperarm'>
+                <Transform translation='-0.2 1.2 0'>
+                  <Shape>
+                    <Appearance>
+                      <Material diffuseColor='0.8 0.3 0.2'/>
+                    </Appearance>
+                    <Cylinder height='0.28' radius='0.045'/>
+                  </Shape>
+                </Transform>
+              </HAnimSegment>
+              <HAnimJoint DEF='hanim_r_elbow' name='r_elbow' center='-0.2 1.05 0'>
+                <HAnimSegment name='r_forearm'>
+                  <Transform translation='-0.2 0.92 0'>
+                    <Shape>
+                      <Appearance>
+                        <Material diffuseColor='0.9 0.75 0.65'/>
+                      </Appearance>
+                      <Cylinder height='0.25' radius='0.04'/>
+                    </Shape>
+                  </Transform>
+                </HAnimSegment>
+                <HAnimJoint name='r_wrist' center='-0.2 0.8 0'>
+                  <HAnimSegment name='r_hand'>
+                    <Transform translation='-0.2 0.75 0'>
+                      <Shape>
+                        <Appearance>
+                          <Material diffuseColor='0.9 0.75 0.65'/>
+                        </Appearance>
+                        <Box size='0.04 0.08 0.07'/>
+                      </Shape>
+                    </Transform>
+                  </HAnimSegment>
+                </HAnimJoint>
+              </HAnimJoint>
+            </HAnimJoint>
+
+          </HAnimJoint>
+        </HAnimJoint>
+      </HAnimJoint>
+      <HAnimJoint USE='hanim_HumanoidRoot' containerField='joints'/>
+      <HAnimJoint USE='hanim_r_shoulder' containerField='joints'/>
+      <HAnimJoint USE='hanim_r_elbow' containerField='joints'/>
+    </HAnimHumanoid>
+
+    <ROUTE fromNode='FigureTouch' fromField='touchTime' toNode='WaveTimer' toField='startTime'/>
+    <ROUTE fromNode='WaveTimer' fromField='fraction_changed' toNode='ShoulderWave' toField='set_fraction'/>
+    <ROUTE fromNode='WaveTimer' fromField='fraction_changed' toNode='ElbowWave' toField='set_fraction'/>
+    <ROUTE fromNode='ShoulderWave' fromField='value_changed' toNode='hanim_r_shoulder' toField='set_rotation'/>
+    <ROUTE fromNode='ElbowWave' fromField='value_changed' toNode='hanim_r_elbow' toField='set_rotation'/>
+  </Scene>
+</X3D>
