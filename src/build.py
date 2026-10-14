@@ -30,7 +30,7 @@ SHARED = [
 ]
 
 NAV = [('index.html', 'All demos'), ('gobbler.html', 'Gobbler'), ('pantheon.html', 'Pantheon'), ('giza.html', 'Giza'), ('powers-of-ten.html', 'Powers of ten'),
-       ('drillfield.html', 'Drillfield'), ('two-renderers.html', 'Two renderers'), ('materials.html', 'Materials'), ('spec-questions.html', 'Spec questions')]
+       ('drillfield.html', 'Drillfield'), ('two-renderers.html', 'Two renderers'), ('materials.html', 'Materials'), ('spec-questions.html', 'Spec questions'), ('osiris-shaft.html', 'Osiris Shaft')]
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%(title)s · PolyXandria</title><meta name="description" content="%(desc)s">
@@ -220,6 +220,87 @@ DEMOS['spec-questions.html'] = dict(
    PX.load({scene:p[1]});document.getElementById('pair').src=p[2];document.getElementById('paircap').textContent=p[0]};a.appendChild(b)})})();''' % json.dumps(PAIRS),
 )
 
+# Appended into build.py: the Osiris Shaft demo page. Voice: a spooky "mystery hunter" who labels every claim.
+import sys as _sys
+_sys.path.insert(0, HERE)
+import osiris as _osi
+os.makedirs(os.path.join(ROOT, 'gifts', 'osiris'), exist_ok=True)
+_scenes = {}
+for _n in _osi.TABLES:
+    _x, _k, _m = _osi.build(_n)
+    open(os.path.join(ROOT, 'gifts', 'osiris', 'osiris-%s.x3d' % _n), 'w', encoding='utf-8').write(_x)
+    _scenes[_n] = _k
+
+OSI_EXTRA = r'''<style>
+.log{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:8px}
+.entry{border:1px solid var(--rule);border-radius:10px;padding:16px 18px;background:var(--bg2)}
+.entry h3{font-size:19px;margin:8px 0 8px}.entry p{margin:0 0 10px;color:var(--ink2);font-size:14.5px}
+.tag{display:inline-block;font:600 11px var(--mono);letter-spacing:.12em;border-radius:4px;padding:4px 8px}
+.t-fact{background:#173a28;color:#9fe0b6}.t-theory{background:#35204d;color:#d2b4ff}.t-unk{background:#4a3a14;color:#f0cf86}
+.test{font:12.5px var(--mono);color:var(--ink3);border-top:1px dashed var(--rule);padding-top:8px;margin-top:6px}
+.map{width:100%;max-width:760px;height:auto;display:block;border:1px solid var(--rule);border-radius:10px;background:#0d0b10}
+.ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:14px}
+.ladder div{border-left:3px solid var(--gold2);padding:6px 10px;color:var(--ink2);font-size:14px}.ladder b{color:var(--ink);display:block}
+@keyframes ping{0%{r:4;opacity:1}100%{r:16;opacity:0}}.pingc{animation:ping 1.8s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.pingc{animation:none}}
+</style>
+<section class="band"><div class="wrap"><h2>Agent Theory's field log</h2>
+<p class="lead" style="margin-bottom:6px">Agent Theory has read exactly one blog post and is therefore an expert. Every entry carries a tag, so you always know what is measured, what is made up, and what nobody knows.</p>
+<div class="pillrow" style="margin:10px 0 18px"><span class="tag t-fact">FACT</span><span class="pill">reported by a named person or team</span><span class="tag t-theory">THEORY</span><span class="pill">spooky, fun, and unproven</span><span class="tag t-unk">UNKNOWN</span><span class="pill">the sources disagree or are silent</span></div>
+<div class="log">
+<div class="entry"><span class="tag t-fact">FACT</span><h3>A shaft really is down there</h3><p>It drops into the bedrock beside the causeway that runs from Khafre's pyramid toward the Sphinx, near the Valley Temple end. Egyptologist Zahi Hawass is the one who named it the Osiris Shaft. (Reported in the blog post; his 2007 report is the source to read.)</p><div class="test">Check it: find Hawass 2007 and the Harvard Giza Project pages.</div></div>
+<div class="entry"><span class="tag t-fact">FACT</span><h3>Three levels, then water</h3><p>The post describes three levels joined by shafts, a central hall with side rooms, and a lowest level that is flooded, with a large granite sarcophagus on a central island. The model above follows that picture. The shapes of the rooms are invented to make it look right.</p><div class="test">Schematic: depths come from published diagrams; the floor plan does not.</div></div>
+<div class="entry"><span class="tag t-unk">UNKNOWN</span><h3>The case of the missing 11 metres</h3><p>One diagram puts the bottom at 30 m. Another adds up to 41.48 m. Both are published. Use the Survey switch and watch the whole thing stretch. Somebody measured differently, or measured something different.</p><div class="test">Test: ask which team measured which floor, and from which ground level.</div></div>
+<div class="entry"><span class="tag t-theory">THEORY</span><h3>Why hide a skyscraper under a road?</h3><p>Three storeys of rooms right beside the royal causeway. Agent Theory is certain the builders were hiding something. Agent Theory is also certain about most things before breakfast.</p><div class="test">Test: look at the other shafts nearby. If they are all tombs, the boring answer wins.</div></div>
+<div class="entry"><span class="tag t-theory">THEORY</span><h3>The moat of the dead</h3><p>Osiris myths love islands and water, and the lowest level has a sarcophagus on an island in a flooded room. Spooky match! It might also be groundwater, because the bottom is simply deep. Pick your story, then go find the evidence.</p><div class="test">Test: when was the water level measured, and has it changed?</div></div>
+<div class="entry"><span class="tag t-theory">THEORY</span><h3>A secret line to the pyramid</h3><p>One diagram labels a grey strip "mix line to the pyramid". That is a label the diagram's author added. No published survey shows a passage. It is a great idea for a story. It is not a finding.</p><div class="test">Test: any tunnel would show up in a scan. Has anyone published one?</div></div>
+<div class="entry"><span class="tag t-unk">UNKNOWN</span><h3>How old is it?</h3><p>Hawass dates the shaft to the Late Period, 26th Dynasty, 664 to 525 BCE. The blog post also mixes in Old and Middle Kingdom dates and contradicts itself. Pots and bones of different ages can sit in one shaft.</p><div class="test">Test: which objects were dated, by whom, and how?</div></div>
+<div class="entry"><span class="tag t-fact">FACT</span><h3>Plot twist: the 1898 headline</h3><p>A newspaper clipping shouts "Grave of Osiris discovered". Read its own map: it marks a spot opposite the Temple of Luxor, far to the south of Giza. A different grave, a different claim. Old headlines are not evidence for this shaft.</p><div class="test">Check it: read the article's caption and map, then look up the claim.</div></div>
+</div></div></section>
+<section class="band"><div class="wrap"><h2>Where it sits on the plateau</h2>
+<svg class="map" viewBox="0 0 520 262" role="img" aria-label="Schematic plan: Khafre's pyramid, its causeway running east-south-east to the Valley Temple, the Sphinx beside it, and a pulsing dot for the Osiris Shaft near the Valley Temple end.">
+<rect x="14" y="26" width="146" height="146" fill="#241d12" stroke="#b8964a"/><text x="87" y="104" fill="#b9b2a5" font-size="12" text-anchor="middle" font-family="system-ui">Khafre's pyramid</text>
+<rect x="160" y="90" width="26" height="30" fill="#2c2418" stroke="#b8964a"/><text x="173" y="84" fill="#b9b2a5" font-size="10" text-anchor="middle" font-family="system-ui">Mortuary temple</text>
+<line x1="186" y1="105" x2="476" y2="226" stroke="#7d776c" stroke-width="5"/><text x="300" y="148" fill="#b9b2a5" font-size="11" font-family="system-ui" transform="rotate(22 300 148)">Causeway</text>
+<rect x="470" y="214" width="30" height="26" fill="#2c2418" stroke="#b8964a"/><text x="470" y="256" fill="#b9b2a5" font-size="10" font-family="system-ui">Valley temple</text>
+<path d="M392 158 q10 -12 28 -8 l14 4 q4 6 -2 10 l-34 6 z" fill="#3a2f1c" stroke="#b8964a"/><text x="404" y="144" fill="#b9b2a5" font-size="10" text-anchor="middle" font-family="system-ui">Sphinx</text>
+<circle cx="448" cy="214" r="4" fill="#e9cf8a"/><circle class="pingc" cx="448" cy="214" r="4" fill="none" stroke="#e9cf8a" stroke-width="2"/><text x="428" y="203" fill="#e9cf8a" font-size="11" font-family="system-ui" text-anchor="end">Osiris Shaft</text>
+<line x1="20" y1="232" x2="154" y2="232" stroke="#b9b2a5"/><line x1="20" y1="227" x2="20" y2="237" stroke="#b9b2a5"/><line x1="154" y1="227" x2="154" y2="237" stroke="#b9b2a5"/><text x="87" y="250" fill="#b9b2a5" font-size="10" text-anchor="middle" font-family="system-ui">200 m</text>
+</svg>
+<p class="test" style="max-width:70ch;margin-top:10px">Redrawn for this page from a published plan; positions are approximate, not surveyed. The shaft sits near the Valley Temple end of the causeway.</p>
+<h2 style="margin-top:36px">The evidence ladder</h2><div class="ladder">
+<div><b>1. Measured</b>someone with a tape or a scanner wrote the number down</div><div><b>2. Published</b>a named team put it in a report you can find</div><div><b>3. Repeated</b>other teams got the same answer</div><div><b>4. Story</b>everything else, however good it sounds</div></div></div></section>'''
+
+OSI_JS = r'''(function(){
+ var KEYS=%s, cur='paganini', a=document.getElementById('vps');
+ function mk(t,fn,on){var b=document.createElement('button');b.className='chip'+(on?' on':'');b.textContent=t;b.addEventListener('click',function(){fn(b)});a.appendChild(b);return b}
+ function node(n){try{return PX.el.browser.currentScene.getNamedNode(n)}catch(e){return null}}
+ function tour(){PX.cfg.tour={kind:'keys',keys:KEYS[cur],fov:0.95};PX.tourStop();PX.tourStart()}
+ var inside=mk('Inside',function(b){var s=node('Look');if(s)s.whichChoice=0;tour();set('in')},true);
+ var xray=mk('X-ray',function(b){var s=node('Look');if(s)s.whichChoice=1;PX.tourStop();var v=node('Outside');if(v)v.set_bind=true;set('x')});
+ var flood=mk('Drain the water',function(b){var f=node('Flood');if(!f)return;var on=f.whichChoice===0;f.whichChoice=on?-1:0;b.textContent=on?'Flood it':'Drain the water'});
+ var s30=mk('Survey: 30 m',function(){load('paganini')},true), s41=mk('Survey: 41.48 m',function(){load('author')});
+ function set(m){inside.classList.toggle('on',m==='in');xray.classList.toggle('on',m==='x')}
+ function load(n){cur=n;s30.classList.toggle('on',n==='paganini');s41.classList.toggle('on',n==='author');
+  PX.load({scene:'gifts/osiris/osiris-'+n+'.x3d'}).then(function(){flood.textContent='Drain the water';tour()})}
+})();''' % json.dumps(_scenes)
+
+DEMOS['osiris-shaft.html'] = dict(
+    title='The Osiris Shaft', kicker='Demo 10 · Mystery hunt · schematic, not surveyed', h1='What is <em>down there?</em>',
+    tag='Descend three levels under the causeway at Giza. Every claim is tagged: fact, theory, or nobody knows.',
+    poster='gifts/gobbler-poster.jpg', hint='Agent Theory is on the case. Touch the scene to take over. Chips: X-ray, drain the water, switch surveys.',
+    say='Two published diagrams disagree on the depth: 30 m or 41.48 m. Flip the switch and watch it stretch.',
+    lead='A schematic descent into the Osiris Shaft beside Khafre\'s causeway. The level depths come from published diagrams; the rooms\' shapes are invented to make the picture work. No survey plan was used, so treat the geometry as a storyboard, and use the log below to separate what is known from what is just spooky.',
+    facts=[('Levels', '3, joined by shafts', 'as described in the blog post'), ('Depth, survey A', '30 m (98 ft)', 'level tops at 4, 20 and 30 m, per one published diagram'),
+           ('Depth, survey B', '41.48 m', 'shaft and level heights add up to this in a second diagram'), ('Bottom level', 'flooded, island and sarcophagus', 'reported; shapes here are schematic'),
+           ('Date (Hawass)', '26th Dynasty, 664 to 525 BCE', 'the blog also quotes older dates and contradicts itself'), ('Status', 'schematic, not surveyed', 'plan shapes are invented; depths are from diagrams')],
+    cardTitle='Case file',
+    cfg=dict(scene='gifts/osiris/osiris-paganini.x3d', look=dict(toneMapping='NONE', exposure=1.0), darkDefault=False, autoClean=16000,
+             tour=dict(kind='keys', keys=_scenes['paganini'], fov=0.95), viewpoints=[]),
+    extra=OSI_EXTRA, js=OSI_JS,
+    foot=DEFAULT_FOOT + ' The Osiris Shaft geometry is a schematic built from published depth diagrams; it is not a survey. Claims in the field log are tagged by evidence status.',
+)
+
 for fn, d in DEMOS.items():
     page(fn, d)
 
@@ -233,16 +314,17 @@ CARDS = [
     ('two-renderers.html', 'gifts/synthsplat/compare.png', '06', 'One scene, two renderers', 'Blender Cycles against X_ITE: SSIM 0.905 for the mesh, 0.977 for splats.', ['Blender', 'Measured']),
     ('materials.html', 'gifts/materials/poster.png', '07', 'Materials from nothing', 'Synthetic textures on standard PhysicalMaterial nodes.', ['PhysicalMaterial', 'Synthetic']),
     ('spec-questions.html', 'gifts/repros/profile-tables.png', '08', 'Questions for the spec', 'Six click-to-load repro pairs, framed as questions.', ['Validator', 'For the group']),
+    ('osiris-shaft.html', 'gifts/osiris-poster.jpg', '10', 'The Osiris Shaft', 'A spooky descent beneath Giza. Every claim tagged: fact, theory, or nobody knows. Flip between two surveys that disagree.', ['Mystery', 'Schematic']),
     ('https://claude.ai/artifact/2haGH8DR71XrPHRVorVHYq', 'gifts/materials/poster.png', '09', 'A Material Odyssey', 'The film made from the Materials scene: a slow, symmetrical camera through synthetic gold, stone and silk.', ['Film', 'Opens in a new tab']),
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
 idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
-                    'tag': 'Nine demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
+                    'tag': 'Ten demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
                     'nav': nav('index.html'), 'buttons': BTNS, 'hint': 'Lights are out. Move the pointer to find it.'}.copy())
-idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Nine demos</h2><div class="grid">')
+idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Ten demos</h2><div class="grid">')
 for h, img, n, t, p, tags in CARDS:
     ext = ' target="_blank" rel="noopener"' if h.startswith('http') else ''
     idx.append('<a class="card" href="%s"%s><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %

@@ -64,6 +64,15 @@
     var t = (performance.now() - tourT0) / 1000, d = T.duration || 40;
     var u = (t % d) / d, e = u < .5 ? 2 * u * u : 1 - 2 * (1 - u) * (1 - u);          /* ease in/out over one pass */
     var k = T.loop === 'pingpong' ? (Math.floor(t / d) % 2 ? 1 - e : e) : e;
+    if (T.kind === 'keys') {                                   /* waypoints [time, px,py,pz, tx,ty,tz], eased between keys, played forward then back */
+      var K = T.keys, D = K[K.length - 1][0], tt = t % (2 * D); if (tt > D) tt = 2 * D - tt;
+      var i = 0; while (i < K.length - 2 && tt > K[i + 1][0]) i++;
+      var a = K[i], b = K[i + 1], f = Math.max(0, Math.min(1, (tt - a[0]) / (b[0] - a[0]))); f = f * f * (3 - 2 * f);
+      var P = [a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f, a[3] + (b[3] - a[3]) * f], G = [a[4] + (b[4] - a[4]) * f, a[5] + (b[5] - a[5]) * f, a[6] + (b[6] - a[6]) * f];
+      var ok = lookAt(P, G);
+      try { tourVp.position = new X3D.SFVec3f(P[0], P[1], P[2]); tourVp.orientation = new X3D.SFRotation(ok[0], ok[1], ok[2], ok[3]); } catch (e5) {}
+      tourRaf = requestAnimationFrame(tourStep); return;
+    }
     if (T.kind === 'path') {                                   /* straight-on dolly or tilt: camera p0 to p1, target t0 to t1 */
       var lp = function (a, b) { return [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k]; };
       var pp = lp(T.p0, T.p1), oo = lookAt(pp, lp(T.t0, T.t1));
