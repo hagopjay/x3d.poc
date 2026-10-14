@@ -8,7 +8,7 @@ const [base, ...pages] = process.argv.slice(2);
   });
   let failed = 0;
   for (const p of pages) {
-    const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+    const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, locale: 'en-US' });
     const errors = [];
     page.on('pageerror', e => errors.push(e.message));
     page.on('response', r => { if (r.status() >= 400 && !r.url().endsWith('favicon.ico')) errors.push(r.status() + ' ' + r.url()); });
