@@ -1,0 +1,17 @@
+# Build a release image. Usage: gcloud builds submit --config hosting/cloudbuild.yaml --substitutions=_V=1 .
+# The previous release's v/ folders are copied out of the last pushed image so nothing is ever dropped.
+steps:
+- name: gcr.io/cloud-builders/docker
+  entrypoint: bash
+  args: ['-c', 'docker pull $_REG/poc-site:latest >/dev/null 2>&1 && (id=$(docker create $_REG/poc-site:latest) && mkdir -p /workspace/prev && docker cp $id:/site/v /workspace/prev/v && docker rm $id) || echo "no previous release"']
+- name: node:22-bookworm
+  entrypoint: bash
+  args: ['-c', 'PREV=$([ -d /workspace/prev/v ] && echo /workspace/prev) bash hosting/build.sh $_V /workspace/site']
+- name: gcr.io/cloud-builders/docker
+  args: ['build','-f','hosting/Dockerfile','-t','$_REG/poc-site:v$_V','-t','$_REG/poc-site:latest','.']
+  dir: '/workspace'
+images: ['$_REG/poc-site:v$_V','$_REG/poc-site:latest']
+substitutions:
+  _V: '1'
+  _REG: us-central1-docker.pkg.dev/${PROJECT_ID}/x3d-showcase
+options: {logging: CLOUD_LOGGING_ONLY}

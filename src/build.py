@@ -147,7 +147,7 @@ DEMOS['powers-of-ten.html'] = dict(
     title='Powers of ten', kicker='Demo 4 · Scriptless · 18 powers of ten', h1='From Burruss Hall to <em>the stars</em>',
     tag='One continuous zoom from one metre to 978 real stars, for the opening day of Web3D 2026 in Doha.',
     poster='gifts/stars/poster.png', hint='The zoom is one TimeSensor driving every interpolator. No Script.',
-    links=[('Open the full page with the scrubber ↗', 'https://claude.ai/artifact/MgCNbxgBmzbAz68aGud485')],
+    links=[],
     say=G[8]['say'], lead=G[8]['line'], facts=G[8]['facts'], cardTitle=G[8].get('cardTitle', 'Catalogue card'),
     cfg=dict(scene='gifts/stars/planet-zoom.x3d', look=dict(toneMapping='NONE'), darkDefault=False,
              viewpoints=[['VP_zoom', 'Zoom'], ['VP_burruss', 'Burruss Hall']]),
@@ -187,7 +187,7 @@ DEMOS['materials.html'] = dict(
     title='Materials from nothing', kicker='Demo 7 · Synthetic textures · PhysicalMaterial', h1='Materials from <em>nothing</em>',
     tag='Gold leaf, Hokie Stone, marble, silk and walnut, each generated as a texture and worn by X3D PhysicalMaterial.',
     poster='gifts/materials/poster.png', hint='Shadowed lights, normal maps, all standard nodes.',
-    links=[('Watch the film made from this scene ↗', 'https://claude.ai/artifact/2haGH8DR71XrPHRVorVHYq')],
+    links=[],
     say=G[6]['say'], lead=G[6]['line'], facts=G[6]['facts'], cardTitle=G[6].get('cardTitle', 'Catalogue card'),
     cfg=dict(scene='gifts/materials/materials.x3d', look=dict(toneMapping='KHR_PBR_NEUTRAL', exposure=1.5),
              viewpoints=[['Shelf', 'Shelf'], ['Close', 'Close']],
@@ -315,16 +315,15 @@ CARDS = [
     ('materials.html', 'gifts/materials/poster.png', '07', 'Materials from nothing', 'Synthetic textures on standard PhysicalMaterial nodes.', ['PhysicalMaterial', 'Synthetic']),
     ('spec-questions.html', 'gifts/repros/profile-tables.png', '08', 'Questions for the spec', 'Six click-to-load repro pairs, framed as questions.', ['Validator', 'For the group']),
     ('osiris-shaft.html', 'gifts/osiris-poster.jpg', '10', 'The Osiris Shaft', 'A spooky descent beneath Giza. Every claim tagged: fact, theory, or nobody knows. Flip between two surveys that disagree.', ['Mystery', 'Schematic']),
-    ('https://claude.ai/artifact/2haGH8DR71XrPHRVorVHYq', 'gifts/materials/poster.png', '09', 'A Material Odyssey', 'The film made from the Materials scene: a slow, symmetrical camera through synthetic gold, stone and silk.', ['Film', 'Opens in a new tab']),
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
 idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
-                    'tag': 'Ten demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
+                    'tag': 'Nine demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
                     'nav': nav('index.html'), 'buttons': BTNS, 'hint': 'Lights are out. Move the pointer to find it.'}.copy())
-idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Ten demos</h2><div class="grid">')
+idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Nine demos</h2><div class="grid">')
 for h, img, n, t, p, tags in CARDS:
     ext = ' target="_blank" rel="noopener"' if h.startswith('http') else ''
     idx.append('<a class="card" href="%s"%s><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %
