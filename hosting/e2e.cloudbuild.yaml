@@ -1,0 +1,12 @@
+steps:
+- name: gcr.io/cloud-builders/curl
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    U=https://poc-site-dic4oegqma-uc.a.run.app
+    for p in /health / /v/1/gobbler.html /vendor/x_ite/x_ite.min.js /stats.json /admin /_admin.html; do printf "%-34s" $$p; curl -s -o /dev/null -w "%{http_code} %{content_type} %{size_download}B %{time_total}s\n" $$U$$p; done
+    curl -s -o /dev/null -w "beacon %{http_code}\n" -X POST -d '{"p":"/e2e","l":900,"f":60}' $$U/_t
+    sleep 4; curl -s $$U/stats.json; echo
+    curl -s -H 'Accept-Encoding: gzip' -o /dev/null -w "gz index %{size_download}B\n" $$U/
+options: {logging: CLOUD_LOGGING_ONLY}

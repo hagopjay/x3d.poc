@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>x3d.poc admin</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>:root{color-scheme:dark light;--bg:#14120e;--fg:#e9e4d8;--mut:#9a9384;--gold:#d9b45a;--bad:#e5735a;--card:#1d1a14;--line:#34302a}
+@media(prefers-color-scheme:light){:root{--bg:#f6f2e8;--fg:#211d15;--mut:#6e6757;--gold:#8a6a14;--bad:#b3391f;--card:#fffdf6;--line:#ddd5c0}}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 Inter,system-ui,sans-serif}main{max-width:1200px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0 0 4px}.sub{color:var(--mut);margin-bottom:14px}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px}.t b{display:block;font-size:24px;color:var(--gold)}.t span{color:var(--mut);font-size:12px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}section{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow:auto}
+h2{font-size:13px;margin:0 0 6px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:3px 6px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+.bad{color:var(--bad)}#gate{text-align:center;margin:60px 0}</style></head><body><main>
+<h1>x3d.poc admin</h1><div class="sub" id="sub">Sign in with your Google account.</div>
+<div id="gate"><div id="g_id_onload" data-client_id="__CLIENT_ID__" data-callback="onCred" data-auto_select="true"></div><div class="g_id_signin"></div><p class="sub" id="gmsg"></p></div>
+<div id="dash" hidden><div class="tiles" id="tiles"></div><div class="g"><section><h2>Live stream (latest 100)</h2><table id="stream"></table></section>
+<section><h2>Top addresses by bytes, last hour (hashed)</h2><table id="top"></table></section><section><h2>Pages, 24 h</h2><table id="pages"></table></section>
+<section><h2>Referrers, 7 d</h2><table id="refs"></table></section><section><h2>Browser errors, 24 h</h2><table id="errs"></table></section></div></div></main>
+<script>
+var tok='',iv;function onCred(r){tok=r.credential;document.getElementById('gate').hidden=true;document.getElementById('dash').hidden=false;load();clearInterval(iv);iv=setInterval(load,5000)}
+if(!'__CLIENT_ID__')document.getElementById('gmsg').textContent='Admin sign-in is not configured yet (OAuth client id missing).';
+function tb(id,rows,cols){var e=document.getElementById(id);e.innerHTML='<tr>'+cols.map(function(c){return'<th>'+c+'</th>'}).join('')+'</tr>'+(rows||[]).map(function(r){return'<tr>'+cols.map(function(c){var v=r[c]==null?'':String(r[c]);return'<td'+(c==='status'&&+v>=500?' class="bad"':'')+'>'+v.replace(/</g,'&lt;')+'</td>'}).join('')+'</tr>'}).join('')}
+function load(){fetch('/admin/data',{headers:{Authorization:'Bearer '+tok}}).then(function(r){if(r.status==401){throw new Error('This Google account is not on the admin list, or the session expired.')}return r.json()}).then(function(d){
+var h=d.hour||{};document.getElementById('sub').textContent='Updated '+new Date().toLocaleTimeString()+' · BigQuery events, refresh 5 s';
+document.getElementById('tiles').innerHTML=[['Requests, 1 h',h.reqs],['5xx, 1 h',h.s5xx],['Egress, 1 h',((+h.bytes||0)/1048576).toFixed(1)+' MB'],['Instance uptime',d.instance.uptime_s+' s'],['Instance requests',d.instance.reqs],['Instance egress',(d.instance.bytes/1048576).toFixed(1)+' MB']].map(function(x){return'<div class="t"><b>'+(x[1]==null?0:x[1])+'</b><span>'+x[0]+'</span></div>'}).join('');
+tb('stream',d.stream,['ts','kind','path','status','bytes','ms','ip','ua']);tb('top',d.top_ips_by_bytes,['ip','reqs','bytes']);tb('pages',d.pages_24h,['path','reqs']);tb('refs',d.referrers_7d,['ref','n']);tb('errs',d.beacon_errors,['ts','path','err','ua'])}).catch(function(e){clearInterval(iv);document.getElementById('gate').hidden=false;document.getElementById('dash').hidden=true;document.getElementById('gmsg').textContent=e.message})}
+</script></body></html>
