@@ -1,0 +1,8524 @@
+{
+ "@context": {
+  "@vocab": "urn:shroud:vocab:",
+  "kb": "urn:shroud:",
+  "schema": "https://schema.org/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "name": "schema:name",
+  "description": "schema:description",
+  "url": {
+   "@id": "schema:url",
+   "@type": "xsd:anyURI"
+  },
+  "start": {
+   "@id": "startYear",
+   "@type": "xsd:integer"
+  },
+  "end": {
+   "@id": "endYear",
+   "@type": "xsd:integer"
+  },
+  "year": {
+   "@type": "xsd:integer"
+  },
+  "locatedAt": {
+   "@type": "@id"
+  },
+  "heldBy": {
+   "@type": "@id"
+  },
+  "derivesFrom": {
+   "@type": "@id"
+  },
+  "branchOf": {
+   "@type": "@id"
+  },
+  "about": {
+   "@type": "@id"
+  },
+  "describedIn": {
+   "@type": "@id"
+  },
+  "proposedBy": {
+   "@type": "@id"
+  },
+  "supportedBy": {
+   "@type": "@id"
+  },
+  "disputedBy": {
+   "@type": "@id"
+  },
+  "answeredBy": {
+   "@type": "@id"
+  },
+  "examinedBy": {
+   "@type": "@id"
+  },
+  "madeBy": {
+   "@type": "@id"
+  },
+  "instanceOf": {
+   "@type": "@id"
+  },
+  "depicts": {
+   "@type": "@id"
+  },
+  "commissionedBy": {
+   "@type": "@id"
+  },
+  "approvedBy": {
+   "@type": "@id"
+  },
+  "houses": {
+   "@type": "@id"
+  },
+  "exhibitedAt": {
+   "@type": "@id"
+  },
+  "foundAt": {
+   "@type": "@id"
+  },
+  "takenBy": {
+   "@type": "@id"
+  },
+  "photographs": {
+   "@type": "@id"
+  },
+  "basedOn": {
+   "@type": "@id"
+  },
+  "happenedAt": {
+   "@type": "@id"
+  },
+  "involves": {
+   "@type": "@id"
+  },
+  "recordedAs": {
+   "@type": "@id"
+  },
+  "recordedBy": {
+   "@type": "@id"
+  },
+  "usesData": {
+   "@type": "@id"
+  },
+  "author": {
+   "@type": "@id"
+  },
+  "cites": {
+   "@type": "@id"
+  },
+  "supersedes": {
+   "@type": "@id"
+  },
+  "affects": {
+   "@type": "@id"
+  },
+  "source": {
+   "@type": "@id"
+  }
+ },
+ "@graph": [
+  {
+   "@id": "kb:place/edessa",
+   "@type": "Place",
+   "name": "Edessa",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/constantinople",
+   "@type": "Place",
+   "name": "Constantinople (Istanbul)",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/nicaea",
+   "@type": "Place",
+   "name": "Nicaea",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/lirey",
+   "@type": "Place",
+   "name": "Lirey",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/chambery",
+   "@type": "Place",
+   "name": "Chambéry",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/turin",
+   "@type": "Place",
+   "name": "Turin",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/sinai",
+   "@type": "Place",
+   "name": "St. Catherine's Monastery, Sinai",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/ravenna",
+   "@type": "Place",
+   "name": "Sant'Apollinare Nuovo, Ravenna",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/rome",
+   "@type": "Place",
+   "name": "Rome",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/daphni",
+   "@type": "Place",
+   "name": "Daphni Monastery, near Athens",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/cefalu",
+   "@type": "Place",
+   "name": "Cefalù Cathedral, Sicily",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/hagia-sophia",
+   "@type": "Place",
+   "name": "Hagia Sophia, Istanbul",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/oviedo",
+   "@type": "Place",
+   "name": "Oviedo",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/manoppello",
+   "@type": "Place",
+   "name": "Manoppello",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/summit-nj",
+   "@type": "Place",
+   "name": "Dominican Nuns Monastery, Summit, New Jersey",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/zvenigorod",
+   "@type": "Place",
+   "name": "Zvenigorod",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/moscow",
+   "@type": "Place",
+   "name": "Moscow",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/maniava",
+   "@type": "Place",
+   "name": "Maniava Hermitage",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/zhovkva",
+   "@type": "Place",
+   "name": "Zhovkva",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/prado",
+   "@type": "Place",
+   "name": "Museo del Prado, Madrid",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/goulandris",
+   "@type": "Place",
+   "name": "Goulandris Foundation, Athens",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/santa-cruz-toledo",
+   "@type": "Place",
+   "name": "Museo de Santa Cruz, Toledo",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/bilbao",
+   "@type": "Place",
+   "name": "Bilbao",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/houston",
+   "@type": "Place",
+   "name": "Houston",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/stockholm",
+   "@type": "Place",
+   "name": "Stockholm",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/met",
+   "@type": "Place",
+   "name": "Metropolitan Museum of Art, New York",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/hermitage",
+   "@type": "Place",
+   "name": "Hermitage, St Petersburg",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/khm",
+   "@type": "Place",
+   "name": "Kunsthistorisches Museum, Vienna",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/national-gallery",
+   "@type": "Place",
+   "name": "National Gallery, London",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/new-orleans",
+   "@type": "Place",
+   "name": "New Orleans",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/oxford",
+   "@type": "Place",
+   "name": "Oxford",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/zurich",
+   "@type": "Place",
+   "name": "Zurich",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/arizona",
+   "@type": "Place",
+   "name": "Arizona",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/genoa",
+   "@type": "Place",
+   "name": "Genoa",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/amsterdam",
+   "@type": "Place",
+   "name": "Amsterdam",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:place/sandia",
+   "@type": "Place",
+   "name": "Sandia Laboratories",
+   "tag": "historical",
+   "fromDocument": [
+    "v3"
+   ]
+  },
+  {
+   "@id": "kb:org/house-of-savoy",
+   "@type": "Organization",
+   "name": "House of Savoy",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:org/sturp",
+   "@type": "Organization",
+   "name": "STURP (Shroud of Turin Research Project)",
+   "tag": "historical",
+   "fromDocument": [
+    "v3"
+   ]
+  },
+  {
+   "@id": "kb:org/poor-clares",
+   "@type": "Organization",
+   "name": "Poor Clare nuns of Chambéry",
+   "tag": "historical",
+   "fromDocument": [
+    "plan"
+   ]
+  },
+  {
+   "@id": "kb:org/dominican-nuns-summit",
+   "@type": "Organization",
+   "name": "Dominican Nuns, Summit",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:org/lab-oxford",
+   "@type": "Organization",
+   "name": "Oxford radiocarbon laboratory",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/oxford"
+   }
+  },
+  {
+   "@id": "kb:org/lab-zurich",
+   "@type": "Organization",
+   "name": "Zurich radiocarbon laboratory",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/zurich"
+   }
+  },
+  {
+   "@id": "kb:org/lab-arizona",
+   "@type": "Organization",
+   "name": "Arizona radiocarbon laboratory",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/arizona"
+   }
+  },
+  {
+   "@id": "kb:org/haltadefinizione",
+   "@type": "Organization",
+   "name": "Haltadefinizione",
+   "tag": "historical",
+   "fromDocument": [
+    "v3note"
+   ]
+  },
+  {
+   "@id": "kb:person/abgar",
+   "@type": "Person",
+   "name": "King Abgar of Edessa",
+   "description": "Receives the miraculous cloth in the legend.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/eusebius",
+   "@type": "Person",
+   "name": "Eusebius of Caesarea",
+   "description": "First records the Abgar legend, early 4th century.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/evagrius",
+   "@type": "Person",
+   "name": "Evagrius Scholasticus",
+   "description": "First mentions a physical image, about 593.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/romanos-i",
+   "@type": "Person",
+   "name": "Romanos I Lekapenos",
+   "description": "Byzantine emperor; brings the Image of Edessa to Constantinople in 944.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/ian-wilson",
+   "@type": "Person",
+   "name": "Ian Wilson",
+   "description": "Author of the Shroud = Mandylion hypothesis.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/paul-vignon",
+   "@type": "Person",
+   "name": "Paul Vignon",
+   "description": "Catalogued fifteen recurring facial traits (the Vignon markings).",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/whangers",
+   "@type": "Person",
+   "name": "Alan and Judith Whanger",
+   "description": "Two researchers named together; polarized image overlay.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/leo-iii",
+   "@type": "Person",
+   "name": "Emperor Leo III",
+   "description": "Banned the veneration of images in 726.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/john-damascus",
+   "@type": "Person",
+   "name": "John of Damascus",
+   "description": "Defended images, leaning on the Abgar legend.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/veronica",
+   "@type": "Person",
+   "name": "Veronica",
+   "description": "Legendary woman who wiped Christ's face on the way to Calvary.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/weyden",
+   "@type": "Person",
+   "name": "Rogier van der Weyden",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/memling",
+   "@type": "Person",
+   "name": "Hans Memling",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/bosch",
+   "@type": "Person",
+   "name": "Hieronymus Bosch",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/pontormo",
+   "@type": "Person",
+   "name": "Jacopo Pontormo",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/correggio",
+   "@type": "Person",
+   "name": "Correggio",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/aelbrecht-bouts",
+   "@type": "Person",
+   "name": "Aelbrecht Bouts",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/durer",
+   "@type": "Person",
+   "name": "Albrecht Dürer",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/baldung-grien",
+   "@type": "Person",
+   "name": "Hans Baldung Grien",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/rabel",
+   "@type": "Person",
+   "name": "Jean Rabel",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/wierix",
+   "@type": "Person",
+   "name": "Hieronymus Wierix",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/fetti",
+   "@type": "Person",
+   "name": "Domenico Fetti",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/el-greco",
+   "@type": "Person",
+   "name": "El Greco",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/zurbaran",
+   "@type": "Person",
+   "name": "Francisco de Zurbarán",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/tempesta",
+   "@type": "Person",
+   "name": "Antonio Tempesta",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/philip-ii",
+   "@type": "Person",
+   "name": "King Philip II of Spain",
+   "description": "Had a painted Shroud copy made in the late 1500s.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/julius-ii",
+   "@type": "Person",
+   "name": "Pope Julius II",
+   "description": "Authorized veneration of the Shroud as a relic in 1506.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/guarini",
+   "@type": "Person",
+   "name": "Guarino Guarini",
+   "description": "Architect of the Chapel of the Holy Shroud.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/rublev",
+   "@type": "Person",
+   "name": "Andrei Rublev",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/ushakov",
+   "@type": "Person",
+   "name": "Simon Ushakov",
+   "description": "Moscow court painter.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/kondzelevych",
+   "@type": "Person",
+   "name": "Yov Kondzelevych",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/rutkovych",
+   "@type": "Person",
+   "name": "Ivan Rutkovych",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/van-eyck",
+   "@type": "Person",
+   "name": "Jan van Eyck",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/gerard-david",
+   "@type": "Person",
+   "name": "Gerard David",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/crivelli",
+   "@type": "Person",
+   "name": "Carlo Crivelli",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/titian",
+   "@type": "Person",
+   "name": "Titian",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/leonardo",
+   "@type": "Person",
+   "name": "Leonardo da Vinci",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/pia",
+   "@type": "Person",
+   "name": "Secondo Pia",
+   "description": "Amateur photographer; his 1898 negative reads as a coherent positive.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/enrie",
+   "@type": "Person",
+   "name": "Giuseppe Enrie",
+   "description": "Re-photographed the Shroud in 1931.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/de-micheli",
+   "@type": "Person",
+   "name": "Maria Pierina De Micheli",
+   "description": "Designed the Holy Face Medal from Pia's photographs.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/pius-xii",
+   "@type": "Person",
+   "name": "Pope Pius XII",
+   "description": "Approved the Holy Face Medal for devotional use.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/therese",
+   "@type": "Person",
+   "name": "Thérèse of Lisieux",
+   "description": "Took the religious name 'of the Holy Face' in 1889.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/olsen",
+   "@type": "Person",
+   "name": "Antoinette Merete Olsen",
+   "description": "Weaver; 2020 loom reconstruction of the herringbone weave.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/dali",
+   "@type": "Person",
+   "name": "Salvador Dalí",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/warhol",
+   "@type": "Person",
+   "name": "Andy Warhol",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/rembrandt",
+   "@type": "Person",
+   "name": "Rembrandt",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/rouault",
+   "@type": "Person",
+   "name": "Georges Rouault",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/grunewald",
+   "@type": "Person",
+   "name": "Matthias Grünewald",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/clement-vii",
+   "@type": "Person",
+   "name": "Antipope Clement VII",
+   "description": "Recipient of the 1389 memorandum.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/darcis",
+   "@type": "Person",
+   "name": "Pierre d'Arcis, Bishop of Troyes",
+   "description": "Author of the 1389 memorandum. The research write-up says 'a bishop'; the name is the standard identification.",
+   "tag": "historical",
+   "fromDocument": [
+    "research",
+    "package"
+   ]
+  },
+  {
+   "@id": "kb:person/mccrone",
+   "@type": "Person",
+   "name": "Walter McCrone",
+   "description": "Microscopist; pigment hypothesis.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/moraes",
+   "@type": "Person",
+   "name": "Cicero Moraes",
+   "description": "3D-graphics researcher; 2025 draping study.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/casper",
+   "@type": "Person",
+   "name": "Andrew Casper",
+   "description": "Art historian; An Artful Relic.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:person/belting",
+   "@type": "Person",
+   "name": "Hans Belting",
+   "description": "Art historian; Likeness and Presence.",
+   "tag": "historical",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:relic/shroud",
+   "@type": "Relic",
+   "name": "Shroud of Turin",
+   "description": "A linen cloth, 3/1 herringbone twill, bearing the faint frontal and dorsal image of a man.",
+   "tag": "measured",
+   "lane": "shroud",
+   "fromDocument": [
+    "plan",
+    "v3",
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/turin"
+   },
+   "heldBy": {
+    "@id": "kb:org/house-of-savoy"
+   }
+  },
+  {
+   "@id": "kb:relic/mandylion",
+   "@type": "Relic",
+   "name": "Image of Edessa (Mandylion)",
+   "description": "Legendary cloth with Christ's face; in Constantinople from 944; lost after 1204.",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "attested about 593",
+   "start": 544,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": [
+    {
+     "@id": "kb:place/edessa"
+    },
+    {
+     "@id": "kb:place/constantinople"
+    }
+   ]
+  },
+  {
+   "@id": "kb:relic/veronica-veil",
+   "@type": "Relic",
+   "name": "Veil of Veronica (Vera Icon)",
+   "tag": "tradition",
+   "lane": "veronica",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:relic/manoppello",
+   "@type": "Relic",
+   "name": "Manoppello Image",
+   "description": "A separate cloth in Italy venerated as a Veronica-type true image.",
+   "tag": "tradition",
+   "lane": "veronica",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/manoppello"
+   }
+  },
+  {
+   "@id": "kb:relic/sudarium",
+   "@type": "Relic",
+   "name": "Sudarium of Oviedo",
+   "description": "A bloodstained face cloth with no image; radiocarbon about AD 680.",
+   "tag": "measured",
+   "lane": "shroud",
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/oviedo"
+   }
+  },
+  {
+   "@id": "kb:relic/holy-face-genoa",
+   "@type": "Relic",
+   "name": "Holy Face of Genoa",
+   "description": "Historically claimed as the real Mandylion (a thread for later).",
+   "tag": "tradition",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/genoa"
+   }
+  },
+  {
+   "@id": "kb:relic/holy-face-san-silvestro",
+   "@type": "Relic",
+   "name": "Holy Face of San Silvestro",
+   "description": "Historically claimed as the real Mandylion (a thread for later).",
+   "tag": "tradition",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:concept/acheiropoieta",
+   "@type": "Concept",
+   "name": "Acheiropoieta",
+   "description": "Images not made by human hands.",
+   "tag": "tradition",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "describedIn": {
+    "@id": "kb:ref/belting"
+   }
+  },
+  {
+   "@id": "kb:concept/abgar-legend",
+   "@type": "Concept",
+   "name": "Abgar legend",
+   "description": "King Abgar receives a cloth imprinted with Christ's face.",
+   "tag": "tradition",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": {
+    "@id": "kb:concept/acheiropoieta"
+   },
+   "about": {
+    "@id": "kb:relic/mandylion"
+   }
+  },
+  {
+   "@id": "kb:concept/tetradiplon",
+   "@type": "Concept",
+   "name": "Tetradiplon folding hypothesis",
+   "description": "The Shroud folded in four so only the face showed (Wilson).",
+   "tag": "contested",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:relic/mandylion"
+    }
+   ],
+   "proposedBy": {
+    "@id": "kb:person/ian-wilson"
+   }
+  },
+  {
+   "@id": "kb:concept/iconoclasm",
+   "@type": "Concept",
+   "name": "Iconoclastic Controversy",
+   "description": "From 726, images banned; the Second Council of Nicaea (787) sided with their defenders.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:concept/pantocrator",
+   "@type": "Concept",
+   "name": "Christ Pantocrator type",
+   "description": "Frontal bearded Christ; earliest known icon at Sinai.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": {
+    "@id": "kb:concept/acheiropoieta"
+   },
+   "branchOf": {
+    "@id": "kb:concept/acheiropoieta"
+   }
+  },
+  {
+   "@id": "kb:concept/vignon-markings",
+   "@type": "Concept",
+   "name": "Vignon markings",
+   "description": "Fifteen recurring facial traits, e.g. a topless square between the eyebrows, a V at the bridge of the nose, two forked wisps of hair.",
+   "tag": "contested",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "proposedBy": {
+    "@id": "kb:person/paul-vignon"
+   }
+  },
+  {
+   "@id": "kb:concept/whanger-overlay",
+   "@type": "Concept",
+   "name": "Polarized image overlay",
+   "description": "The Whangers' method of comparing images point by point.",
+   "tag": "contested",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "proposedBy": {
+    "@id": "kb:person/whangers"
+   }
+  },
+  {
+   "@id": "kb:concept/spas-nerukotvorny",
+   "@type": "Concept",
+   "name": "Spas Nerukotvorny (Savior Not Made by Hands)",
+   "description": "A named icon genre descended from the Edessa legend.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": [
+    {
+     "@id": "kb:concept/abgar-legend"
+    },
+    {
+     "@id": "kb:concept/pantocrator"
+    }
+   ]
+  },
+  {
+   "@id": "kb:concept/vera-icon",
+   "@type": "Concept",
+   "name": "Veronica legend",
+   "description": "Crystallizes around 1380 in the Meditations on the Life of Christ.",
+   "tag": "tradition",
+   "lane": "veronica",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": {
+    "@id": "kb:concept/acheiropoieta"
+   },
+   "about": {
+    "@id": "kb:relic/veronica-veil"
+   },
+   "describedIn": {
+    "@id": "kb:ref/meditations1380"
+   }
+  },
+  {
+   "@id": "kb:concept/holy-face-devotion",
+   "@type": "Concept",
+   "name": "Holy Face devotion",
+   "tag": "historical",
+   "lane": "veronica",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": {
+    "@id": "kb:concept/vera-icon"
+   }
+  },
+  {
+   "@id": "kb:concept/contact-relic-copies",
+   "@type": "Concept",
+   "name": "Painted contact-relic copies of the Shroud",
+   "description": "Copies pressed against the original to sanctify them.",
+   "tag": "historical",
+   "lane": "shroud",
+   "fromDocument": [
+    "research"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "describedIn": {
+    "@id": "kb:ref/casper"
+   },
+   "branchOf": {
+    "@id": "kb:concept/acheiropoieta"
+   }
+  },
+  {
+   "@id": "kb:concept/salvator-mundi",
+   "@type": "Concept",
+   "name": "Salvator Mundi type",
+   "description": "Frontal Christ blessing, holding an orb; emerges in the 15th century.",
+   "tag": "historical",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ],
+   "derivesFrom": [
+    {
+     "@id": "kb:concept/pantocrator"
+    },
+    {
+     "@id": "kb:concept/christ-in-majesty"
+    }
+   ],
+   "branchOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:concept/christ-in-majesty",
+   "@type": "Concept",
+   "name": "Christ in Majesty",
+   "tag": "historical",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:concept/good-shepherd",
+   "@type": "Concept",
+   "name": "Good Shepherd type",
+   "description": "Beardless youthful Christ of the 3rd-century catacombs.",
+   "tag": "historical",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:concept/forensic-reconstruction",
+   "@type": "Concept",
+   "name": "Devotional and forensic reconstruction art",
+   "description": "Sculptures and exhibits reconstructing the body from the Shroud.",
+   "tag": "historical",
+   "lane": "photography",
+   "fromDocument": [
+    "research"
+   ]
+  },
+  {
+   "@id": "kb:concept/photographic-negative",
+   "@type": "Concept",
+   "name": "The photographic negative as positive",
+   "description": "The negative of the cloth reads as a coherent positive image.",
+   "tag": "measured",
+   "lane": "photography",
+   "fromDocument": [
+    "research"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:artwork/good-shepherd-catacombs",
+   "@type": "Artwork",
+   "name": "Good Shepherd catacomb paintings",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "3rd century",
+   "start": 200,
+   "end": 299,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/rome"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/good-shepherd"
+   }
+  },
+  {
+   "@id": "kb:artwork/sinai-pantocrator",
+   "@type": "Artwork",
+   "name": "Christ Pantocrator icon",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 550 to 590",
+   "start": 550,
+   "end": 590,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/sinai"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:artwork/ravenna-pantocrator",
+   "@type": "Artwork",
+   "name": "Christ Pantocrator mosaic, Sant'Apollinare Nuovo",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "completed by 526",
+   "start": 526,
+   "end": 526,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/ravenna"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:artwork/justinian-ii-solidus",
+   "@type": "Artwork",
+   "name": "Justinian II gold solidus",
+   "description": "The first coinage to bear Christ's portrait.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 690",
+   "start": 690,
+   "end": 690,
+   "fromDocument": [
+    "research"
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:artwork/pontianus-fresco",
+   "@type": "Artwork",
+   "name": "Fresco bust of Christ, Catacomb of St. Pontianus",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "7th to 8th century",
+   "start": 600,
+   "end": 799,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/rome"
+   }
+  },
+  {
+   "@id": "kb:artwork/mandylion-triptych",
+   "@type": "Artwork",
+   "name": "Mandylion triptych icon (Abgar receiving the image)",
+   "tag": "historical",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/sinai"
+   },
+   "depicts": [
+    {
+     "@id": "kb:relic/mandylion"
+    },
+    {
+     "@id": "kb:person/abgar"
+    }
+   ]
+  },
+  {
+   "@id": "kb:artwork/daphni-pantocrator",
+   "@type": "Artwork",
+   "name": "Christ Pantocrator dome mosaic",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 1050 to 1100",
+   "start": 1050,
+   "end": 1100,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/daphni"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:artwork/cefalu-pantocrator",
+   "@type": "Artwork",
+   "name": "Christ Pantocrator apse mosaic",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "1148",
+   "start": 1148,
+   "end": 1148,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/cefalu"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/pantocrator"
+   }
+  },
+  {
+   "@id": "kb:artwork/deesis-hagia-sophia",
+   "@type": "Artwork",
+   "name": "Deesis mosaic",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 1260 to 1280",
+   "start": 1260,
+   "end": 1280,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/hagia-sophia"
+   }
+  },
+  {
+   "@id": "kb:artwork/rublev-zvenigorod",
+   "@type": "Artwork",
+   "name": "Christ the Savior (Zvenigorod)",
+   "description": "Rediscovered in 1918 under a woodpile near Zvenigorod.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 1410",
+   "start": 1410,
+   "end": 1410,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/rublev"
+   },
+   "locatedAt": {
+    "@id": "kb:place/zvenigorod"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/spas-nerukotvorny"
+   }
+  },
+  {
+   "@id": "kb:artwork/ushakov-savior",
+   "@type": "Artwork",
+   "name": "Savior Not Made by Hands",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "1673",
+   "start": 1673,
+   "end": 1673,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/ushakov"
+   },
+   "locatedAt": {
+    "@id": "kb:place/moscow"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/spas-nerukotvorny"
+   }
+  },
+  {
+   "@id": "kb:artwork/maniava-iconostasis",
+   "@type": "Artwork",
+   "name": "Maniava iconostasis panels",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "about 1698 to 1705",
+   "start": 1698,
+   "end": 1705,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/kondzelevych"
+   },
+   "locatedAt": {
+    "@id": "kb:place/maniava"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/spas-nerukotvorny"
+   }
+  },
+  {
+   "@id": "kb:artwork/zhovkva-iconostasis",
+   "@type": "Artwork",
+   "name": "Zhovkva iconostasis",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "1699",
+   "start": 1699,
+   "end": 1699,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/rutkovych"
+   },
+   "locatedAt": {
+    "@id": "kb:place/zhovkva"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/spas-nerukotvorny"
+   }
+  },
+  {
+   "@id": "kb:artwork/weyden-crucifixion-panel",
+   "@type": "Artwork",
+   "name": "Crucifixion triptych side panel with Veronica",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "1440",
+   "start": 1440,
+   "end": 1440,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/weyden"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   },
+   "depicts": {
+    "@id": "kb:relic/veronica-veil"
+   }
+  },
+  {
+   "@id": "kb:artwork/veronica-treatments",
+   "@type": "Artwork",
+   "name": "Veronica veil treatments",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "15th to 16th century",
+   "start": 1450,
+   "end": 1560,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": [
+    {
+     "@id": "kb:person/memling"
+    },
+    {
+     "@id": "kb:person/bosch"
+    },
+    {
+     "@id": "kb:person/pontormo"
+    },
+    {
+     "@id": "kb:person/correggio"
+    }
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   },
+   "depicts": {
+    "@id": "kb:relic/veronica-veil"
+   }
+  },
+  {
+   "@id": "kb:artwork/bouts-veil-of-veronica",
+   "@type": "Artwork",
+   "name": "The Veil of Saint Veronica (several versions)",
+   "tag": "historical",
+   "lane": "veronica",
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/aelbrecht-bouts"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   },
+   "depicts": {
+    "@id": "kb:relic/veronica-veil"
+   }
+  },
+  {
+   "@id": "kb:artwork/holy-face-engravings",
+   "@type": "Artwork",
+   "name": "Holy Face engravings and panels",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "16th century",
+   "start": 1500,
+   "end": 1600,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": [
+    {
+     "@id": "kb:person/durer"
+    },
+    {
+     "@id": "kb:person/baldung-grien"
+    },
+    {
+     "@id": "kb:person/rabel"
+    },
+    {
+     "@id": "kb:person/wierix"
+    }
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   }
+  },
+  {
+   "@id": "kb:artwork/fetti-veil-of-veronica",
+   "@type": "Artwork",
+   "name": "The Veil of Veronica",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "early 1600s",
+   "start": 1600,
+   "end": 1620,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/fetti"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   },
+   "depicts": {
+    "@id": "kb:relic/veronica-veil"
+   }
+  },
+  {
+   "@id": "kb:artwork/el-greco-veronica",
+   "@type": "Artwork",
+   "name": "Veronica veil versions",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "16th century",
+   "start": 1570,
+   "end": 1600,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/el-greco"
+   },
+   "locatedAt": [
+    {
+     "@id": "kb:place/prado"
+    },
+    {
+     "@id": "kb:place/goulandris"
+    },
+    {
+     "@id": "kb:place/santa-cruz-toledo"
+    }
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   },
+   "depicts": {
+    "@id": "kb:relic/veronica-veil"
+   }
+  },
+  {
+   "@id": "kb:artwork/zurbaran-holy-face",
+   "@type": "Artwork",
+   "name": "Holy Face (about a dozen versions)",
+   "description": "The face floating on a nailed-up cloth against darkness.",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "17th century",
+   "start": 1630,
+   "end": 1660,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/zurbaran"
+   },
+   "locatedAt": [
+    {
+     "@id": "kb:place/bilbao"
+    },
+    {
+     "@id": "kb:place/houston"
+    },
+    {
+     "@id": "kb:place/stockholm"
+    }
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/vera-icon"
+   }
+  },
+  {
+   "@id": "kb:artwork/philip-ii-shroud-copy",
+   "@type": "Artwork",
+   "name": "Painted Shroud replica for Philip II",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "late 1500s",
+   "start": 1570,
+   "end": 1599,
+   "fromDocument": [
+    "research"
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/contact-relic-copies"
+   },
+   "depicts": {
+    "@id": "kb:relic/shroud"
+   },
+   "commissionedBy": {
+    "@id": "kb:person/philip-ii"
+   }
+  },
+  {
+   "@id": "kb:artwork/summit-shroud-copy",
+   "@type": "Artwork",
+   "name": "Shroud copy of 1624",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1624",
+   "start": 1624,
+   "end": 1624,
+   "fromDocument": [
+    "research"
+   ],
+   "locatedAt": {
+    "@id": "kb:place/summit-nj"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/contact-relic-copies"
+   },
+   "depicts": {
+    "@id": "kb:relic/shroud"
+   },
+   "heldBy": {
+    "@id": "kb:org/dominican-nuns-summit"
+   }
+  },
+  {
+   "@id": "kb:artwork/tempesta-ostension",
+   "@type": "Artwork",
+   "name": "Engraving of the Shroud's public ostension",
+   "description": "A documentary image of crowds at the display ceremony.",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "about 1613",
+   "start": 1613,
+   "end": 1613,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/tempesta"
+   },
+   "depicts": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:artwork/guarini-chapel",
+   "@type": "Artwork",
+   "name": "Chapel of the Holy Shroud (Cappella della Sindone)",
+   "description": "A Baroque reliquary building with a spiralling dome, linking the royal palace to the cathedral.",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "completed 1694",
+   "start": 1694,
+   "end": 1694,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/guarini"
+   },
+   "locatedAt": {
+    "@id": "kb:place/turin"
+   },
+   "commissionedBy": {
+    "@id": "kb:org/house-of-savoy"
+   },
+   "houses": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:artwork/early-salvator-mundi",
+   "@type": "Artwork",
+   "name": "Early Salvator Mundi paintings",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "15th century",
+   "start": 1430,
+   "end": 1500,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": [
+    {
+     "@id": "kb:person/van-eyck"
+    },
+    {
+     "@id": "kb:person/memling"
+    },
+    {
+     "@id": "kb:person/gerard-david"
+    },
+    {
+     "@id": "kb:person/crivelli"
+    }
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/salvator-mundi"
+   }
+  },
+  {
+   "@id": "kb:artwork/durer-salvator-mundi",
+   "@type": "Artwork",
+   "name": "Salvator Mundi (unfinished)",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "about 1505",
+   "start": 1505,
+   "end": 1505,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/durer"
+   },
+   "locatedAt": {
+    "@id": "kb:place/met"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/salvator-mundi"
+   }
+  },
+  {
+   "@id": "kb:artwork/titian-salvator-mundi",
+   "@type": "Artwork",
+   "name": "Salvator Mundi (Christ Blessing)",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "about 1570",
+   "start": 1570,
+   "end": 1570,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/titian"
+   },
+   "locatedAt": {
+    "@id": "kb:place/hermitage"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/salvator-mundi"
+   }
+  },
+  {
+   "@id": "kb:artwork/titian-christ-with-orb",
+   "@type": "Artwork",
+   "name": "Christ with an Orb",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "about 1520 to 1530",
+   "start": 1520,
+   "end": 1530,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/titian"
+   },
+   "locatedAt": {
+    "@id": "kb:place/khm"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/salvator-mundi"
+   }
+  },
+  {
+   "@id": "kb:artwork/leonardo-salvator-mundi",
+   "@type": "Artwork",
+   "name": "Salvator Mundi (attributed to Leonardo da Vinci)",
+   "description": "Rediscovered at a 2005 New Orleans estate sale, shown at the National Gallery 2011 to 2012, sold in 2017 for USD 450.3 million.",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "rediscovered 2005",
+   "start": 1500,
+   "end": 1500,
+   "fromDocument": [
+    "research"
+   ],
+   "instanceOf": {
+    "@id": "kb:concept/salvator-mundi"
+   },
+   "exhibitedAt": {
+    "@id": "kb:place/national-gallery"
+   },
+   "foundAt": {
+    "@id": "kb:place/new-orleans"
+   }
+  },
+  {
+   "@id": "kb:artwork/holy-face-medal",
+   "@type": "Artwork",
+   "name": "Holy Face Medal",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "1936",
+   "start": 1936,
+   "end": 1936,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/de-micheli"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/holy-face-devotion"
+   },
+   "approvedBy": {
+    "@id": "kb:person/pius-xii"
+   },
+   "basedOn": {
+    "@id": "kb:photo/pia-1898"
+   }
+  },
+  {
+   "@id": "kb:artwork/dali-christ-of-saint-john",
+   "@type": "Artwork",
+   "name": "Christ of Saint John of the Cross",
+   "description": "Dalí's own foreshortened crucifixion; not modelled on the Shroud or the Salvator Mundi type.",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "1951",
+   "start": 1951,
+   "end": 1951,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/dali"
+   }
+  },
+  {
+   "@id": "kb:artwork/warhol-last-supper",
+   "@type": "Artwork",
+   "name": "Last Supper series",
+   "description": "Based on Leonardo, not the Shroud.",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "1986",
+   "start": 1986,
+   "end": 1986,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/warhol"
+   }
+  },
+  {
+   "@id": "kb:artwork/rembrandt-christ-studies",
+   "@type": "Artwork",
+   "name": "Christ studies from a live model",
+   "description": "An empirical counter-tradition (a thread for later).",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "1640s",
+   "start": 1640,
+   "end": 1649,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/rembrandt"
+   },
+   "locatedAt": {
+    "@id": "kb:place/amsterdam"
+   }
+  },
+  {
+   "@id": "kb:artwork/rouault-head-of-christ",
+   "@type": "Artwork",
+   "name": "Head of Christ series",
+   "description": "A thread for later.",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "early 20th century",
+   "start": 1900,
+   "end": 1940,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/rouault"
+   }
+  },
+  {
+   "@id": "kb:artwork/isenheim-altarpiece",
+   "@type": "Artwork",
+   "name": "Isenheim Altarpiece",
+   "description": "A thread for later.",
+   "tag": "historical",
+   "lane": "veronica",
+   "date": "1512 to 1516",
+   "start": 1512,
+   "end": 1516,
+   "fromDocument": [
+    "research"
+   ],
+   "madeBy": {
+    "@id": "kb:person/grunewald"
+   }
+  },
+  {
+   "@id": "kb:photo/pia-1898",
+   "@type": "Photograph",
+   "name": "Secondo Pia's negative",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "1898",
+   "start": 1898,
+   "end": 1898,
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "takenBy": {
+    "@id": "kb:person/pia"
+   },
+   "photographs": {
+    "@id": "kb:relic/shroud"
+   },
+   "instanceOf": {
+    "@id": "kb:concept/photographic-negative"
+   }
+  },
+  {
+   "@id": "kb:photo/enrie-1931",
+   "@type": "Photograph",
+   "name": "Giuseppe Enrie's plates",
+   "description": "Orthochromatic plates; the build plan's source for the image and height field.",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "1931",
+   "start": 1931,
+   "end": 1931,
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "takenBy": {
+    "@id": "kb:person/enrie"
+   },
+   "photographs": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:photo/sturp-1978",
+   "@type": "Photograph",
+   "name": "STURP photography and spectra",
+   "tag": "historical",
+   "lane": "science",
+   "date": "1978",
+   "start": 1978,
+   "end": 1978,
+   "fromDocument": [
+    "v3"
+   ],
+   "takenBy": {
+    "@id": "kb:org/sturp"
+   },
+   "photographs": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:photo/haltadefinizione-2008",
+   "@type": "Photograph",
+   "name": "Haltadefinizione 12-gigapixel capture",
+   "description": "1649 photographs in one 72 GB file; never published at full resolution.",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "2008",
+   "start": 2008,
+   "end": 2008,
+   "fromDocument": [
+    "v3note"
+   ],
+   "takenBy": {
+    "@id": "kb:org/haltadefinizione"
+   },
+   "photographs": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:event/abgar-recorded",
+   "@type": "Event",
+   "name": "Abgar legend first recorded",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "early 4th century",
+   "start": 300,
+   "end": 340,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": [
+    {
+     "@id": "kb:person/eusebius"
+    },
+    {
+     "@id": "kb:concept/abgar-legend"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/edessa-siege",
+   "@type": "Event",
+   "name": "Image credited with defending Edessa from a Persian siege",
+   "description": "Described by Evagrius Scholasticus about 593, the first mention of a physical image.",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "544",
+   "start": 544,
+   "end": 544,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/edessa"
+   },
+   "involves": {
+    "@id": "kb:relic/mandylion"
+   },
+   "recordedBy": {
+    "@id": "kb:person/evagrius"
+   }
+  },
+  {
+   "@id": "kb:event/iconoclasm",
+   "@type": "Event",
+   "name": "Leo III bans the veneration of images",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "726",
+   "start": 726,
+   "end": 726,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": [
+    {
+     "@id": "kb:person/leo-iii"
+    },
+    {
+     "@id": "kb:concept/iconoclasm"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/nicaea-ii",
+   "@type": "Event",
+   "name": "Second Council of Nicaea restores images",
+   "description": "Images deserve reverence, not adoration; the Abgar legend served as proof of concept.",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "787",
+   "start": 787,
+   "end": 787,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/nicaea"
+   },
+   "involves": [
+    {
+     "@id": "kb:person/john-damascus"
+    },
+    {
+     "@id": "kb:concept/abgar-legend"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/mandylion-944",
+   "@type": "Event",
+   "name": "Image of Edessa brought to Constantinople",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "944",
+   "start": 944,
+   "end": 944,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/constantinople"
+   },
+   "involves": [
+    {
+     "@id": "kb:relic/mandylion"
+    },
+    {
+     "@id": "kb:person/romanos-i"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/sack-1204",
+   "@type": "Event",
+   "name": "Crusaders sack Constantinople; the Mandylion disappears from the record",
+   "tag": "historical",
+   "lane": "legend",
+   "date": "1204",
+   "start": 1204,
+   "end": 1204,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/constantinople"
+   },
+   "involves": {
+    "@id": "kb:relic/mandylion"
+   }
+  },
+  {
+   "@id": "kb:event/lirey",
+   "@type": "Event",
+   "name": "First certain appearance of the Shroud",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1350s",
+   "start": 1350,
+   "end": 1359,
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/lirey"
+   },
+   "involves": {
+    "@id": "kb:relic/shroud"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.lirey"
+   }
+  },
+  {
+   "@id": "kb:event/memorandum-1389",
+   "@type": "Event",
+   "name": "Memorandum to Clement VII calls the cloth painted",
+   "description": "'Artificially painted in an ingenious way', by an artist said to have confessed.",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1389",
+   "start": 1389,
+   "end": 1389,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:person/darcis"
+    },
+    {
+     "@id": "kb:person/clement-vii"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/history.darcis_memorandum"
+   }
+  },
+  {
+   "@id": "kb:event/chambery",
+   "@type": "Event",
+   "name": "The Shroud with the House of Savoy at Chambéry",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "by 1466",
+   "start": 1466,
+   "end": 1466,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/chambery"
+   },
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:org/house-of-savoy"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/veneration-1506",
+   "@type": "Event",
+   "name": "Julius II authorizes veneration as a relic",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1506",
+   "start": 1506,
+   "end": 1506,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:person/julius-ii"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/fire-1532",
+   "@type": "Event",
+   "name": "Chambéry fire: scorches and water stains",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1532",
+   "start": 1532,
+   "end": 1532,
+   "fromDocument": [
+    "v3",
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/chambery"
+   },
+   "involves": {
+    "@id": "kb:relic/shroud"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.fire"
+   }
+  },
+  {
+   "@id": "kb:event/patches-1534",
+   "@type": "Event",
+   "name": "Poor Clare patches and backing",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1534",
+   "start": 1534,
+   "end": 1534,
+   "fromDocument": [
+    "v3"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/chambery"
+   },
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:org/poor-clares"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/history.patches"
+   }
+  },
+  {
+   "@id": "kb:event/turin-1578",
+   "@type": "Event",
+   "name": "The Shroud settles in Turin",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "1578",
+   "start": 1578,
+   "end": 1578,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/turin"
+   },
+   "involves": {
+    "@id": "kb:relic/shroud"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.turin"
+   }
+  },
+  {
+   "@id": "kb:event/therese-1889",
+   "@type": "Event",
+   "name": "Thérèse of Lisieux takes the name 'of the Holy Face'",
+   "tag": "historical",
+   "lane": "photography",
+   "date": "1889",
+   "start": 1889,
+   "end": 1889,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": [
+    {
+     "@id": "kb:person/therese"
+    },
+    {
+     "@id": "kb:concept/holy-face-devotion"
+    }
+   ]
+  },
+  {
+   "@id": "kb:event/vp8-1976",
+   "@type": "Event",
+   "name": "First VP-8 analysis",
+   "description": "Image intensity read as relief.",
+   "tag": "historical",
+   "lane": "science",
+   "date": "1976",
+   "start": 1976,
+   "end": 1976,
+   "fromDocument": [
+    "v3"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/sandia"
+   },
+   "involves": {
+    "@id": "kb:relic/shroud"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.vp8"
+   }
+  },
+  {
+   "@id": "kb:event/sturp-1978",
+   "@type": "Event",
+   "name": "STURP examination",
+   "tag": "historical",
+   "lane": "science",
+   "date": "1978",
+   "start": 1978,
+   "end": 1978,
+   "fromDocument": [
+    "v3"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/turin"
+   },
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:org/sturp"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/history.sturp"
+   }
+  },
+  {
+   "@id": "kb:event/c14-1988",
+   "@type": "Event",
+   "name": "Radiocarbon dating by three laboratories",
+   "tag": "historical",
+   "lane": "science",
+   "date": "1988",
+   "start": 1988,
+   "end": 1988,
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "involves": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:org/lab-oxford"
+    },
+    {
+     "@id": "kb:org/lab-zurich"
+    },
+    {
+     "@id": "kb:org/lab-arizona"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/history.c14"
+   }
+  },
+  {
+   "@id": "kb:event/restoration-2002",
+   "@type": "Event",
+   "name": "Restoration removes the patches and backing",
+   "tag": "historical",
+   "lane": "shroud",
+   "date": "2002",
+   "start": 2002,
+   "end": 2002,
+   "fromDocument": [
+    "plan"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/turin"
+   },
+   "involves": {
+    "@id": "kb:relic/shroud"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.restoration"
+   }
+  },
+  {
+   "@id": "kb:event/leonardo-sale",
+   "@type": "Event",
+   "name": "Leonardo-attributed Salvator Mundi sold at auction",
+   "description": "USD 450.3 million, the most expensive painting sold at auction.",
+   "tag": "historical",
+   "lane": "salvator",
+   "date": "2017",
+   "start": 2017,
+   "end": 2017,
+   "fromDocument": [
+    "research"
+   ],
+   "involves": {
+    "@id": "kb:artwork/leonardo-salvator-mundi"
+   }
+  },
+  {
+   "@id": "kb:event/rublev-rediscovered",
+   "@type": "Event",
+   "name": "Rublev's Zvenigorod Christ rediscovered",
+   "tag": "historical",
+   "lane": "byzantine",
+   "date": "1918",
+   "start": 1918,
+   "end": 1918,
+   "fromDocument": [
+    "research"
+   ],
+   "happenedAt": {
+    "@id": "kb:place/zvenigorod"
+   },
+   "involves": {
+    "@id": "kb:artwork/rublev-zvenigorod"
+   }
+  },
+  {
+   "@id": "kb:event/loom-2020",
+   "@type": "Event",
+   "name": "Loom reconstruction of the weave",
+   "tag": "historical",
+   "lane": "science",
+   "date": "2020",
+   "start": 2020,
+   "end": 2020,
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "involves": [
+    {
+     "@id": "kb:person/olsen"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/dating.weave_treadle_loom"
+   }
+  },
+  {
+   "@id": "kb:claim/shroud-is-mandylion",
+   "@type": "Claim",
+   "name": "The Shroud and the Image of Edessa are the same cloth",
+   "description": "A published hypothesis, not a scholarly consensus.",
+   "tag": "contested",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:relic/mandylion"
+    },
+    {
+     "@id": "kb:concept/tetradiplon"
+    }
+   ],
+   "proposedBy": {
+    "@id": "kb:person/ian-wilson"
+   }
+  },
+  {
+   "@id": "kb:claim/vignon-correspondence",
+   "@type": "Claim",
+   "name": "Byzantine icons carry the Shroud's facial traits",
+   "description": "Not accepted as settled by mainstream art historians.",
+   "tag": "contested",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:concept/vignon-markings"
+    },
+    {
+     "@id": "kb:artwork/sinai-pantocrator"
+    },
+    {
+     "@id": "kb:artwork/ravenna-pantocrator"
+    },
+    {
+     "@id": "kb:artwork/justinian-ii-solidus"
+    },
+    {
+     "@id": "kb:artwork/pontianus-fresco"
+    },
+    {
+     "@id": "kb:artwork/daphni-pantocrator"
+    },
+    {
+     "@id": "kb:artwork/cefalu-pantocrator"
+    },
+    {
+     "@id": "kb:artwork/deesis-hagia-sophia"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    }
+   ],
+   "proposedBy": {
+    "@id": "kb:person/paul-vignon"
+   }
+  },
+  {
+   "@id": "kb:claim/whanger-145",
+   "@type": "Claim",
+   "name": "145 points of correspondence between the Justinian II solidus and the Shroud face",
+   "tag": "contested",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:artwork/justinian-ii-solidus"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:concept/whanger-overlay"
+    }
+   ],
+   "proposedBy": {
+    "@id": "kb:person/whangers"
+   }
+  },
+  {
+   "@id": "kb:claim/whanger-170",
+   "@type": "Claim",
+   "name": "170 points of congruence between the Sinai Pantocrator and the Shroud face",
+   "tag": "contested",
+   "lane": "byzantine",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:artwork/sinai-pantocrator"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:concept/whanger-overlay"
+    }
+   ],
+   "proposedBy": {
+    "@id": "kb:person/whangers"
+   }
+  },
+  {
+   "@id": "kb:claim/durer-correspondence",
+   "@type": "Claim",
+   "name": "Dürer's Salvator Mundi corresponds closely to the Shroud face",
+   "description": "Made by some Shroud researchers; not peer-reviewed art-historical consensus.",
+   "tag": "contested",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:artwork/durer-salvator-mundi"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/authenticity-timeline",
+   "@type": "Claim",
+   "name": "The Shroud, as the Image of Edessa, shaped icon painting from the 6th century",
+   "tag": "contested",
+   "lane": "legend",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:relic/mandylion"
+    },
+    {
+     "@id": "kb:concept/pantocrator"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/medieval-timeline",
+   "@type": "Claim",
+   "name": "The Shroud is a 13th to 14th century work that borrowed the Byzantine Christ face",
+   "tag": "contested",
+   "lane": "shroud",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:concept/pantocrator"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/pigment-from-copies",
+   "@type": "Claim",
+   "name": "Trace iron oxide on the cloth came from painted copies touched to it",
+   "tag": "hypothesis",
+   "lane": "shroud",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/shroud"
+    },
+    {
+     "@id": "kb:concept/contact-relic-copies"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/summit-damp-mark",
+   "@type": "Claim",
+   "name": "The 1624 copy developed a damp mark at the wound site when touched to the original",
+   "description": "The monastery's own tradition.",
+   "tag": "tradition",
+   "lane": "shroud",
+   "fromDocument": [
+    "research"
+   ],
+   "about": {
+    "@id": "kb:artwork/summit-shroud-copy"
+   }
+  },
+  {
+   "@id": "kb:claim/leonardo-attribution",
+   "@type": "Claim",
+   "name": "The Salvator Mundi is by Leonardo's own hand",
+   "description": "Some scholars think it studio work or a later copy.",
+   "tag": "contested",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:artwork/leonardo-salvator-mundi"
+    },
+    {
+     "@id": "kb:person/leonardo"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/dali-salvator-mundi",
+   "@type": "Claim",
+   "name": "Salvador Dalí painted a Salvator Mundi",
+   "description": "No such painting is known; 'Salvador' and 'Salvator' are the same word.",
+   "tag": "unsupported",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:person/dali"
+    },
+    {
+     "@id": "kb:concept/salvator-mundi"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/warhol-shroud",
+   "@type": "Claim",
+   "name": "Andy Warhol made a work titled after the Shroud",
+   "description": "Could not be verified; his 1986 Last Supper series is the documented link to this tradition.",
+   "tag": "unsupported",
+   "lane": "salvator",
+   "fromDocument": [
+    "research"
+   ],
+   "about": [
+    {
+     "@id": "kb:person/warhol"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/c14-medieval",
+   "@type": "Claim",
+   "name": "The cloth dates to 1260 to 1390",
+   "description": "Three laboratories, 1988. The sampling and homogeneity are disputed; alternatives are considered fringe by mainstream science.",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "supportedBy": {
+    "@id": "kb:ref/damon1989"
+   },
+   "disputedBy": [
+    {
+     "@id": "kb:ref/riani2013"
+    },
+    {
+     "@id": "kb:ref/casabianca2019"
+    },
+    {
+     "@id": "kb:ref/decaro2022"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/dating.c14_1988_ad"
+   }
+  },
+  {
+   "@id": "kb:claim/c14-heterogeneous",
+   "@type": "Claim",
+   "name": "The radiocarbon raw data trend along the sample",
+   "tag": "contested",
+   "lane": "science",
+   "fromDocument": [
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": [
+    {
+     "@id": "kb:ref/riani2013"
+    },
+    {
+     "@id": "kb:ref/casabianca2019"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/dating.c14_heterogeneity"
+   }
+  },
+  {
+   "@id": "kb:claim/fragments-consistent",
+   "@type": "Claim",
+   "name": "The 1988 fragments are consistent with the main cloth",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "v3note"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": {
+    "@id": "kb:ref/freerwaters2026"
+   },
+   "recordedAs": [
+    {
+     "@id": "kb:constant/dating.c14_fragments_2026"
+    },
+    {
+     "@id": "kb:constant/weave.c14_fragment_counts_per_cm"
+    }
+   ]
+  },
+  {
+   "@id": "kb:claim/mccrone-pigment",
+   "@type": "Claim",
+   "name": "The image is red ochre and vermilion in a collagen binder",
+   "tag": "contested",
+   "lane": "science",
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": [
+    {
+     "@id": "kb:person/mccrone"
+    },
+    {
+     "@id": "kb:ref/mccrone1996"
+    }
+   ],
+   "disputedBy": [
+    {
+     "@id": "kb:ref/sturp1981"
+    },
+    {
+     "@id": "kb:ref/heller1981"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/chemistry.mccrone_pigment"
+   }
+  },
+  {
+   "@id": "kb:claim/no-pigment",
+   "@type": "Claim",
+   "name": "The body image is oxidized, dehydrated cellulose, not pigment",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "v3",
+    "research"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": {
+    "@id": "kb:org/sturp"
+   },
+   "supportedBy": [
+    {
+     "@id": "kb:ref/sturp1981"
+    },
+    {
+     "@id": "kb:ref/fanti2010"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/chemistry.no_pigment_image"
+   }
+  },
+  {
+   "@id": "kb:claim/moraes-low-relief",
+   "@type": "Claim",
+   "name": "The image's distortions match cloth draped over a low-relief sculpture",
+   "tag": "contested",
+   "lane": "science",
+   "fromDocument": [
+    "research",
+    "v3note"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": [
+    {
+     "@id": "kb:person/moraes"
+    },
+    {
+     "@id": "kb:ref/moraes2025"
+    }
+   ],
+   "disputedBy": {
+    "@id": "kb:ref/casabianca2026"
+   },
+   "answeredBy": {
+    "@id": "kb:ref/moraes2026"
+   }
+  },
+  {
+   "@id": "kb:claim/treadle-loom",
+   "@type": "Claim",
+   "name": "The weave can be reproduced only on a treadle loom",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "research",
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": {
+    "@id": "kb:person/olsen"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/dating.weave_treadle_loom"
+   }
+  },
+  {
+   "@id": "kb:claim/image-encodes-distance",
+   "@type": "Claim",
+   "name": "Image intensity encodes the vertical cloth-body distance",
+   "tag": "inferred",
+   "lane": "science",
+   "fromDocument": [
+    "v3",
+    "prd1"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "supportedBy": {
+    "@id": "kb:ref/jje1984"
+   },
+   "recordedAs": [
+    {
+     "@id": "kb:constant/distance.vertical_collimation"
+    },
+    {
+     "@id": "kb:constant/distance.linear_model"
+    }
+   ],
+   "examinedBy": {
+    "@id": "kb:ref/ercoline1982"
+   }
+  },
+  {
+   "@id": "kb:claim/not-visible-close",
+   "@type": "Claim",
+   "name": "The image is not discernible closer than about 1.8 m",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "v3",
+    "plan"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "supportedBy": {
+    "@id": "kb:ref/jje1984"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/perception.min_distance_m"
+   }
+  },
+  {
+   "@id": "kb:claim/blood-before-image",
+   "@type": "Claim",
+   "name": "The blood was on the cloth before the image",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "supportedBy": [
+    {
+     "@id": "kb:ref/heller1981"
+    },
+    {
+     "@id": "kb:ref/kearse2026"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/blood.ordering"
+   }
+  },
+  {
+   "@id": "kb:claim/double-superficiality",
+   "@type": "Claim",
+   "name": "Face and hands appear faintly on the reverse side",
+   "tag": "measured",
+   "lane": "science",
+   "fromDocument": [
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "supportedBy": {
+    "@id": "kb:ref/fanti2004"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/image.double_superficiality"
+   }
+  },
+  {
+   "@id": "kb:claim/sudarium-match",
+   "@type": "Claim",
+   "name": "The Sudarium's stains are consistent with the Shroud's face",
+   "description": "Photographic overlay and forensic comparison; the honest verb is 'consistent with'.",
+   "tag": "contested",
+   "lane": "science",
+   "fromDocument": [
+    "v3"
+   ],
+   "about": [
+    {
+     "@id": "kb:relic/sudarium"
+    },
+    {
+     "@id": "kb:relic/shroud"
+    }
+   ],
+   "supportedBy": [
+    {
+     "@id": "kb:ref/whanger1985"
+    },
+    {
+     "@id": "kb:ref/heras1998"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/sudarium.xray_micrography"
+   }
+  },
+  {
+   "@id": "kb:claim/darcis-painted",
+   "@type": "Claim",
+   "name": "A bishop wrote in 1389 that the cloth was painted by a confessed artist",
+   "tag": "historical",
+   "lane": "shroud",
+   "fromDocument": [
+    "research"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": {
+    "@id": "kb:person/darcis"
+   },
+   "recordedAs": {
+    "@id": "kb:constant/history.darcis_memorandum"
+   }
+  },
+  {
+   "@id": "kb:claim/pollen-coins",
+   "@type": "Claim",
+   "name": "Pollen, plant images and coins identify the cloth's history",
+   "tag": "contested",
+   "lane": "science",
+   "fromDocument": [
+    "v3"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   },
+   "proposedBy": [
+    {
+     "@id": "kb:ref/frei1973"
+    },
+    {
+     "@id": "kb:ref/filas1982"
+    },
+    {
+     "@id": "kb:ref/danin1999"
+    },
+    {
+     "@id": "kb:ref/barcaccia2015"
+    }
+   ],
+   "recordedAs": {
+    "@id": "kb:constant/evidence.pollen_coins"
+   }
+  },
+  {
+   "@id": "kb:dataset/constants",
+   "@type": "Dataset",
+   "name": "Science constants registry",
+   "description": "Every number with citation and epistemic tag.",
+   "tag": "derived",
+   "path": "data/constants.json",
+   "fromDocument": [
+    "package"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/corrections",
+   "@type": "Dataset",
+   "name": "Corrections ledger",
+   "description": "Contradictions resolved, citations fixed, claims retracted.",
+   "tag": "derived",
+   "path": "data/corrections.json",
+   "fromDocument": [
+    "package"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/bibliography",
+   "@type": "Dataset",
+   "name": "Bibliography",
+   "description": "CSL-JSON and BibTeX.",
+   "tag": "derived",
+   "path": "data/bibliography/references.json",
+   "fromDocument": [
+    "package"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/spectral-lut",
+   "@type": "Dataset",
+   "name": "Spectral albedo LUT",
+   "description": "JJE 1984 model under seven illuminants.",
+   "tag": "derived",
+   "path": "data/spectral/shroud_spectral_lut.json",
+   "fromDocument": [
+    "package"
+   ],
+   "usesData": {
+    "@id": "kb:ref/jje1984"
+   },
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/weave",
+   "@type": "Dataset",
+   "name": "Weave rule and tile",
+   "description": "Herringbone rule from Vial's counts.",
+   "tag": "derived",
+   "path": "data/weave.json",
+   "fromDocument": [
+    "package"
+   ],
+   "usesData": {
+    "@id": "kb:ref/vial1989"
+   },
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/synthetic-h",
+   "@type": "Dataset",
+   "name": "Synthetic image field h",
+   "description": "License-free forward model; aesthetic stand-in.",
+   "tag": "aesthetic",
+   "path": "maps/synthetic/h_16bit.png",
+   "fromDocument": [
+    "package"
+   ],
+   "usesData": {
+    "@id": "kb:constant/distance.frontal_range_m"
+   },
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/perception",
+   "@type": "Dataset",
+   "name": "Perceptual dissolve model",
+   "description": "Why the image vanishes up close.",
+   "tag": "derived",
+   "path": "data/perception.json",
+   "fromDocument": [
+    "package"
+   ],
+   "usesData": [
+    {
+     "@id": "kb:ref/mannos1974"
+    },
+    {
+     "@id": "kb:ref/peli1990"
+    },
+    {
+     "@id": "kb:ref/jje1984"
+    }
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:dataset/graph",
+   "@type": "Dataset",
+   "name": "This knowledge graph",
+   "tag": "derived",
+   "path": "graph/shroud.jsonld",
+   "fromDocument": [
+    "package"
+   ],
+   "about": {
+    "@id": "kb:relic/shroud"
+   }
+  },
+  {
+   "@id": "kb:doc/plan",
+   "@type": "Document",
+   "name": "Shroud Twin Build Plan, 2026-09-30 (canonical reconciliation; precedence 1)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/v3",
+   "@type": "Document",
+   "name": "Pincer v3 review and directions, 2026-09-30 (shroud_pincer_v3_review_and_directions.md; precedence 2)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/v3note",
+   "@type": "Document",
+   "name": "HagopJay's v3 corrections note, 2026-09-30 (00_v3_corrections_and_directions.md; precedence 2)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/prd1",
+   "@type": "Document",
+   "name": "Unity URP PRD v2.0 part 1, foundation (precedence 3)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/prd2",
+   "@type": "Document",
+   "name": "Unity URP PRD v2.0 part 2, render modes (precedence 3)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/prd3",
+   "@type": "Document",
+   "name": "Unity URP PRD v2.0 part 3, resurrection and audio (precedence 3)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/web",
+   "@type": "Document",
+   "name": "Shader of the Shroud v3 WebGL2 page (precedence 4)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/port",
+   "@type": "Document",
+   "name": "Shader of the Shroud Unity 6.3 port README (precedence 4)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/poc",
+   "@type": "Document",
+   "name": "Three.js digital-twin proof of concept (precedence 5; lessons only)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/research",
+   "@type": "Document",
+   "name": "Face of Jesus art-history research notes (2026-09-30)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:doc/package",
+   "@type": "Document",
+   "name": "This package (computed by tools/derive.py from the entries it cites)",
+   "tag": "convention"
+  },
+  {
+   "@id": "kb:ref/jje1984",
+   "@type": "Study",
+   "name": "Correlation of image intensity on the Turin Shroud with the 3-D structure of a human body shape",
+   "tag": "historical",
+   "note": "Eq. 1 spectral model and constants; 3.7 cm intensity-distance range, r^2 0.60 for 13 points; image not discernible closer than about 180 cm; cloth thickness 345 um; pressure independence.",
+   "year": 1984,
+   "container": "Applied Optics",
+   "volume": "23",
+   "issue": "14",
+   "page": "2244-2270",
+   "doi": "10.1364/AO.23.002244",
+   "url": "https://doi.org/10.1364/AO.23.002244",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/jackson-j-p"
+    },
+    {
+     "@id": "kb:person/jumper-e-j"
+    },
+    {
+     "@id": "kb:person/ercoline-w-r"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/jackson-j-p",
+   "@type": "Person",
+   "name": "Jackson, J. P.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Jackson",
+   "initials": "J. P."
+  },
+  {
+   "@id": "kb:person/jumper-e-j",
+   "@type": "Person",
+   "name": "Jumper, E. J.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Jumper",
+   "initials": "E. J."
+  },
+  {
+   "@id": "kb:person/ercoline-w-r",
+   "@type": "Person",
+   "name": "Ercoline, W. R.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Ercoline",
+   "initials": "W. R."
+  },
+  {
+   "@id": "kb:ref/fazio2008",
+   "@type": "Study",
+   "name": "Fazio and Mandaglio 2008",
+   "tag": "historical",
+   "note": "Dorsal intensity-distance slope steeper than frontal; the dorsal range is called arbitrary. Title not recorded in the project sources; see DOI.",
+   "year": 2008,
+   "container": "Atti della Accademia Peloritana dei Pericolanti",
+   "volume": "86",
+   "issue": "2",
+   "doi": "10.1478/C1A0802005",
+   "url": "https://doi.org/10.1478/C1A0802005",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/fazio"
+    },
+    {
+     "@id": "kb:person/mandaglio"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/fazio",
+   "@type": "Person",
+   "name": "Fazio",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Fazio"
+  },
+  {
+   "@id": "kb:person/mandaglio",
+   "@type": "Person",
+   "name": "Mandaglio",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Mandaglio"
+  },
+  {
+   "@id": "kb:ref/vial1989",
+   "@type": "Study",
+   "name": "Technical study of the Turin Shroud (English translation)",
+   "tag": "historical",
+   "note": "Main cloth 38.3 warp / 25.4 weft per cm; side strip 38.1 / 26.2; 3/1 herringbone; repeat 41 warp threads one way, 39 back; selvedges along both long edges. Title here is descriptive; see URL.",
+   "year": 1989,
+   "container": "Shroud Spectrum International",
+   "issue": "38/39",
+   "url": "https://www.shroud.com/pdfs/ssi3839part4.pdf",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/vial-g"
+   }
+  },
+  {
+   "@id": "kb:person/vial-g",
+   "@type": "Person",
+   "name": "Vial, G.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Vial",
+   "initials": "G."
+  },
+  {
+   "@id": "kb:ref/raes1974",
+   "@type": "Study",
+   "name": "Analysis report on the Raes sample (English translation)",
+   "tag": "historical",
+   "note": "Source of the 38.6 x 25.7 per cm counts that the PRD misattributed to Vial. Examination 1973-74. Title here is descriptive; see URL.",
+   "year": 1974,
+   "container": "Shroud Spectrum International",
+   "issue": "38/39",
+   "url": "https://www.shroud.com/pdfs/ssi3839part3.pdf",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/raes"
+   }
+  },
+  {
+   "@id": "kb:person/raes",
+   "@type": "Person",
+   "name": "Raes",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Raes"
+  },
+  {
+   "@id": "kb:ref/linteum2002",
+   "@type": "Study",
+   "name": "2002 restoration measurements of the Turin Shroud (Linteum report)",
+   "tag": "historical",
+   "note": "Post-2002 size 4.415 x 1.137 m. Author not recorded in the project sources.",
+   "year": 2002,
+   "url": "https://www.shroud.com/pdfs/n58part7.pdf",
+   "verified": "build-plan-2026-09-30"
+  },
+  {
+   "@id": "kb:ref/freerwaters2026",
+   "@type": "Study",
+   "name": "Freer-Waters and Jull 2026",
+   "tag": "historical",
+   "note": "Re-examination of the 1988 radiocarbon fragments; its 38 x 25-26 per cm is quoted from older work, its own count is 37-41 x 26-29. Fragments consistent with the main cloth. Title not recorded in the project sources.",
+   "year": 2026,
+   "container": "npj Heritage Science",
+   "volume": "14",
+   "page": "263",
+   "doi": "10.1038/s40494-026-02530-7",
+   "url": "https://doi.org/10.1038/s40494-026-02530-7",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/freer-waters"
+    },
+    {
+     "@id": "kb:person/jull"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/freer-waters",
+   "@type": "Person",
+   "name": "Freer-Waters",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Freer-Waters"
+  },
+  {
+   "@id": "kb:person/jull",
+   "@type": "Person",
+   "name": "Jull",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Jull"
+  },
+  {
+   "@id": "kb:ref/fanti2004",
+   "@type": "Study",
+   "name": "The double superficiality of the frontal image of the Turin Shroud",
+   "tag": "historical",
+   "note": "Frontal face and hands faintly present on the reverse side; dorsal image not.",
+   "year": 2004,
+   "container": "Journal of Optics A: Pure and Applied Optics",
+   "volume": "6",
+   "page": "491",
+   "doi": "10.1088/1464-4258/6/6/001",
+   "url": "https://doi.org/10.1088/1464-4258/6/6/001",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/fanti"
+    },
+    {
+     "@id": "kb:person/maggiolo"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/fanti",
+   "@type": "Person",
+   "name": "Fanti",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Fanti"
+  },
+  {
+   "@id": "kb:person/maggiolo",
+   "@type": "Person",
+   "name": "Maggiolo",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Maggiolo"
+  },
+  {
+   "@id": "kb:ref/fanti2010",
+   "@type": "Study",
+   "name": "Fanti et al. 2010",
+   "tag": "historical",
+   "note": "Image coloration about 200 nm thick, confined to the primary cell wall of the outermost fibrils; yarn diameter 0.25-0.30 mm.",
+   "year": 2010,
+   "container": "Journal of Imaging Science and Technology",
+   "volume": "54",
+   "issue": "4",
+   "page": "040201",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/fanti-g"
+    },
+    {
+     "@id": "kb:person/botella-j-a"
+    },
+    {
+     "@id": "kb:person/di-lazzaro-p"
+    },
+    {
+     "@id": "kb:person/heimburger-t"
+    },
+    {
+     "@id": "kb:person/schneider-r"
+    },
+    {
+     "@id": "kb:person/svensson-n"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/fanti-g",
+   "@type": "Person",
+   "name": "Fanti, G.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Fanti",
+   "initials": "G."
+  },
+  {
+   "@id": "kb:person/botella-j-a",
+   "@type": "Person",
+   "name": "Botella, J. A.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Botella",
+   "initials": "J. A."
+  },
+  {
+   "@id": "kb:person/di-lazzaro-p",
+   "@type": "Person",
+   "name": "Di Lazzaro, P.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Di Lazzaro",
+   "initials": "P."
+  },
+  {
+   "@id": "kb:person/heimburger-t",
+   "@type": "Person",
+   "name": "Heimburger, T.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Heimburger",
+   "initials": "T."
+  },
+  {
+   "@id": "kb:person/schneider-r",
+   "@type": "Person",
+   "name": "Schneider, R.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Schneider",
+   "initials": "R."
+  },
+  {
+   "@id": "kb:person/svensson-n",
+   "@type": "Person",
+   "name": "Svensson, N.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Svensson",
+   "initials": "N."
+  },
+  {
+   "@id": "kb:ref/dilazzaro2012",
+   "@type": "Study",
+   "name": "Di Lazzaro et al. 2012",
+   "tag": "historical",
+   "note": "Table 1: Shroud-like coloration from 200-600 ArF (193 nm) pulses of 0.07-0.13 J/cm2 each, 6-13 MW/cm2 per pulse, totals about 25-40 J/cm2; 73 J/cm2 ablated the linen.",
+   "year": 2012,
+   "container": "Applied Optics",
+   "volume": "51",
+   "issue": "36",
+   "page": "8567",
+   "doi": "10.1364/AO.51.008567",
+   "url": "https://doi.org/10.1364/AO.51.008567",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/di-lazzaro-p"
+    },
+    {
+     "@id": "kb:person/murra-d"
+    },
+    {
+     "@id": "kb:person/santoni-a"
+    },
+    {
+     "@id": "kb:person/nichelatti-e"
+    },
+    {
+     "@id": "kb:person/baldacchini-g"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/murra-d",
+   "@type": "Person",
+   "name": "Murra, D.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Murra",
+   "initials": "D."
+  },
+  {
+   "@id": "kb:person/santoni-a",
+   "@type": "Person",
+   "name": "Santoni, A.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Santoni",
+   "initials": "A."
+  },
+  {
+   "@id": "kb:person/nichelatti-e",
+   "@type": "Person",
+   "name": "Nichelatti, E.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Nichelatti",
+   "initials": "E."
+  },
+  {
+   "@id": "kb:person/baldacchini-g",
+   "@type": "Person",
+   "name": "Baldacchini, G.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Baldacchini",
+   "initials": "G."
+  },
+  {
+   "@id": "kb:ref/enea2011",
+   "@type": "Study",
+   "name": "ENEA technical report RT/2011/14",
+   "tag": "historical",
+   "note": "Source of the PRD's whole-body single-pulse power estimate (34 TW); an estimate, not a measurement.",
+   "year": 2011,
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/di-lazzaro-p"
+    },
+    {
+     "@id": "kb:person/murra-d"
+    },
+    {
+     "@id": "kb:person/santoni-a"
+    },
+    {
+     "@id": "kb:person/nichelatti-e"
+    },
+    {
+     "@id": "kb:person/baldacchini-g"
+    }
+   ]
+  },
+  {
+   "@id": "kb:ref/gilbert1980",
+   "@type": "Study",
+   "name": "Gilbert and Gilbert 1980",
+   "tag": "historical",
+   "note": "1978 reflectance and fluorescence spectra; dense-blood curve for a future blood Y.",
+   "year": 1980,
+   "container": "Applied Optics",
+   "volume": "19",
+   "issue": "12",
+   "verified": "cited-in-v3",
+   "author": [
+    {
+     "@id": "kb:person/gilbert"
+    },
+    {
+     "@id": "kb:person/gilbert"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/gilbert",
+   "@type": "Person",
+   "name": "Gilbert",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Gilbert"
+  },
+  {
+   "@id": "kb:ref/pellicori1980",
+   "@type": "Study",
+   "name": "Pellicori 1980",
+   "tag": "historical",
+   "note": "1978 spectral measurements the JJE model was fitted to.",
+   "year": 1980,
+   "container": "Applied Optics",
+   "volume": "19",
+   "issue": "12",
+   "verified": "cited-in-v3",
+   "author": {
+    "@id": "kb:person/pellicori-s-f"
+   }
+  },
+  {
+   "@id": "kb:person/pellicori-s-f",
+   "@type": "Person",
+   "name": "Pellicori, S. F.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Pellicori",
+   "initials": "S. F."
+  },
+  {
+   "@id": "kb:ref/schwalbe2023",
+   "@type": "Study",
+   "name": "Schwalbe and Pellicori 2023",
+   "tag": "historical",
+   "note": "CIE xyY reduction of the 1978 spectrophotometry: image and background clusters overlap; blood separated; scorches on a continuum.",
+   "year": 2023,
+   "container": "International Journal of Archaeology",
+   "volume": "11",
+   "issue": "1",
+   "doi": "10.11648/j.ija.20231101.11",
+   "url": "https://doi.org/10.11648/j.ija.20231101.11",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/schwalbe"
+    },
+    {
+     "@id": "kb:person/pellicori-s-f"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/schwalbe",
+   "@type": "Person",
+   "name": "Schwalbe",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Schwalbe"
+  },
+  {
+   "@id": "kb:ref/pellicori2025",
+   "@type": "Study",
+   "name": "Pellicori 2025",
+   "tag": "historical",
+   "note": "Photoelectric UV fluorimetry revisited; background, non-image and image areas behave differently.",
+   "year": 2025,
+   "container": "International Journal of Archaeology",
+   "volume": "13",
+   "issue": "1",
+   "page": "63-68",
+   "doi": "10.11648/j.ija.20251301.16",
+   "url": "https://doi.org/10.11648/j.ija.20251301.16",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/pellicori-s-f"
+   }
+  },
+  {
+   "@id": "kb:ref/jaworski2025",
+   "@type": "Study",
+   "name": "Jaworski 2025",
+   "tag": "historical",
+   "note": "Verified to exist by the build plan; its subject is not recorded in the project sources.",
+   "year": 2025,
+   "container": "International Journal of Archaeology",
+   "volume": "13",
+   "issue": "2",
+   "doi": "10.11648/j.ija.20251302.15",
+   "url": "https://doi.org/10.11648/j.ija.20251302.15",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/jaworski"
+   }
+  },
+  {
+   "@id": "kb:person/jaworski",
+   "@type": "Person",
+   "name": "Jaworski",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Jaworski"
+  },
+  {
+   "@id": "kb:ref/miller1981",
+   "@type": "Study",
+   "name": "Ultraviolet fluorescence photography of the Shroud of Turin",
+   "tag": "historical",
+   "note": "Background fluoresces; image quenches; dried blood non-fluorescent; serum margins fluoresce; light scorches fluoresce reddish.",
+   "year": 1981,
+   "container": "Journal of Biological Photography",
+   "volume": "49",
+   "issue": "3",
+   "page": "71-85",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/miller-v-d"
+    },
+    {
+     "@id": "kb:person/pellicori-s-f"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/miller-v-d",
+   "@type": "Person",
+   "name": "Miller, V. D.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Miller",
+   "initials": "V. D."
+  },
+  {
+   "@id": "kb:ref/kearse2026",
+   "@type": "Study",
+   "name": "Kearse 2026",
+   "tag": "historical",
+   "note": "No image under blood reproduced artificially on acid-treated linen: ordering is fact, exclusivity is not proof.",
+   "year": 2026,
+   "container": "International Journal of Archaeology",
+   "volume": "14",
+   "issue": "2",
+   "page": "16-26",
+   "doi": "10.11648/j.ija.20261402.11",
+   "url": "https://doi.org/10.11648/j.ija.20261402.11",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/kearse"
+   }
+  },
+  {
+   "@id": "kb:person/kearse",
+   "@type": "Person",
+   "name": "Kearse",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Kearse"
+  },
+  {
+   "@id": "kb:ref/decaro2022",
+   "@type": "Study",
+   "name": "De Caro et al. 2022",
+   "tag": "historical",
+   "note": "WAXS ageing parameter AP = 0.60 +/- 0.02; age interpretation disputed.",
+   "year": 2022,
+   "container": "Heritage",
+   "volume": "5",
+   "issue": "2",
+   "page": "860-870",
+   "verified": "cited-in-v3",
+   "author": {
+    "@id": "kb:person/de-caro-l"
+   }
+  },
+  {
+   "@id": "kb:person/de-caro-l",
+   "@type": "Person",
+   "name": "De Caro, L.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "De Caro",
+   "initials": "L."
+  },
+  {
+   "@id": "kb:ref/damon1989",
+   "@type": "Study",
+   "name": "Radiocarbon dating of the Shroud of Turin",
+   "tag": "historical",
+   "note": "Oxford, Zurich and Arizona: 1260-1390 AD at 95 % confidence.",
+   "year": 1989,
+   "container": "Nature",
+   "volume": "337",
+   "page": "611-615",
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/damon-p-e"
+   }
+  },
+  {
+   "@id": "kb:person/damon-p-e",
+   "@type": "Person",
+   "name": "Damon, P. E.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Damon",
+   "initials": "P. E."
+  },
+  {
+   "@id": "kb:ref/riani2013",
+   "@type": "Study",
+   "name": "Riani et al. 2013",
+   "tag": "historical",
+   "note": "Corrected citation: the PRD's 23:339 is wrong. Heterogeneity in the 1988 raw data.",
+   "year": 2013,
+   "container": "Statistics and Computing",
+   "volume": "23",
+   "issue": "4",
+   "page": "551-561",
+   "doi": "10.1007/s11222-012-9329-5",
+   "url": "https://doi.org/10.1007/s11222-012-9329-5",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/riani-m"
+    },
+    {
+     "@id": "kb:person/atkinson-a-c"
+    },
+    {
+     "@id": "kb:person/fanti-g"
+    },
+    {
+     "@id": "kb:person/crosilla-f"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/riani-m",
+   "@type": "Person",
+   "name": "Riani, M.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Riani",
+   "initials": "M."
+  },
+  {
+   "@id": "kb:person/atkinson-a-c",
+   "@type": "Person",
+   "name": "Atkinson, A. C.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Atkinson",
+   "initials": "A. C."
+  },
+  {
+   "@id": "kb:person/crosilla-f",
+   "@type": "Person",
+   "name": "Crosilla, F.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Crosilla",
+   "initials": "F."
+  },
+  {
+   "@id": "kb:ref/casabianca2019",
+   "@type": "Study",
+   "name": "Casabianca et al. 2019",
+   "tag": "historical",
+   "note": "Raw-data re-analysis; homogeneity test fails.",
+   "year": 2019,
+   "container": "Archaeometry",
+   "volume": "61",
+   "issue": "5",
+   "page": "1223",
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/casabianca-t"
+   }
+  },
+  {
+   "@id": "kb:person/casabianca-t",
+   "@type": "Person",
+   "name": "Casabianca, T.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Casabianca",
+   "initials": "T."
+  },
+  {
+   "@id": "kb:ref/moraes2025",
+   "@type": "Study",
+   "name": "Moraes 2025",
+   "tag": "historical",
+   "note": "Open-source 3D draping: a low-relief source matches the image contour better than a full body.",
+   "year": 2025,
+   "container": "Archaeometry",
+   "doi": "10.1111/arcm.70030",
+   "url": "https://doi.org/10.1111/arcm.70030",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/moraes"
+   }
+  },
+  {
+   "@id": "kb:ref/casabianca2026",
+   "@type": "Study",
+   "name": "Casabianca et al. 2026",
+   "tag": "historical",
+   "note": "Commentary disputing Moraes 2025.",
+   "year": 2026,
+   "container": "Archaeometry",
+   "volume": "68",
+   "issue": "4",
+   "doi": "10.1111/arcm.70109",
+   "url": "https://doi.org/10.1111/arcm.70109",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/casabianca"
+    },
+    {
+     "@id": "kb:person/marinelli"
+    },
+    {
+     "@id": "kb:person/piana"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/casabianca",
+   "@type": "Person",
+   "name": "Casabianca",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Casabianca"
+  },
+  {
+   "@id": "kb:person/marinelli",
+   "@type": "Person",
+   "name": "Marinelli",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Marinelli"
+  },
+  {
+   "@id": "kb:person/piana",
+   "@type": "Person",
+   "name": "Piana",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Piana"
+  },
+  {
+   "@id": "kb:ref/moraes2026",
+   "@type": "Study",
+   "name": "Moraes 2026",
+   "tag": "historical",
+   "note": "Reply to the commentary.",
+   "year": 2026,
+   "container": "Archaeometry",
+   "volume": "68",
+   "issue": "4",
+   "doi": "10.1111/arcm.70112",
+   "url": "https://doi.org/10.1111/arcm.70112",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/moraes"
+   }
+  },
+  {
+   "@id": "kb:ref/barcaccia2026",
+   "@type": "Study",
+   "name": "Barcaccia et al. 2026",
+   "tag": "historical",
+   "note": "First PCR-free sequencing of the 1978 samples (linen filaments, vacuum dust and a slide). Cannot date the cloth. Preprint bioRxiv 2026.03.19.712852 (the v3 review cited the preprint).",
+   "year": 2026,
+   "container": "Scientific Reports",
+   "volume": "16",
+   "page": "21206",
+   "doi": "10.1038/s41598-026-60684-7",
+   "url": "https://doi.org/10.1038/s41598-026-60684-7",
+   "verified": "build-plan-2026-09-30",
+   "author": {
+    "@id": "kb:person/barcaccia"
+   }
+  },
+  {
+   "@id": "kb:person/barcaccia",
+   "@type": "Person",
+   "name": "Barcaccia",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Barcaccia"
+  },
+  {
+   "@id": "kb:ref/sagredo2026",
+   "@type": "Study",
+   "name": "Sagredo et al. 2026",
+   "tag": "historical",
+   "note": "Inverse rendering of translucent fabric; its abstract does not mention Mitsuba 3 (the v3 review assumed it).",
+   "year": 2026,
+   "container": "IEEE Transactions on Visualization and Computer Graphics",
+   "doi": "10.1109/TVCG.2026.3676259",
+   "url": "https://doi.org/10.1109/TVCG.2026.3676259",
+   "verified": "build-plan-2026-09-30",
+   "author": [
+    {
+     "@id": "kb:person/sagredo"
+    },
+    {
+     "@id": "kb:person/fabre"
+    },
+    {
+     "@id": "kb:person/lopez-moreno"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/sagredo",
+   "@type": "Person",
+   "name": "Sagredo",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Sagredo"
+  },
+  {
+   "@id": "kb:person/fabre",
+   "@type": "Person",
+   "name": "Fabre",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Fabre"
+  },
+  {
+   "@id": "kb:person/lopez-moreno",
+   "@type": "Person",
+   "name": "López-Moreno",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "López-Moreno"
+  },
+  {
+   "@id": "kb:ref/heller1980",
+   "@type": "Study",
+   "name": "Blood on the Shroud of Turin",
+   "tag": "historical",
+   "year": 1980,
+   "container": "Applied Optics",
+   "volume": "19",
+   "issue": "16",
+   "page": "2742",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/heller-j-h"
+    },
+    {
+     "@id": "kb:person/adler-a-d"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/heller-j-h",
+   "@type": "Person",
+   "name": "Heller, J. H.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Heller",
+   "initials": "J. H."
+  },
+  {
+   "@id": "kb:person/adler-a-d",
+   "@type": "Person",
+   "name": "Adler, A. D.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Adler",
+   "initials": "A. D."
+  },
+  {
+   "@id": "kb:ref/heller1981",
+   "@type": "Study",
+   "name": "A chemical investigation of the Shroud of Turin",
+   "tag": "historical",
+   "note": "Hemoglobin/porphyrin, bilirubin, albumin; no image under blood.",
+   "year": 1981,
+   "container": "Canadian Society of Forensic Science Journal",
+   "volume": "14",
+   "issue": "3",
+   "page": "81",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/heller-j-h"
+    },
+    {
+     "@id": "kb:person/adler-a-d"
+    }
+   ]
+  },
+  {
+   "@id": "kb:ref/baimabollone1982",
+   "@type": "Study",
+   "name": "Baima Bollone 1982",
+   "tag": "historical",
+   "note": "AB blood typing; degraded samples can false-type AB.",
+   "year": 1982,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/baima-bollone-p-l"
+   }
+  },
+  {
+   "@id": "kb:person/baima-bollone-p-l",
+   "@type": "Person",
+   "name": "Baima Bollone, P. L.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Baima Bollone",
+   "initials": "P. L."
+  },
+  {
+   "@id": "kb:ref/kohlbeck1986",
+   "@type": "Study",
+   "name": "Kohlbeck and Levi-Setti 1986",
+   "tag": "historical",
+   "note": "Travertine aragonite (limestone) on the cloth.",
+   "year": 1986,
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/kohlbeck"
+    },
+    {
+     "@id": "kb:person/levi-setti"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/kohlbeck",
+   "@type": "Person",
+   "name": "Kohlbeck",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Kohlbeck"
+  },
+  {
+   "@id": "kb:person/levi-setti",
+   "@type": "Person",
+   "name": "Levi-Setti",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Levi-Setti"
+  },
+  {
+   "@id": "kb:ref/whanger1985",
+   "@type": "Study",
+   "name": "Whanger et al. 1985",
+   "tag": "historical",
+   "note": "Polarized image overlay technique (PIOT).",
+   "year": 1985,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/whangers"
+   }
+  },
+  {
+   "@id": "kb:ref/heras1998",
+   "@type": "Study",
+   "name": "Heras 1998",
+   "tag": "historical",
+   "note": "Sudarium of Oviedo cross-reference (EDICES).",
+   "year": 1998,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/heras"
+   }
+  },
+  {
+   "@id": "kb:person/heras",
+   "@type": "Person",
+   "name": "Heras",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Heras"
+  },
+  {
+   "@id": "kb:ref/frei1973",
+   "@type": "Study",
+   "name": "Frei 1973",
+   "tag": "historical",
+   "note": "Pollen claims (contested).",
+   "year": 1973,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/frei"
+   }
+  },
+  {
+   "@id": "kb:person/frei",
+   "@type": "Person",
+   "name": "Frei",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Frei"
+  },
+  {
+   "@id": "kb:ref/filas1982",
+   "@type": "Study",
+   "name": "Filas 1982",
+   "tag": "historical",
+   "note": "Coin-over-eye claims (contested).",
+   "year": 1982,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/filas"
+   }
+  },
+  {
+   "@id": "kb:person/filas",
+   "@type": "Person",
+   "name": "Filas",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Filas"
+  },
+  {
+   "@id": "kb:ref/danin1999",
+   "@type": "Study",
+   "name": "Danin 1999",
+   "tag": "historical",
+   "note": "Plant-image claims (contested).",
+   "year": 1999,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/danin"
+   }
+  },
+  {
+   "@id": "kb:person/danin",
+   "@type": "Person",
+   "name": "Danin",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Danin"
+  },
+  {
+   "@id": "kb:ref/barcaccia2015",
+   "@type": "Study",
+   "name": "Barcaccia et al. 2015",
+   "tag": "historical",
+   "note": "Earlier DNA survey of dust; counter-evidence to single-origin pollen narratives.",
+   "year": 2015,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:person/barcaccia"
+   }
+  },
+  {
+   "@id": "kb:ref/sturp1981",
+   "@type": "Study",
+   "name": "STURP summary of findings",
+   "tag": "historical",
+   "note": "Oxidized cellulose, no pigment forming the body image, superficial coloration.",
+   "year": 1981,
+   "verified": "cited-in-prd-v2",
+   "author": {
+    "@id": "kb:org/sturp"
+   }
+  },
+  {
+   "@id": "kb:ref/cifra2014",
+   "@type": "Study",
+   "name": "Cifra and Pospíšil 2014",
+   "tag": "historical",
+   "note": "Ultra-weak photon emission 10-1000 photons/cm2/s, 350-1300 nm.",
+   "year": 2014,
+   "container": "Journal of Photochemistry and Photobiology B",
+   "volume": "139",
+   "page": "2",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/cifra-m"
+    },
+    {
+     "@id": "kb:person/pospisil-p"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/cifra-m",
+   "@type": "Person",
+   "name": "Cifra, M.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Cifra",
+   "initials": "M."
+  },
+  {
+   "@id": "kb:person/pospisil-p",
+   "@type": "Person",
+   "name": "Pospíšil, P.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Pospíšil",
+   "initials": "P."
+  },
+  {
+   "@id": "kb:ref/lehrer2014",
+   "@type": "Study",
+   "name": "Lehrer and Gevirtz 2014",
+   "tag": "historical",
+   "note": "Resonance breathing near 0.1 Hz (Unity audio only).",
+   "year": 2014,
+   "container": "Frontiers in Psychology",
+   "volume": "5",
+   "page": "756",
+   "verified": "cited-in-prd-v2",
+   "author": [
+    {
+     "@id": "kb:person/lehrer-p"
+    },
+    {
+     "@id": "kb:person/gevirtz-r"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/lehrer-p",
+   "@type": "Person",
+   "name": "Lehrer, P.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Lehrer",
+   "initials": "P."
+  },
+  {
+   "@id": "kb:person/gevirtz-r",
+   "@type": "Person",
+   "name": "Gevirtz, R.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Gevirtz",
+   "initials": "R."
+  },
+  {
+   "@id": "kb:ref/devan1982",
+   "@type": "Study",
+   "name": "Quantitative photography of the Shroud of Turin",
+   "tag": "historical",
+   "note": "Lighting geometry and film characteristic curves for the 1978 photographs.",
+   "year": 1982,
+   "verified": "cited-in-v3",
+   "author": [
+    {
+     "@id": "kb:person/devan"
+    },
+    {
+     "@id": "kb:person/miller"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/devan",
+   "@type": "Person",
+   "name": "Devan",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Devan"
+  },
+  {
+   "@id": "kb:person/miller",
+   "@type": "Person",
+   "name": "Miller",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Miller"
+  },
+  {
+   "@id": "kb:ref/ercoline1982",
+   "@type": "Study",
+   "name": "Ercoline et al. 1982",
+   "tag": "historical",
+   "note": "Lateral distortion of the image under draping.",
+   "year": 1982,
+   "verified": "cited-in-v3",
+   "author": {
+    "@id": "kb:person/ercoline"
+   }
+  },
+  {
+   "@id": "kb:person/ercoline",
+   "@type": "Person",
+   "name": "Ercoline",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Ercoline"
+  },
+  {
+   "@id": "kb:ref/jumper1984",
+   "@type": "Study",
+   "name": "Jumper et al. 1984",
+   "tag": "historical",
+   "note": "Stain taxonomy by location.",
+   "year": 1984,
+   "container": "Archaeological Chemistry III (ACS Advances in Chemistry), ch. 22",
+   "verified": "cited-in-v3",
+   "author": {
+    "@id": "kb:person/jumper"
+   }
+  },
+  {
+   "@id": "kb:person/jumper",
+   "@type": "Person",
+   "name": "Jumper",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Jumper"
+  },
+  {
+   "@id": "kb:ref/blackwell",
+   "@type": "Study",
+   "name": "Blackwell",
+   "tag": "historical",
+   "note": "Contrast threshold 0.004 density, as used by JJE 1984 for the visibility argument.",
+   "verified": "cited-in-v3",
+   "author": {
+    "@id": "kb:person/blackwell"
+   }
+  },
+  {
+   "@id": "kb:person/blackwell",
+   "@type": "Person",
+   "name": "Blackwell",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Blackwell"
+  },
+  {
+   "@id": "kb:ref/casper",
+   "@type": "Study",
+   "name": "An Artful Relic: The Shroud of Turin in Baroque Italy",
+   "tag": "historical",
+   "note": "Painted contact-relic copies of the Shroud.",
+   "verified": "cited-in-research",
+   "author": {
+    "@id": "kb:person/casper"
+   }
+  },
+  {
+   "@id": "kb:ref/belting",
+   "@type": "Study",
+   "name": "Likeness and Presence: A History of the Image before the Era of Art",
+   "tag": "historical",
+   "note": "Standard reference on acheiropoieta and true images.",
+   "verified": "cited-in-research",
+   "author": {
+    "@id": "kb:person/belting"
+   }
+  },
+  {
+   "@id": "kb:ref/mccrone1996",
+   "@type": "Study",
+   "name": "Judgment Day for the Shroud of Turin",
+   "tag": "historical",
+   "note": "Red ochre and vermilion in a collagen binder; forgery hypothesis (contested by STURP).",
+   "year": 1996,
+   "verified": "cited-in-research",
+   "author": {
+    "@id": "kb:person/mccrone"
+   }
+  },
+  {
+   "@id": "kb:ref/meditations1380",
+   "@type": "Study",
+   "name": "Meditations on the Life of Christ",
+   "tag": "historical",
+   "note": "Veronica narrative crystallizes around 1380.",
+   "year": 1380,
+   "verified": "cited-in-research"
+  },
+  {
+   "@id": "kb:ref/mannos1974",
+   "@type": "Study",
+   "name": "The effects of a visual fidelity criterion on the encoding of images",
+   "tag": "historical",
+   "note": "Contrast sensitivity function used by the perceptual dissolve model.",
+   "year": 1974,
+   "container": "IEEE Transactions on Information Theory",
+   "volume": "20",
+   "issue": "4",
+   "page": "525-536",
+   "verified": "added-for-package",
+   "author": [
+    {
+     "@id": "kb:person/mannos-j-l"
+    },
+    {
+     "@id": "kb:person/sakrison-d-j"
+    }
+   ]
+  },
+  {
+   "@id": "kb:person/mannos-j-l",
+   "@type": "Person",
+   "name": "Mannos, J. L.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Mannos",
+   "initials": "J. L."
+  },
+  {
+   "@id": "kb:person/sakrison-d-j",
+   "@type": "Person",
+   "name": "Sakrison, D. J.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Sakrison",
+   "initials": "D. J."
+  },
+  {
+   "@id": "kb:ref/peli1990",
+   "@type": "Study",
+   "name": "Contrast in complex images",
+   "tag": "historical",
+   "note": "Band-limited local contrast used by the perceptual dissolve model.",
+   "year": 1990,
+   "container": "Journal of the Optical Society of America A",
+   "volume": "7",
+   "issue": "10",
+   "page": "2032-2040",
+   "verified": "added-for-package",
+   "author": {
+    "@id": "kb:person/peli-e"
+   }
+  },
+  {
+   "@id": "kb:person/peli-e",
+   "@type": "Person",
+   "name": "Peli, E.",
+   "tag": "historical",
+   "note": "Bibliography author; initials as given in the sources.",
+   "family": "Peli",
+   "initials": "E."
+  },
+  {
+   "@id": "kb:ref/cie1931",
+   "@type": "Study",
+   "name": "CIE 1931 2 degree standard colorimetric observer",
+   "tag": "standard",
+   "note": "Colour-matching functions used to bake the spectral LUT (via colour-science).",
+   "year": 1931,
+   "verified": "added-for-package",
+   "author": {
+    "@id": "kb:org/cie"
+   }
+  },
+  {
+   "@id": "kb:org/cie",
+   "@type": "Organization",
+   "name": "CIE (International Commission on Illumination)",
+   "tag": "standard"
+  },
+  {
+   "@id": "kb:constant/convention.units",
+   "@type": "Quantity",
+   "name": "Length unit",
+   "tag": "convention",
+   "value": "metre",
+   "group": "conventions",
+   "note": "All lengths in metres unless the unit field says otherwise.",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/convention.axes",
+   "@type": "Quantity",
+   "name": "Axes",
+   "tag": "convention",
+   "value": "Y up; flat cloth in the XZ plane; u across the width (X), v along the length (Z)",
+   "group": "conventions",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/convention.map_grid",
+   "@type": "Quantity",
+   "name": "Map grid",
+   "tag": "convention",
+   "value": "[2048, 8192]",
+   "unit": "texels (u x v)",
+   "group": "conventions",
+   "note": "One grid for every map and compute pass, about 0.54 mm per texel on the pre-2002 cloth. Shipped maps here are 512 x 2048 because the image carries no detail finer than 5 mm (see image.resolution_floor_m); tools/derive.py can bake at the full grid.",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/convention.h_range",
+   "@type": "Quantity",
+   "name": "Image field h",
+   "tag": "convention",
+   "value": "[0, 1]",
+   "group": "conventions",
+   "note": "h = 0 is background linen, h = 1 the most intense image point (the nose tip). Scorch may use h > 1 (same chemistry, more of it).",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/convention.albedo_rule",
+   "@type": "Quantity",
+   "name": "Albedo from h",
+   "tag": "convention",
+   "value": "albedo = lerp(LUT row at h=0, LUT row at h=1, h)",
+   "group": "conventions",
+   "note": "Exact for the JJE model, which is linear in h. Rows are already adapted to D65, so an illuminant's colour lives in the row or in the light, never both.",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/convention.frontal_mask",
+   "@type": "Quantity",
+   "name": "Frontal versus dorsal",
+   "tag": "convention",
+   "value": "UV-space mask shipped with the data",
+   "group": "conventions",
+   "note": "Never a view- or normal-based test. The PoC's FIXED/LEGACY toggle demonstrates why.",
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/poc"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/convention.restoration_default",
+   "@type": "Quantity",
+   "name": "Default restoration state",
+   "tag": "convention",
+   "value": "pre-2002",
+   "group": "conventions",
+   "note": "The state Enrie (1931) and STURP (1978) recorded: patches and Holland backing present.",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/convention.colour_workflow",
+   "@type": "Quantity",
+   "name": "Colour workflow",
+   "tag": "convention",
+   "value": "linear sRGB (Rec.709 primaries), D65 white",
+   "group": "conventions",
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/cloth.length_pre2002_m",
+   "@type": "Quantity",
+   "name": "Length before the 2002 restoration",
+   "tag": "measured",
+   "value": 4.37,
+   "unit": "m",
+   "group": "cloth",
+   "prdStatus": "Measured",
+   "note": "The PRD attributed this to the 2002 restoration and the web page to Flury-Lemberg 1998; the build plan found it is the pre-2002 size and found no Flury-Lemberg 1998 source.",
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/cloth.width_pre2002_m",
+   "@type": "Quantity",
+   "name": "Width before the 2002 restoration",
+   "tag": "measured",
+   "value": 1.11,
+   "unit": "m",
+   "group": "cloth",
+   "prdStatus": "Measured",
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/cloth.length_post2002_m",
+   "@type": "Quantity",
+   "name": "Length after the 2002 restoration",
+   "tag": "measured",
+   "value": 4.415,
+   "unit": "m",
+   "group": "cloth",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/linteum2002"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/cloth.width_post2002_m",
+   "@type": "Quantity",
+   "name": "Width after the 2002 restoration",
+   "tag": "measured",
+   "value": 1.137,
+   "unit": "m",
+   "group": "cloth",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/linteum2002"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/cloth.thickness_um",
+   "@type": "Quantity",
+   "name": "Cloth thickness",
+   "tag": "measured",
+   "value": 345,
+   "unit": "um",
+   "group": "cloth",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/cloth.aspect",
+   "@type": "Quantity",
+   "name": "Aspect ratio (length / width)",
+   "tag": "derived",
+   "value": 3.94,
+   "group": "cloth",
+   "note": "4.37 / 1.11 = 3.94 (pre-2002); 4.415 / 1.137 = 3.88 (post-2002).",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.structure",
+   "@type": "Quantity",
+   "name": "Weave structure",
+   "tag": "measured",
+   "value": "3/1 herringbone twill",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": [
+    {
+     "@id": "kb:ref/vial1989"
+    },
+    {
+     "@id": "kb:ref/raes1974"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.warp_per_cm",
+   "@type": "Quantity",
+   "name": "Warp threads per cm (main cloth)",
+   "tag": "measured",
+   "value": 38.3,
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   },
+   "supersedes": [
+    {
+     "@id": "kb:constant/weave.warp_per_cm_prd"
+    },
+    {
+     "@id": "kb:constant/weave.warp_per_cm_web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.weft_per_cm",
+   "@type": "Quantity",
+   "name": "Weft threads per cm (main cloth)",
+   "tag": "measured",
+   "value": 25.4,
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   },
+   "supersedes": [
+    {
+     "@id": "kb:constant/weave.weft_per_cm_prd"
+    },
+    {
+     "@id": "kb:constant/weave.weft_per_cm_web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.side_strip_warp_per_cm",
+   "@type": "Quantity",
+   "name": "Warp threads per cm (side strip)",
+   "tag": "measured",
+   "value": 38.1,
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.side_strip_weft_per_cm",
+   "@type": "Quantity",
+   "name": "Weft threads per cm (side strip)",
+   "tag": "measured",
+   "value": 26.2,
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.raes_counts_per_cm",
+   "@type": "Quantity",
+   "name": "Raes sample counts (warp, weft)",
+   "tag": "measured",
+   "value": "[38.6, 25.7]",
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "note": "Measured on the Raes sample in 1973-74; the PRD misattributed these to Vial 1989.",
+   "cites": {
+    "@id": "kb:ref/raes1974"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.c14_fragment_counts_per_cm",
+   "@type": "Quantity",
+   "name": "1988 radiocarbon fragment counts (warp, weft ranges)",
+   "tag": "measured",
+   "value": "[[37, 41], [26, 29]]",
+   "unit": "1/cm",
+   "group": "weave",
+   "prdStatus": "PeerReviewed",
+   "note": "The paper's own count; its quoted 38 x 25-26 comes from older work.",
+   "cites": {
+    "@id": "kb:ref/freerwaters2026"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.band_repeat_threads",
+   "@type": "Quantity",
+   "name": "Herringbone repeat (warp threads one way, then back)",
+   "tag": "measured",
+   "value": "[41, 39]",
+   "unit": "threads",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.band_width_cm",
+   "@type": "Quantity",
+   "name": "Herringbone band width",
+   "tag": "derived",
+   "value": "[1.07, 1.02]",
+   "unit": "cm",
+   "group": "weave",
+   "note": "41 / 38.3 and 39 / 38.3 warp threads per cm; one full chevron period is 80 threads = 2.09 cm.",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/package"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.band_orientation",
+   "@type": "Quantity",
+   "name": "Band orientation",
+   "tag": "measured",
+   "value": "bands run lengthwise, parallel to the warp; the twill diagonal reverses across the width",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "note": "Selvedges run along both long edges, so the warp runs lengthwise. The PRD's LinenWeave reverses along the wrong axis.",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.yarn_twist",
+   "@type": "Quantity",
+   "name": "Yarn twist",
+   "tag": "measured",
+   "value": "Z",
+   "group": "weave",
+   "prdStatus": "Reported",
+   "note": "As stated in the Unity port README.",
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   },
+   "source": {
+    "@id": "kb:doc/port"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.yarn_diameter_mm",
+   "@type": "Quantity",
+   "name": "Yarn diameter",
+   "tag": "measured",
+   "value": 0.28,
+   "unit": "mm",
+   "group": "weave",
+   "prdStatus": "Reported",
+   "cites": {
+    "@id": "kb:ref/fanti2010"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.fibril_diameter_um",
+   "@type": "Quantity",
+   "name": "Flax ultimate fibre diameter",
+   "tag": "standard",
+   "value": 15,
+   "unit": "um",
+   "group": "weave",
+   "prdStatus": "Measured",
+   "note": "Generic flax value from textile science, not measured on the cloth.",
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.threads_across_pre2002",
+   "@type": "Quantity",
+   "name": "Warp threads across the width (pre-2002)",
+   "tag": "derived",
+   "value": 4251,
+   "unit": "threads",
+   "group": "weave",
+   "note": "1.11 m x 3830 per m.",
+   "source": {
+    "@id": "kb:doc/package"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.picks_along_pre2002",
+   "@type": "Quantity",
+   "name": "Weft picks along the length (pre-2002)",
+   "tag": "derived",
+   "value": 11100,
+   "unit": "threads",
+   "group": "weave",
+   "note": "4.37 m x 2540 per m.",
+   "source": {
+    "@id": "kb:doc/package"
+   }
+  },
+  {
+   "@id": "kb:constant/jje.model",
+   "@type": "Quantity",
+   "name": "JJE spectral model",
+   "tag": "fitted",
+   "value": "r(lambda, h) = (a + b*lambda) * [1 + c*(lambda - lambda_prime)*h]",
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "note": "Fitted to the 1978 spectrophotometry (Gilbert and Gilbert 1980; Pellicori 1980). Film-independent.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/web"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/jje.a",
+   "@type": "Quantity",
+   "name": "JJE a",
+   "tag": "fitted",
+   "value": -0.21,
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/jje.b",
+   "@type": "Quantity",
+   "name": "JJE b",
+   "tag": "fitted",
+   "value": 0.00102,
+   "unit": "1/nm",
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/jje.c",
+   "@type": "Quantity",
+   "name": "JJE c",
+   "tag": "fitted",
+   "value": 0.000778,
+   "unit": "1/nm",
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/jje.lambda_prime_nm",
+   "@type": "Quantity",
+   "name": "JJE lambda prime",
+   "tag": "fitted",
+   "value": 790,
+   "unit": "nm",
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/jje.validity_nm",
+   "@type": "Quantity",
+   "name": "Model validity range",
+   "tag": "fitted",
+   "value": "[300, 700]",
+   "unit": "nm",
+   "group": "image_spectral",
+   "note": "The LUT baker holds lambda at the range ends outside it (380-780 nm integration).",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/jje.accuracy",
+   "@type": "Quantity",
+   "name": "Stated accuracy against measured spectra",
+   "tag": "fitted",
+   "value": 0.04,
+   "unit": "fraction",
+   "group": "image_spectral",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/image.reflectance_550_background",
+   "@type": "Quantity",
+   "name": "Background reflectance at 550 nm",
+   "tag": "derived",
+   "value": 0.351,
+   "unit": "fraction",
+   "group": "image_spectral",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.reflectance_550_max",
+   "@type": "Quantity",
+   "name": "Maximum image reflectance at 550 nm",
+   "tag": "derived",
+   "value": 0.285,
+   "unit": "fraction",
+   "group": "image_spectral",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.density_range",
+   "@type": "Quantity",
+   "name": "Image density range",
+   "tag": "measured",
+   "value": 0.09,
+   "unit": "optical density",
+   "group": "image_spectral",
+   "prdStatus": "PeerReviewed",
+   "note": "JJE's figure; the model gives 0.090 at 550 nm and 0.085 for D65 luminance.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/image.density_luminance_d65",
+   "@type": "Quantity",
+   "name": "Luminance density at h = 1 (D65)",
+   "tag": "derived",
+   "value": 0.085,
+   "unit": "optical density",
+   "group": "image_spectral",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.attenuation_h1",
+   "@type": "Quantity",
+   "name": "Reflectance ratio at h = 1 (440, 550, 680 nm)",
+   "tag": "derived",
+   "value": "[0.728, 0.813, 0.914]",
+   "unit": "ratio",
+   "group": "image_spectral",
+   "note": "A wavelength-dependent multiplicative loss steepest in the blue, not added yellow.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.ratio_680_440",
+   "@type": "Quantity",
+   "name": "680/440 nm reflectance ratio (background, image)",
+   "tag": "derived",
+   "value": "[2.0, 2.5]",
+   "unit": "ratio",
+   "group": "image_spectral",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.chromaticity_shift_xy",
+   "@type": "Quantity",
+   "name": "Chromaticity shift background to h = 1 (D65)",
+   "tag": "derived",
+   "value": "[0.014, 0.008]",
+   "unit": "CIE xy",
+   "group": "image_spectral",
+   "note": "Inside the overlap of the background and image clusters reported by Schwalbe and Pellicori 2023.",
+   "cites": [
+    {
+     "@id": "kb:ref/jje1984"
+    },
+    {
+     "@id": "kb:ref/schwalbe2023"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/colour.linen_d65_linear",
+   "@type": "Quantity",
+   "name": "Background linen, linear sRGB (D65)",
+   "tag": "derived",
+   "value": "[0.445, 0.344, 0.24]",
+   "unit": "linear sRGB",
+   "group": "image_colour",
+   "note": "Luminance Y = 0.358.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ],
+   "supersedes": [
+    {
+     "@id": "kb:constant/colour.linen_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.linen_prd_straw"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/colour.linen_d65_Y",
+   "@type": "Quantity",
+   "name": "Background linen luminance Y (D65)",
+   "tag": "derived",
+   "value": 0.358,
+   "group": "image_colour",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.image_max_d65_linear",
+   "@type": "Quantity",
+   "name": "Maximum image (h = 1), linear sRGB (D65)",
+   "tag": "derived",
+   "value": "[0.392, 0.278, 0.174]",
+   "unit": "linear sRGB",
+   "group": "image_colour",
+   "note": "Luminance Y = 0.294.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.image_tint_h1_d65",
+   "@type": "Quantity",
+   "name": "Image tint at h = 1 (multiplier on linen, D65)",
+   "tag": "derived",
+   "value": "[0.881, 0.807, 0.725]",
+   "unit": "linear sRGB ratio",
+   "group": "image_colour",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ],
+   "supersedes": {
+    "@id": "kb:constant/colour.tint_v2"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.linen_d65_srgb_encoded",
+   "@type": "Quantity",
+   "name": "Background linen, sRGB-encoded (display only)",
+   "tag": "derived",
+   "value": "[0.698, 0.621, 0.527]",
+   "unit": "sRGB",
+   "group": "image_colour",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.image_max_d65_srgb_encoded",
+   "@type": "Quantity",
+   "name": "Maximum image, sRGB-encoded (display only)",
+   "tag": "derived",
+   "value": "[0.659, 0.563, 0.454]",
+   "unit": "sRGB",
+   "group": "image_colour",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.new_linen_reflectance_550",
+   "@type": "Quantity",
+   "name": "New linen reflectance at 550 nm",
+   "tag": "measured",
+   "value": 0.58,
+   "unit": "fraction",
+   "group": "image_colour",
+   "note": "Density 0.24 relative to the cloth.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.new_linen_linear",
+   "@type": "Quantity",
+   "name": "New linen, linear sRGB",
+   "tag": "assumption",
+   "value": "[0.66, 0.57, 0.46]",
+   "unit": "linear sRGB",
+   "group": "image_colour",
+   "note": "Spectral shape not in JJE; base slope assumed halved. Replace with a measured modern flax reference.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.blood_Y",
+   "@type": "Quantity",
+   "name": "Blood luminance Y",
+   "tag": "assumption",
+   "value": 0.15,
+   "group": "image_colour",
+   "note": "Placeholder: keep the v2 chromaticity (G about equal to B, desaturated crimson-mauve) until the Schwalbe-Pellicori xy and the Gilbert dense-blood curve are pulled.",
+   "cites": [
+    {
+     "@id": "kb:ref/schwalbe2023"
+    },
+    {
+     "@id": "kb:ref/gilbert1980"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.char_linear",
+   "@type": "Quantity",
+   "name": "Deep scorch (char) target colour",
+   "tag": "assumption",
+   "value": "[0.05, 0.045, 0.04]",
+   "unit": "linear sRGB",
+   "group": "image_colour",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.half_tone_fmax",
+   "@type": "Quantity",
+   "name": "Half-tone f_max",
+   "tag": "aesthetic",
+   "value": 1.0,
+   "group": "image_colour",
+   "note": "Coloured fibril fraction f = h * f_max; each coloured fibril takes the JJE colour at h = 1/f_max, so the average equals the smooth model.",
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/distance.frontal_range_m",
+   "@type": "Quantity",
+   "name": "Frontal intensity-distance range",
+   "tag": "fitted",
+   "value": 0.037,
+   "unit": "m",
+   "group": "image_geometry",
+   "prdStatus": "PeerReviewed",
+   "note": "Image intensity falls monotonically to background over about 3.7 cm of vertical cloth-body distance.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/web"
+    }
+   ],
+   "supersedes": {
+    "@id": "kb:constant/distance.range_prd_0p04"
+   }
+  },
+  {
+   "@id": "kb:constant/distance.frontal_r2",
+   "@type": "Quantity",
+   "name": "Linear fit r^2",
+   "tag": "fitted",
+   "value": 0.6,
+   "group": "image_geometry",
+   "prdStatus": "PeerReviewed",
+   "note": "13 points. The PRD notes a refit of JJE Fig. 2 gives 0.58.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/prd1"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.frontal_n_points",
+   "@type": "Quantity",
+   "name": "Points in the fit",
+   "tag": "measured",
+   "value": 13,
+   "group": "image_geometry",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/distance.frontal_sigma_m",
+   "@type": "Quantity",
+   "name": "Residual sigma of the linear fit",
+   "tag": "fitted",
+   "value": 0.006,
+   "unit": "m",
+   "group": "image_geometry",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/distance.linear_model",
+   "@type": "Quantity",
+   "name": "Linear model (default)",
+   "tag": "fitted",
+   "value": "z = 0.037 * (1 - h) m (frontal)",
+   "group": "image_geometry",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/distance.exponential_model",
+   "@type": "Quantity",
+   "name": "Exponential alternative",
+   "tag": "hypothesis",
+   "value": "z = -z0 * ln(max(h, 0.01)), z0 = 0.037 / ln(100) = 0.00803 m",
+   "group": "image_geometry",
+   "note": "A labelled alternative curve shape from Shader of the Shroud v3; z0 chosen so z = 3.7 cm at h = 0.01, not fitted.",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/port"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.dorsal_range_m",
+   "@type": "Quantity",
+   "name": "Dorsal intensity-distance range",
+   "tag": "hypothesis",
+   "value": 0.037,
+   "unit": "m",
+   "group": "image_geometry",
+   "prdStatus": "Hypothesis",
+   "note": "No measured value exists. Fazio and Mandaglio 2008 find a steeper dorsal slope but call its range arbitrary. 0.037 is a placeholder until a fit exists.",
+   "cites": {
+    "@id": "kb:ref/fazio2008"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.pressure_ratio",
+   "@type": "Quantity",
+   "name": "Dorsal/frontal contact pressure ratio with equal image amplitude",
+   "tag": "measured",
+   "value": 77,
+   "unit": "ratio",
+   "group": "image_geometry",
+   "note": "26.8 versus 0.35 g/cm^2. The mechanism is pressure-independent.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.vertical_collimation",
+   "@type": "Quantity",
+   "name": "Image encodes vertical cloth-body distance",
+   "tag": "inferred",
+   "value": "vertical (no lateral wrap distortion)",
+   "group": "image_geometry",
+   "prdStatus": "Hypothesis",
+   "note": "JJE's reading; the image-formation lab exists to test it against draping (Ercoline 1982).",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/prd3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.relief_exaggeration_default",
+   "@type": "Quantity",
+   "name": "Relief exaggeration in the X3D relief scene",
+   "tag": "aesthetic",
+   "value": 4.0,
+   "unit": "x",
+   "group": "image_geometry",
+   "note": "Displayed relief = 0.037 m x h x exaggeration. 1 is true scale.",
+   "source": {
+    "@id": "kb:doc/package"
+   }
+  },
+  {
+   "@id": "kb:constant/perception.min_distance_m",
+   "@type": "Quantity",
+   "name": "Image not discernible closer than",
+   "tag": "measured",
+   "value": 1.8,
+   "unit": "m",
+   "group": "perception",
+   "prdStatus": "PeerReviewed",
+   "note": "About 180 cm under photographic lighting (observers).",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/plan"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/perception.threshold_density",
+   "@type": "Quantity",
+   "name": "Human contrast threshold",
+   "tag": "measured",
+   "value": 0.004,
+   "unit": "optical density",
+   "group": "perception",
+   "cites": [
+    {
+     "@id": "kb:ref/blackwell"
+    },
+    {
+     "@id": "kb:ref/jje1984"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/perception.range_over_threshold",
+   "@type": "Quantity",
+   "name": "Image density range over threshold",
+   "tag": "derived",
+   "value": 22.5,
+   "unit": "ratio",
+   "group": "perception",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/package"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/perception.dissolve_model",
+   "@type": "Quantity",
+   "name": "Dissolve model",
+   "tag": "inferred",
+   "value": "CSF-weighted band contrast of h at the viewing distance (Mannos-Sakrison CSF, Peli band contrast), calibrated so detection crosses 50 % at 1.8 m",
+   "group": "perception",
+   "note": "This package's model of why the image dissolves; only the 1.8 m point is measured. See data/perception.json.",
+   "cites": [
+    {
+     "@id": "kb:ref/mannos1974"
+    },
+    {
+     "@id": "kb:ref/peli1990"
+    },
+    {
+     "@id": "kb:ref/jje1984"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/package"
+   }
+  },
+  {
+   "@id": "kb:constant/perception.image_weave_power_ratio",
+   "@type": "Quantity",
+   "name": "Image to weave spectral power ratio",
+   "tag": "measured",
+   "value": 14000.0,
+   "unit": "ratio",
+   "group": "perception",
+   "note": "From the v1/v2 slide FFT; a relative quantity that survives the v3 corrections. It is the frequency separation the LOD split relies on.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/image.resolution_floor_m",
+   "@type": "Quantity",
+   "name": "Finest image detail",
+   "tag": "measured",
+   "value": 0.005,
+   "unit": "m",
+   "group": "perception",
+   "note": "Never synthesise image detail finer than 5 mm; the thread scale carries only weave.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/optics.mu_cloth_per_mm",
+   "@type": "Quantity",
+   "name": "Cloth attenuation (Beer-Lambert)",
+   "tag": "derived",
+   "value": 1.25,
+   "unit": "1/mm",
+   "group": "optics",
+   "note": "Uses the 345 um thickness.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   },
+   "supersedes": {
+    "@id": "kb:constant/optics.mu_prd"
+   }
+  },
+  {
+   "@id": "kb:constant/optics.mfp_mm",
+   "@type": "Quantity",
+   "name": "Mean free path",
+   "tag": "derived",
+   "value": 0.8,
+   "unit": "mm",
+   "group": "optics",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/optics.sss_radius_mm",
+   "@type": "Quantity",
+   "name": "Subsurface radius (R, G, B)",
+   "tag": "assumption",
+   "value": "[0.96, 0.8, 0.56]",
+   "unit": "mm",
+   "group": "optics",
+   "note": "Approximation until fitted by inverse rendering.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/optics.transmission_rule",
+   "@type": "Quantity",
+   "name": "Transmitted light",
+   "tag": "inferred",
+   "value": "T = exp(-(mu_cloth + mu_blood*blood + mu_scorch*scorch)*d), no image term",
+   "group": "optics",
+   "note": "The 200 nm image layer cannot change bulk transmission; scorches attenuate through the full thickness; blood is near-opaque.",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/optics.blood_mu_green_per_mm",
+   "@type": "Quantity",
+   "name": "Blood attenuation (green)",
+   "tag": "assumption",
+   "value": 35,
+   "unit": "1/mm",
+   "group": "optics",
+   "note": "Order of magnitude only (5 um layer assumption): blood is about opaque at fibre scale.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/image.layer_thickness_nm",
+   "@type": "Quantity",
+   "name": "Image coloration thickness",
+   "tag": "measured",
+   "value": 200,
+   "unit": "nm",
+   "group": "optics",
+   "prdStatus": "PeerReviewed",
+   "note": "Confined to the primary cell wall of the outermost fibrils; Pellicori 2025 proposes pectin/primary-wall chemistry.",
+   "cites": {
+    "@id": "kb:ref/fanti2010"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.double_superficiality",
+   "@type": "Quantity",
+   "name": "Double superficiality",
+   "tag": "measured",
+   "value": "frontal face and hands faintly on the reverse; dorsal none",
+   "group": "optics",
+   "cites": {
+    "@id": "kb:ref/fanti2004"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/image.reverse_gain",
+   "@type": "Quantity",
+   "name": "Reverse-side image gain (face and hands)",
+   "tag": "aesthetic",
+   "value": "[0.15, 0.3]",
+   "group": "optics",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/crystal.waxs_ap",
+   "@type": "Quantity",
+   "name": "WAXS ageing parameter AP",
+   "tag": "measured",
+   "value": 0.6,
+   "group": "optics",
+   "prdStatus": "Contested",
+   "cites": {
+    "@id": "kb:ref/decaro2022"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.excitation_nm",
+   "@type": "Quantity",
+   "name": "UV excitation",
+   "tag": "measured",
+   "value": 365,
+   "unit": "nm",
+   "group": "uv_fluorescence",
+   "prdStatus": "Measured",
+   "cites": {
+    "@id": "kb:ref/miller1981"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/uvf.background",
+   "@type": "Quantity",
+   "name": "Background linen under UV",
+   "tag": "measured",
+   "value": "fluoresces greenish",
+   "group": "uv_fluorescence",
+   "prdStatus": "PeerReviewed",
+   "cites": [
+    {
+     "@id": "kb:ref/miller1981"
+    },
+    {
+     "@id": "kb:ref/pellicori2025"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.image",
+   "@type": "Quantity",
+   "name": "Body image under UV",
+   "tag": "measured",
+   "value": "dark (absorbs, does not re-emit)",
+   "group": "uv_fluorescence",
+   "prdStatus": "PeerReviewed",
+   "cites": [
+    {
+     "@id": "kb:ref/miller1981"
+    },
+    {
+     "@id": "kb:ref/pellicori2025"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.blood",
+   "@type": "Quantity",
+   "name": "Dried blood under UV",
+   "tag": "measured",
+   "value": "dark, non-fluorescent (heme quench)",
+   "group": "uv_fluorescence",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/miller1981"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   },
+   "supersedes": {
+    "@id": "kb:constant/uvf.tiers_v2"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.serum",
+   "@type": "Quantity",
+   "name": "Serum margins under UV",
+   "tag": "measured",
+   "value": "fluoresce",
+   "group": "uv_fluorescence",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/miller1981"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.light_scorch",
+   "@type": "Quantity",
+   "name": "Light scorch under UV",
+   "tag": "measured",
+   "value": "fluoresces reddish",
+   "group": "uv_fluorescence",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/miller1981"
+   },
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/uvf.background_hue",
+   "@type": "Quantity",
+   "name": "Qualitative background emission hue",
+   "tag": "assumption",
+   "value": "[0.55, 0.65, 0.35]",
+   "unit": "linear sRGB",
+   "group": "uv_fluorescence",
+   "note": "Until the Schwalbe-Pellicori fluorescence xy clusters are pulled.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/blood.serum_ring_mm",
+   "@type": "Quantity",
+   "name": "Serum ring width (one slide-3 stain)",
+   "tag": "measured",
+   "value": 4,
+   "unit": "mm",
+   "group": "uv_fluorescence",
+   "note": "Per-stain parameter; from the v1/v2 slide analysis (relative geometry survives).",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/blood.human",
+   "@type": "Quantity",
+   "name": "Blood findings",
+   "tag": "measured",
+   "value": "hemoglobin/porphyrin, bilirubin, albumin; no image under blood",
+   "group": "blood",
+   "prdStatus": "PeerReviewed",
+   "cites": [
+    {
+     "@id": "kb:ref/heller1980"
+    },
+    {
+     "@id": "kb:ref/heller1981"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/prd2"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/blood.ordering",
+   "@type": "Quantity",
+   "name": "Blood before image",
+   "tag": "measured",
+   "value": "ordering established; exclusivity not proof",
+   "group": "blood",
+   "prdStatus": "PeerReviewed",
+   "cites": [
+    {
+     "@id": "kb:ref/heller1981"
+    },
+    {
+     "@id": "kb:ref/kearse2026"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ],
+   "supersedes": {
+    "@id": "kb:constant/blood.first_proves_authenticity"
+   }
+  },
+  {
+   "@id": "kb:constant/blood.type_ab",
+   "@type": "Quantity",
+   "name": "AB blood typing",
+   "tag": "contested",
+   "value": "AB",
+   "group": "blood",
+   "prdStatus": "Contested",
+   "note": "Degraded samples can false-type AB.",
+   "cites": {
+    "@id": "kb:ref/baimabollone1982"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/blood.rg_thresholds",
+   "@type": "Quantity",
+   "name": "R/G discriminator (blood, image, linen)",
+   "tag": "hypothesis",
+   "value": ">1.15 blood; 1.05-1.15 image; <1.05 linen",
+   "group": "blood",
+   "note": "From the v1/v2 slides; verify on corrected data.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/chemistry.no_pigment_image",
+   "@type": "Quantity",
+   "name": "Body image is not pigment",
+   "tag": "measured",
+   "value": "oxidized/dehydrated cellulose, superficial",
+   "group": "blood",
+   "prdStatus": "PeerReviewed",
+   "cites": [
+    {
+     "@id": "kb:ref/sturp1981"
+    },
+    {
+     "@id": "kb:ref/fanti2010"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/prd2"
+   }
+  },
+  {
+   "@id": "kb:constant/chemistry.mccrone_pigment",
+   "@type": "Quantity",
+   "name": "Pigment hypothesis",
+   "tag": "contested",
+   "value": "red ochre and vermilion in a collagen binder",
+   "group": "blood",
+   "prdStatus": "Contested",
+   "cites": {
+    "@id": "kb:ref/mccrone1996"
+   },
+   "source": {
+    "@id": "kb:doc/research"
+   }
+  },
+  {
+   "@id": "kb:constant/evidence.limestone",
+   "@type": "Quantity",
+   "name": "Travertine aragonite on the cloth",
+   "tag": "measured",
+   "value": "reported",
+   "group": "blood",
+   "prdStatus": "Reported",
+   "cites": {
+    "@id": "kb:ref/kohlbeck1986"
+   },
+   "source": {
+    "@id": "kb:doc/prd2"
+   }
+  },
+  {
+   "@id": "kb:constant/evidence.pollen_coins",
+   "@type": "Quantity",
+   "name": "Pollen, plant images and coins",
+   "tag": "contested",
+   "value": "contested",
+   "group": "blood",
+   "prdStatus": "Contested",
+   "cites": [
+    {
+     "@id": "kb:ref/frei1973"
+    },
+    {
+     "@id": "kb:ref/filas1982"
+    },
+    {
+     "@id": "kb:ref/danin1999"
+    },
+    {
+     "@id": "kb:ref/barcaccia2015"
+    }
+   ],
+   "source": {
+    "@id": "kb:doc/prd2"
+   }
+  },
+  {
+   "@id": "kb:constant/evidence.metagenomics",
+   "@type": "Quantity",
+   "name": "Metagenomics of the 1978 samples",
+   "tag": "measured",
+   "value": "mixed human and environmental lineages; cannot date the cloth",
+   "group": "blood",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/barcaccia2026"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/dating.c14_1988_ad",
+   "@type": "Quantity",
+   "name": "Radiocarbon range (95 %)",
+   "tag": "measured",
+   "value": "[1260, 1390]",
+   "unit": "year AD",
+   "group": "dating",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/damon1989"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/prd2"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/dating.c14_heterogeneity",
+   "@type": "Quantity",
+   "name": "Radiocarbon heterogeneity",
+   "tag": "contested",
+   "value": "raw data trend along the sample; homogeneity test fails",
+   "group": "dating",
+   "prdStatus": "Contested",
+   "cites": [
+    {
+     "@id": "kb:ref/riani2013"
+    },
+    {
+     "@id": "kb:ref/casabianca2019"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/dating.c14_fragments_2026",
+   "@type": "Quantity",
+   "name": "1988 fragments re-examined",
+   "tag": "measured",
+   "value": "consistent with the main cloth; no contamination evidence",
+   "group": "dating",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/freerwaters2026"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/dating.waxs_age_years",
+   "@type": "Quantity",
+   "name": "WAXS age estimate",
+   "tag": "contested",
+   "value": 2000,
+   "unit": "years",
+   "group": "dating",
+   "prdStatus": "Contested",
+   "note": "Method disputed.",
+   "cites": {
+    "@id": "kb:ref/decaro2022"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/dating.sudarium_c14_ad",
+   "@type": "Quantity",
+   "name": "Sudarium of Oviedo radiocarbon",
+   "tag": "measured",
+   "value": 680,
+   "unit": "year AD",
+   "group": "dating",
+   "prdStatus": "Reported",
+   "note": "About the 7th century, as reported.",
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/dating.weave_treadle_loom",
+   "@type": "Quantity",
+   "name": "Weave reproducible only on a treadle loom",
+   "tag": "measured",
+   "value": "2020 loom reconstruction",
+   "group": "dating",
+   "prdStatus": "Reported",
+   "note": "Antoinette Merete Olsen; treadle looms are placed in Europe from the 13th century.",
+   "source": {
+    "@id": "kb:doc/research"
+   }
+  },
+  {
+   "@id": "kb:constant/history.lirey",
+   "@type": "Quantity",
+   "name": "First certain appearance, Lirey",
+   "tag": "historical",
+   "value": "1350s",
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.darcis_memorandum",
+   "@type": "Quantity",
+   "name": "Bishop's memorandum to Clement VII calling it painted",
+   "tag": "historical",
+   "value": 1389,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.fire",
+   "@type": "Quantity",
+   "name": "Chambéry fire",
+   "tag": "historical",
+   "value": 1532,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "Scorches and water stains.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.patches",
+   "@type": "Quantity",
+   "name": "Poor Clare patches and backing",
+   "tag": "historical",
+   "value": 1534,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.turin",
+   "@type": "Quantity",
+   "name": "Shroud settles in Turin",
+   "tag": "historical",
+   "value": 1578,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.guarini_chapel",
+   "@type": "Quantity",
+   "name": "Guarini's Chapel of the Holy Shroud completed",
+   "tag": "historical",
+   "value": 1694,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.pia",
+   "@type": "Quantity",
+   "name": "Secondo Pia's photograph (28 May)",
+   "tag": "historical",
+   "value": 1898,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "The negative reads as a coherent positive.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.enrie",
+   "@type": "Quantity",
+   "name": "Giuseppe Enrie's photographs",
+   "tag": "historical",
+   "value": 1931,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "Orthochromatic plates; the build plan's development source.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.vp8",
+   "@type": "Quantity",
+   "name": "First VP-8 analysis, Sandia",
+   "tag": "historical",
+   "value": 1976,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "Mottern, Jackson, Jumper.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.sturp",
+   "@type": "Quantity",
+   "name": "STURP examination",
+   "tag": "historical",
+   "value": 1978,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "Spectrophotometry, UV fluorescence and photography.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.c14",
+   "@type": "Quantity",
+   "name": "Radiocarbon sampling and dating",
+   "tag": "historical",
+   "value": 1988,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.restoration",
+   "@type": "Quantity",
+   "name": "Restoration: patches and Holland backing removed",
+   "tag": "historical",
+   "value": 2002,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/history.haltadefinizione",
+   "@type": "Quantity",
+   "name": "Haltadefinizione 12-gigapixel capture",
+   "tag": "historical",
+   "value": 2008,
+   "unit": "year AD",
+   "group": "history",
+   "prdStatus": "Historical",
+   "note": "1649 photographs in one 72 GB file; never published at full resolution.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/research"
+    },
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/v3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/laser.wavelength_nm",
+   "@type": "Quantity",
+   "name": "ArF excimer wavelength",
+   "tag": "standard",
+   "value": 193,
+   "unit": "nm",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.pulse_ns",
+   "@type": "Quantity",
+   "name": "Pulse duration",
+   "tag": "measured",
+   "value": 12,
+   "unit": "ns",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "note": "As stated in the PRD; not re-checked by the build plan.",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.colouring_pulses",
+   "@type": "Quantity",
+   "name": "Pulses that coloured linen",
+   "tag": "measured",
+   "value": "[200, 600]",
+   "unit": "pulses",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.fluence_per_pulse_j_cm2",
+   "@type": "Quantity",
+   "name": "Fluence per pulse",
+   "tag": "measured",
+   "value": "[0.07, 0.13]",
+   "unit": "J/cm^2",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.intensity_per_pulse_mw_cm2",
+   "@type": "Quantity",
+   "name": "Intensity per pulse",
+   "tag": "measured",
+   "value": "[6, 13]",
+   "unit": "MW/cm^2",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   },
+   "supersedes": {
+    "@id": "kb:constant/laser.threshold_prd_gw"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.total_fluence_j_cm2",
+   "@type": "Quantity",
+   "name": "Total fluence for coloration",
+   "tag": "measured",
+   "value": "[25, 40]",
+   "unit": "J/cm^2",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   },
+   "supersedes": {
+    "@id": "kb:constant/laser.fluence_prd_24_48"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.ablation_j_cm2",
+   "@type": "Quantity",
+   "name": "Fluence that ablated the linen",
+   "tag": "measured",
+   "value": 73,
+   "unit": "J/cm^2",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/plan"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.colour_depth_um",
+   "@type": "Quantity",
+   "name": "Coloration depth at 193 nm (lab analogue)",
+   "tag": "measured",
+   "value": 26,
+   "unit": "um",
+   "group": "laser_lab",
+   "prdStatus": "PeerReviewed",
+   "note": "As stated in the PRD; 3-5x less than at 308 nm. Not re-checked by the build plan.",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.whole_body_power_tw",
+   "@type": "Quantity",
+   "name": "Whole-body single-pulse power estimate",
+   "tag": "hypothesis",
+   "value": 34,
+   "unit": "TW",
+   "group": "laser_lab",
+   "prdStatus": "Reported",
+   "note": "An estimate, not a measurement.",
+   "cites": {
+    "@id": "kb:ref/enea2011"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/bio.upe_photons_cm2_s",
+   "@type": "Quantity",
+   "name": "Ultra-weak photon emission of skin",
+   "tag": "measured",
+   "value": "[10, 1000]",
+   "unit": "photons/cm^2/s",
+   "group": "biophysics",
+   "prdStatus": "PeerReviewed",
+   "note": "Broadband 350-1300 nm.",
+   "cites": {
+    "@id": "kb:ref/cifra2014"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/bio.hypothesis_amplification",
+   "@type": "Quantity",
+   "name": "Required amplification (hypothesis)",
+   "tag": "hypothesis",
+   "value": 10000000000000.0,
+   "unit": "x",
+   "group": "biophysics",
+   "prdStatus": "Hypothesis",
+   "note": "Unexplained.",
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/bio.hypothesis_wavelength_nm",
+   "@type": "Quantity",
+   "name": "Required wavelength (hypothesis)",
+   "tag": "hypothesis",
+   "value": 190,
+   "unit": "nm",
+   "group": "biophysics",
+   "prdStatus": "Hypothesis",
+   "note": "Unexplained shift to the vacuum UV.",
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/bio.hypothesis_collimation",
+   "@type": "Quantity",
+   "name": "Vertical collimation (hypothesis)",
+   "tag": "hypothesis",
+   "value": 1,
+   "group": "biophysics",
+   "prdStatus": "Hypothesis",
+   "note": "Jackson's fall-through idea; unexplained.",
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/instrument.vga_dac_bits",
+   "@type": "Quantity",
+   "name": "VGA DAC bits",
+   "tag": "standard",
+   "value": 6,
+   "unit": "bits",
+   "group": "instrument",
+   "source": {
+    "@id": "kb:doc/web"
+   }
+  },
+  {
+   "@id": "kb:constant/instrument.mode13h",
+   "@type": "Quantity",
+   "name": "Mode 13h raster",
+   "tag": "standard",
+   "value": "[320, 200]",
+   "unit": "pixels",
+   "group": "instrument",
+   "note": "70.086 Hz, pixel aspect 1.2.",
+   "source": {
+    "@id": "kb:doc/web"
+   }
+  },
+  {
+   "@id": "kb:constant/instrument.vblank_hz",
+   "@type": "Quantity",
+   "name": "Mode 13h refresh",
+   "tag": "standard",
+   "value": 70.086,
+   "unit": "Hz",
+   "group": "instrument",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/port"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/instrument.laser_lines_nm",
+   "@type": "Quantity",
+   "name": "Fringe-mode laser lines",
+   "tag": "standard",
+   "value": "[632.8, 532, 514.5, 445]",
+   "unit": "nm",
+   "group": "instrument",
+   "source": {
+    "@id": "kb:doc/web"
+   }
+  },
+  {
+   "@id": "kb:constant/instrument.phosphor_peaks_nm",
+   "@type": "Quantity",
+   "name": "Phosphor peaks P1, P3, P22G, P31",
+   "tag": "standard",
+   "value": "[525, 602, 530, 525]",
+   "unit": "nm",
+   "group": "instrument",
+   "source": {
+    "@id": "kb:doc/web"
+   }
+  },
+  {
+   "@id": "kb:constant/audio.transpose_octaves",
+   "@type": "Quantity",
+   "name": "Light-to-audio transposition",
+   "tag": "aesthetic",
+   "value": 40,
+   "unit": "octaves",
+   "group": "audio",
+   "prdStatus": "Aesthetic",
+   "note": "f_audio = c / lambda / 2^40: 632.8 nm gives 430.9 Hz, 193 nm gives 1412.8 Hz.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/prd3"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/audio.breath_lfo_hz",
+   "@type": "Quantity",
+   "name": "Breath LFO",
+   "tag": "measured",
+   "value": 0.1,
+   "unit": "Hz",
+   "group": "audio",
+   "prdStatus": "PeerReviewed",
+   "note": "Resonance breathing; Unity audio only.",
+   "cites": {
+    "@id": "kb:ref/lehrer2014"
+   },
+   "source": {
+    "@id": "kb:doc/prd1"
+   }
+  },
+  {
+   "@id": "kb:constant/cloth.size_web_flury_lemberg_1998",
+   "@type": "Quantity",
+   "name": "Cloth size cited to Flury-Lemberg 1998",
+   "tag": "superseded",
+   "value": "[4.37, 1.11]",
+   "unit": "m",
+   "group": "legacy",
+   "note": "The size is right for the pre-2002 state, but no Flury-Lemberg 1998 source was found.",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/cloth.size_prd_2002",
+   "@type": "Quantity",
+   "name": "Cloth size cited to the 2002 restoration",
+   "tag": "superseded",
+   "value": "[4.37, 1.11]",
+   "unit": "m",
+   "group": "legacy",
+   "note": "After 2002 the cloth measures 4.415 x 1.137 m.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.warp_per_cm_prd",
+   "@type": "Quantity",
+   "name": "PRD warp count (cited to Vial 1989)",
+   "tag": "superseded",
+   "value": 38.6,
+   "unit": "1/cm",
+   "group": "legacy",
+   "note": "Actually Raes 1973-74.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.weft_per_cm_prd",
+   "@type": "Quantity",
+   "name": "PRD weft count (cited to Vial 1989)",
+   "tag": "superseded",
+   "value": 25.7,
+   "unit": "1/cm",
+   "group": "legacy",
+   "note": "Actually Raes 1973-74.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.warp_per_cm_web",
+   "@type": "Quantity",
+   "name": "Web v3 warp count (cited to Vial 1991)",
+   "tag": "superseded",
+   "value": 38.1,
+   "unit": "1/cm",
+   "group": "legacy",
+   "note": "The side strip's warp mixed with the overall weft.",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.weft_per_cm_web",
+   "@type": "Quantity",
+   "name": "Web v3 weft count",
+   "tag": "superseded",
+   "value": 25.8,
+   "unit": "1/cm",
+   "group": "legacy",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.tile_counts_v2",
+   "@type": "Quantity",
+   "name": "Weave tile counts U, V (v1/v2)",
+   "tag": "superseded",
+   "value": "[1130, 4632]",
+   "unit": "tiles",
+   "group": "legacy",
+   "note": "Computed from the Raes counts with a circular px/mm calibration; data/weave.json recomputes repeats from Vial 1989.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/weave.orientation_prd",
+   "@type": "Quantity",
+   "name": "PRD weave reversal every N weft rows (bands across the cloth)",
+   "tag": "retracted",
+   "value": "bands across",
+   "group": "legacy",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/weave.chevron_web",
+   "@type": "Quantity",
+   "name": "Web v3 chevron every 40 warp threads",
+   "tag": "superseded",
+   "value": 40,
+   "unit": "threads",
+   "group": "legacy",
+   "note": "Orientation right; the measured repeat is 41 one way and 39 back.",
+   "source": [
+    {
+     "@id": "kb:doc/web"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/distance.range_prd_0p04",
+   "@type": "Quantity",
+   "name": "PRD maximum image distance",
+   "tag": "superseded",
+   "value": 0.04,
+   "unit": "m",
+   "group": "legacy",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/colour.linen_v1_slide",
+   "@type": "Quantity",
+   "name": "v1 aged linen from slides",
+   "tag": "retracted",
+   "value": "[0.943, 0.924, 0.84]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Slide exposure and scan: Y about 0.83 against the measured 0.36; about 2.4x too bright and too neutral.",
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/colour.linen_prd_straw",
+   "@type": "Quantity",
+   "name": "PRD aged linen",
+   "tag": "retracted",
+   "value": "[0.82, 0.72, 0.52]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Hue roughly right, about 1.6x too bright. The PRD's straw tint (0.86, 0.72, 0.46) was tagged Aesthetic.",
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/colour.blood_v1_slide",
+   "@type": "Quantity",
+   "name": "v1 blood from slides",
+   "tag": "retracted",
+   "value": "[0.513, 0.414, 0.35]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Absolute value wrong; the chromatic character (G about B) survives.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.scorch_v1_slide",
+   "@type": "Quantity",
+   "name": "v1 scorch from slides",
+   "tag": "retracted",
+   "value": "[0.61, 0.56, 0.42]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Absolute wrong; ordering survives.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.patch_v1_slide",
+   "@type": "Quantity",
+   "name": "v1 patch from slides",
+   "tag": "retracted",
+   "value": "[0.95, 0.93, 0.88]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Absolute wrong; ordering survives.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.tint_v2",
+   "@type": "Quantity",
+   "name": "v2 image tint (blue -10.7 %, red +2.1 %)",
+   "tag": "retracted",
+   "value": "[1.021, null, 0.893]",
+   "unit": "ratio",
+   "group": "legacy",
+   "note": "Sign error on red: red goes down at h = 1, not up.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/colour.body_image_delta_lum_v1",
+   "@type": "Quantity",
+   "name": "v1 body image luminance change 2.1 %",
+   "tag": "retracted",
+   "value": 0.021,
+   "unit": "fraction",
+   "group": "legacy",
+   "note": "Misframed: a face-region mean on an 8-bit negative. h = 1 gives -18 % Y; the face mean is a few percent.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/interpretation.dorsal_darker_gravity",
+   "@type": "Quantity",
+   "name": "Dorsal darker by 11 % because of gravity",
+   "tag": "retracted",
+   "value": "retracted",
+   "group": "legacy",
+   "note": "JJE found equal amplitudes at about 77x pressure difference; the 11 % gap was slide exposure. The real asymmetry is the dorsal slope (Fazio and Mandaglio 2008).",
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/uvf.tiers_v2",
+   "@type": "Quantity",
+   "name": "v2 UV porphyrin emission tiers",
+   "tag": "retracted",
+   "value": "retracted",
+   "group": "legacy",
+   "note": "Read upside down: dried blood is non-fluorescent, serum margins fluoresce; the false-colour face is a display mapping.",
+   "cites": {
+    "@id": "kb:ref/miller1981"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/uvf.dense_porphyrin_v2",
+   "@type": "Quantity",
+   "name": "v2 dense porphyrin colour",
+   "tag": "retracted",
+   "value": "[0.84, 0.101, 0.114]",
+   "unit": "sRGB",
+   "group": "legacy",
+   "note": "Pseudo-colour, not emission. Deleted.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/blood.first_proves_authenticity",
+   "@type": "Quantity",
+   "name": "Blood first proves authenticity",
+   "tag": "retracted",
+   "value": "retracted",
+   "group": "legacy",
+   "note": "Ordering is fact; exclusivity is not proof (Kearse 2026 reproduces no image under blood artificially).",
+   "cites": {
+    "@id": "kb:ref/kearse2026"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/sudarium.xray_micrography",
+   "@type": "Quantity",
+   "name": "Sudarium correspondence by X-ray micrography",
+   "tag": "retracted",
+   "value": "retracted",
+   "group": "legacy",
+   "note": "The evidence is photographic overlay (PIOT) and forensic (EDICES); the honest verb is 'consistent with'. The v2 'pulmonary edema colour' was measured on a Shroud slide.",
+   "cites": [
+    {
+     "@id": "kb:ref/whanger1985"
+    },
+    {
+     "@id": "kb:ref/heras1998"
+    }
+   ],
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/optics.mu_prd",
+   "@type": "Quantity",
+   "name": "v2 Beer-Lambert mu",
+   "tag": "superseded",
+   "value": 2.154,
+   "unit": "1/mm",
+   "group": "legacy",
+   "note": "Used a 200 um thickness guess.",
+   "source": {
+    "@id": "kb:doc/v3"
+   }
+  },
+  {
+   "@id": "kb:constant/laser.threshold_prd_gw",
+   "@type": "Quantity",
+   "name": "PRD coloration threshold 2-4 GW/cm^2",
+   "tag": "retracted",
+   "value": 3,
+   "unit": "GW/cm^2",
+   "group": "legacy",
+   "note": "Does not match Di Lazzaro 2012 Table 1 (6-13 MW/cm^2 per pulse).",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/laser.fluence_prd_24_48",
+   "@type": "Quantity",
+   "name": "PRD fluence onset 24 / saturation 48 J/cm^2",
+   "tag": "retracted",
+   "value": "[24, 48]",
+   "unit": "J/cm^2",
+   "group": "legacy",
+   "note": "48 J/cm^2 does not appear in the paper's table.",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/laser.single_pulse_prd",
+   "@type": "Quantity",
+   "name": "PRD single 12 ns pulse of 57.6 J/cm^2 'inside the window'",
+   "tag": "retracted",
+   "value": 4.8,
+   "unit": "GW/cm^2",
+   "group": "legacy",
+   "note": "Hundreds of times the coloring intensities; not inside the window.",
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   },
+   "source": [
+    {
+     "@id": "kb:doc/prd3"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/geometry.lod0_quad_mm_prd",
+   "@type": "Quantity",
+   "name": "PRD LOD0 quad size 8.5 mm",
+   "tag": "superseded",
+   "value": 8.5,
+   "unit": "mm",
+   "group": "legacy",
+   "note": "The 512 x 1024 grid gives 4.3 x 2.2 mm quads.",
+   "source": [
+    {
+     "@id": "kb:doc/prd1"
+    },
+    {
+     "@id": "kb:doc/plan"
+    }
+   ]
+  },
+  {
+   "@id": "kb:constant/unity.custom_light_api",
+   "@type": "Quantity",
+   "name": "Biophoton emitter on Unity 6.5 custom lights",
+   "tag": "retracted",
+   "value": "do not build",
+   "group": "legacy",
+   "note": "The 6.5 custom-light API is 2D-only.",
+   "source": [
+    {
+     "@id": "kb:doc/v3"
+    },
+    {
+     "@id": "kb:doc/v3note"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/range",
+   "@type": "Correction",
+   "name": "Cloth-to-body range",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD 0.04 m; web 37 mm; v3 3.7 cm frontal with its own dorsal slope",
+   "now": "0.037 m frontal (JJE 1984: 3.7 cm, r^2 0.60 for 13 points). No measured dorsal value: tagged hypothesis until a fit exists. Linear by default, exponential as the labelled alternative.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/distance.frontal_range_m"
+    },
+    {
+     "@id": "kb:constant/distance.dorsal_range_m"
+    },
+    {
+     "@id": "kb:constant/distance.range_prd_0p04"
+    },
+    {
+     "@id": "kb:constant/distance.exponential_model"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/jje1984"
+    },
+    {
+     "@id": "kb:ref/fazio2008"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/linen_colour",
+   "@type": "Correction",
+   "name": "Linen and image colour",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD straw tint (0.86, 0.72, 0.46), tagged Aesthetic",
+   "now": "Linen (0.445, 0.344, 0.240) linear sRGB under D65; image at h = 1 is linen x (0.881, 0.807, 0.725). Recomputed independently; agrees within 0.001.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/colour.linen_d65_linear"
+    },
+    {
+     "@id": "kb:constant/colour.image_tint_h1_d65"
+    },
+    {
+     "@id": "kb:constant/colour.linen_prd_straw"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/halftone",
+   "@type": "Correction",
+   "name": "Half-tone versus smooth colour",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD: each fibril is coloured or not; v3: colour is a smooth function of h",
+   "now": "Both hold: coloured fraction f = h x f_max, and each coloured fibril takes the JJE colour at h = 1/f_max, so the average is exactly v3's.",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/colour.half_tone_fmax"
+   },
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/stain_colours",
+   "@type": "Correction",
+   "name": "Blood, scorch and patch colours",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD artist colours on painted masks; v3: slide-derived absolutes are about 2.4x too bright",
+   "now": "Masks and ratios stay; absolute colours are re-derived relative to the JJE linen and stay assumptions until a measured spectrum is cited.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/colour.blood_Y"
+    },
+    {
+     "@id": "kb:constant/colour.char_linear"
+    },
+    {
+     "@id": "kb:constant/colour.blood_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.scorch_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.patch_v1_slide"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/schwalbe2023"
+    },
+    {
+     "@id": "kb:ref/gilbert1980"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/thread_counts",
+   "@type": "Correction",
+   "name": "Thread counts",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD 38.6 x 25.7 cited to Vial 1989; web 38.1 x 25.8 cited to Vial 1991; the 2026 fragment paper quotes 38 x 25-26",
+   "now": "Vial 1989 main cloth: warp 38.3, weft 25.4 per cm; side strip 38.1 and 26.2. 38.6 x 25.7 is Raes 1973-74; 38.1 x 25.8 mixes the side strip's warp with the overall weft. The 2026 paper's own count is 37-41 x 26-29.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/weave.warp_per_cm"
+    },
+    {
+     "@id": "kb:constant/weave.weft_per_cm"
+    },
+    {
+     "@id": "kb:constant/weave.warp_per_cm_prd"
+    },
+    {
+     "@id": "kb:constant/weave.weft_per_cm_prd"
+    },
+    {
+     "@id": "kb:constant/weave.warp_per_cm_web"
+    },
+    {
+     "@id": "kb:constant/weave.weft_per_cm_web"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/vial1989"
+    },
+    {
+     "@id": "kb:ref/raes1974"
+    },
+    {
+     "@id": "kb:ref/freerwaters2026"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/cloth_size",
+   "@type": "Correction",
+   "name": "Cloth size",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD 4.37 x 1.11 m cited to the 2002 restoration; web the same numbers cited to Flury-Lemberg 1998",
+   "now": "4.37 x 1.11 m is the size before the 2002 restoration (no Flury-Lemberg 1998 source found). After 2002: 4.415 x 1.137 m. Both kept, tied to the restoration-state switch; default pre-2002.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/cloth.length_pre2002_m"
+    },
+    {
+     "@id": "kb:constant/cloth.width_pre2002_m"
+    },
+    {
+     "@id": "kb:constant/cloth.length_post2002_m"
+    },
+    {
+     "@id": "kb:constant/cloth.width_post2002_m"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/linteum2002"
+   }
+  },
+  {
+   "@id": "kb:correction/weave_orientation",
+   "@type": "Correction",
+   "name": "Weave orientation",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD reverses the diagonal every N weft rows (bands across the cloth); web reverses every 40 warp threads (bands along it)",
+   "now": "The web is right: selvedges along both long edges, warp lengthwise, chevrons along the warp; a repeat is 41 threads one way and 39 back, so each band is about 1 cm.",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/weave.band_orientation"
+    },
+    {
+     "@id": "kb:constant/weave.band_repeat_threads"
+    },
+    {
+     "@id": "kb:constant/weave.orientation_prd"
+    },
+    {
+     "@id": "kb:constant/weave.chevron_web"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/vial1989"
+   }
+  },
+  {
+   "@id": "kb:correction/height_field",
+   "@type": "Correction",
+   "name": "Height field",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "Three bakers (PRD Rec.709 luma; port and web percentile), none masking blood, scorch or patches, so they become bumps",
+   "now": "One offline JJE inversion with masks. This package ships a synthetic forward-model h (license-free) and, outside the public repo, a masked photo proxy; neither is the final inversion.",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/convention.h_range"
+   },
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/xray_mode",
+   "@type": "Correction",
+   "name": "X-ray",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD: edge-enhanced sub-surface hypothesis view; v3: a physical X-radiograph from the endmember model",
+   "now": "PRD mode renamed 'Sub-surface (hypothesis)'; X-radiograph added as its own mode.",
+   "decidedBy": "plan"
+  },
+  {
+   "@id": "kb:correction/lod",
+   "@type": "Correction",
+   "name": "LOD",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "v3 LOD 0-4 are scale levels (chapel to crystal); PRD LOD 0-3 are mesh levels",
+   "now": "v3's become scale levels S0-S4. PRD LOD0 quads are 4.3 x 2.2 mm, not 8.5 mm.",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/geometry.lod0_quad_mm_prd"
+   }
+  },
+  {
+   "@id": "kb:correction/transmitted",
+   "@type": "Correction",
+   "name": "Transmitted light",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "v3 and the PoC have it; the PRD mode list does not",
+   "now": "Added: T = exp(-(mu_cloth + mu_blood*blood + mu_scorch*scorch)*d), with no image term.",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/optics.transmission_rule"
+   },
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/fractal_veil",
+   "@type": "Correction",
+   "name": "Fractal veil",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD v2 removed the Mandelbrot mode as meaningless; web v3 keeps a Fractal veil",
+   "now": "Web only, labelled aesthetic; not ported.",
+   "decidedBy": "plan"
+  },
+  {
+   "@id": "kb:correction/map_grid",
+   "@type": "Correction",
+   "name": "Map grid",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD 8K square maps and a 2048 x 4096 compute grid; the cloth is 1 : 3.9",
+   "now": "One grid, 2048 x 8192, for every map and the compute pass.",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/convention.map_grid"
+   }
+  },
+  {
+   "@id": "kb:correction/unity_version",
+   "@type": "Correction",
+   "name": "Unity version",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "v3 section 6 says ship on URP 17 and 6.5",
+   "now": "HagopJay's decision stands: 6.3 LTS (Unity work is parked in this package).",
+   "decidedBy": "plan"
+  },
+  {
+   "@id": "kb:correction/unity_code_sets",
+   "@type": "Correction",
+   "name": "Two Unity code sets",
+   "tag": "convention",
+   "kind": "contradiction",
+   "was": "PRD CRTLookFeature and static palette PNGs versus the port's CRT feature and cycler",
+   "now": "Merged as in the build plan's 'Which code survives' table (Unity form, not part of this package).",
+   "decidedBy": "plan"
+  },
+  {
+   "@id": "kb:correction/cite_riani",
+   "@type": "Correction",
+   "name": "Riani et al. 2013 pages",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "Stat. Comput. 23:339",
+   "now": "Stat. Comput. 23(4):551-561",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/dating.c14_heterogeneity"
+   },
+   "cites": {
+    "@id": "kb:ref/riani2013"
+   }
+  },
+  {
+   "@id": "kb:correction/cite_fazio",
+   "@type": "Correction",
+   "name": "'Mandaglio-Fazio' dorsal slope",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "Mandaglio-Fazio (v3)",
+   "now": "Fazio and Mandaglio 2008, Atti Accad. Peloritana 86(2); the dorsal range is 'arbitrary' there",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/distance.dorsal_range_m"
+   },
+   "cites": {
+    "@id": "kb:ref/fazio2008"
+   }
+  },
+  {
+   "@id": "kb:correction/cite_barcaccia",
+   "@type": "Correction",
+   "name": "Metagenomics DOI",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "bioRxiv preprint DOI (v3)",
+   "now": "Sci. Rep. 16:21206 (2026); samples are linen filaments, vacuum dust and a slide, not only dust",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/evidence.metagenomics"
+   },
+   "cites": {
+    "@id": "kb:ref/barcaccia2026"
+   }
+  },
+  {
+   "@id": "kb:correction/cite_moraes",
+   "@type": "Correction",
+   "name": "Moraes 2025 debate",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "Moraes 2025 alone",
+   "now": "Add the Casabianca, Marinelli and Piana commentary and Moraes' reply (Archaeometry 68(4), 2026)",
+   "decidedBy": "plan",
+   "cites": [
+    {
+     "@id": "kb:ref/moraes2025"
+    },
+    {
+     "@id": "kb:ref/casabianca2026"
+    },
+    {
+     "@id": "kb:ref/moraes2026"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/cite_tvcg",
+   "@type": "Correction",
+   "name": "TVCG 2026 fabric inverse rendering",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "Uses Mitsuba 3 (v3)",
+   "now": "Exists; its abstract does not mention Mitsuba 3 and the full text is paywalled",
+   "decidedBy": "plan",
+   "cites": {
+    "@id": "kb:ref/sagredo2026"
+   }
+  },
+  {
+   "@id": "kb:correction/cite_laser",
+   "@type": "Correction",
+   "name": "Di Lazzaro 2012 numbers",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "PRD: 2-4 GW/cm^2 threshold, 24/48 J/cm^2 onset/saturation, a single 12 ns pulse of 57.6 J/cm^2 (4.8 GW/cm^2) 'inside the window'",
+   "now": "Table 1: 200-600 pulses of 0.07-0.13 J/cm^2 at 6-13 MW/cm^2 per pulse, totals about 25-40 J/cm^2; 73 J/cm^2 ablated",
+   "decidedBy": "plan",
+   "affects": [
+    {
+     "@id": "kb:constant/laser.intensity_per_pulse_mw_cm2"
+    },
+    {
+     "@id": "kb:constant/laser.total_fluence_j_cm2"
+    },
+    {
+     "@id": "kb:constant/laser.threshold_prd_gw"
+    },
+    {
+     "@id": "kb:constant/laser.fluence_prd_24_48"
+    },
+    {
+     "@id": "kb:constant/laser.single_pulse_prd"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/dilazzaro2012"
+   }
+  },
+  {
+   "@id": "kb:correction/cite_freerwaters",
+   "@type": "Correction",
+   "name": "Freer-Waters and Jull 2026 counts",
+   "tag": "convention",
+   "kind": "citation",
+   "was": "38 x 25-26 per cm attributed to the 2026 paper",
+   "now": "Quoted from older work; the paper's own count is 37-41 x 26-29",
+   "decidedBy": "plan",
+   "affects": {
+    "@id": "kb:constant/weave.c14_fragment_counts_per_cm"
+   },
+   "cites": {
+    "@id": "kb:ref/freerwaters2026"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_slide_colours",
+   "@type": "Correction",
+   "name": "Absolute colours from slides",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "v1 linen (0.943, 0.924, 0.840), blood (0.513, 0.414, 0.350), scorch (0.61, 0.56, 0.42), patch (0.95, 0.93, 0.88)",
+   "now": "Discard absolute values (about 2.4x too bright, too neutral): Ektachrome response, 45 years of dye fade, scanner and 8-bit JPEG are unknown transfer functions. Masks, ratios, thread geometry and frequency structure survive.",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/colour.linen_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.blood_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.scorch_v1_slide"
+    },
+    {
+     "@id": "kb:constant/colour.patch_v1_slide"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_tint",
+   "@type": "Correction",
+   "name": "Image tint",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "v2: blue -10.7 %, red +2.1 %",
+   "now": "tint(h=1) = (0.881, 0.807, 0.725): red goes down, not up",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/colour.tint_v2"
+    },
+    {
+     "@id": "kb:constant/colour.image_tint_h1_d65"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_dorsal_gravity",
+   "@type": "Correction",
+   "name": "Dorsal darker = gravity",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "Dorsal 11 % darker because pressed harder",
+   "now": "Retracted: JJE found equal amplitudes at about 77x pressure difference (26.8 vs 0.35 g/cm^2); the 11 % gap was slide exposure. The dorsal slope differs (Fazio and Mandaglio 2008).",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/interpretation.dorsal_darker_gravity"
+    },
+    {
+     "@id": "kb:constant/distance.pressure_ratio"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/jje1984"
+    },
+    {
+     "@id": "kb:ref/fazio2008"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/v3_uv_tiers",
+   "@type": "Correction",
+   "name": "UV fluorescence tiers",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "Porphyrin emission tiers; dense porphyrin (0.840, 0.101, 0.114)",
+   "now": "Dried blood is non-fluorescent; serum margins fluoresce; background greenish; image dark; light scorch reddish. The false-colour face is a display mapping.",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/uvf.tiers_v2"
+    },
+    {
+     "@id": "kb:constant/uvf.dense_porphyrin_v2"
+    },
+    {
+     "@id": "kb:constant/uvf.blood"
+    },
+    {
+     "@id": "kb:constant/uvf.serum"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/miller1981"
+    },
+    {
+     "@id": "kb:ref/pellicori2025"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/v3_blood_first",
+   "@type": "Correction",
+   "name": "Blood first proves authenticity",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "Blood-before-image proves authenticity",
+   "now": "Ordering is fact; exclusivity is not proof (Kearse 2026).",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/blood.first_proves_authenticity"
+    },
+    {
+     "@id": "kb:constant/blood.ordering"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/kearse2026"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_sudarium",
+   "@type": "Correction",
+   "name": "Sudarium framing",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "Correspondence by X-ray micrography; 'pulmonary edema colour'",
+   "now": "Photographic overlay (PIOT) and forensic (EDICES) evidence; 'consistent with'. The edema colour was measured on a Shroud slide.",
+   "decidedBy": "v3",
+   "affects": {
+    "@id": "kb:constant/sudarium.xray_micrography"
+   },
+   "cites": [
+    {
+     "@id": "kb:ref/whanger1985"
+    },
+    {
+     "@id": "kb:ref/heras1998"
+    }
+   ]
+  },
+  {
+   "@id": "kb:correction/v3_mu",
+   "@type": "Correction",
+   "name": "Beer-Lambert mu",
+   "tag": "convention",
+   "kind": "replacement",
+   "was": "2.154 per mm (200 um guess)",
+   "now": "1.25 per mm with the 345 um JJE thickness; MFP 0.80 mm",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/optics.mu_prd"
+    },
+    {
+     "@id": "kb:constant/optics.mu_cloth_per_mm"
+    }
+   ],
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_delta_lum",
+   "@type": "Correction",
+   "name": "Body image luminance change",
+   "tag": "convention",
+   "kind": "replacement",
+   "was": "2.1 % (face mean on an 8-bit negative)",
+   "now": "h = 1 gives -18 % Y; a face-region mean is a few percent. Report both.",
+   "decidedBy": "v3",
+   "affects": {
+    "@id": "kb:constant/colour.body_image_delta_lum_v1"
+   },
+   "cites": {
+    "@id": "kb:ref/jje1984"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_custom_light",
+   "@type": "Correction",
+   "name": "Unity custom-light API",
+   "tag": "retracted",
+   "kind": "retraction",
+   "was": "Build the biophoton emitter on Unity's new custom lights",
+   "now": "That API is 2D-only; keep the emitter as emissive geometry (Unity form, parked).",
+   "decidedBy": "v3",
+   "affects": {
+    "@id": "kb:constant/unity.custom_light_api"
+   }
+  },
+  {
+   "@id": "kb:correction/v3_visibility",
+   "@type": "Correction",
+   "name": "Image visibility distance",
+   "tag": "convention",
+   "kind": "addition",
+   "was": "(not modelled)",
+   "now": "The image is not discernible closer than about 1.8 m; its density range is about 22x the 0.004 threshold. Fall out of the weave scale naturally.",
+   "decidedBy": "v3",
+   "affects": [
+    {
+     "@id": "kb:constant/perception.min_distance_m"
+    },
+    {
+     "@id": "kb:constant/perception.threshold_density"
+    }
+   ],
+   "cites": [
+    {
+     "@id": "kb:ref/jje1984"
+    },
+    {
+     "@id": "kb:ref/blackwell"
+    }
+   ]
+  }
+ ]
+}

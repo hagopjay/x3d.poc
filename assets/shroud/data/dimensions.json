@@ -1,0 +1,104 @@
+{
+ "title": "Dimensions and coordinate conventions",
+ "restoration_default": {
+  "id": "convention.restoration_default",
+  "value": "pre-2002",
+  "unit": null,
+  "tag": "convention",
+  "citations": []
+ },
+ "states": {
+  "pre-2002": {
+   "length_m": 4.37,
+   "width_m": 1.11,
+   "constants": [
+    {
+     "id": "cloth.length_pre2002_m",
+     "value": 4.37,
+     "unit": "m",
+     "tag": "measured",
+     "citations": []
+    },
+    {
+     "id": "cloth.width_pre2002_m",
+     "value": 1.11,
+     "unit": "m",
+     "tag": "measured",
+     "citations": []
+    }
+   ],
+   "note": "The state Enrie 1931 and STURP 1978 recorded; the default."
+  },
+  "post-2002": {
+   "length_m": 4.415,
+   "width_m": 1.137,
+   "constants": [
+    {
+     "id": "cloth.length_post2002_m",
+     "value": 4.415,
+     "unit": "m",
+     "tag": "measured",
+     "citations": [
+      "linteum2002"
+     ]
+    },
+    {
+     "id": "cloth.width_post2002_m",
+     "value": 1.137,
+     "unit": "m",
+     "tag": "measured",
+     "citations": [
+      "linteum2002"
+     ]
+    }
+   ],
+   "note": "After the 2002 restoration removed the 1534 patches and the backing cloth."
+  }
+ },
+ "thickness": {
+  "id": "cloth.thickness_um",
+  "value": 345,
+  "unit": "um",
+  "tag": "measured",
+  "citations": [
+   "jje1984"
+  ]
+ },
+ "units": {
+  "id": "convention.units",
+  "value": "metre",
+  "unit": null,
+  "tag": "convention",
+  "citations": []
+ },
+ "axes": {
+  "id": "convention.axes",
+  "value": "Y up; flat cloth in the XZ plane; u across the width (X), v along the length (Z)",
+  "unit": null,
+  "tag": "convention",
+  "citations": []
+ },
+ "uv": {
+  "tag": "convention",
+  "text": "u_m runs 0..width across the cloth, v_m runs 0..length along it; texture s = u_m / width, t = v_m / length. Placed flat: X = u_m - width/2, Y = 0, Z = v_m - length/2, so s runs along +X and t along +Z, as an X3D ElevationGrid maps them. Seen as in the usual horizontal display (dorsal image left, frontal right, heads meeting in the middle), v_m = 0 is the left end. In the synthetic maps u_m = width is the figure's left side in both images; for a measured map, record its own orientation."
+ },
+ "map_grid": {
+  "id": "convention.map_grid",
+  "value": [
+   2048,
+   8192
+  ],
+  "unit": "texels (u x v)",
+  "tag": "convention",
+  "citations": []
+ },
+ "synthetic_map_grid": {
+  "value": [
+   1024,
+   4096
+  ],
+  "tag": "convention",
+  "note": "Half the convention grid; the synthetic image has no detail finer than 5 mm. Sample by UV."
+ },
+ "png_rows": "Row 0 of every map PNG is t = 1 (v_m = length); the last row is t = 0."
+}

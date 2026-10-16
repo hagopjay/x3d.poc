@@ -1,0 +1,3936 @@
+{
+ "title": "Curated part of the Shroud knowledge graph",
+ "note": "Hand-edited source. Add nodes and edges here and run tools/make_graph.py. Ids are 'kind/slug'; 'ref/<id>' points into data/bibliography/references.json and 'constant/<id>' into data/constants.json.",
+ "lanes": {
+  "legend": "Edessa, the Mandylion and images not made by hands",
+  "byzantine": "Pantocrator and the Eastern icon line",
+  "veronica": "The Western Veronica and Holy Face line",
+  "shroud": "The Shroud's own history and its copies",
+  "salvator": "The Salvator Mundi line",
+  "photography": "Photography and modern devotion",
+  "science": "Measurement and dispute"
+ },
+ "nodes": [
+  {
+   "id": "place/edessa",
+   "type": "Place",
+   "name": "Edessa",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/constantinople",
+   "type": "Place",
+   "name": "Constantinople (Istanbul)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/nicaea",
+   "type": "Place",
+   "name": "Nicaea",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/lirey",
+   "type": "Place",
+   "name": "Lirey",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/chambery",
+   "type": "Place",
+   "name": "Chambéry",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/turin",
+   "type": "Place",
+   "name": "Turin",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/sinai",
+   "type": "Place",
+   "name": "St. Catherine's Monastery, Sinai",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/ravenna",
+   "type": "Place",
+   "name": "Sant'Apollinare Nuovo, Ravenna",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/rome",
+   "type": "Place",
+   "name": "Rome",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/daphni",
+   "type": "Place",
+   "name": "Daphni Monastery, near Athens",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/cefalu",
+   "type": "Place",
+   "name": "Cefalù Cathedral, Sicily",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/hagia-sophia",
+   "type": "Place",
+   "name": "Hagia Sophia, Istanbul",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/oviedo",
+   "type": "Place",
+   "name": "Oviedo",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/manoppello",
+   "type": "Place",
+   "name": "Manoppello",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/summit-nj",
+   "type": "Place",
+   "name": "Dominican Nuns Monastery, Summit, New Jersey",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/zvenigorod",
+   "type": "Place",
+   "name": "Zvenigorod",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/moscow",
+   "type": "Place",
+   "name": "Moscow",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/maniava",
+   "type": "Place",
+   "name": "Maniava Hermitage",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/zhovkva",
+   "type": "Place",
+   "name": "Zhovkva",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/prado",
+   "type": "Place",
+   "name": "Museo del Prado, Madrid",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/goulandris",
+   "type": "Place",
+   "name": "Goulandris Foundation, Athens",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/santa-cruz-toledo",
+   "type": "Place",
+   "name": "Museo de Santa Cruz, Toledo",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/bilbao",
+   "type": "Place",
+   "name": "Bilbao",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/houston",
+   "type": "Place",
+   "name": "Houston",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/stockholm",
+   "type": "Place",
+   "name": "Stockholm",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/met",
+   "type": "Place",
+   "name": "Metropolitan Museum of Art, New York",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/hermitage",
+   "type": "Place",
+   "name": "Hermitage, St Petersburg",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/khm",
+   "type": "Place",
+   "name": "Kunsthistorisches Museum, Vienna",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/national-gallery",
+   "type": "Place",
+   "name": "National Gallery, London",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/new-orleans",
+   "type": "Place",
+   "name": "New Orleans",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/oxford",
+   "type": "Place",
+   "name": "Oxford",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/zurich",
+   "type": "Place",
+   "name": "Zurich",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/arizona",
+   "type": "Place",
+   "name": "Arizona",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/genoa",
+   "type": "Place",
+   "name": "Genoa",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/amsterdam",
+   "type": "Place",
+   "name": "Amsterdam",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "place/sandia",
+   "type": "Place",
+   "name": "Sandia Laboratories",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ]
+  },
+  {
+   "id": "org/house-of-savoy",
+   "type": "Organization",
+   "name": "House of Savoy",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "org/sturp",
+   "type": "Organization",
+   "name": "STURP (Shroud of Turin Research Project)",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ]
+  },
+  {
+   "id": "org/poor-clares",
+   "type": "Organization",
+   "name": "Poor Clare nuns of Chambéry",
+   "tag": "historical",
+   "sources": [
+    "plan"
+   ]
+  },
+  {
+   "id": "org/dominican-nuns-summit",
+   "type": "Organization",
+   "name": "Dominican Nuns, Summit",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "org/lab-oxford",
+   "type": "Organization",
+   "name": "Oxford radiocarbon laboratory",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "org/lab-zurich",
+   "type": "Organization",
+   "name": "Zurich radiocarbon laboratory",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "org/lab-arizona",
+   "type": "Organization",
+   "name": "Arizona radiocarbon laboratory",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "org/haltadefinizione",
+   "type": "Organization",
+   "name": "Haltadefinizione",
+   "tag": "historical",
+   "sources": [
+    "v3note"
+   ]
+  },
+  {
+   "id": "person/abgar",
+   "type": "Person",
+   "name": "King Abgar of Edessa",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Receives the miraculous cloth in the legend."
+  },
+  {
+   "id": "person/eusebius",
+   "type": "Person",
+   "name": "Eusebius of Caesarea",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "First records the Abgar legend, early 4th century."
+  },
+  {
+   "id": "person/evagrius",
+   "type": "Person",
+   "name": "Evagrius Scholasticus",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "First mentions a physical image, about 593."
+  },
+  {
+   "id": "person/romanos-i",
+   "type": "Person",
+   "name": "Romanos I Lekapenos",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Byzantine emperor; brings the Image of Edessa to Constantinople in 944."
+  },
+  {
+   "id": "person/ian-wilson",
+   "type": "Person",
+   "name": "Ian Wilson",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Author of the Shroud = Mandylion hypothesis."
+  },
+  {
+   "id": "person/paul-vignon",
+   "type": "Person",
+   "name": "Paul Vignon",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Catalogued fifteen recurring facial traits (the Vignon markings)."
+  },
+  {
+   "id": "person/whangers",
+   "type": "Person",
+   "name": "Alan and Judith Whanger",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Two researchers named together; polarized image overlay.",
+   "bib_alias": [
+    "Whanger",
+    ""
+   ]
+  },
+  {
+   "id": "person/leo-iii",
+   "type": "Person",
+   "name": "Emperor Leo III",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Banned the veneration of images in 726."
+  },
+  {
+   "id": "person/john-damascus",
+   "type": "Person",
+   "name": "John of Damascus",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Defended images, leaning on the Abgar legend."
+  },
+  {
+   "id": "person/veronica",
+   "type": "Person",
+   "name": "Veronica",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Legendary woman who wiped Christ's face on the way to Calvary."
+  },
+  {
+   "id": "person/weyden",
+   "type": "Person",
+   "name": "Rogier van der Weyden",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/memling",
+   "type": "Person",
+   "name": "Hans Memling",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/bosch",
+   "type": "Person",
+   "name": "Hieronymus Bosch",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/pontormo",
+   "type": "Person",
+   "name": "Jacopo Pontormo",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/correggio",
+   "type": "Person",
+   "name": "Correggio",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/aelbrecht-bouts",
+   "type": "Person",
+   "name": "Aelbrecht Bouts",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/durer",
+   "type": "Person",
+   "name": "Albrecht Dürer",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/baldung-grien",
+   "type": "Person",
+   "name": "Hans Baldung Grien",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/rabel",
+   "type": "Person",
+   "name": "Jean Rabel",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/wierix",
+   "type": "Person",
+   "name": "Hieronymus Wierix",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/fetti",
+   "type": "Person",
+   "name": "Domenico Fetti",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/el-greco",
+   "type": "Person",
+   "name": "El Greco",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/zurbaran",
+   "type": "Person",
+   "name": "Francisco de Zurbarán",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/tempesta",
+   "type": "Person",
+   "name": "Antonio Tempesta",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/philip-ii",
+   "type": "Person",
+   "name": "King Philip II of Spain",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Had a painted Shroud copy made in the late 1500s."
+  },
+  {
+   "id": "person/julius-ii",
+   "type": "Person",
+   "name": "Pope Julius II",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Authorized veneration of the Shroud as a relic in 1506."
+  },
+  {
+   "id": "person/guarini",
+   "type": "Person",
+   "name": "Guarino Guarini",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Architect of the Chapel of the Holy Shroud."
+  },
+  {
+   "id": "person/rublev",
+   "type": "Person",
+   "name": "Andrei Rublev",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/ushakov",
+   "type": "Person",
+   "name": "Simon Ushakov",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Moscow court painter."
+  },
+  {
+   "id": "person/kondzelevych",
+   "type": "Person",
+   "name": "Yov Kondzelevych",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/rutkovych",
+   "type": "Person",
+   "name": "Ivan Rutkovych",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/van-eyck",
+   "type": "Person",
+   "name": "Jan van Eyck",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/gerard-david",
+   "type": "Person",
+   "name": "Gerard David",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/crivelli",
+   "type": "Person",
+   "name": "Carlo Crivelli",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/titian",
+   "type": "Person",
+   "name": "Titian",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/leonardo",
+   "type": "Person",
+   "name": "Leonardo da Vinci",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/pia",
+   "type": "Person",
+   "name": "Secondo Pia",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Amateur photographer; his 1898 negative reads as a coherent positive."
+  },
+  {
+   "id": "person/enrie",
+   "type": "Person",
+   "name": "Giuseppe Enrie",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Re-photographed the Shroud in 1931."
+  },
+  {
+   "id": "person/de-micheli",
+   "type": "Person",
+   "name": "Maria Pierina De Micheli",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Designed the Holy Face Medal from Pia's photographs."
+  },
+  {
+   "id": "person/pius-xii",
+   "type": "Person",
+   "name": "Pope Pius XII",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Approved the Holy Face Medal for devotional use."
+  },
+  {
+   "id": "person/therese",
+   "type": "Person",
+   "name": "Thérèse of Lisieux",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Took the religious name 'of the Holy Face' in 1889."
+  },
+  {
+   "id": "person/olsen",
+   "type": "Person",
+   "name": "Antoinette Merete Olsen",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Weaver; 2020 loom reconstruction of the herringbone weave."
+  },
+  {
+   "id": "person/dali",
+   "type": "Person",
+   "name": "Salvador Dalí",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/warhol",
+   "type": "Person",
+   "name": "Andy Warhol",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/rembrandt",
+   "type": "Person",
+   "name": "Rembrandt",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/rouault",
+   "type": "Person",
+   "name": "Georges Rouault",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/grunewald",
+   "type": "Person",
+   "name": "Matthias Grünewald",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ]
+  },
+  {
+   "id": "person/clement-vii",
+   "type": "Person",
+   "name": "Antipope Clement VII",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Recipient of the 1389 memorandum."
+  },
+  {
+   "id": "person/darcis",
+   "type": "Person",
+   "name": "Pierre d'Arcis, Bishop of Troyes",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "package"
+   ],
+   "description": "Author of the 1389 memorandum. The research write-up says 'a bishop'; the name is the standard identification."
+  },
+  {
+   "id": "person/mccrone",
+   "type": "Person",
+   "name": "Walter McCrone",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Microscopist; pigment hypothesis.",
+   "bib_alias": [
+    "McCrone",
+    "W."
+   ]
+  },
+  {
+   "id": "person/moraes",
+   "type": "Person",
+   "name": "Cicero Moraes",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "3D-graphics researcher; 2025 draping study.",
+   "bib_alias": [
+    "Moraes",
+    "C."
+   ]
+  },
+  {
+   "id": "person/casper",
+   "type": "Person",
+   "name": "Andrew Casper",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Art historian; An Artful Relic.",
+   "bib_alias": [
+    "Casper",
+    "A."
+   ]
+  },
+  {
+   "id": "person/belting",
+   "type": "Person",
+   "name": "Hans Belting",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "description": "Art historian; Likeness and Presence.",
+   "bib_alias": [
+    "Belting",
+    "H."
+   ]
+  },
+  {
+   "id": "relic/shroud",
+   "type": "Relic",
+   "name": "Shroud of Turin",
+   "tag": "measured",
+   "sources": [
+    "plan",
+    "v3",
+    "research"
+   ],
+   "lane": "shroud",
+   "description": "A linen cloth, 3/1 herringbone twill, bearing the faint frontal and dorsal image of a man."
+  },
+  {
+   "id": "relic/mandylion",
+   "type": "Relic",
+   "name": "Image of Edessa (Mandylion)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "attested about 593",
+   "start": 544,
+   "description": "Legendary cloth with Christ's face; in Constantinople from 944; lost after 1204."
+  },
+  {
+   "id": "relic/veronica-veil",
+   "type": "Relic",
+   "name": "Veil of Veronica (Vera Icon)",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica"
+  },
+  {
+   "id": "relic/manoppello",
+   "type": "Relic",
+   "name": "Manoppello Image",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "description": "A separate cloth in Italy venerated as a Veronica-type true image."
+  },
+  {
+   "id": "relic/sudarium",
+   "type": "Relic",
+   "name": "Sudarium of Oviedo",
+   "tag": "measured",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "shroud",
+   "description": "A bloodstained face cloth with no image; radiocarbon about AD 680."
+  },
+  {
+   "id": "relic/holy-face-genoa",
+   "type": "Relic",
+   "name": "Holy Face of Genoa",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "Historically claimed as the real Mandylion (a thread for later)."
+  },
+  {
+   "id": "relic/holy-face-san-silvestro",
+   "type": "Relic",
+   "name": "Holy Face of San Silvestro",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "Historically claimed as the real Mandylion (a thread for later)."
+  },
+  {
+   "id": "concept/acheiropoieta",
+   "type": "Concept",
+   "name": "Acheiropoieta",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "Images not made by human hands."
+  },
+  {
+   "id": "concept/abgar-legend",
+   "type": "Concept",
+   "name": "Abgar legend",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "King Abgar receives a cloth imprinted with Christ's face."
+  },
+  {
+   "id": "concept/tetradiplon",
+   "type": "Concept",
+   "name": "Tetradiplon folding hypothesis",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "The Shroud folded in four so only the face showed (Wilson)."
+  },
+  {
+   "id": "concept/iconoclasm",
+   "type": "Concept",
+   "name": "Iconoclastic Controversy",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "From 726, images banned; the Second Council of Nicaea (787) sided with their defenders."
+  },
+  {
+   "id": "concept/pantocrator",
+   "type": "Concept",
+   "name": "Christ Pantocrator type",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "Frontal bearded Christ; earliest known icon at Sinai."
+  },
+  {
+   "id": "concept/vignon-markings",
+   "type": "Concept",
+   "name": "Vignon markings",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "Fifteen recurring facial traits, e.g. a topless square between the eyebrows, a V at the bridge of the nose, two forked wisps of hair."
+  },
+  {
+   "id": "concept/whanger-overlay",
+   "type": "Concept",
+   "name": "Polarized image overlay",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "The Whangers' method of comparing images point by point."
+  },
+  {
+   "id": "concept/spas-nerukotvorny",
+   "type": "Concept",
+   "name": "Spas Nerukotvorny (Savior Not Made by Hands)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "A named icon genre descended from the Edessa legend."
+  },
+  {
+   "id": "concept/vera-icon",
+   "type": "Concept",
+   "name": "Veronica legend",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "description": "Crystallizes around 1380 in the Meditations on the Life of Christ."
+  },
+  {
+   "id": "concept/holy-face-devotion",
+   "type": "Concept",
+   "name": "Holy Face devotion",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica"
+  },
+  {
+   "id": "concept/contact-relic-copies",
+   "type": "Concept",
+   "name": "Painted contact-relic copies of the Shroud",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "description": "Copies pressed against the original to sanctify them."
+  },
+  {
+   "id": "concept/salvator-mundi",
+   "type": "Concept",
+   "name": "Salvator Mundi type",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "description": "Frontal Christ blessing, holding an orb; emerges in the 15th century."
+  },
+  {
+   "id": "concept/christ-in-majesty",
+   "type": "Concept",
+   "name": "Christ in Majesty",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator"
+  },
+  {
+   "id": "concept/good-shepherd",
+   "type": "Concept",
+   "name": "Good Shepherd type",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "Beardless youthful Christ of the 3rd-century catacombs."
+  },
+  {
+   "id": "concept/forensic-reconstruction",
+   "type": "Concept",
+   "name": "Devotional and forensic reconstruction art",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "photography",
+   "description": "Sculptures and exhibits reconstructing the body from the Shroud."
+  },
+  {
+   "id": "concept/photographic-negative",
+   "type": "Concept",
+   "name": "The photographic negative as positive",
+   "tag": "measured",
+   "sources": [
+    "research"
+   ],
+   "lane": "photography",
+   "description": "The negative of the cloth reads as a coherent positive image."
+  },
+  {
+   "id": "artwork/good-shepherd-catacombs",
+   "type": "Artwork",
+   "name": "Good Shepherd catacomb paintings",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "3rd century",
+   "start": 200,
+   "end": 299
+  },
+  {
+   "id": "artwork/sinai-pantocrator",
+   "type": "Artwork",
+   "name": "Christ Pantocrator icon",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 550 to 590",
+   "start": 550,
+   "end": 590
+  },
+  {
+   "id": "artwork/ravenna-pantocrator",
+   "type": "Artwork",
+   "name": "Christ Pantocrator mosaic, Sant'Apollinare Nuovo",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "completed by 526",
+   "start": 526,
+   "end": 526
+  },
+  {
+   "id": "artwork/justinian-ii-solidus",
+   "type": "Artwork",
+   "name": "Justinian II gold solidus",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 690",
+   "start": 690,
+   "end": 690,
+   "description": "The first coinage to bear Christ's portrait."
+  },
+  {
+   "id": "artwork/pontianus-fresco",
+   "type": "Artwork",
+   "name": "Fresco bust of Christ, Catacomb of St. Pontianus",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "7th to 8th century",
+   "start": 600,
+   "end": 799
+  },
+  {
+   "id": "artwork/mandylion-triptych",
+   "type": "Artwork",
+   "name": "Mandylion triptych icon (Abgar receiving the image)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend"
+  },
+  {
+   "id": "artwork/daphni-pantocrator",
+   "type": "Artwork",
+   "name": "Christ Pantocrator dome mosaic",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 1050 to 1100",
+   "start": 1050,
+   "end": 1100
+  },
+  {
+   "id": "artwork/cefalu-pantocrator",
+   "type": "Artwork",
+   "name": "Christ Pantocrator apse mosaic",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "1148",
+   "start": 1148,
+   "end": 1148
+  },
+  {
+   "id": "artwork/deesis-hagia-sophia",
+   "type": "Artwork",
+   "name": "Deesis mosaic",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 1260 to 1280",
+   "start": 1260,
+   "end": 1280
+  },
+  {
+   "id": "artwork/rublev-zvenigorod",
+   "type": "Artwork",
+   "name": "Christ the Savior (Zvenigorod)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 1410",
+   "start": 1410,
+   "end": 1410,
+   "description": "Rediscovered in 1918 under a woodpile near Zvenigorod."
+  },
+  {
+   "id": "artwork/ushakov-savior",
+   "type": "Artwork",
+   "name": "Savior Not Made by Hands",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "1673",
+   "start": 1673,
+   "end": 1673
+  },
+  {
+   "id": "artwork/maniava-iconostasis",
+   "type": "Artwork",
+   "name": "Maniava iconostasis panels",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "about 1698 to 1705",
+   "start": 1698,
+   "end": 1705
+  },
+  {
+   "id": "artwork/zhovkva-iconostasis",
+   "type": "Artwork",
+   "name": "Zhovkva iconostasis",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "1699",
+   "start": 1699,
+   "end": 1699
+  },
+  {
+   "id": "artwork/weyden-crucifixion-panel",
+   "type": "Artwork",
+   "name": "Crucifixion triptych side panel with Veronica",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "1440",
+   "start": 1440,
+   "end": 1440
+  },
+  {
+   "id": "artwork/veronica-treatments",
+   "type": "Artwork",
+   "name": "Veronica veil treatments",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "15th to 16th century",
+   "start": 1450,
+   "end": 1560
+  },
+  {
+   "id": "artwork/bouts-veil-of-veronica",
+   "type": "Artwork",
+   "name": "The Veil of Saint Veronica (several versions)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica"
+  },
+  {
+   "id": "artwork/holy-face-engravings",
+   "type": "Artwork",
+   "name": "Holy Face engravings and panels",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "16th century",
+   "start": 1500,
+   "end": 1600
+  },
+  {
+   "id": "artwork/fetti-veil-of-veronica",
+   "type": "Artwork",
+   "name": "The Veil of Veronica",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "early 1600s",
+   "start": 1600,
+   "end": 1620
+  },
+  {
+   "id": "artwork/el-greco-veronica",
+   "type": "Artwork",
+   "name": "Veronica veil versions",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "16th century",
+   "start": 1570,
+   "end": 1600
+  },
+  {
+   "id": "artwork/zurbaran-holy-face",
+   "type": "Artwork",
+   "name": "Holy Face (about a dozen versions)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "17th century",
+   "start": 1630,
+   "end": 1660,
+   "description": "The face floating on a nailed-up cloth against darkness."
+  },
+  {
+   "id": "artwork/philip-ii-shroud-copy",
+   "type": "Artwork",
+   "name": "Painted Shroud replica for Philip II",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "late 1500s",
+   "start": 1570,
+   "end": 1599
+  },
+  {
+   "id": "artwork/summit-shroud-copy",
+   "type": "Artwork",
+   "name": "Shroud copy of 1624",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "1624",
+   "start": 1624,
+   "end": 1624
+  },
+  {
+   "id": "artwork/tempesta-ostension",
+   "type": "Artwork",
+   "name": "Engraving of the Shroud's public ostension",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "about 1613",
+   "start": 1613,
+   "end": 1613,
+   "description": "A documentary image of crowds at the display ceremony."
+  },
+  {
+   "id": "artwork/guarini-chapel",
+   "type": "Artwork",
+   "name": "Chapel of the Holy Shroud (Cappella della Sindone)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "completed 1694",
+   "start": 1694,
+   "end": 1694,
+   "description": "A Baroque reliquary building with a spiralling dome, linking the royal palace to the cathedral."
+  },
+  {
+   "id": "artwork/early-salvator-mundi",
+   "type": "Artwork",
+   "name": "Early Salvator Mundi paintings",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "15th century",
+   "start": 1430,
+   "end": 1500
+  },
+  {
+   "id": "artwork/durer-salvator-mundi",
+   "type": "Artwork",
+   "name": "Salvator Mundi (unfinished)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "about 1505",
+   "start": 1505,
+   "end": 1505
+  },
+  {
+   "id": "artwork/titian-salvator-mundi",
+   "type": "Artwork",
+   "name": "Salvator Mundi (Christ Blessing)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "about 1570",
+   "start": 1570,
+   "end": 1570
+  },
+  {
+   "id": "artwork/titian-christ-with-orb",
+   "type": "Artwork",
+   "name": "Christ with an Orb",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "about 1520 to 1530",
+   "start": 1520,
+   "end": 1530
+  },
+  {
+   "id": "artwork/leonardo-salvator-mundi",
+   "type": "Artwork",
+   "name": "Salvator Mundi (attributed to Leonardo da Vinci)",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "rediscovered 2005",
+   "start": 1500,
+   "end": 1500,
+   "description": "Rediscovered at a 2005 New Orleans estate sale, shown at the National Gallery 2011 to 2012, sold in 2017 for USD 450.3 million."
+  },
+  {
+   "id": "artwork/holy-face-medal",
+   "type": "Artwork",
+   "name": "Holy Face Medal",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "photography",
+   "date": "1936",
+   "start": 1936,
+   "end": 1936
+  },
+  {
+   "id": "artwork/dali-christ-of-saint-john",
+   "type": "Artwork",
+   "name": "Christ of Saint John of the Cross",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "1951",
+   "start": 1951,
+   "end": 1951,
+   "description": "Dalí's own foreshortened crucifixion; not modelled on the Shroud or the Salvator Mundi type."
+  },
+  {
+   "id": "artwork/warhol-last-supper",
+   "type": "Artwork",
+   "name": "Last Supper series",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "1986",
+   "start": 1986,
+   "end": 1986,
+   "description": "Based on Leonardo, not the Shroud."
+  },
+  {
+   "id": "artwork/rembrandt-christ-studies",
+   "type": "Artwork",
+   "name": "Christ studies from a live model",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "1640s",
+   "start": 1640,
+   "end": 1649,
+   "description": "An empirical counter-tradition (a thread for later)."
+  },
+  {
+   "id": "artwork/rouault-head-of-christ",
+   "type": "Artwork",
+   "name": "Head of Christ series",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "photography",
+   "date": "early 20th century",
+   "start": 1900,
+   "end": 1940,
+   "description": "A thread for later."
+  },
+  {
+   "id": "artwork/isenheim-altarpiece",
+   "type": "Artwork",
+   "name": "Isenheim Altarpiece",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "veronica",
+   "date": "1512 to 1516",
+   "start": 1512,
+   "end": 1516,
+   "description": "A thread for later."
+  },
+  {
+   "id": "photo/pia-1898",
+   "type": "Photograph",
+   "name": "Secondo Pia's negative",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "photography",
+   "date": "1898",
+   "start": 1898,
+   "end": 1898
+  },
+  {
+   "id": "photo/enrie-1931",
+   "type": "Photograph",
+   "name": "Giuseppe Enrie's plates",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "photography",
+   "date": "1931",
+   "start": 1931,
+   "end": 1931,
+   "description": "Orthochromatic plates; the build plan's source for the image and height field."
+  },
+  {
+   "id": "photo/sturp-1978",
+   "type": "Photograph",
+   "name": "STURP photography and spectra",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science",
+   "date": "1978",
+   "start": 1978,
+   "end": 1978
+  },
+  {
+   "id": "photo/haltadefinizione-2008",
+   "type": "Photograph",
+   "name": "Haltadefinizione 12-gigapixel capture",
+   "tag": "historical",
+   "sources": [
+    "v3note"
+   ],
+   "lane": "photography",
+   "date": "2008",
+   "start": 2008,
+   "end": 2008,
+   "description": "1649 photographs in one 72 GB file; never published at full resolution."
+  },
+  {
+   "id": "event/abgar-recorded",
+   "type": "Event",
+   "name": "Abgar legend first recorded",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "early 4th century",
+   "start": 300,
+   "end": 340
+  },
+  {
+   "id": "event/edessa-siege",
+   "type": "Event",
+   "name": "Image credited with defending Edessa from a Persian siege",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "544",
+   "start": 544,
+   "end": 544,
+   "description": "Described by Evagrius Scholasticus about 593, the first mention of a physical image."
+  },
+  {
+   "id": "event/iconoclasm",
+   "type": "Event",
+   "name": "Leo III bans the veneration of images",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "726",
+   "start": 726,
+   "end": 726
+  },
+  {
+   "id": "event/nicaea-ii",
+   "type": "Event",
+   "name": "Second Council of Nicaea restores images",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "787",
+   "start": 787,
+   "end": 787,
+   "description": "Images deserve reverence, not adoration; the Abgar legend served as proof of concept."
+  },
+  {
+   "id": "event/mandylion-944",
+   "type": "Event",
+   "name": "Image of Edessa brought to Constantinople",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "944",
+   "start": 944,
+   "end": 944
+  },
+  {
+   "id": "event/sack-1204",
+   "type": "Event",
+   "name": "Crusaders sack Constantinople; the Mandylion disappears from the record",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "date": "1204",
+   "start": 1204,
+   "end": 1204
+  },
+  {
+   "id": "event/lirey",
+   "type": "Event",
+   "name": "First certain appearance of the Shroud",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "shroud",
+   "date": "1350s",
+   "start": 1350,
+   "end": 1359
+  },
+  {
+   "id": "event/memorandum-1389",
+   "type": "Event",
+   "name": "Memorandum to Clement VII calls the cloth painted",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "1389",
+   "start": 1389,
+   "end": 1389,
+   "description": "'Artificially painted in an ingenious way', by an artist said to have confessed."
+  },
+  {
+   "id": "event/chambery",
+   "type": "Event",
+   "name": "The Shroud with the House of Savoy at Chambéry",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "by 1466",
+   "start": 1466,
+   "end": 1466
+  },
+  {
+   "id": "event/veneration-1506",
+   "type": "Event",
+   "name": "Julius II authorizes veneration as a relic",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "1506",
+   "start": 1506,
+   "end": 1506
+  },
+  {
+   "id": "event/fire-1532",
+   "type": "Event",
+   "name": "Chambéry fire: scorches and water stains",
+   "tag": "historical",
+   "sources": [
+    "v3",
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "1532",
+   "start": 1532,
+   "end": 1532
+  },
+  {
+   "id": "event/patches-1534",
+   "type": "Event",
+   "name": "Poor Clare patches and backing",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ],
+   "lane": "shroud",
+   "date": "1534",
+   "start": 1534,
+   "end": 1534
+  },
+  {
+   "id": "event/turin-1578",
+   "type": "Event",
+   "name": "The Shroud settles in Turin",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "date": "1578",
+   "start": 1578,
+   "end": 1578
+  },
+  {
+   "id": "event/therese-1889",
+   "type": "Event",
+   "name": "Thérèse of Lisieux takes the name 'of the Holy Face'",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "photography",
+   "date": "1889",
+   "start": 1889,
+   "end": 1889
+  },
+  {
+   "id": "event/vp8-1976",
+   "type": "Event",
+   "name": "First VP-8 analysis",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science",
+   "date": "1976",
+   "start": 1976,
+   "end": 1976,
+   "description": "Image intensity read as relief."
+  },
+  {
+   "id": "event/sturp-1978",
+   "type": "Event",
+   "name": "STURP examination",
+   "tag": "historical",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science",
+   "date": "1978",
+   "start": 1978,
+   "end": 1978
+  },
+  {
+   "id": "event/c14-1988",
+   "type": "Event",
+   "name": "Radiocarbon dating by three laboratories",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "science",
+   "date": "1988",
+   "start": 1988,
+   "end": 1988
+  },
+  {
+   "id": "event/restoration-2002",
+   "type": "Event",
+   "name": "Restoration removes the patches and backing",
+   "tag": "historical",
+   "sources": [
+    "plan"
+   ],
+   "lane": "shroud",
+   "date": "2002",
+   "start": 2002,
+   "end": 2002
+  },
+  {
+   "id": "event/leonardo-sale",
+   "type": "Event",
+   "name": "Leonardo-attributed Salvator Mundi sold at auction",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "date": "2017",
+   "start": 2017,
+   "end": 2017,
+   "description": "USD 450.3 million, the most expensive painting sold at auction."
+  },
+  {
+   "id": "event/rublev-rediscovered",
+   "type": "Event",
+   "name": "Rublev's Zvenigorod Christ rediscovered",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "date": "1918",
+   "start": 1918,
+   "end": 1918
+  },
+  {
+   "id": "event/loom-2020",
+   "type": "Event",
+   "name": "Loom reconstruction of the weave",
+   "tag": "historical",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "science",
+   "date": "2020",
+   "start": 2020,
+   "end": 2020
+  },
+  {
+   "id": "claim/shroud-is-mandylion",
+   "type": "Claim",
+   "name": "The Shroud and the Image of Edessa are the same cloth",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend",
+   "description": "A published hypothesis, not a scholarly consensus."
+  },
+  {
+   "id": "claim/vignon-correspondence",
+   "type": "Claim",
+   "name": "Byzantine icons carry the Shroud's facial traits",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine",
+   "description": "Not accepted as settled by mainstream art historians."
+  },
+  {
+   "id": "claim/whanger-145",
+   "type": "Claim",
+   "name": "145 points of correspondence between the Justinian II solidus and the Shroud face",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine"
+  },
+  {
+   "id": "claim/whanger-170",
+   "type": "Claim",
+   "name": "170 points of congruence between the Sinai Pantocrator and the Shroud face",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "byzantine"
+  },
+  {
+   "id": "claim/durer-correspondence",
+   "type": "Claim",
+   "name": "Dürer's Salvator Mundi corresponds closely to the Shroud face",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "description": "Made by some Shroud researchers; not peer-reviewed art-historical consensus."
+  },
+  {
+   "id": "claim/authenticity-timeline",
+   "type": "Claim",
+   "name": "The Shroud, as the Image of Edessa, shaped icon painting from the 6th century",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "legend"
+  },
+  {
+   "id": "claim/medieval-timeline",
+   "type": "Claim",
+   "name": "The Shroud is a 13th to 14th century work that borrowed the Byzantine Christ face",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud"
+  },
+  {
+   "id": "claim/pigment-from-copies",
+   "type": "Claim",
+   "name": "Trace iron oxide on the cloth came from painted copies touched to it",
+   "tag": "hypothesis",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud"
+  },
+  {
+   "id": "claim/summit-damp-mark",
+   "type": "Claim",
+   "name": "The 1624 copy developed a damp mark at the wound site when touched to the original",
+   "tag": "tradition",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud",
+   "description": "The monastery's own tradition."
+  },
+  {
+   "id": "claim/leonardo-attribution",
+   "type": "Claim",
+   "name": "The Salvator Mundi is by Leonardo's own hand",
+   "tag": "contested",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "description": "Some scholars think it studio work or a later copy."
+  },
+  {
+   "id": "claim/dali-salvator-mundi",
+   "type": "Claim",
+   "name": "Salvador Dalí painted a Salvator Mundi",
+   "tag": "unsupported",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "description": "No such painting is known; 'Salvador' and 'Salvator' are the same word."
+  },
+  {
+   "id": "claim/warhol-shroud",
+   "type": "Claim",
+   "name": "Andy Warhol made a work titled after the Shroud",
+   "tag": "unsupported",
+   "sources": [
+    "research"
+   ],
+   "lane": "salvator",
+   "description": "Could not be verified; his 1986 Last Supper series is the documented link to this tradition."
+  },
+  {
+   "id": "claim/c14-medieval",
+   "type": "Claim",
+   "name": "The cloth dates to 1260 to 1390",
+   "tag": "measured",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "science",
+   "description": "Three laboratories, 1988. The sampling and homogeneity are disputed; alternatives are considered fringe by mainstream science."
+  },
+  {
+   "id": "claim/c14-heterogeneous",
+   "type": "Claim",
+   "name": "The radiocarbon raw data trend along the sample",
+   "tag": "contested",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/fragments-consistent",
+   "type": "Claim",
+   "name": "The 1988 fragments are consistent with the main cloth",
+   "tag": "measured",
+   "sources": [
+    "v3note"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/mccrone-pigment",
+   "type": "Claim",
+   "name": "The image is red ochre and vermilion in a collagen binder",
+   "tag": "contested",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/no-pigment",
+   "type": "Claim",
+   "name": "The body image is oxidized, dehydrated cellulose, not pigment",
+   "tag": "measured",
+   "sources": [
+    "v3",
+    "research"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/moraes-low-relief",
+   "type": "Claim",
+   "name": "The image's distortions match cloth draped over a low-relief sculpture",
+   "tag": "contested",
+   "sources": [
+    "research",
+    "v3note"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/treadle-loom",
+   "type": "Claim",
+   "name": "The weave can be reproduced only on a treadle loom",
+   "tag": "measured",
+   "sources": [
+    "research",
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/image-encodes-distance",
+   "type": "Claim",
+   "name": "Image intensity encodes the vertical cloth-body distance",
+   "tag": "inferred",
+   "sources": [
+    "v3",
+    "prd1"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/not-visible-close",
+   "type": "Claim",
+   "name": "The image is not discernible closer than about 1.8 m",
+   "tag": "measured",
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/blood-before-image",
+   "type": "Claim",
+   "name": "The blood was on the cloth before the image",
+   "tag": "measured",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/double-superficiality",
+   "type": "Claim",
+   "name": "Face and hands appear faintly on the reverse side",
+   "tag": "measured",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "claim/sudarium-match",
+   "type": "Claim",
+   "name": "The Sudarium's stains are consistent with the Shroud's face",
+   "tag": "contested",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science",
+   "description": "Photographic overlay and forensic comparison; the honest verb is 'consistent with'."
+  },
+  {
+   "id": "claim/darcis-painted",
+   "type": "Claim",
+   "name": "A bishop wrote in 1389 that the cloth was painted by a confessed artist",
+   "tag": "historical",
+   "sources": [
+    "research"
+   ],
+   "lane": "shroud"
+  },
+  {
+   "id": "claim/pollen-coins",
+   "type": "Claim",
+   "name": "Pollen, plant images and coins identify the cloth's history",
+   "tag": "contested",
+   "sources": [
+    "v3"
+   ],
+   "lane": "science"
+  },
+  {
+   "id": "dataset/constants",
+   "type": "Dataset",
+   "name": "Science constants registry",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "Every number with citation and epistemic tag.",
+   "path": "data/constants.json"
+  },
+  {
+   "id": "dataset/corrections",
+   "type": "Dataset",
+   "name": "Corrections ledger",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "Contradictions resolved, citations fixed, claims retracted.",
+   "path": "data/corrections.json"
+  },
+  {
+   "id": "dataset/bibliography",
+   "type": "Dataset",
+   "name": "Bibliography",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "CSL-JSON and BibTeX.",
+   "path": "data/bibliography/references.json"
+  },
+  {
+   "id": "dataset/spectral-lut",
+   "type": "Dataset",
+   "name": "Spectral albedo LUT",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "JJE 1984 model under seven illuminants.",
+   "path": "data/spectral/shroud_spectral_lut.json"
+  },
+  {
+   "id": "dataset/weave",
+   "type": "Dataset",
+   "name": "Weave rule and tile",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "Herringbone rule from Vial's counts.",
+   "path": "data/weave.json"
+  },
+  {
+   "id": "dataset/synthetic-h",
+   "type": "Dataset",
+   "name": "Synthetic image field h",
+   "tag": "aesthetic",
+   "sources": [
+    "package"
+   ],
+   "description": "License-free forward model; aesthetic stand-in.",
+   "path": "maps/synthetic/h_16bit.png"
+  },
+  {
+   "id": "dataset/perception",
+   "type": "Dataset",
+   "name": "Perceptual dissolve model",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "description": "Why the image vanishes up close.",
+   "path": "data/perception.json"
+  },
+  {
+   "id": "dataset/graph",
+   "type": "Dataset",
+   "name": "This knowledge graph",
+   "tag": "derived",
+   "sources": [
+    "package"
+   ],
+   "path": "graph/shroud.jsonld"
+  }
+ ],
+ "edges": [
+  {
+   "s": "org/lab-oxford",
+   "p": "locatedAt",
+   "o": "place/oxford"
+  },
+  {
+   "s": "org/lab-zurich",
+   "p": "locatedAt",
+   "o": "place/zurich"
+  },
+  {
+   "s": "org/lab-arizona",
+   "p": "locatedAt",
+   "o": "place/arizona"
+  },
+  {
+   "s": "relic/shroud",
+   "p": "locatedAt",
+   "o": "place/turin"
+  },
+  {
+   "s": "relic/sudarium",
+   "p": "locatedAt",
+   "o": "place/oviedo"
+  },
+  {
+   "s": "relic/manoppello",
+   "p": "locatedAt",
+   "o": "place/manoppello"
+  },
+  {
+   "s": "relic/holy-face-genoa",
+   "p": "locatedAt",
+   "o": "place/genoa"
+  },
+  {
+   "s": "relic/mandylion",
+   "p": "locatedAt",
+   "o": "place/edessa",
+   "note": "until 944"
+  },
+  {
+   "s": "relic/mandylion",
+   "p": "locatedAt",
+   "o": "place/constantinople",
+   "note": "944 to 1204"
+  },
+  {
+   "s": "relic/shroud",
+   "p": "heldBy",
+   "o": "org/house-of-savoy"
+  },
+  {
+   "s": "concept/pantocrator",
+   "p": "derivesFrom",
+   "o": "concept/acheiropoieta"
+  },
+  {
+   "s": "concept/spas-nerukotvorny",
+   "p": "derivesFrom",
+   "o": "concept/abgar-legend"
+  },
+  {
+   "s": "concept/spas-nerukotvorny",
+   "p": "derivesFrom",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "concept/salvator-mundi",
+   "p": "derivesFrom",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "concept/salvator-mundi",
+   "p": "derivesFrom",
+   "o": "concept/christ-in-majesty"
+  },
+  {
+   "s": "concept/vera-icon",
+   "p": "derivesFrom",
+   "o": "concept/acheiropoieta"
+  },
+  {
+   "s": "concept/abgar-legend",
+   "p": "derivesFrom",
+   "o": "concept/acheiropoieta"
+  },
+  {
+   "s": "concept/holy-face-devotion",
+   "p": "derivesFrom",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "concept/abgar-legend",
+   "p": "about",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "concept/vera-icon",
+   "p": "about",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "concept/contact-relic-copies",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "concept/photographic-negative",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "concept/tetradiplon",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "concept/tetradiplon",
+   "p": "about",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "concept/acheiropoieta",
+   "p": "describedIn",
+   "o": "ref/belting"
+  },
+  {
+   "s": "concept/contact-relic-copies",
+   "p": "describedIn",
+   "o": "ref/casper"
+  },
+  {
+   "s": "concept/vera-icon",
+   "p": "describedIn",
+   "o": "ref/meditations1380"
+  },
+  {
+   "s": "concept/vignon-markings",
+   "p": "proposedBy",
+   "o": "person/paul-vignon"
+  },
+  {
+   "s": "concept/whanger-overlay",
+   "p": "proposedBy",
+   "o": "person/whangers"
+  },
+  {
+   "s": "concept/tetradiplon",
+   "p": "proposedBy",
+   "o": "person/ian-wilson"
+  },
+  {
+   "s": "artwork/good-shepherd-catacombs",
+   "p": "locatedAt",
+   "o": "place/rome"
+  },
+  {
+   "s": "artwork/good-shepherd-catacombs",
+   "p": "instanceOf",
+   "o": "concept/good-shepherd"
+  },
+  {
+   "s": "artwork/sinai-pantocrator",
+   "p": "locatedAt",
+   "o": "place/sinai"
+  },
+  {
+   "s": "artwork/sinai-pantocrator",
+   "p": "instanceOf",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "artwork/ravenna-pantocrator",
+   "p": "locatedAt",
+   "o": "place/ravenna"
+  },
+  {
+   "s": "artwork/ravenna-pantocrator",
+   "p": "instanceOf",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "artwork/justinian-ii-solidus",
+   "p": "instanceOf",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "artwork/pontianus-fresco",
+   "p": "locatedAt",
+   "o": "place/rome"
+  },
+  {
+   "s": "artwork/mandylion-triptych",
+   "p": "locatedAt",
+   "o": "place/sinai"
+  },
+  {
+   "s": "artwork/mandylion-triptych",
+   "p": "depicts",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "artwork/mandylion-triptych",
+   "p": "depicts",
+   "o": "person/abgar"
+  },
+  {
+   "s": "artwork/daphni-pantocrator",
+   "p": "locatedAt",
+   "o": "place/daphni"
+  },
+  {
+   "s": "artwork/daphni-pantocrator",
+   "p": "instanceOf",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "artwork/cefalu-pantocrator",
+   "p": "locatedAt",
+   "o": "place/cefalu"
+  },
+  {
+   "s": "artwork/cefalu-pantocrator",
+   "p": "instanceOf",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "artwork/deesis-hagia-sophia",
+   "p": "locatedAt",
+   "o": "place/hagia-sophia"
+  },
+  {
+   "s": "artwork/rublev-zvenigorod",
+   "p": "madeBy",
+   "o": "person/rublev"
+  },
+  {
+   "s": "artwork/rublev-zvenigorod",
+   "p": "locatedAt",
+   "o": "place/zvenigorod"
+  },
+  {
+   "s": "artwork/rublev-zvenigorod",
+   "p": "instanceOf",
+   "o": "concept/spas-nerukotvorny"
+  },
+  {
+   "s": "artwork/ushakov-savior",
+   "p": "madeBy",
+   "o": "person/ushakov"
+  },
+  {
+   "s": "artwork/ushakov-savior",
+   "p": "locatedAt",
+   "o": "place/moscow"
+  },
+  {
+   "s": "artwork/ushakov-savior",
+   "p": "instanceOf",
+   "o": "concept/spas-nerukotvorny"
+  },
+  {
+   "s": "artwork/maniava-iconostasis",
+   "p": "madeBy",
+   "o": "person/kondzelevych"
+  },
+  {
+   "s": "artwork/maniava-iconostasis",
+   "p": "locatedAt",
+   "o": "place/maniava"
+  },
+  {
+   "s": "artwork/maniava-iconostasis",
+   "p": "instanceOf",
+   "o": "concept/spas-nerukotvorny"
+  },
+  {
+   "s": "artwork/zhovkva-iconostasis",
+   "p": "madeBy",
+   "o": "person/rutkovych"
+  },
+  {
+   "s": "artwork/zhovkva-iconostasis",
+   "p": "locatedAt",
+   "o": "place/zhovkva"
+  },
+  {
+   "s": "artwork/zhovkva-iconostasis",
+   "p": "instanceOf",
+   "o": "concept/spas-nerukotvorny"
+  },
+  {
+   "s": "artwork/weyden-crucifixion-panel",
+   "p": "madeBy",
+   "o": "person/weyden"
+  },
+  {
+   "s": "artwork/weyden-crucifixion-panel",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/weyden-crucifixion-panel",
+   "p": "depicts",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "madeBy",
+   "o": "person/memling"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "madeBy",
+   "o": "person/bosch"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "madeBy",
+   "o": "person/pontormo"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "madeBy",
+   "o": "person/correggio"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/veronica-treatments",
+   "p": "depicts",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "artwork/bouts-veil-of-veronica",
+   "p": "madeBy",
+   "o": "person/aelbrecht-bouts"
+  },
+  {
+   "s": "artwork/bouts-veil-of-veronica",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/bouts-veil-of-veronica",
+   "p": "depicts",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "artwork/holy-face-engravings",
+   "p": "madeBy",
+   "o": "person/durer"
+  },
+  {
+   "s": "artwork/holy-face-engravings",
+   "p": "madeBy",
+   "o": "person/baldung-grien"
+  },
+  {
+   "s": "artwork/holy-face-engravings",
+   "p": "madeBy",
+   "o": "person/rabel"
+  },
+  {
+   "s": "artwork/holy-face-engravings",
+   "p": "madeBy",
+   "o": "person/wierix"
+  },
+  {
+   "s": "artwork/holy-face-engravings",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/fetti-veil-of-veronica",
+   "p": "madeBy",
+   "o": "person/fetti"
+  },
+  {
+   "s": "artwork/fetti-veil-of-veronica",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/fetti-veil-of-veronica",
+   "p": "depicts",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "madeBy",
+   "o": "person/el-greco"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "locatedAt",
+   "o": "place/prado"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "locatedAt",
+   "o": "place/goulandris"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "locatedAt",
+   "o": "place/santa-cruz-toledo"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/el-greco-veronica",
+   "p": "depicts",
+   "o": "relic/veronica-veil"
+  },
+  {
+   "s": "artwork/zurbaran-holy-face",
+   "p": "madeBy",
+   "o": "person/zurbaran"
+  },
+  {
+   "s": "artwork/zurbaran-holy-face",
+   "p": "locatedAt",
+   "o": "place/bilbao"
+  },
+  {
+   "s": "artwork/zurbaran-holy-face",
+   "p": "locatedAt",
+   "o": "place/houston"
+  },
+  {
+   "s": "artwork/zurbaran-holy-face",
+   "p": "locatedAt",
+   "o": "place/stockholm"
+  },
+  {
+   "s": "artwork/zurbaran-holy-face",
+   "p": "instanceOf",
+   "o": "concept/vera-icon"
+  },
+  {
+   "s": "artwork/philip-ii-shroud-copy",
+   "p": "instanceOf",
+   "o": "concept/contact-relic-copies"
+  },
+  {
+   "s": "artwork/philip-ii-shroud-copy",
+   "p": "depicts",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "artwork/philip-ii-shroud-copy",
+   "p": "commissionedBy",
+   "o": "person/philip-ii"
+  },
+  {
+   "s": "artwork/summit-shroud-copy",
+   "p": "locatedAt",
+   "o": "place/summit-nj"
+  },
+  {
+   "s": "artwork/summit-shroud-copy",
+   "p": "instanceOf",
+   "o": "concept/contact-relic-copies"
+  },
+  {
+   "s": "artwork/summit-shroud-copy",
+   "p": "depicts",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "artwork/summit-shroud-copy",
+   "p": "heldBy",
+   "o": "org/dominican-nuns-summit"
+  },
+  {
+   "s": "artwork/tempesta-ostension",
+   "p": "madeBy",
+   "o": "person/tempesta"
+  },
+  {
+   "s": "artwork/tempesta-ostension",
+   "p": "depicts",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "artwork/guarini-chapel",
+   "p": "madeBy",
+   "o": "person/guarini"
+  },
+  {
+   "s": "artwork/guarini-chapel",
+   "p": "locatedAt",
+   "o": "place/turin"
+  },
+  {
+   "s": "artwork/guarini-chapel",
+   "p": "commissionedBy",
+   "o": "org/house-of-savoy"
+  },
+  {
+   "s": "artwork/guarini-chapel",
+   "p": "houses",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "artwork/early-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/van-eyck"
+  },
+  {
+   "s": "artwork/early-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/memling"
+  },
+  {
+   "s": "artwork/early-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/gerard-david"
+  },
+  {
+   "s": "artwork/early-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/crivelli"
+  },
+  {
+   "s": "artwork/early-salvator-mundi",
+   "p": "instanceOf",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "artwork/durer-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/durer"
+  },
+  {
+   "s": "artwork/durer-salvator-mundi",
+   "p": "locatedAt",
+   "o": "place/met"
+  },
+  {
+   "s": "artwork/durer-salvator-mundi",
+   "p": "instanceOf",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "artwork/titian-salvator-mundi",
+   "p": "madeBy",
+   "o": "person/titian"
+  },
+  {
+   "s": "artwork/titian-salvator-mundi",
+   "p": "locatedAt",
+   "o": "place/hermitage"
+  },
+  {
+   "s": "artwork/titian-salvator-mundi",
+   "p": "instanceOf",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "artwork/titian-christ-with-orb",
+   "p": "madeBy",
+   "o": "person/titian"
+  },
+  {
+   "s": "artwork/titian-christ-with-orb",
+   "p": "locatedAt",
+   "o": "place/khm"
+  },
+  {
+   "s": "artwork/titian-christ-with-orb",
+   "p": "instanceOf",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "artwork/leonardo-salvator-mundi",
+   "p": "instanceOf",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "artwork/holy-face-medal",
+   "p": "madeBy",
+   "o": "person/de-micheli"
+  },
+  {
+   "s": "artwork/holy-face-medal",
+   "p": "instanceOf",
+   "o": "concept/holy-face-devotion"
+  },
+  {
+   "s": "artwork/holy-face-medal",
+   "p": "approvedBy",
+   "o": "person/pius-xii"
+  },
+  {
+   "s": "artwork/leonardo-salvator-mundi",
+   "p": "exhibitedAt",
+   "o": "place/national-gallery",
+   "note": "2011 to 2012"
+  },
+  {
+   "s": "artwork/leonardo-salvator-mundi",
+   "p": "foundAt",
+   "o": "place/new-orleans",
+   "note": "2005 estate sale"
+  },
+  {
+   "s": "artwork/dali-christ-of-saint-john",
+   "p": "madeBy",
+   "o": "person/dali"
+  },
+  {
+   "s": "artwork/warhol-last-supper",
+   "p": "madeBy",
+   "o": "person/warhol"
+  },
+  {
+   "s": "artwork/rembrandt-christ-studies",
+   "p": "madeBy",
+   "o": "person/rembrandt"
+  },
+  {
+   "s": "artwork/rembrandt-christ-studies",
+   "p": "locatedAt",
+   "o": "place/amsterdam"
+  },
+  {
+   "s": "artwork/rouault-head-of-christ",
+   "p": "madeBy",
+   "o": "person/rouault"
+  },
+  {
+   "s": "artwork/isenheim-altarpiece",
+   "p": "madeBy",
+   "o": "person/grunewald"
+  },
+  {
+   "s": "photo/pia-1898",
+   "p": "takenBy",
+   "o": "person/pia"
+  },
+  {
+   "s": "photo/enrie-1931",
+   "p": "takenBy",
+   "o": "person/enrie"
+  },
+  {
+   "s": "photo/sturp-1978",
+   "p": "takenBy",
+   "o": "org/sturp"
+  },
+  {
+   "s": "photo/haltadefinizione-2008",
+   "p": "takenBy",
+   "o": "org/haltadefinizione"
+  },
+  {
+   "s": "photo/pia-1898",
+   "p": "photographs",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "photo/enrie-1931",
+   "p": "photographs",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "photo/sturp-1978",
+   "p": "photographs",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "photo/haltadefinizione-2008",
+   "p": "photographs",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "artwork/holy-face-medal",
+   "p": "basedOn",
+   "o": "photo/pia-1898"
+  },
+  {
+   "s": "photo/pia-1898",
+   "p": "instanceOf",
+   "o": "concept/photographic-negative"
+  },
+  {
+   "s": "event/abgar-recorded",
+   "p": "involves",
+   "o": "person/eusebius"
+  },
+  {
+   "s": "event/abgar-recorded",
+   "p": "involves",
+   "o": "concept/abgar-legend"
+  },
+  {
+   "s": "event/edessa-siege",
+   "p": "happenedAt",
+   "o": "place/edessa"
+  },
+  {
+   "s": "event/edessa-siege",
+   "p": "involves",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "event/edessa-siege",
+   "p": "recordedBy",
+   "o": "person/evagrius"
+  },
+  {
+   "s": "event/iconoclasm",
+   "p": "involves",
+   "o": "person/leo-iii"
+  },
+  {
+   "s": "event/iconoclasm",
+   "p": "involves",
+   "o": "concept/iconoclasm"
+  },
+  {
+   "s": "event/nicaea-ii",
+   "p": "happenedAt",
+   "o": "place/nicaea"
+  },
+  {
+   "s": "event/nicaea-ii",
+   "p": "involves",
+   "o": "person/john-damascus"
+  },
+  {
+   "s": "event/nicaea-ii",
+   "p": "involves",
+   "o": "concept/abgar-legend"
+  },
+  {
+   "s": "event/mandylion-944",
+   "p": "happenedAt",
+   "o": "place/constantinople"
+  },
+  {
+   "s": "event/mandylion-944",
+   "p": "involves",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "event/mandylion-944",
+   "p": "involves",
+   "o": "person/romanos-i"
+  },
+  {
+   "s": "event/sack-1204",
+   "p": "happenedAt",
+   "o": "place/constantinople"
+  },
+  {
+   "s": "event/sack-1204",
+   "p": "involves",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "event/lirey",
+   "p": "happenedAt",
+   "o": "place/lirey"
+  },
+  {
+   "s": "event/lirey",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/lirey",
+   "p": "recordedAs",
+   "o": "constant/history.lirey"
+  },
+  {
+   "s": "event/memorandum-1389",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/memorandum-1389",
+   "p": "involves",
+   "o": "person/darcis"
+  },
+  {
+   "s": "event/memorandum-1389",
+   "p": "involves",
+   "o": "person/clement-vii"
+  },
+  {
+   "s": "event/memorandum-1389",
+   "p": "recordedAs",
+   "o": "constant/history.darcis_memorandum"
+  },
+  {
+   "s": "event/chambery",
+   "p": "happenedAt",
+   "o": "place/chambery"
+  },
+  {
+   "s": "event/chambery",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/chambery",
+   "p": "involves",
+   "o": "org/house-of-savoy"
+  },
+  {
+   "s": "event/veneration-1506",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/veneration-1506",
+   "p": "involves",
+   "o": "person/julius-ii"
+  },
+  {
+   "s": "event/fire-1532",
+   "p": "happenedAt",
+   "o": "place/chambery"
+  },
+  {
+   "s": "event/fire-1532",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/fire-1532",
+   "p": "recordedAs",
+   "o": "constant/history.fire"
+  },
+  {
+   "s": "event/patches-1534",
+   "p": "happenedAt",
+   "o": "place/chambery"
+  },
+  {
+   "s": "event/patches-1534",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/patches-1534",
+   "p": "involves",
+   "o": "org/poor-clares"
+  },
+  {
+   "s": "event/patches-1534",
+   "p": "recordedAs",
+   "o": "constant/history.patches"
+  },
+  {
+   "s": "event/turin-1578",
+   "p": "happenedAt",
+   "o": "place/turin"
+  },
+  {
+   "s": "event/turin-1578",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/turin-1578",
+   "p": "recordedAs",
+   "o": "constant/history.turin"
+  },
+  {
+   "s": "event/therese-1889",
+   "p": "involves",
+   "o": "person/therese"
+  },
+  {
+   "s": "event/therese-1889",
+   "p": "involves",
+   "o": "concept/holy-face-devotion"
+  },
+  {
+   "s": "event/vp8-1976",
+   "p": "happenedAt",
+   "o": "place/sandia"
+  },
+  {
+   "s": "event/vp8-1976",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/vp8-1976",
+   "p": "recordedAs",
+   "o": "constant/history.vp8"
+  },
+  {
+   "s": "event/sturp-1978",
+   "p": "happenedAt",
+   "o": "place/turin"
+  },
+  {
+   "s": "event/sturp-1978",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/sturp-1978",
+   "p": "involves",
+   "o": "org/sturp"
+  },
+  {
+   "s": "event/sturp-1978",
+   "p": "recordedAs",
+   "o": "constant/history.sturp"
+  },
+  {
+   "s": "event/c14-1988",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/c14-1988",
+   "p": "involves",
+   "o": "org/lab-oxford"
+  },
+  {
+   "s": "event/c14-1988",
+   "p": "involves",
+   "o": "org/lab-zurich"
+  },
+  {
+   "s": "event/c14-1988",
+   "p": "involves",
+   "o": "org/lab-arizona"
+  },
+  {
+   "s": "event/c14-1988",
+   "p": "recordedAs",
+   "o": "constant/history.c14"
+  },
+  {
+   "s": "event/restoration-2002",
+   "p": "happenedAt",
+   "o": "place/turin"
+  },
+  {
+   "s": "event/restoration-2002",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/restoration-2002",
+   "p": "recordedAs",
+   "o": "constant/history.restoration"
+  },
+  {
+   "s": "event/leonardo-sale",
+   "p": "involves",
+   "o": "artwork/leonardo-salvator-mundi"
+  },
+  {
+   "s": "event/rublev-rediscovered",
+   "p": "happenedAt",
+   "o": "place/zvenigorod"
+  },
+  {
+   "s": "event/rublev-rediscovered",
+   "p": "involves",
+   "o": "artwork/rublev-zvenigorod"
+  },
+  {
+   "s": "event/loom-2020",
+   "p": "involves",
+   "o": "person/olsen"
+  },
+  {
+   "s": "event/loom-2020",
+   "p": "involves",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "event/loom-2020",
+   "p": "recordedAs",
+   "o": "constant/dating.weave_treadle_loom"
+  },
+  {
+   "s": "claim/shroud-is-mandylion",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/shroud-is-mandylion",
+   "p": "about",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "claim/shroud-is-mandylion",
+   "p": "about",
+   "o": "concept/tetradiplon"
+  },
+  {
+   "s": "claim/shroud-is-mandylion",
+   "p": "proposedBy",
+   "o": "person/ian-wilson"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "concept/vignon-markings"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/sinai-pantocrator"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/ravenna-pantocrator"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/justinian-ii-solidus"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/pontianus-fresco"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/daphni-pantocrator"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/cefalu-pantocrator"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "artwork/deesis-hagia-sophia"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/vignon-correspondence",
+   "p": "proposedBy",
+   "o": "person/paul-vignon"
+  },
+  {
+   "s": "claim/whanger-145",
+   "p": "about",
+   "o": "artwork/justinian-ii-solidus"
+  },
+  {
+   "s": "claim/whanger-145",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/whanger-145",
+   "p": "about",
+   "o": "concept/whanger-overlay"
+  },
+  {
+   "s": "claim/whanger-145",
+   "p": "proposedBy",
+   "o": "person/whangers"
+  },
+  {
+   "s": "claim/whanger-170",
+   "p": "about",
+   "o": "artwork/sinai-pantocrator"
+  },
+  {
+   "s": "claim/whanger-170",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/whanger-170",
+   "p": "about",
+   "o": "concept/whanger-overlay"
+  },
+  {
+   "s": "claim/whanger-170",
+   "p": "proposedBy",
+   "o": "person/whangers"
+  },
+  {
+   "s": "claim/durer-correspondence",
+   "p": "about",
+   "o": "artwork/durer-salvator-mundi"
+  },
+  {
+   "s": "claim/durer-correspondence",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/authenticity-timeline",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/authenticity-timeline",
+   "p": "about",
+   "o": "relic/mandylion"
+  },
+  {
+   "s": "claim/authenticity-timeline",
+   "p": "about",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "claim/medieval-timeline",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/medieval-timeline",
+   "p": "about",
+   "o": "concept/pantocrator"
+  },
+  {
+   "s": "claim/pigment-from-copies",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/pigment-from-copies",
+   "p": "about",
+   "o": "concept/contact-relic-copies"
+  },
+  {
+   "s": "claim/summit-damp-mark",
+   "p": "about",
+   "o": "artwork/summit-shroud-copy"
+  },
+  {
+   "s": "claim/leonardo-attribution",
+   "p": "about",
+   "o": "artwork/leonardo-salvator-mundi"
+  },
+  {
+   "s": "claim/leonardo-attribution",
+   "p": "about",
+   "o": "person/leonardo"
+  },
+  {
+   "s": "claim/dali-salvator-mundi",
+   "p": "about",
+   "o": "person/dali"
+  },
+  {
+   "s": "claim/dali-salvator-mundi",
+   "p": "about",
+   "o": "concept/salvator-mundi"
+  },
+  {
+   "s": "claim/warhol-shroud",
+   "p": "about",
+   "o": "person/warhol"
+  },
+  {
+   "s": "claim/warhol-shroud",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "supportedBy",
+   "o": "ref/damon1989"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "disputedBy",
+   "o": "ref/riani2013"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "disputedBy",
+   "o": "ref/casabianca2019"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "disputedBy",
+   "o": "ref/decaro2022"
+  },
+  {
+   "s": "claim/c14-medieval",
+   "p": "recordedAs",
+   "o": "constant/dating.c14_1988_ad"
+  },
+  {
+   "s": "claim/c14-heterogeneous",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/c14-heterogeneous",
+   "p": "proposedBy",
+   "o": "ref/riani2013"
+  },
+  {
+   "s": "claim/c14-heterogeneous",
+   "p": "proposedBy",
+   "o": "ref/casabianca2019"
+  },
+  {
+   "s": "claim/c14-heterogeneous",
+   "p": "recordedAs",
+   "o": "constant/dating.c14_heterogeneity"
+  },
+  {
+   "s": "claim/fragments-consistent",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/fragments-consistent",
+   "p": "proposedBy",
+   "o": "ref/freerwaters2026"
+  },
+  {
+   "s": "claim/fragments-consistent",
+   "p": "recordedAs",
+   "o": "constant/dating.c14_fragments_2026"
+  },
+  {
+   "s": "claim/fragments-consistent",
+   "p": "recordedAs",
+   "o": "constant/weave.c14_fragment_counts_per_cm"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "proposedBy",
+   "o": "person/mccrone"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "proposedBy",
+   "o": "ref/mccrone1996"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "disputedBy",
+   "o": "ref/sturp1981"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "disputedBy",
+   "o": "ref/heller1981"
+  },
+  {
+   "s": "claim/mccrone-pigment",
+   "p": "recordedAs",
+   "o": "constant/chemistry.mccrone_pigment"
+  },
+  {
+   "s": "claim/no-pigment",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/no-pigment",
+   "p": "proposedBy",
+   "o": "org/sturp"
+  },
+  {
+   "s": "claim/no-pigment",
+   "p": "supportedBy",
+   "o": "ref/sturp1981"
+  },
+  {
+   "s": "claim/no-pigment",
+   "p": "supportedBy",
+   "o": "ref/fanti2010"
+  },
+  {
+   "s": "claim/no-pigment",
+   "p": "recordedAs",
+   "o": "constant/chemistry.no_pigment_image"
+  },
+  {
+   "s": "claim/moraes-low-relief",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/moraes-low-relief",
+   "p": "proposedBy",
+   "o": "person/moraes"
+  },
+  {
+   "s": "claim/moraes-low-relief",
+   "p": "proposedBy",
+   "o": "ref/moraes2025"
+  },
+  {
+   "s": "claim/moraes-low-relief",
+   "p": "disputedBy",
+   "o": "ref/casabianca2026"
+  },
+  {
+   "s": "claim/moraes-low-relief",
+   "p": "answeredBy",
+   "o": "ref/moraes2026"
+  },
+  {
+   "s": "claim/treadle-loom",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/treadle-loom",
+   "p": "proposedBy",
+   "o": "person/olsen"
+  },
+  {
+   "s": "claim/treadle-loom",
+   "p": "recordedAs",
+   "o": "constant/dating.weave_treadle_loom"
+  },
+  {
+   "s": "claim/image-encodes-distance",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/image-encodes-distance",
+   "p": "supportedBy",
+   "o": "ref/jje1984"
+  },
+  {
+   "s": "claim/image-encodes-distance",
+   "p": "recordedAs",
+   "o": "constant/distance.vertical_collimation"
+  },
+  {
+   "s": "claim/image-encodes-distance",
+   "p": "recordedAs",
+   "o": "constant/distance.linear_model"
+  },
+  {
+   "s": "claim/image-encodes-distance",
+   "p": "examinedBy",
+   "o": "ref/ercoline1982",
+   "note": "lateral distortion of the image under draping"
+  },
+  {
+   "s": "claim/not-visible-close",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/not-visible-close",
+   "p": "supportedBy",
+   "o": "ref/jje1984"
+  },
+  {
+   "s": "claim/not-visible-close",
+   "p": "recordedAs",
+   "o": "constant/perception.min_distance_m"
+  },
+  {
+   "s": "claim/blood-before-image",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/blood-before-image",
+   "p": "supportedBy",
+   "o": "ref/heller1981"
+  },
+  {
+   "s": "claim/blood-before-image",
+   "p": "supportedBy",
+   "o": "ref/kearse2026"
+  },
+  {
+   "s": "claim/blood-before-image",
+   "p": "recordedAs",
+   "o": "constant/blood.ordering"
+  },
+  {
+   "s": "claim/double-superficiality",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/double-superficiality",
+   "p": "supportedBy",
+   "o": "ref/fanti2004"
+  },
+  {
+   "s": "claim/double-superficiality",
+   "p": "recordedAs",
+   "o": "constant/image.double_superficiality"
+  },
+  {
+   "s": "claim/sudarium-match",
+   "p": "about",
+   "o": "relic/sudarium"
+  },
+  {
+   "s": "claim/sudarium-match",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/sudarium-match",
+   "p": "supportedBy",
+   "o": "ref/whanger1985"
+  },
+  {
+   "s": "claim/sudarium-match",
+   "p": "supportedBy",
+   "o": "ref/heras1998"
+  },
+  {
+   "s": "claim/sudarium-match",
+   "p": "recordedAs",
+   "o": "constant/sudarium.xray_micrography"
+  },
+  {
+   "s": "claim/darcis-painted",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/darcis-painted",
+   "p": "proposedBy",
+   "o": "person/darcis"
+  },
+  {
+   "s": "claim/darcis-painted",
+   "p": "recordedAs",
+   "o": "constant/history.darcis_memorandum"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "proposedBy",
+   "o": "ref/frei1973"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "proposedBy",
+   "o": "ref/filas1982"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "proposedBy",
+   "o": "ref/danin1999"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "proposedBy",
+   "o": "ref/barcaccia2015"
+  },
+  {
+   "s": "claim/pollen-coins",
+   "p": "recordedAs",
+   "o": "constant/evidence.pollen_coins"
+  },
+  {
+   "s": "concept/pantocrator",
+   "p": "branchOf",
+   "o": "concept/acheiropoieta",
+   "note": "the Byzantine line"
+  },
+  {
+   "s": "concept/contact-relic-copies",
+   "p": "branchOf",
+   "o": "concept/acheiropoieta",
+   "note": "the Shroud line"
+  },
+  {
+   "s": "concept/salvator-mundi",
+   "p": "branchOf",
+   "o": "concept/pantocrator",
+   "note": "the Salvator Mundi line"
+  },
+  {
+   "s": "dataset/spectral-lut",
+   "p": "usesData",
+   "o": "ref/jje1984"
+  },
+  {
+   "s": "dataset/weave",
+   "p": "usesData",
+   "o": "ref/vial1989"
+  },
+  {
+   "s": "dataset/perception",
+   "p": "usesData",
+   "o": "ref/mannos1974"
+  },
+  {
+   "s": "dataset/perception",
+   "p": "usesData",
+   "o": "ref/peli1990"
+  },
+  {
+   "s": "dataset/perception",
+   "p": "usesData",
+   "o": "ref/jje1984"
+  },
+  {
+   "s": "dataset/synthetic-h",
+   "p": "usesData",
+   "o": "constant/distance.frontal_range_m"
+  },
+  {
+   "s": "dataset/constants",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/corrections",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/bibliography",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/spectral-lut",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/weave",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/synthetic-h",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/perception",
+   "p": "about",
+   "o": "relic/shroud"
+  },
+  {
+   "s": "dataset/graph",
+   "p": "about",
+   "o": "relic/shroud"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "title": "Weave of the Shroud linen as data",
+ "structure": {
+  "id": "weave.structure",
+  "value": "3/1 herringbone twill",
+  "unit": null,
+  "tag": "measured",
+  "citations": [
+   "vial1989",
+   "raes1974"
+  ]
+ },
+ "warp_per_m": 3829.9999999999995,
+ "weft_per_m": 2540.0,
+ "counts": [
+  {
+   "id": "weave.warp_per_cm",
+   "value": 38.3,
+   "unit": "1/cm",
+   "tag": "measured",
+   "citations": [
+    "vial1989"
+   ]
+  },
+  {
+   "id": "weave.weft_per_cm",
+   "value": 25.4,
+   "unit": "1/cm",
+   "tag": "measured",
+   "citations": [
+    "vial1989"
+   ]
+  }
+ ],
+ "band_repeat_threads": {
+  "id": "weave.band_repeat_threads",
+  "value": [
+   41,
+   39
+  ],
+  "unit": "threads",
+  "tag": "measured",
+  "citations": [
+   "vial1989"
+  ]
+ },
+ "band_orientation": {
+  "id": "weave.band_orientation",
+  "value": "bands run lengthwise, parallel to the warp; the twill diagonal reverses across the width",
+  "unit": null,
+  "tag": "measured",
+  "citations": [
+   "vial1989"
+  ]
+ },
+ "yarn_diameter": {
+  "id": "weave.yarn_diameter_mm",
+  "value": 0.28,
+  "unit": "mm",
+  "tag": "measured",
+  "citations": [
+   "fanti2010"
+  ]
+ },
+ "rule": {
+  "tag": "convention",
+  "text": "i = floor(u_m * warp_per_m) counts warp threads across the width; j = floor(v_m * weft_per_m) counts weft picks along the length; p = i mod 80; phase = p if p <= 40 else 80 - p; the weft is on top where (phase + j) mod 4 == 0, so the warp floats over three picks and under one.",
+  "first_8_picks_by_80_warp": [
+   "fWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWW",
+   "WWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWW",
+   "WWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfW",
+   "WfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWf",
+   "fWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWW",
+   "WWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWW",
+   "WWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfW",
+   "WfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWfWWWf"
+  ],
+  "legend": "W = warp on top, f = weft on top"
+ },
+ "tile": {
+  "warp_threads": 80,
+  "weft_picks": 52,
+  "pixels": [
+   640,
+   416
+  ],
+  "texels_per_thread": 8,
+  "size_m": [
+   0.0208877,
+   0.0204724
+  ],
+  "repeats_on_cloth_pre2002": [
+   53.1412,
+   213.4577
+  ],
+  "files": [
+   "maps/weave/weave_height_16bit.png",
+   "maps/weave/weave_normal.png",
+   "maps/weave/weave_occlusion.png",
+   "maps/weave/weave_warp_on_top.png"
+  ],
+  "orientation": "s across the width (warp count), t along the length (weft count); PNG row 0 is t = 1",
+  "normal_encoding": "slope space: rgb = 0.5 + 0.5 * (-dh/ds, -dh/dt, 1) / 2.5, slopes clipped at 2.5; normalize after sampling (glTF and X3D renderers do). Mipmaps then average slopes, so the weave fades to flat with distance instead of striping.",
+  "profile_tag": "aesthetic",
+  "profile": "elliptical yarn sections at 0.9 of the pitch; a thread passing over sits a full yarn height up, under it 0.45 of it; cosine transitions between crossings"
+ },
+ "threads_on_cloth_pre2002": [
+  4251,
+  11100
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "title": "Shroud of Turin scenes",
+ "generator": "tools/make_x3d.py",
+ "scenes": [
+  {
+   "id": "cloth",
+   "file": "x3d/shroud_cloth.x3d",
+   "title": "The cloth",
+   "kicker": "4.37 by 1.11 m, as Enrie and STURP saw it",
+   "blurb": "Linen coloured by the JJE 1984 model, the weave at Vial's thread counts, and an image that fades as you come closer than about 1.8 m.",
+   "viewpoints": [
+    {
+     "def": "V_whole",
+     "label": "Whole cloth",
+     "description": "The whole cloth at 5.5 m, hung as it is shown in Turin",
+     "distance_to_face_m": 5.504
+    },
+    {
+     "def": "V_frontal",
+     "label": "Frontal image",
+     "description": "The frontal image at 3 m",
+     "distance_to_face_m": 3.1
+    },
+    {
+     "def": "V_face_6",
+     "label": "Face at 6 m",
+     "description": "The face from 6 m: the image is clear",
+     "distance_to_face_m": 6.0
+    },
+    {
+     "def": "V_face_18",
+     "label": "Face at 1.8 m",
+     "description": "The face from 1.8 m: the measured threshold",
+     "distance_to_face_m": 1.8
+    },
+    {
+     "def": "V_face_10",
+     "label": "Face at 1 m",
+     "description": "The face from 1 m: the image has dissolved into the cloth",
+     "distance_to_face_m": 1.0
+    },
+    {
+     "def": "V_weave",
+     "label": "Weave at 0.3 m",
+     "description": "The weave from 0.3 m, a 4 cm field: 38.3 warp and 25.4 weft threads per cm",
+     "distance_to_face_m": 0.301
+    }
+   ],
+   "face_world_m": [
+    0.2200000000000002,
+    0.0,
+    0.0
+   ],
+   "controls": "distance",
+   "look": {
+    "toneMapping": "KHR_PBR_NEUTRAL",
+    "exposure": 1.0
+   }
+  },
+  {
+   "id": "lab",
+   "file": "x3d/shroud_lab.x3d",
+   "title": "Spectral lab",
+   "kicker": "One equation, seven lights",
+   "blurb": "The image under daylight, tungsten, candle and museum LEDs, or at a single wavelength, with the dissolve computed for every pixel.",
+   "viewpoints": [
+    {
+     "def": "L_face_6",
+     "label": "Face at 6 m",
+     "description": "The face from 6 m",
+     "distance_to_face_m": 6.0
+    },
+    {
+     "def": "L_face_18",
+     "label": "Face at 1.8 m",
+     "description": "The face from 1.8 m: the measured threshold",
+     "distance_to_face_m": 1.8
+    },
+    {
+     "def": "L_face_10",
+     "label": "Face at 1 m",
+     "description": "The face from 1 m",
+     "distance_to_face_m": 1.0
+    },
+    {
+     "def": "L_weave",
+     "label": "Weave at 0.3 m",
+     "description": "The weave from 0.3 m, a 4 cm field",
+     "distance_to_face_m": 0.301
+    },
+    {
+     "def": "L_whole",
+     "label": "Whole cloth",
+     "description": "The whole cloth at 5.5 m",
+     "distance_to_face_m": 5.504
+    },
+    {
+     "def": "L_raking",
+     "label": "Raking light",
+     "description": "The frontal half from low on the right; switch relief on",
+     "distance_to_face_m": 3.271
+    }
+   ],
+   "face_world_m": [
+    0.2200000000000002,
+    0.0,
+    0.0
+   ],
+   "controls": "lab",
+   "look": {
+    "toneMapping": "NONE",
+    "exposure": 1.0
+   }
+  },
+  {
+   "id": "relief",
+   "file": "x3d/shroud_relief.x3d",
+   "title": "Relief",
+   "kicker": "Intensity read as distance",
+   "blurb": "The image intensity plotted as height, as the VP-8 Image Analyzer first showed it in 1976. Height is exaggerated four times.",
+   "viewpoints": [
+    {
+     "def": "R_whole",
+     "label": "Whole relief",
+     "description": "The whole cloth as relief, lit from the upper left"
+    },
+    {
+     "def": "R_frontal",
+     "label": "Frontal relief",
+     "description": "The frontal figure as relief, raking view from the feet"
+    },
+    {
+     "def": "R_face",
+     "label": "Face relief",
+     "description": "The face as relief at 1.5 mm, true width and true 3.7 cm range"
+    },
+    {
+     "def": "R_face_side",
+     "label": "Face, raking",
+     "description": "The face relief from the right, under a grazing light"
+    }
+   ],
+   "face_world_m": null,
+   "controls": null,
+   "look": {
+    "toneMapping": "KHR_PBR_NEUTRAL",
+    "exposure": 1.0
+   }
+  },
+  {
+   "id": "formation",
+   "file": "x3d/shroud_formation.x3d",
+   "title": "Formation",
+   "kicker": "A hypothesis made visible",
+   "blurb": "A cloth resting on a body carries an image whose darkness follows the gap between them. This is what that rule predicts, not how it happened.",
+   "viewpoints": [
+    {
+     "def": "F_three_quarter",
+     "label": "Over the body",
+     "description": "The cloth resting on the body, three-quarter view"
+    },
+    {
+     "def": "F_face",
+     "label": "Over the face",
+     "description": "Over the face: where the cloth touches, the image is darkest"
+    },
+    {
+     "def": "F_top",
+     "label": "From above",
+     "description": "From above: the drape's colour is the image it would form"
+    },
+    {
+     "def": "F_flat",
+     "label": "Drape and flat",
+     "description": "The drape beside the same cloth laid flat"
+    }
+   ],
+   "face_world_m": null,
+   "controls": null,
+   "look": {
+    "toneMapping": "KHR_PBR_NEUTRAL",
+    "exposure": 1.0
+   }
+  },
+  {
+   "id": "timeline",
+   "file": "x3d/shroud_timeline.x3d",
+   "title": "Timeline",
+   "kicker": "Eighteen centuries of one face",
+   "blurb": "Relics, artworks, photographs and measurements from the knowledge graph, in the lanes of the lineage diagram.",
+   "viewpoints": [
+    {
+     "def": "T_all",
+     "label": "Whole timeline",
+     "description": "Every dated node, 200 to 2026"
+    },
+    {
+     "def": "T_early",
+     "label": "200 to 1250",
+     "description": "Legend and icon: Edessa, the Pantocrator, the Mandylion"
+    },
+    {
+     "def": "T_middle",
+     "label": "1350 to 1550",
+     "description": "Lirey, Chambery, Veronica, the first Salvator Mundi"
+    },
+    {
+     "def": "T_late",
+     "label": "1550 to 1900",
+     "description": "Turin, the painted copies, the chapel, the first photograph"
+    },
+    {
+     "def": "T_modern",
+     "label": "1880 to 2026",
+     "description": "Photography and science"
+    }
+   ],
+   "face_world_m": null,
+   "controls": null,
+   "look": {
+    "toneMapping": "NONE",
+    "exposure": 1.0
+   }
+  }
+ ]
+}

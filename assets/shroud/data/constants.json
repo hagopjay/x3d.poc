@@ -1,0 +1,2902 @@
+{
+ "title": "Shroud of Turin knowledge base: science constants registry",
+ "version": "1.0.0",
+ "date": "2026-10-16",
+ "precedence": [
+  "plan",
+  "v3",
+  "v3note",
+  "prd1",
+  "prd2",
+  "prd3",
+  "web",
+  "port",
+  "poc"
+ ],
+ "precedence_note": "When documents disagree: the build plan's decisions, then the v3 corrections, then the Unity PRD v2.0, then Shader of the Shroud v3, then the PoC (lessons only).",
+ "tags": {
+  "measured": "Direct instrument measurement or observation of the cloth or its samples.",
+  "fitted": "A curve or regression fitted to measurements; the fit, not the cloth, carries the number.",
+  "derived": "Computed from measured or fitted values by a stated formula, with no new assumption.",
+  "inferred": "An interpretation or model applied beyond what was measured (for example, reading h as body distance everywhere).",
+  "hypothesis": "A model whose parameters are unexplained or unmeasured; shown so it can be tested, not believed.",
+  "contested": "Published, with published disagreement that is still open.",
+  "assumption": "A placeholder value chosen because no measurement exists yet; replace when one does.",
+  "aesthetic": "A visualization or design choice, not a scientific claim.",
+  "historical": "A documented event or date.",
+  "tradition": "A religious or traditional claim, recorded as such.",
+  "standard": "An engineering or colorimetric standard (CIE, VGA timing, laser lines), not a claim about the cloth.",
+  "convention": "A project convention (units, axes, grid) that every engine and file follows.",
+  "superseded": "A number replaced by a better-sourced number; kept so old files can be traced.",
+  "retracted": "An earlier project claim or interpretation withdrawn by the v3 corrections or the build plan; kept as a record.",
+  "unsupported": "A premise the research looked for and could not support (for example, a painting that does not exist)."
+ },
+ "prd_status_values": [
+  "Measured",
+  "PeerReviewed",
+  "Reported",
+  "Contested",
+  "Hypothesis",
+  "Historical",
+  "Tradition",
+  "Aesthetic",
+  "Popular"
+ ],
+ "sources": {
+  "plan": "Shroud Twin Build Plan, 2026-09-30 (canonical reconciliation; precedence 1)",
+  "v3": "Pincer v3 review and directions, 2026-09-30 (shroud_pincer_v3_review_and_directions.md; precedence 2)",
+  "v3note": "HagopJay's v3 corrections note, 2026-09-30 (00_v3_corrections_and_directions.md; precedence 2)",
+  "prd1": "Unity URP PRD v2.0 part 1, foundation (precedence 3)",
+  "prd2": "Unity URP PRD v2.0 part 2, render modes (precedence 3)",
+  "prd3": "Unity URP PRD v2.0 part 3, resurrection and audio (precedence 3)",
+  "web": "Shader of the Shroud v3 WebGL2 page (precedence 4)",
+  "port": "Shader of the Shroud Unity 6.3 port README (precedence 4)",
+  "poc": "Three.js digital-twin proof of concept (precedence 5; lessons only)",
+  "research": "Face of Jesus art-history research notes (2026-09-30)",
+  "package": "This package (computed by tools/derive.py from the entries it cites)"
+ },
+ "fields": {
+  "id": "stable dotted identifier",
+  "group": "topic",
+  "label": "human label",
+  "value": "number, list or text",
+  "unit": "SI unless stated",
+  "tag": "epistemic tag (see tags)",
+  "prd_status": "Unity PRD ClaimStatus, when the PRD carried one",
+  "citations": "ids in data/bibliography/references.json",
+  "sources": "project documents (see sources)",
+  "supersedes / superseded_by": "links between replaced and replacing entries",
+  "x3d": "true when the X3D scenes carry it as metadata",
+  "uncertainty / range": "when stated by the source"
+ },
+ "constants": [
+  {
+   "id": "convention.units",
+   "group": "conventions",
+   "label": "Length unit",
+   "value": "metre",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "All lengths in metres unless the unit field says otherwise."
+  },
+  {
+   "id": "convention.axes",
+   "group": "conventions",
+   "label": "Axes",
+   "value": "Y up; flat cloth in the XZ plane; u across the width (X), v along the length (Z)",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "convention.map_grid",
+   "group": "conventions",
+   "label": "Map grid",
+   "value": [
+    2048,
+    8192
+   ],
+   "unit": "texels (u x v)",
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "One grid for every map and compute pass, about 0.54 mm per texel on the pre-2002 cloth. Shipped maps here are 512 x 2048 because the image carries no detail finer than 5 mm (see image.resolution_floor_m); tools/derive.py can bake at the full grid."
+  },
+  {
+   "id": "convention.h_range",
+   "group": "conventions",
+   "label": "Image field h",
+   "value": [
+    0,
+    1
+   ],
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "h = 0 is background linen, h = 1 the most intense image point (the nose tip). Scorch may use h > 1 (same chemistry, more of it)."
+  },
+  {
+   "id": "convention.albedo_rule",
+   "group": "conventions",
+   "label": "Albedo from h",
+   "value": "albedo = lerp(LUT row at h=0, LUT row at h=1, h)",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "Exact for the JJE model, which is linear in h. Rows are already adapted to D65, so an illuminant's colour lives in the row or in the light, never both."
+  },
+  {
+   "id": "convention.frontal_mask",
+   "group": "conventions",
+   "label": "Frontal versus dorsal",
+   "value": "UV-space mask shipped with the data",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan",
+    "poc"
+   ],
+   "note": "Never a view- or normal-based test. The PoC's FIXED/LEGACY toggle demonstrates why."
+  },
+  {
+   "id": "convention.restoration_default",
+   "group": "conventions",
+   "label": "Default restoration state",
+   "value": "pre-2002",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "The state Enrie (1931) and STURP (1978) recorded: patches and Holland backing present."
+  },
+  {
+   "id": "convention.colour_workflow",
+   "group": "conventions",
+   "label": "Colour workflow",
+   "value": "linear sRGB (Rec.709 primaries), D65 white",
+   "unit": null,
+   "tag": "convention",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "cloth.length_pre2002_m",
+   "group": "cloth",
+   "label": "Length before the 2002 restoration",
+   "value": 4.37,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [],
+   "sources": [
+    "plan",
+    "prd1",
+    "web"
+   ],
+   "note": "The PRD attributed this to the 2002 restoration and the web page to Flury-Lemberg 1998; the build plan found it is the pre-2002 size and found no Flury-Lemberg 1998 source.",
+   "x3d": true
+  },
+  {
+   "id": "cloth.width_pre2002_m",
+   "group": "cloth",
+   "label": "Width before the 2002 restoration",
+   "value": 1.11,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [],
+   "sources": [
+    "plan",
+    "prd1",
+    "web"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "cloth.length_post2002_m",
+   "group": "cloth",
+   "label": "Length after the 2002 restoration",
+   "value": 4.415,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "linteum2002"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "cloth.width_post2002_m",
+   "group": "cloth",
+   "label": "Width after the 2002 restoration",
+   "value": 1.137,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "linteum2002"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "cloth.thickness_um",
+   "group": "cloth",
+   "label": "Cloth thickness",
+   "value": 345,
+   "unit": "um",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "cloth.aspect",
+   "group": "cloth",
+   "label": "Aspect ratio (length / width)",
+   "value": 3.94,
+   "unit": null,
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "4.37 / 1.11 = 3.94 (pre-2002); 4.415 / 1.137 = 3.88 (post-2002)."
+  },
+  {
+   "id": "weave.structure",
+   "group": "weave",
+   "label": "Weave structure",
+   "value": "3/1 herringbone twill",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989",
+    "raes1974"
+   ],
+   "sources": [
+    "plan",
+    "prd1",
+    "web"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "weave.warp_per_cm",
+   "group": "weave",
+   "label": "Warp threads per cm (main cloth)",
+   "value": 38.3,
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "weave.warp_per_cm_prd",
+    "weave.warp_per_cm_web"
+   ],
+   "x3d": true
+  },
+  {
+   "id": "weave.weft_per_cm",
+   "group": "weave",
+   "label": "Weft threads per cm (main cloth)",
+   "value": 25.4,
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "weave.weft_per_cm_prd",
+    "weave.weft_per_cm_web"
+   ],
+   "x3d": true
+  },
+  {
+   "id": "weave.side_strip_warp_per_cm",
+   "group": "weave",
+   "label": "Warp threads per cm (side strip)",
+   "value": 38.1,
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "weave.side_strip_weft_per_cm",
+   "group": "weave",
+   "label": "Weft threads per cm (side strip)",
+   "value": 26.2,
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "weave.raes_counts_per_cm",
+   "group": "weave",
+   "label": "Raes sample counts (warp, weft)",
+   "value": [
+    38.6,
+    25.7
+   ],
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "raes1974"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "Measured on the Raes sample in 1973-74; the PRD misattributed these to Vial 1989."
+  },
+  {
+   "id": "weave.c14_fragment_counts_per_cm",
+   "group": "weave",
+   "label": "1988 radiocarbon fragment counts (warp, weft ranges)",
+   "value": [
+    [
+     37,
+     41
+    ],
+    [
+     26,
+     29
+    ]
+   ],
+   "unit": "1/cm",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "freerwaters2026"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "The paper's own count; its quoted 38 x 25-26 comes from older work."
+  },
+  {
+   "id": "weave.band_repeat_threads",
+   "group": "weave",
+   "label": "Herringbone repeat (warp threads one way, then back)",
+   "value": [
+    41,
+    39
+   ],
+   "unit": "threads",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "weave.band_width_cm",
+   "group": "weave",
+   "label": "Herringbone band width",
+   "value": [
+    1.07,
+    1.02
+   ],
+   "unit": "cm",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "package"
+   ],
+   "note": "41 / 38.3 and 39 / 38.3 warp threads per cm; one full chevron period is 80 threads = 2.09 cm.",
+   "x3d": true
+  },
+  {
+   "id": "weave.band_orientation",
+   "group": "weave",
+   "label": "Band orientation",
+   "value": "bands run lengthwise, parallel to the warp; the twill diagonal reverses across the width",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "Selvedges run along both long edges, so the warp runs lengthwise. The PRD's LinenWeave reverses along the wrong axis.",
+   "x3d": true
+  },
+  {
+   "id": "weave.yarn_twist",
+   "group": "weave",
+   "label": "Yarn twist",
+   "value": "Z",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Reported",
+   "citations": [
+    "vial1989"
+   ],
+   "sources": [
+    "port"
+   ],
+   "note": "As stated in the Unity port README."
+  },
+  {
+   "id": "weave.yarn_diameter_mm",
+   "group": "weave",
+   "label": "Yarn diameter",
+   "value": 0.28,
+   "unit": "mm",
+   "tag": "measured",
+   "prd_status": "Reported",
+   "citations": [
+    "fanti2010"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "",
+   "range": [
+    0.25,
+    0.3
+   ]
+  },
+  {
+   "id": "weave.fibril_diameter_um",
+   "group": "weave",
+   "label": "Flax ultimate fibre diameter",
+   "value": 15,
+   "unit": "um",
+   "tag": "standard",
+   "prd_status": "Measured",
+   "citations": [],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Generic flax value from textile science, not measured on the cloth.",
+   "range": [
+    10,
+    20
+   ]
+  },
+  {
+   "id": "weave.threads_across_pre2002",
+   "group": "weave",
+   "label": "Warp threads across the width (pre-2002)",
+   "value": 4251,
+   "unit": "threads",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "package"
+   ],
+   "note": "1.11 m x 3830 per m."
+  },
+  {
+   "id": "weave.picks_along_pre2002",
+   "group": "weave",
+   "label": "Weft picks along the length (pre-2002)",
+   "value": 11100,
+   "unit": "threads",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "package"
+   ],
+   "note": "4.37 m x 2540 per m."
+  },
+  {
+   "id": "jje.model",
+   "group": "image_spectral",
+   "label": "JJE spectral model",
+   "value": "r(lambda, h) = (a + b*lambda) * [1 + c*(lambda - lambda_prime)*h]",
+   "unit": null,
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3",
+    "web"
+   ],
+   "note": "Fitted to the 1978 spectrophotometry (Gilbert and Gilbert 1980; Pellicori 1980). Film-independent.",
+   "x3d": true
+  },
+  {
+   "id": "jje.a",
+   "group": "image_spectral",
+   "label": "JJE a",
+   "value": -0.21,
+   "unit": null,
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "jje.b",
+   "group": "image_spectral",
+   "label": "JJE b",
+   "value": 0.00102,
+   "unit": "1/nm",
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "jje.c",
+   "group": "image_spectral",
+   "label": "JJE c",
+   "value": 0.000778,
+   "unit": "1/nm",
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "jje.lambda_prime_nm",
+   "group": "image_spectral",
+   "label": "JJE lambda prime",
+   "value": 790,
+   "unit": "nm",
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "jje.validity_nm",
+   "group": "image_spectral",
+   "label": "Model validity range",
+   "value": [
+    300,
+    700
+   ],
+   "unit": "nm",
+   "tag": "fitted",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "The LUT baker holds lambda at the range ends outside it (380-780 nm integration)."
+  },
+  {
+   "id": "jje.accuracy",
+   "group": "image_spectral",
+   "label": "Stated accuracy against measured spectra",
+   "value": 0.04,
+   "unit": "fraction",
+   "tag": "fitted",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.reflectance_550_background",
+   "group": "image_spectral",
+   "label": "Background reflectance at 550 nm",
+   "value": 0.351,
+   "unit": "fraction",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.reflectance_550_max",
+   "group": "image_spectral",
+   "label": "Maximum image reflectance at 550 nm",
+   "value": 0.285,
+   "unit": "fraction",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.density_range",
+   "group": "image_spectral",
+   "label": "Image density range",
+   "value": 0.09,
+   "unit": "optical density",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "JJE's figure; the model gives 0.090 at 550 nm and 0.085 for D65 luminance.",
+   "x3d": true
+  },
+  {
+   "id": "image.density_luminance_d65",
+   "group": "image_spectral",
+   "label": "Luminance density at h = 1 (D65)",
+   "value": 0.085,
+   "unit": "optical density",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.attenuation_h1",
+   "group": "image_spectral",
+   "label": "Reflectance ratio at h = 1 (440, 550, 680 nm)",
+   "value": [
+    0.728,
+    0.813,
+    0.914
+   ],
+   "unit": "ratio",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": "A wavelength-dependent multiplicative loss steepest in the blue, not added yellow.",
+   "x3d": true
+  },
+  {
+   "id": "image.ratio_680_440",
+   "group": "image_spectral",
+   "label": "680/440 nm reflectance ratio (background, image)",
+   "value": [
+    2.0,
+    2.5
+   ],
+   "unit": "ratio",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.chromaticity_shift_xy",
+   "group": "image_spectral",
+   "label": "Chromaticity shift background to h = 1 (D65)",
+   "value": [
+    0.014,
+    0.008
+   ],
+   "unit": "CIE xy",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984",
+    "schwalbe2023"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": "Inside the overlap of the background and image clusters reported by Schwalbe and Pellicori 2023."
+  },
+  {
+   "id": "colour.linen_d65_linear",
+   "group": "image_colour",
+   "label": "Background linen, linear sRGB (D65)",
+   "value": [
+    0.445,
+    0.344,
+    0.24
+   ],
+   "unit": "linear sRGB",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "v3note",
+    "plan"
+   ],
+   "note": "Luminance Y = 0.358.",
+   "supersedes": [
+    "colour.linen_v1_slide",
+    "colour.linen_prd_straw"
+   ],
+   "x3d": true
+  },
+  {
+   "id": "colour.linen_d65_Y",
+   "group": "image_colour",
+   "label": "Background linen luminance Y (D65)",
+   "value": 0.358,
+   "unit": null,
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "colour.image_max_d65_linear",
+   "group": "image_colour",
+   "label": "Maximum image (h = 1), linear sRGB (D65)",
+   "value": [
+    0.392,
+    0.278,
+    0.174
+   ],
+   "unit": "linear sRGB",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "Luminance Y = 0.294.",
+   "x3d": true
+  },
+  {
+   "id": "colour.image_tint_h1_d65",
+   "group": "image_colour",
+   "label": "Image tint at h = 1 (multiplier on linen, D65)",
+   "value": [
+    0.881,
+    0.807,
+    0.725
+   ],
+   "unit": "linear sRGB ratio",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "colour.tint_v2"
+   ],
+   "x3d": true
+  },
+  {
+   "id": "colour.linen_d65_srgb_encoded",
+   "group": "image_colour",
+   "label": "Background linen, sRGB-encoded (display only)",
+   "value": [
+    0.698,
+    0.621,
+    0.527
+   ],
+   "unit": "sRGB",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "colour.image_max_d65_srgb_encoded",
+   "group": "image_colour",
+   "label": "Maximum image, sRGB-encoded (display only)",
+   "value": [
+    0.659,
+    0.563,
+    0.454
+   ],
+   "unit": "sRGB",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "colour.new_linen_reflectance_550",
+   "group": "image_colour",
+   "label": "New linen reflectance at 550 nm",
+   "value": 0.58,
+   "unit": "fraction",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "Density 0.24 relative to the cloth."
+  },
+  {
+   "id": "colour.new_linen_linear",
+   "group": "image_colour",
+   "label": "New linen, linear sRGB",
+   "value": [
+    0.66,
+    0.57,
+    0.46
+   ],
+   "unit": "linear sRGB",
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Spectral shape not in JJE; base slope assumed halved. Replace with a measured modern flax reference."
+  },
+  {
+   "id": "colour.blood_Y",
+   "group": "image_colour",
+   "label": "Blood luminance Y",
+   "value": 0.15,
+   "unit": null,
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [
+    "schwalbe2023",
+    "gilbert1980"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "Placeholder: keep the v2 chromaticity (G about equal to B, desaturated crimson-mauve) until the Schwalbe-Pellicori xy and the Gilbert dense-blood curve are pulled."
+  },
+  {
+   "id": "colour.char_linear",
+   "group": "image_colour",
+   "label": "Deep scorch (char) target colour",
+   "value": [
+    0.05,
+    0.045,
+    0.04
+   ],
+   "unit": "linear sRGB",
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "colour.half_tone_fmax",
+   "group": "image_colour",
+   "label": "Half-tone f_max",
+   "value": 1.0,
+   "unit": null,
+   "tag": "aesthetic",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "plan"
+   ],
+   "note": "Coloured fibril fraction f = h * f_max; each coloured fibril takes the JJE colour at h = 1/f_max, so the average equals the smooth model."
+  },
+  {
+   "id": "distance.frontal_range_m",
+   "group": "image_geometry",
+   "label": "Frontal intensity-distance range",
+   "value": 0.037,
+   "unit": "m",
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3",
+    "web"
+   ],
+   "note": "Image intensity falls monotonically to background over about 3.7 cm of vertical cloth-body distance.",
+   "supersedes": [
+    "distance.range_prd_0p04"
+   ],
+   "x3d": true
+  },
+  {
+   "id": "distance.frontal_r2",
+   "group": "image_geometry",
+   "label": "Linear fit r^2",
+   "value": 0.6,
+   "unit": null,
+   "tag": "fitted",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3",
+    "prd1"
+   ],
+   "note": "13 points. The PRD notes a refit of JJE Fig. 2 gives 0.58.",
+   "x3d": true
+  },
+  {
+   "id": "distance.frontal_n_points",
+   "group": "image_geometry",
+   "label": "Points in the fit",
+   "value": 13,
+   "unit": null,
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "distance.frontal_sigma_m",
+   "group": "image_geometry",
+   "label": "Residual sigma of the linear fit",
+   "value": 0.006,
+   "unit": "m",
+   "tag": "fitted",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "distance.linear_model",
+   "group": "image_geometry",
+   "label": "Linear model (default)",
+   "value": "z = 0.037 * (1 - h) m (frontal)",
+   "unit": null,
+   "tag": "fitted",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "distance.exponential_model",
+   "group": "image_geometry",
+   "label": "Exponential alternative",
+   "value": "z = -z0 * ln(max(h, 0.01)), z0 = 0.037 / ln(100) = 0.00803 m",
+   "unit": null,
+   "tag": "hypothesis",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "port"
+   ],
+   "note": "A labelled alternative curve shape from Shader of the Shroud v3; z0 chosen so z = 3.7 cm at h = 0.01, not fitted."
+  },
+  {
+   "id": "distance.dorsal_range_m",
+   "group": "image_geometry",
+   "label": "Dorsal intensity-distance range",
+   "value": 0.037,
+   "unit": "m",
+   "tag": "hypothesis",
+   "prd_status": "Hypothesis",
+   "citations": [
+    "fazio2008"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "No measured value exists. Fazio and Mandaglio 2008 find a steeper dorsal slope but call its range arbitrary. 0.037 is a placeholder until a fit exists.",
+   "x3d": true
+  },
+  {
+   "id": "distance.pressure_ratio",
+   "group": "image_geometry",
+   "label": "Dorsal/frontal contact pressure ratio with equal image amplitude",
+   "value": 77,
+   "unit": "ratio",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "26.8 versus 0.35 g/cm^2. The mechanism is pressure-independent."
+  },
+  {
+   "id": "distance.vertical_collimation",
+   "group": "image_geometry",
+   "label": "Image encodes vertical cloth-body distance",
+   "value": "vertical (no lateral wrap distortion)",
+   "unit": null,
+   "tag": "inferred",
+   "prd_status": "Hypothesis",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "prd1",
+    "prd3"
+   ],
+   "note": "JJE's reading; the image-formation lab exists to test it against draping (Ercoline 1982)."
+  },
+  {
+   "id": "distance.relief_exaggeration_default",
+   "group": "image_geometry",
+   "label": "Relief exaggeration in the X3D relief scene",
+   "value": 4.0,
+   "unit": "x",
+   "tag": "aesthetic",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "package"
+   ],
+   "note": "Displayed relief = 0.037 m x h x exaggeration. 1 is true scale."
+  },
+  {
+   "id": "perception.min_distance_m",
+   "group": "perception",
+   "label": "Image not discernible closer than",
+   "value": 1.8,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "plan",
+    "v3"
+   ],
+   "note": "About 180 cm under photographic lighting (observers).",
+   "x3d": true
+  },
+  {
+   "id": "perception.threshold_density",
+   "group": "perception",
+   "label": "Human contrast threshold",
+   "value": 0.004,
+   "unit": "optical density",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "blackwell",
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "perception.range_over_threshold",
+   "group": "perception",
+   "label": "Image density range over threshold",
+   "value": 22.5,
+   "unit": "ratio",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "package"
+   ],
+   "note": ""
+  },
+  {
+   "id": "perception.dissolve_model",
+   "group": "perception",
+   "label": "Dissolve model",
+   "value": "CSF-weighted band contrast of h at the viewing distance (Mannos-Sakrison CSF, Peli band contrast), calibrated so detection crosses 50 % at 1.8 m",
+   "unit": null,
+   "tag": "inferred",
+   "prd_status": null,
+   "citations": [
+    "mannos1974",
+    "peli1990",
+    "jje1984"
+   ],
+   "sources": [
+    "package"
+   ],
+   "note": "This package's model of why the image dissolves; only the 1.8 m point is measured. See data/perception.json."
+  },
+  {
+   "id": "perception.image_weave_power_ratio",
+   "group": "perception",
+   "label": "Image to weave spectral power ratio",
+   "value": 14000.0,
+   "unit": "ratio",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "From the v1/v2 slide FFT; a relative quantity that survives the v3 corrections. It is the frequency separation the LOD split relies on."
+  },
+  {
+   "id": "image.resolution_floor_m",
+   "group": "perception",
+   "label": "Finest image detail",
+   "value": 0.005,
+   "unit": "m",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "Never synthesise image detail finer than 5 mm; the thread scale carries only weave.",
+   "x3d": true
+  },
+  {
+   "id": "optics.mu_cloth_per_mm",
+   "group": "optics",
+   "label": "Cloth attenuation (Beer-Lambert)",
+   "value": 1.25,
+   "unit": "1/mm",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "Uses the 345 um thickness.",
+   "supersedes": [
+    "optics.mu_prd"
+   ]
+  },
+  {
+   "id": "optics.mfp_mm",
+   "group": "optics",
+   "label": "Mean free path",
+   "value": 0.8,
+   "unit": "mm",
+   "tag": "derived",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "optics.sss_radius_mm",
+   "group": "optics",
+   "label": "Subsurface radius (R, G, B)",
+   "value": [
+    0.96,
+    0.8,
+    0.56
+   ],
+   "unit": "mm",
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Approximation until fitted by inverse rendering."
+  },
+  {
+   "id": "optics.transmission_rule",
+   "group": "optics",
+   "label": "Transmitted light",
+   "value": "T = exp(-(mu_cloth + mu_blood*blood + mu_scorch*scorch)*d), no image term",
+   "unit": null,
+   "tag": "inferred",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": "The 200 nm image layer cannot change bulk transmission; scorches attenuate through the full thickness; blood is near-opaque."
+  },
+  {
+   "id": "optics.blood_mu_green_per_mm",
+   "group": "optics",
+   "label": "Blood attenuation (green)",
+   "value": 35,
+   "unit": "1/mm",
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Order of magnitude only (5 um layer assumption): blood is about opaque at fibre scale."
+  },
+  {
+   "id": "image.layer_thickness_nm",
+   "group": "optics",
+   "label": "Image coloration thickness",
+   "value": 200,
+   "unit": "nm",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "fanti2010"
+   ],
+   "sources": [
+    "prd1",
+    "v3"
+   ],
+   "note": "Confined to the primary cell wall of the outermost fibrils; Pellicori 2025 proposes pectin/primary-wall chemistry."
+  },
+  {
+   "id": "image.double_superficiality",
+   "group": "optics",
+   "label": "Double superficiality",
+   "value": "frontal face and hands faintly on the reverse; dorsal none",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [
+    "fanti2004"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "image.reverse_gain",
+   "group": "optics",
+   "label": "Reverse-side image gain (face and hands)",
+   "value": [
+    0.15,
+    0.3
+   ],
+   "unit": null,
+   "tag": "aesthetic",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "crystal.waxs_ap",
+   "group": "optics",
+   "label": "WAXS ageing parameter AP",
+   "value": 0.6,
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Contested",
+   "citations": [
+    "decaro2022"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "",
+   "uncertainty": 0.02
+  },
+  {
+   "id": "uvf.excitation_nm",
+   "group": "uv_fluorescence",
+   "label": "UV excitation",
+   "value": 365,
+   "unit": "nm",
+   "tag": "measured",
+   "prd_status": "Measured",
+   "citations": [
+    "miller1981"
+   ],
+   "sources": [
+    "prd1",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "uvf.background",
+   "group": "uv_fluorescence",
+   "label": "Background linen under UV",
+   "value": "fluoresces greenish",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "miller1981",
+    "pellicori2025"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "uvf.image",
+   "group": "uv_fluorescence",
+   "label": "Body image under UV",
+   "value": "dark (absorbs, does not re-emit)",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "miller1981",
+    "pellicori2025"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "uvf.blood",
+   "group": "uv_fluorescence",
+   "label": "Dried blood under UV",
+   "value": "dark, non-fluorescent (heme quench)",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "miller1981"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": "",
+   "supersedes": [
+    "uvf.tiers_v2"
+   ]
+  },
+  {
+   "id": "uvf.serum",
+   "group": "uv_fluorescence",
+   "label": "Serum margins under UV",
+   "value": "fluoresce",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "miller1981"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "uvf.light_scorch",
+   "group": "uv_fluorescence",
+   "label": "Light scorch under UV",
+   "value": "fluoresces reddish",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "miller1981"
+   ],
+   "sources": [
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "uvf.background_hue",
+   "group": "uv_fluorescence",
+   "label": "Qualitative background emission hue",
+   "value": [
+    0.55,
+    0.65,
+    0.35
+   ],
+   "unit": "linear sRGB",
+   "tag": "assumption",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Until the Schwalbe-Pellicori fluorescence xy clusters are pulled."
+  },
+  {
+   "id": "blood.serum_ring_mm",
+   "group": "uv_fluorescence",
+   "label": "Serum ring width (one slide-3 stain)",
+   "value": 4,
+   "unit": "mm",
+   "tag": "measured",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Per-stain parameter; from the v1/v2 slide analysis (relative geometry survives)."
+  },
+  {
+   "id": "blood.human",
+   "group": "blood",
+   "label": "Blood findings",
+   "value": "hemoglobin/porphyrin, bilirubin, albumin; no image under blood",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "heller1980",
+    "heller1981"
+   ],
+   "sources": [
+    "prd1",
+    "prd2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "blood.ordering",
+   "group": "blood",
+   "label": "Blood before image",
+   "value": "ordering established; exclusivity not proof",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "heller1981",
+    "kearse2026"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "blood.first_proves_authenticity"
+   ]
+  },
+  {
+   "id": "blood.type_ab",
+   "group": "blood",
+   "label": "AB blood typing",
+   "value": "AB",
+   "unit": null,
+   "tag": "contested",
+   "prd_status": "Contested",
+   "citations": [
+    "baimabollone1982"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Degraded samples can false-type AB."
+  },
+  {
+   "id": "blood.rg_thresholds",
+   "group": "blood",
+   "label": "R/G discriminator (blood, image, linen)",
+   "value": ">1.15 blood; 1.05-1.15 image; <1.05 linen",
+   "unit": null,
+   "tag": "hypothesis",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "From the v1/v2 slides; verify on corrected data."
+  },
+  {
+   "id": "chemistry.no_pigment_image",
+   "group": "blood",
+   "label": "Body image is not pigment",
+   "value": "oxidized/dehydrated cellulose, superficial",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "sturp1981",
+    "fanti2010"
+   ],
+   "sources": [
+    "prd2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "chemistry.mccrone_pigment",
+   "group": "blood",
+   "label": "Pigment hypothesis",
+   "value": "red ochre and vermilion in a collagen binder",
+   "unit": null,
+   "tag": "contested",
+   "prd_status": "Contested",
+   "citations": [
+    "mccrone1996"
+   ],
+   "sources": [
+    "research"
+   ],
+   "note": ""
+  },
+  {
+   "id": "evidence.limestone",
+   "group": "blood",
+   "label": "Travertine aragonite on the cloth",
+   "value": "reported",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Reported",
+   "citations": [
+    "kohlbeck1986"
+   ],
+   "sources": [
+    "prd2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "evidence.pollen_coins",
+   "group": "blood",
+   "label": "Pollen, plant images and coins",
+   "value": "contested",
+   "unit": null,
+   "tag": "contested",
+   "prd_status": "Contested",
+   "citations": [
+    "frei1973",
+    "filas1982",
+    "danin1999",
+    "barcaccia2015"
+   ],
+   "sources": [
+    "prd2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "evidence.metagenomics",
+   "group": "blood",
+   "label": "Metagenomics of the 1978 samples",
+   "value": "mixed human and environmental lineages; cannot date the cloth",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "barcaccia2026"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "dating.c14_1988_ad",
+   "group": "dating",
+   "label": "Radiocarbon range (95 %)",
+   "value": [
+    1260,
+    1390
+   ],
+   "unit": "year AD",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "damon1989"
+   ],
+   "sources": [
+    "prd1",
+    "prd2"
+   ],
+   "note": "",
+   "x3d": true
+  },
+  {
+   "id": "dating.c14_heterogeneity",
+   "group": "dating",
+   "label": "Radiocarbon heterogeneity",
+   "value": "raw data trend along the sample; homogeneity test fails",
+   "unit": null,
+   "tag": "contested",
+   "prd_status": "Contested",
+   "citations": [
+    "riani2013",
+    "casabianca2019"
+   ],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "dating.c14_fragments_2026",
+   "group": "dating",
+   "label": "1988 fragments re-examined",
+   "value": "consistent with the main cloth; no contamination evidence",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "freerwaters2026"
+   ],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "dating.waxs_age_years",
+   "group": "dating",
+   "label": "WAXS age estimate",
+   "value": 2000,
+   "unit": "years",
+   "tag": "contested",
+   "prd_status": "Contested",
+   "citations": [
+    "decaro2022"
+   ],
+   "sources": [
+    "prd1",
+    "v3"
+   ],
+   "note": "Method disputed."
+  },
+  {
+   "id": "dating.sudarium_c14_ad",
+   "group": "dating",
+   "label": "Sudarium of Oviedo radiocarbon",
+   "value": 680,
+   "unit": "year AD",
+   "tag": "measured",
+   "prd_status": "Reported",
+   "citations": [],
+   "sources": [
+    "prd1"
+   ],
+   "note": "About the 7th century, as reported."
+  },
+  {
+   "id": "dating.weave_treadle_loom",
+   "group": "dating",
+   "label": "Weave reproducible only on a treadle loom",
+   "value": "2020 loom reconstruction",
+   "unit": null,
+   "tag": "measured",
+   "prd_status": "Reported",
+   "citations": [],
+   "sources": [
+    "research"
+   ],
+   "note": "Antoinette Merete Olsen; treadle looms are placed in Europe from the 13th century."
+  },
+  {
+   "id": "history.lirey",
+   "group": "history",
+   "label": "First certain appearance, Lirey",
+   "value": "1350s",
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.darcis_memorandum",
+   "group": "history",
+   "label": "Bishop's memorandum to Clement VII calling it painted",
+   "value": 1389,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.fire",
+   "group": "history",
+   "label": "Chambéry fire",
+   "value": 1532,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "Scorches and water stains."
+  },
+  {
+   "id": "history.patches",
+   "group": "history",
+   "label": "Poor Clare patches and backing",
+   "value": 1534,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.turin",
+   "group": "history",
+   "label": "Shroud settles in Turin",
+   "value": 1578,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.guarini_chapel",
+   "group": "history",
+   "label": "Guarini's Chapel of the Holy Shroud completed",
+   "value": 1694,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.pia",
+   "group": "history",
+   "label": "Secondo Pia's photograph (28 May)",
+   "value": 1898,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "The negative reads as a coherent positive."
+  },
+  {
+   "id": "history.enrie",
+   "group": "history",
+   "label": "Giuseppe Enrie's photographs",
+   "value": 1931,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "Orthochromatic plates; the build plan's development source."
+  },
+  {
+   "id": "history.vp8",
+   "group": "history",
+   "label": "First VP-8 analysis, Sandia",
+   "value": 1976,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "Mottern, Jackson, Jumper."
+  },
+  {
+   "id": "history.sturp",
+   "group": "history",
+   "label": "STURP examination",
+   "value": 1978,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "Spectrophotometry, UV fluorescence and photography."
+  },
+  {
+   "id": "history.c14",
+   "group": "history",
+   "label": "Radiocarbon sampling and dating",
+   "value": 1988,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.restoration",
+   "group": "history",
+   "label": "Restoration: patches and Holland backing removed",
+   "value": 2002,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": ""
+  },
+  {
+   "id": "history.haltadefinizione",
+   "group": "history",
+   "label": "Haltadefinizione 12-gigapixel capture",
+   "value": 2008,
+   "unit": "year AD",
+   "tag": "historical",
+   "prd_status": "Historical",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "research",
+    "web",
+    "v3"
+   ],
+   "note": "1649 photographs in one 72 GB file; never published at full resolution."
+  },
+  {
+   "id": "laser.wavelength_nm",
+   "group": "laser_lab",
+   "label": "ArF excimer wavelength",
+   "value": 193,
+   "unit": "nm",
+   "tag": "standard",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": ""
+  },
+  {
+   "id": "laser.pulse_ns",
+   "group": "laser_lab",
+   "label": "Pulse duration",
+   "value": 12,
+   "unit": "ns",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "As stated in the PRD; not re-checked by the build plan."
+  },
+  {
+   "id": "laser.colouring_pulses",
+   "group": "laser_lab",
+   "label": "Pulses that coloured linen",
+   "value": [
+    200,
+    600
+   ],
+   "unit": "pulses",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "laser.fluence_per_pulse_j_cm2",
+   "group": "laser_lab",
+   "label": "Fluence per pulse",
+   "value": [
+    0.07,
+    0.13
+   ],
+   "unit": "J/cm^2",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "laser.intensity_per_pulse_mw_cm2",
+   "group": "laser_lab",
+   "label": "Intensity per pulse",
+   "value": [
+    6,
+    13
+   ],
+   "unit": "MW/cm^2",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "laser.threshold_prd_gw"
+   ]
+  },
+  {
+   "id": "laser.total_fluence_j_cm2",
+   "group": "laser_lab",
+   "label": "Total fluence for coloration",
+   "value": [
+    25,
+    40
+   ],
+   "unit": "J/cm^2",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": "",
+   "supersedes": [
+    "laser.fluence_prd_24_48"
+   ]
+  },
+  {
+   "id": "laser.ablation_j_cm2",
+   "group": "laser_lab",
+   "label": "Fluence that ablated the linen",
+   "value": 73,
+   "unit": "J/cm^2",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "plan"
+   ],
+   "note": ""
+  },
+  {
+   "id": "laser.colour_depth_um",
+   "group": "laser_lab",
+   "label": "Coloration depth at 193 nm (lab analogue)",
+   "value": 26,
+   "unit": "um",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "As stated in the PRD; 3-5x less than at 308 nm. Not re-checked by the build plan.",
+   "uncertainty": 4
+  },
+  {
+   "id": "laser.whole_body_power_tw",
+   "group": "laser_lab",
+   "label": "Whole-body single-pulse power estimate",
+   "value": 34,
+   "unit": "TW",
+   "tag": "hypothesis",
+   "prd_status": "Reported",
+   "citations": [
+    "enea2011"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "An estimate, not a measurement."
+  },
+  {
+   "id": "bio.upe_photons_cm2_s",
+   "group": "biophysics",
+   "label": "Ultra-weak photon emission of skin",
+   "value": [
+    10,
+    1000
+   ],
+   "unit": "photons/cm^2/s",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "cifra2014"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Broadband 350-1300 nm."
+  },
+  {
+   "id": "bio.hypothesis_amplification",
+   "group": "biophysics",
+   "label": "Required amplification (hypothesis)",
+   "value": 10000000000000.0,
+   "unit": "x",
+   "tag": "hypothesis",
+   "prd_status": "Hypothesis",
+   "citations": [],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Unexplained."
+  },
+  {
+   "id": "bio.hypothesis_wavelength_nm",
+   "group": "biophysics",
+   "label": "Required wavelength (hypothesis)",
+   "value": 190,
+   "unit": "nm",
+   "tag": "hypothesis",
+   "prd_status": "Hypothesis",
+   "citations": [],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Unexplained shift to the vacuum UV."
+  },
+  {
+   "id": "bio.hypothesis_collimation",
+   "group": "biophysics",
+   "label": "Vertical collimation (hypothesis)",
+   "value": 1,
+   "unit": null,
+   "tag": "hypothesis",
+   "prd_status": "Hypothesis",
+   "citations": [],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Jackson's fall-through idea; unexplained."
+  },
+  {
+   "id": "instrument.vga_dac_bits",
+   "group": "instrument",
+   "label": "VGA DAC bits",
+   "value": 6,
+   "unit": "bits",
+   "tag": "standard",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web"
+   ],
+   "note": ""
+  },
+  {
+   "id": "instrument.mode13h",
+   "group": "instrument",
+   "label": "Mode 13h raster",
+   "value": [
+    320,
+    200
+   ],
+   "unit": "pixels",
+   "tag": "standard",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web"
+   ],
+   "note": "70.086 Hz, pixel aspect 1.2."
+  },
+  {
+   "id": "instrument.vblank_hz",
+   "group": "instrument",
+   "label": "Mode 13h refresh",
+   "value": 70.086,
+   "unit": "Hz",
+   "tag": "standard",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "port"
+   ],
+   "note": ""
+  },
+  {
+   "id": "instrument.laser_lines_nm",
+   "group": "instrument",
+   "label": "Fringe-mode laser lines",
+   "value": [
+    632.8,
+    532,
+    514.5,
+    445
+   ],
+   "unit": "nm",
+   "tag": "standard",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web"
+   ],
+   "note": ""
+  },
+  {
+   "id": "instrument.phosphor_peaks_nm",
+   "group": "instrument",
+   "label": "Phosphor peaks P1, P3, P22G, P31",
+   "value": [
+    525,
+    602,
+    530,
+    525
+   ],
+   "unit": "nm",
+   "tag": "standard",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web"
+   ],
+   "note": ""
+  },
+  {
+   "id": "audio.transpose_octaves",
+   "group": "audio",
+   "label": "Light-to-audio transposition",
+   "value": 40,
+   "unit": "octaves",
+   "tag": "aesthetic",
+   "prd_status": "Aesthetic",
+   "citations": [],
+   "sources": [
+    "prd1",
+    "prd3"
+   ],
+   "note": "f_audio = c / lambda / 2^40: 632.8 nm gives 430.9 Hz, 193 nm gives 1412.8 Hz."
+  },
+  {
+   "id": "audio.breath_lfo_hz",
+   "group": "audio",
+   "label": "Breath LFO",
+   "value": 0.1,
+   "unit": "Hz",
+   "tag": "measured",
+   "prd_status": "PeerReviewed",
+   "citations": [
+    "lehrer2014"
+   ],
+   "sources": [
+    "prd1"
+   ],
+   "note": "Resonance breathing; Unity audio only."
+  },
+  {
+   "id": "cloth.size_web_flury_lemberg_1998",
+   "group": "legacy",
+   "label": "Cloth size cited to Flury-Lemberg 1998",
+   "value": [
+    4.37,
+    1.11
+   ],
+   "unit": "m",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "plan"
+   ],
+   "note": "The size is right for the pre-2002 state, but no Flury-Lemberg 1998 source was found.",
+   "superseded_by": "cloth.length_pre2002_m"
+  },
+  {
+   "id": "cloth.size_prd_2002",
+   "group": "legacy",
+   "label": "Cloth size cited to the 2002 restoration",
+   "value": [
+    4.37,
+    1.11
+   ],
+   "unit": "m",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "After 2002 the cloth measures 4.415 x 1.137 m.",
+   "superseded_by": "cloth.length_post2002_m"
+  },
+  {
+   "id": "weave.warp_per_cm_prd",
+   "group": "legacy",
+   "label": "PRD warp count (cited to Vial 1989)",
+   "value": 38.6,
+   "unit": "1/cm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "Actually Raes 1973-74.",
+   "superseded_by": "weave.warp_per_cm"
+  },
+  {
+   "id": "weave.weft_per_cm_prd",
+   "group": "legacy",
+   "label": "PRD weft count (cited to Vial 1989)",
+   "value": 25.7,
+   "unit": "1/cm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "Actually Raes 1973-74.",
+   "superseded_by": "weave.weft_per_cm"
+  },
+  {
+   "id": "weave.warp_per_cm_web",
+   "group": "legacy",
+   "label": "Web v3 warp count (cited to Vial 1991)",
+   "value": 38.1,
+   "unit": "1/cm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "plan"
+   ],
+   "note": "The side strip's warp mixed with the overall weft.",
+   "superseded_by": "weave.warp_per_cm"
+  },
+  {
+   "id": "weave.weft_per_cm_web",
+   "group": "legacy",
+   "label": "Web v3 weft count",
+   "value": 25.8,
+   "unit": "1/cm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "plan"
+   ],
+   "note": "",
+   "superseded_by": "weave.weft_per_cm"
+  },
+  {
+   "id": "weave.tile_counts_v2",
+   "group": "legacy",
+   "label": "Weave tile counts U, V (v1/v2)",
+   "value": [
+    1130,
+    4632
+   ],
+   "unit": "tiles",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Computed from the Raes counts with a circular px/mm calibration; data/weave.json recomputes repeats from Vial 1989.",
+   "superseded_by": "weave.band_width_cm"
+  },
+  {
+   "id": "weave.orientation_prd",
+   "group": "legacy",
+   "label": "PRD weave reversal every N weft rows (bands across the cloth)",
+   "value": "bands across",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "",
+   "superseded_by": "weave.band_orientation"
+  },
+  {
+   "id": "weave.chevron_web",
+   "group": "legacy",
+   "label": "Web v3 chevron every 40 warp threads",
+   "value": 40,
+   "unit": "threads",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "web",
+    "plan"
+   ],
+   "note": "Orientation right; the measured repeat is 41 one way and 39 back.",
+   "superseded_by": "weave.band_repeat_threads"
+  },
+  {
+   "id": "distance.range_prd_0p04",
+   "group": "legacy",
+   "label": "PRD maximum image distance",
+   "value": 0.04,
+   "unit": "m",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "",
+   "superseded_by": "distance.frontal_range_m"
+  },
+  {
+   "id": "colour.linen_v1_slide",
+   "group": "legacy",
+   "label": "v1 aged linen from slides",
+   "value": [
+    0.943,
+    0.924,
+    0.84
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "Slide exposure and scan: Y about 0.83 against the measured 0.36; about 2.4x too bright and too neutral.",
+   "superseded_by": "colour.linen_d65_linear"
+  },
+  {
+   "id": "colour.linen_prd_straw",
+   "group": "legacy",
+   "label": "PRD aged linen",
+   "value": [
+    0.82,
+    0.72,
+    0.52
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3",
+    "plan"
+   ],
+   "note": "Hue roughly right, about 1.6x too bright. The PRD's straw tint (0.86, 0.72, 0.46) was tagged Aesthetic.",
+   "superseded_by": "colour.linen_d65_linear"
+  },
+  {
+   "id": "colour.blood_v1_slide",
+   "group": "legacy",
+   "label": "v1 blood from slides",
+   "value": [
+    0.513,
+    0.414,
+    0.35
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Absolute value wrong; the chromatic character (G about B) survives.",
+   "superseded_by": "colour.blood_Y"
+  },
+  {
+   "id": "colour.scorch_v1_slide",
+   "group": "legacy",
+   "label": "v1 scorch from slides",
+   "value": [
+    0.61,
+    0.56,
+    0.42
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Absolute wrong; ordering survives."
+  },
+  {
+   "id": "colour.patch_v1_slide",
+   "group": "legacy",
+   "label": "v1 patch from slides",
+   "value": [
+    0.95,
+    0.93,
+    0.88
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Absolute wrong; ordering survives."
+  },
+  {
+   "id": "colour.tint_v2",
+   "group": "legacy",
+   "label": "v2 image tint (blue -10.7 %, red +2.1 %)",
+   "value": [
+    1.021,
+    null,
+    0.893
+   ],
+   "unit": "ratio",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Sign error on red: red goes down at h = 1, not up.",
+   "superseded_by": "colour.image_tint_h1_d65"
+  },
+  {
+   "id": "colour.body_image_delta_lum_v1",
+   "group": "legacy",
+   "label": "v1 body image luminance change 2.1 %",
+   "value": 0.021,
+   "unit": "fraction",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Misframed: a face-region mean on an 8-bit negative. h = 1 gives -18 % Y; the face mean is a few percent."
+  },
+  {
+   "id": "interpretation.dorsal_darker_gravity",
+   "group": "legacy",
+   "label": "Dorsal darker by 11 % because of gravity",
+   "value": "retracted",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "jje1984"
+   ],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "JJE found equal amplitudes at about 77x pressure difference; the 11 % gap was slide exposure. The real asymmetry is the dorsal slope (Fazio and Mandaglio 2008)."
+  },
+  {
+   "id": "uvf.tiers_v2",
+   "group": "legacy",
+   "label": "v2 UV porphyrin emission tiers",
+   "value": "retracted",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "miller1981"
+   ],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "Read upside down: dried blood is non-fluorescent, serum margins fluoresce; the false-colour face is a display mapping.",
+   "superseded_by": "uvf.blood"
+  },
+  {
+   "id": "uvf.dense_porphyrin_v2",
+   "group": "legacy",
+   "label": "v2 dense porphyrin colour",
+   "value": [
+    0.84,
+    0.101,
+    0.114
+   ],
+   "unit": "sRGB",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Pseudo-colour, not emission. Deleted."
+  },
+  {
+   "id": "blood.first_proves_authenticity",
+   "group": "legacy",
+   "label": "Blood first proves authenticity",
+   "value": "retracted",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "kearse2026"
+   ],
+   "sources": [
+    "v3",
+    "v3note",
+    "plan"
+   ],
+   "note": "Ordering is fact; exclusivity is not proof (Kearse 2026 reproduces no image under blood artificially).",
+   "superseded_by": "blood.ordering"
+  },
+  {
+   "id": "sudarium.xray_micrography",
+   "group": "legacy",
+   "label": "Sudarium correspondence by X-ray micrography",
+   "value": "retracted",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "whanger1985",
+    "heras1998"
+   ],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "The evidence is photographic overlay (PIOT) and forensic (EDICES); the honest verb is 'consistent with'. The v2 'pulmonary edema colour' was measured on a Shroud slide."
+  },
+  {
+   "id": "optics.mu_prd",
+   "group": "legacy",
+   "label": "v2 Beer-Lambert mu",
+   "value": 2.154,
+   "unit": "1/mm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3"
+   ],
+   "note": "Used a 200 um thickness guess.",
+   "superseded_by": "optics.mu_cloth_per_mm"
+  },
+  {
+   "id": "laser.threshold_prd_gw",
+   "group": "legacy",
+   "label": "PRD coloration threshold 2-4 GW/cm^2",
+   "value": 3,
+   "unit": "GW/cm^2",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "Does not match Di Lazzaro 2012 Table 1 (6-13 MW/cm^2 per pulse).",
+   "superseded_by": "laser.intensity_per_pulse_mw_cm2"
+  },
+  {
+   "id": "laser.fluence_prd_24_48",
+   "group": "legacy",
+   "label": "PRD fluence onset 24 / saturation 48 J/cm^2",
+   "value": [
+    24,
+    48
+   ],
+   "unit": "J/cm^2",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "48 J/cm^2 does not appear in the paper's table.",
+   "superseded_by": "laser.total_fluence_j_cm2"
+  },
+  {
+   "id": "laser.single_pulse_prd",
+   "group": "legacy",
+   "label": "PRD single 12 ns pulse of 57.6 J/cm^2 'inside the window'",
+   "value": 4.8,
+   "unit": "GW/cm^2",
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [
+    "dilazzaro2012"
+   ],
+   "sources": [
+    "prd3",
+    "plan"
+   ],
+   "note": "Hundreds of times the coloring intensities; not inside the window."
+  },
+  {
+   "id": "geometry.lod0_quad_mm_prd",
+   "group": "legacy",
+   "label": "PRD LOD0 quad size 8.5 mm",
+   "value": 8.5,
+   "unit": "mm",
+   "tag": "superseded",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "prd1",
+    "plan"
+   ],
+   "note": "The 512 x 1024 grid gives 4.3 x 2.2 mm quads."
+  },
+  {
+   "id": "unity.custom_light_api",
+   "group": "legacy",
+   "label": "Biophoton emitter on Unity 6.5 custom lights",
+   "value": "do not build",
+   "unit": null,
+   "tag": "retracted",
+   "prd_status": null,
+   "citations": [],
+   "sources": [
+    "v3",
+    "v3note"
+   ],
+   "note": "The 6.5 custom-light API is 2D-only."
+  }
+ ]
+}

@@ -1,0 +1,480 @@
+{
+ "title": "Corrections ledger",
+ "date": "2026-10-16",
+ "kinds": {
+  "contradiction": "documents disagreed; the build plan resolved it",
+  "citation": "a reference was wrong or incomplete",
+  "retraction": "a claim withdrawn (kept as a record)",
+  "replacement": "a number replaced",
+  "addition": "a measured phenomenon the earlier documents did not model"
+ },
+ "corrections": [
+  {
+   "id": "range",
+   "topic": "Cloth-to-body range",
+   "kind": "contradiction",
+   "was": "PRD 0.04 m; web 37 mm; v3 3.7 cm frontal with its own dorsal slope",
+   "now": "0.037 m frontal (JJE 1984: 3.7 cm, r^2 0.60 for 13 points). No measured dorsal value: tagged hypothesis until a fit exists. Linear by default, exponential as the labelled alternative.",
+   "cite": [
+    "jje1984",
+    "fazio2008"
+   ],
+   "constants": [
+    "distance.frontal_range_m",
+    "distance.dorsal_range_m",
+    "distance.range_prd_0p04",
+    "distance.exponential_model"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "linen_colour",
+   "topic": "Linen and image colour",
+   "kind": "contradiction",
+   "was": "PRD straw tint (0.86, 0.72, 0.46), tagged Aesthetic",
+   "now": "Linen (0.445, 0.344, 0.240) linear sRGB under D65; image at h = 1 is linen x (0.881, 0.807, 0.725). Recomputed independently; agrees within 0.001.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "colour.linen_d65_linear",
+    "colour.image_tint_h1_d65",
+    "colour.linen_prd_straw"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "halftone",
+   "topic": "Half-tone versus smooth colour",
+   "kind": "contradiction",
+   "was": "PRD: each fibril is coloured or not; v3: colour is a smooth function of h",
+   "now": "Both hold: coloured fraction f = h x f_max, and each coloured fibril takes the JJE colour at h = 1/f_max, so the average is exactly v3's.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "colour.half_tone_fmax"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "stain_colours",
+   "topic": "Blood, scorch and patch colours",
+   "kind": "contradiction",
+   "was": "PRD artist colours on painted masks; v3: slide-derived absolutes are about 2.4x too bright",
+   "now": "Masks and ratios stay; absolute colours are re-derived relative to the JJE linen and stay assumptions until a measured spectrum is cited.",
+   "cite": [
+    "schwalbe2023",
+    "gilbert1980"
+   ],
+   "constants": [
+    "colour.blood_Y",
+    "colour.char_linear",
+    "colour.blood_v1_slide",
+    "colour.scorch_v1_slide",
+    "colour.patch_v1_slide"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "thread_counts",
+   "topic": "Thread counts",
+   "kind": "contradiction",
+   "was": "PRD 38.6 x 25.7 cited to Vial 1989; web 38.1 x 25.8 cited to Vial 1991; the 2026 fragment paper quotes 38 x 25-26",
+   "now": "Vial 1989 main cloth: warp 38.3, weft 25.4 per cm; side strip 38.1 and 26.2. 38.6 x 25.7 is Raes 1973-74; 38.1 x 25.8 mixes the side strip's warp with the overall weft. The 2026 paper's own count is 37-41 x 26-29.",
+   "cite": [
+    "vial1989",
+    "raes1974",
+    "freerwaters2026"
+   ],
+   "constants": [
+    "weave.warp_per_cm",
+    "weave.weft_per_cm",
+    "weave.warp_per_cm_prd",
+    "weave.weft_per_cm_prd",
+    "weave.warp_per_cm_web",
+    "weave.weft_per_cm_web"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cloth_size",
+   "topic": "Cloth size",
+   "kind": "contradiction",
+   "was": "PRD 4.37 x 1.11 m cited to the 2002 restoration; web the same numbers cited to Flury-Lemberg 1998",
+   "now": "4.37 x 1.11 m is the size before the 2002 restoration (no Flury-Lemberg 1998 source found). After 2002: 4.415 x 1.137 m. Both kept, tied to the restoration-state switch; default pre-2002.",
+   "cite": [
+    "linteum2002"
+   ],
+   "constants": [
+    "cloth.length_pre2002_m",
+    "cloth.width_pre2002_m",
+    "cloth.length_post2002_m",
+    "cloth.width_post2002_m"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "weave_orientation",
+   "topic": "Weave orientation",
+   "kind": "contradiction",
+   "was": "PRD reverses the diagonal every N weft rows (bands across the cloth); web reverses every 40 warp threads (bands along it)",
+   "now": "The web is right: selvedges along both long edges, warp lengthwise, chevrons along the warp; a repeat is 41 threads one way and 39 back, so each band is about 1 cm.",
+   "cite": [
+    "vial1989"
+   ],
+   "constants": [
+    "weave.band_orientation",
+    "weave.band_repeat_threads",
+    "weave.orientation_prd",
+    "weave.chevron_web"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "height_field",
+   "topic": "Height field",
+   "kind": "contradiction",
+   "was": "Three bakers (PRD Rec.709 luma; port and web percentile), none masking blood, scorch or patches, so they become bumps",
+   "now": "One offline JJE inversion with masks. This package ships a synthetic forward-model h (license-free) and, outside the public repo, a masked photo proxy; neither is the final inversion.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "convention.h_range"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "xray_mode",
+   "topic": "X-ray",
+   "kind": "contradiction",
+   "was": "PRD: edge-enhanced sub-surface hypothesis view; v3: a physical X-radiograph from the endmember model",
+   "now": "PRD mode renamed 'Sub-surface (hypothesis)'; X-radiograph added as its own mode.",
+   "cite": [],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "lod",
+   "topic": "LOD",
+   "kind": "contradiction",
+   "was": "v3 LOD 0-4 are scale levels (chapel to crystal); PRD LOD 0-3 are mesh levels",
+   "now": "v3's become scale levels S0-S4. PRD LOD0 quads are 4.3 x 2.2 mm, not 8.5 mm.",
+   "cite": [],
+   "constants": [
+    "geometry.lod0_quad_mm_prd"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "transmitted",
+   "topic": "Transmitted light",
+   "kind": "contradiction",
+   "was": "v3 and the PoC have it; the PRD mode list does not",
+   "now": "Added: T = exp(-(mu_cloth + mu_blood*blood + mu_scorch*scorch)*d), with no image term.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "optics.transmission_rule"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "fractal_veil",
+   "topic": "Fractal veil",
+   "kind": "contradiction",
+   "was": "PRD v2 removed the Mandelbrot mode as meaningless; web v3 keeps a Fractal veil",
+   "now": "Web only, labelled aesthetic; not ported.",
+   "cite": [],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "map_grid",
+   "topic": "Map grid",
+   "kind": "contradiction",
+   "was": "PRD 8K square maps and a 2048 x 4096 compute grid; the cloth is 1 : 3.9",
+   "now": "One grid, 2048 x 8192, for every map and the compute pass.",
+   "cite": [],
+   "constants": [
+    "convention.map_grid"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "unity_version",
+   "topic": "Unity version",
+   "kind": "contradiction",
+   "was": "v3 section 6 says ship on URP 17 and 6.5",
+   "now": "HagopJay's decision stands: 6.3 LTS (Unity work is parked in this package).",
+   "cite": [],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "unity_code_sets",
+   "topic": "Two Unity code sets",
+   "kind": "contradiction",
+   "was": "PRD CRTLookFeature and static palette PNGs versus the port's CRT feature and cycler",
+   "now": "Merged as in the build plan's 'Which code survives' table (Unity form, not part of this package).",
+   "cite": [],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_riani",
+   "topic": "Riani et al. 2013 pages",
+   "kind": "citation",
+   "was": "Stat. Comput. 23:339",
+   "now": "Stat. Comput. 23(4):551-561",
+   "cite": [
+    "riani2013"
+   ],
+   "constants": [
+    "dating.c14_heterogeneity"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_fazio",
+   "topic": "'Mandaglio-Fazio' dorsal slope",
+   "kind": "citation",
+   "was": "Mandaglio-Fazio (v3)",
+   "now": "Fazio and Mandaglio 2008, Atti Accad. Peloritana 86(2); the dorsal range is 'arbitrary' there",
+   "cite": [
+    "fazio2008"
+   ],
+   "constants": [
+    "distance.dorsal_range_m"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_barcaccia",
+   "topic": "Metagenomics DOI",
+   "kind": "citation",
+   "was": "bioRxiv preprint DOI (v3)",
+   "now": "Sci. Rep. 16:21206 (2026); samples are linen filaments, vacuum dust and a slide, not only dust",
+   "cite": [
+    "barcaccia2026"
+   ],
+   "constants": [
+    "evidence.metagenomics"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_moraes",
+   "topic": "Moraes 2025 debate",
+   "kind": "citation",
+   "was": "Moraes 2025 alone",
+   "now": "Add the Casabianca, Marinelli and Piana commentary and Moraes' reply (Archaeometry 68(4), 2026)",
+   "cite": [
+    "moraes2025",
+    "casabianca2026",
+    "moraes2026"
+   ],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_tvcg",
+   "topic": "TVCG 2026 fabric inverse rendering",
+   "kind": "citation",
+   "was": "Uses Mitsuba 3 (v3)",
+   "now": "Exists; its abstract does not mention Mitsuba 3 and the full text is paywalled",
+   "cite": [
+    "sagredo2026"
+   ],
+   "constants": [],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_laser",
+   "topic": "Di Lazzaro 2012 numbers",
+   "kind": "citation",
+   "was": "PRD: 2-4 GW/cm^2 threshold, 24/48 J/cm^2 onset/saturation, a single 12 ns pulse of 57.6 J/cm^2 (4.8 GW/cm^2) 'inside the window'",
+   "now": "Table 1: 200-600 pulses of 0.07-0.13 J/cm^2 at 6-13 MW/cm^2 per pulse, totals about 25-40 J/cm^2; 73 J/cm^2 ablated",
+   "cite": [
+    "dilazzaro2012"
+   ],
+   "constants": [
+    "laser.intensity_per_pulse_mw_cm2",
+    "laser.total_fluence_j_cm2",
+    "laser.threshold_prd_gw",
+    "laser.fluence_prd_24_48",
+    "laser.single_pulse_prd"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "cite_freerwaters",
+   "topic": "Freer-Waters and Jull 2026 counts",
+   "kind": "citation",
+   "was": "38 x 25-26 per cm attributed to the 2026 paper",
+   "now": "Quoted from older work; the paper's own count is 37-41 x 26-29",
+   "cite": [
+    "freerwaters2026"
+   ],
+   "constants": [
+    "weave.c14_fragment_counts_per_cm"
+   ],
+   "decided_by": "plan"
+  },
+  {
+   "id": "v3_slide_colours",
+   "topic": "Absolute colours from slides",
+   "kind": "retraction",
+   "was": "v1 linen (0.943, 0.924, 0.840), blood (0.513, 0.414, 0.350), scorch (0.61, 0.56, 0.42), patch (0.95, 0.93, 0.88)",
+   "now": "Discard absolute values (about 2.4x too bright, too neutral): Ektachrome response, 45 years of dye fade, scanner and 8-bit JPEG are unknown transfer functions. Masks, ratios, thread geometry and frequency structure survive.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "colour.linen_v1_slide",
+    "colour.blood_v1_slide",
+    "colour.scorch_v1_slide",
+    "colour.patch_v1_slide"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_tint",
+   "topic": "Image tint",
+   "kind": "retraction",
+   "was": "v2: blue -10.7 %, red +2.1 %",
+   "now": "tint(h=1) = (0.881, 0.807, 0.725): red goes down, not up",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "colour.tint_v2",
+    "colour.image_tint_h1_d65"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_dorsal_gravity",
+   "topic": "Dorsal darker = gravity",
+   "kind": "retraction",
+   "was": "Dorsal 11 % darker because pressed harder",
+   "now": "Retracted: JJE found equal amplitudes at about 77x pressure difference (26.8 vs 0.35 g/cm^2); the 11 % gap was slide exposure. The dorsal slope differs (Fazio and Mandaglio 2008).",
+   "cite": [
+    "jje1984",
+    "fazio2008"
+   ],
+   "constants": [
+    "interpretation.dorsal_darker_gravity",
+    "distance.pressure_ratio"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_uv_tiers",
+   "topic": "UV fluorescence tiers",
+   "kind": "retraction",
+   "was": "Porphyrin emission tiers; dense porphyrin (0.840, 0.101, 0.114)",
+   "now": "Dried blood is non-fluorescent; serum margins fluoresce; background greenish; image dark; light scorch reddish. The false-colour face is a display mapping.",
+   "cite": [
+    "miller1981",
+    "pellicori2025"
+   ],
+   "constants": [
+    "uvf.tiers_v2",
+    "uvf.dense_porphyrin_v2",
+    "uvf.blood",
+    "uvf.serum"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_blood_first",
+   "topic": "Blood first proves authenticity",
+   "kind": "retraction",
+   "was": "Blood-before-image proves authenticity",
+   "now": "Ordering is fact; exclusivity is not proof (Kearse 2026).",
+   "cite": [
+    "kearse2026"
+   ],
+   "constants": [
+    "blood.first_proves_authenticity",
+    "blood.ordering"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_sudarium",
+   "topic": "Sudarium framing",
+   "kind": "retraction",
+   "was": "Correspondence by X-ray micrography; 'pulmonary edema colour'",
+   "now": "Photographic overlay (PIOT) and forensic (EDICES) evidence; 'consistent with'. The edema colour was measured on a Shroud slide.",
+   "cite": [
+    "whanger1985",
+    "heras1998"
+   ],
+   "constants": [
+    "sudarium.xray_micrography"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_mu",
+   "topic": "Beer-Lambert mu",
+   "kind": "replacement",
+   "was": "2.154 per mm (200 um guess)",
+   "now": "1.25 per mm with the 345 um JJE thickness; MFP 0.80 mm",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "optics.mu_prd",
+    "optics.mu_cloth_per_mm"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_delta_lum",
+   "topic": "Body image luminance change",
+   "kind": "replacement",
+   "was": "2.1 % (face mean on an 8-bit negative)",
+   "now": "h = 1 gives -18 % Y; a face-region mean is a few percent. Report both.",
+   "cite": [
+    "jje1984"
+   ],
+   "constants": [
+    "colour.body_image_delta_lum_v1"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_custom_light",
+   "topic": "Unity custom-light API",
+   "kind": "retraction",
+   "was": "Build the biophoton emitter on Unity's new custom lights",
+   "now": "That API is 2D-only; keep the emitter as emissive geometry (Unity form, parked).",
+   "cite": [],
+   "constants": [
+    "unity.custom_light_api"
+   ],
+   "decided_by": "v3"
+  },
+  {
+   "id": "v3_visibility",
+   "topic": "Image visibility distance",
+   "kind": "addition",
+   "was": "(not modelled)",
+   "now": "The image is not discernible closer than about 1.8 m; its density range is about 22x the 0.004 threshold. Fall out of the weave scale naturally.",
+   "cite": [
+    "jje1984",
+    "blackwell"
+   ],
+   "constants": [
+    "perception.min_distance_m",
+    "perception.threshold_density"
+   ],
+   "decided_by": "v3"
+  }
+ ]
+}

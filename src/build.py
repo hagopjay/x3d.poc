@@ -30,7 +30,8 @@ SHARED = [
 ]
 
 NAV = [('index.html', 'All demos'), ('gobbler.html', 'Gobbler'), ('pantheon.html', 'Pantheon'), ('giza.html', 'Giza'), ('powers-of-ten.html', 'Powers of ten'),
-       ('drillfield.html', 'Drillfield'), ('two-renderers.html', 'Two renderers'), ('materials.html', 'Materials'), ('spec-questions.html', 'Spec questions'), ('osiris-shaft.html', 'Osiris Shaft')]
+       ('drillfield.html', 'Drillfield'), ('two-renderers.html', 'Two renderers'), ('materials.html', 'Materials'), ('spec-questions.html', 'Spec questions'), ('osiris-shaft.html', 'Osiris Shaft'),
+       ('shroud/index.html', 'Shroud')]
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%(title)s · PolyXandria</title><meta name="description" content="%(desc)s">
@@ -315,15 +316,16 @@ CARDS = [
     ('materials.html', 'gifts/materials/poster.png', '07', 'Materials from nothing', 'Synthetic textures on standard PhysicalMaterial nodes.', ['PhysicalMaterial', 'Synthetic']),
     ('spec-questions.html', 'gifts/repros/profile-tables.png', '08', 'Questions for the spec', 'Six click-to-load repro pairs, framed as questions.', ['Validator', 'For the group']),
     ('osiris-shaft.html', 'gifts/osiris-poster.jpg', '10', 'The Osiris Shaft', 'A spooky descent beneath Giza. Every claim tagged: fact, theory, or nobody knows. Flip between two surveys that disagree.', ['Mystery', 'Schematic']),
+    ('shroud/index.html', 'gifts/shroud-poster.jpg', '11', 'The Shroud of Turin', 'Linen coloured from the 1978 spectra, the weave at its true thread count, and an image that fades inside 1.8 m, on a synthetic figure. Five scenes, a knowledge graph, Blender scripts.', ['X3D 4.0', 'Measured']),
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
 idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
-                    'tag': 'Nine demos, one engine: splats, terrain, stars, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
+                    'tag': 'Ten demos: splats, terrain, stars, the Shroud of Turin, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
                     'nav': nav('index.html'), 'buttons': BTNS, 'hint': 'Lights are out. Move the pointer to find it.'}.copy())
-idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Nine demos</h2><div class="grid">')
+idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Ten demos</h2><div class="grid">')
 for h, img, n, t, p, tags in CARDS:
     ext = ' target="_blank" rel="noopener"' if h.startswith('http') else ''
     idx.append('<a class="card" href="%s"%s><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %

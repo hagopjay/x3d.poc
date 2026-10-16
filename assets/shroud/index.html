@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Shroud of Turin in X3D · PolyXandria</title>
+<meta name="description" content="The Shroud of Turin as measured data and X3D 4.0 scenes: the JJE 1984 colour model, Vial's weave, the 1.8 m dissolve, the image as relief, the formation hypothesis and eighteen centuries of the face.">
+<style>
+:root {
+  --bg: #08070a; --ink: #efe9de; --ink2: #b9b2a5; --ink3: #7d776c; --gold: #e9cf8a; --gold2: #b8964a; --ember: #e5751f;
+  --rule: rgba(233,207,138,.16); --glass: rgba(13,11,16,.74); --glass2: rgba(13,11,16,.5);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
+a { color: var(--gold); text-decoration: none; } a:hover { text-decoration: underline; }
+button, select, input { font: inherit; color: inherit; }
+.stage { position: fixed; inset: 0; overflow: hidden; background: radial-gradient(120% 90% at 50% 40%, #15110f 0, #070608 70%); }
+.stage x3d-canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; outline: none; }
+.vignette { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(6,5,7,.6) 0, rgba(6,5,7,0) 13%, rgba(6,5,7,0) 74%, rgba(6,5,7,.72) 100%);
+  box-shadow: inset 0 0 140px 30px rgba(0,0,0,.42); }
+.stage.boost x3d-canvas { filter: url(#boost); }
+.ui { position: absolute; inset: 0; pointer-events: none; display: grid; grid-template-rows: auto 1fr auto; padding: 18px 22px 18px; gap: 10px; transition: opacity .5s; }
+.ui > * { pointer-events: auto; }
+.stage.clean .ui, .stage.clean .panel { opacity: 0; pointer-events: none; }
+.stage.clean .ui > * { pointer-events: none; }
+.top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.brand { font: 600 11px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-right: 6px; }
+.brand span { color: var(--ink3); }
+.scenes { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+.chip { cursor: pointer; border: 1px solid rgba(233,207,138,.22); background: var(--glass2); color: var(--ink2); padding: 6px 12px 6px; border-radius: 999px;
+  font-size: 13px; line-height: 1.2; white-space: nowrap; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: border-color .2s, color .2s, background .2s; }
+.chip:hover { color: var(--ink); border-color: rgba(233,207,138,.5); }
+.chip.on { color: #17120a; background: var(--gold); border-color: var(--gold); }
+.chip.ghost { margin-left: auto; }
+.chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.titleblock { align-self: start; margin-top: 3vh; max-width: 30em; text-shadow: 0 2px 18px rgba(0,0,0,.8); transition: opacity .6s; }
+.titleblock.dim { opacity: .0; }
+.kicker { font: 600 11px/1.3 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--gold2); margin-bottom: 8px; }
+h1 { font: 400 clamp(30px, 4.6vw, 56px)/1.04 var(--serif); margin: 0 0 10px; letter-spacing: .005em; color: #f6efe2; }
+.titleblock p { margin: 0; color: var(--ink2); font-size: 15px; max-width: 28em; }
+.warn { margin-top: 10px; font-size: 12px; color: var(--ink3); max-width: 30em; }
+.warn b { color: #d9a38a; font-weight: 600; }
+.bar { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.vps { display: flex; gap: 6px; flex-wrap: wrap; max-width: 64em; }
+.readout { display: grid; grid-template-columns: auto 200px auto; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid var(--rule);
+  background: var(--glass); border-radius: 14px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.readout[hidden] { display: none; }
+.readout .num b { display: block; font: 400 26px/1 var(--serif); color: #f6efe2; font-variant-numeric: tabular-nums; }
+.readout .num span { display: block; font-size: 11px; color: var(--ink3); margin-top: 4px; max-width: 9em; line-height: 1.25; }
+.readout svg { width: 200px; height: 64px; display: block; overflow: visible; }
+.readout .note { grid-column: 1 / -1; font-size: 10.5px; color: var(--ink3); line-height: 1.3; }
+.busy { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 10px 16px; border-radius: 999px; background: var(--glass);
+  border: 1px solid var(--rule); color: var(--ink2); font-size: 13px; pointer-events: none; transition: opacity .3s; }
+.busy:empty { opacity: 0; }
+.panel { position: absolute; top: 62px; right: 18px; bottom: 18px; width: min(400px, calc(100% - 36px)); display: flex; flex-direction: column;
+  background: var(--glass); border: 1px solid var(--rule); border-radius: 16px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.5); transition: opacity .3s, transform .3s; z-index: 3; }
+.panel[hidden] { display: flex; opacity: 0; transform: translateX(20px); pointer-events: none; }
+.tabs { display: flex; gap: 4px; padding: 10px 10px 0; flex-wrap: wrap; }
+.tabs button { cursor: pointer; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--ink3); padding: 6px 8px 8px; font-size: 13px; }
+.tabs button.on { color: var(--gold); border-bottom-color: var(--gold); }
+.tabbody { overflow: auto; padding: 12px 16px 18px; border-top: 1px solid var(--rule); flex: 1; scrollbar-width: thin; scrollbar-color: #4a4034 transparent; }
+.tabbody h3 { font: 400 19px/1.2 var(--serif); margin: 6px 0 8px; color: #f6efe2; }
+.tabbody h4 { font: 600 10.5px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--gold2); margin: 18px 0 8px; }
+.tabbody p { color: var(--ink2); font-size: 13.5px; margin: 0 0 10px; }
+.eq { font: 14px/1.5 var(--serif); color: #f3e9d6; background: rgba(233,207,138,.06); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 10px; margin: 6px 0 10px; }
+.eq small { display: block; font: 11.5px/1.4 var(--sans); color: var(--ink3); margin-top: 4px; }
+.ctl { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; margin: 10px 0; }
+.ctl label { font-size: 13px; color: var(--ink2); }
+.ctl output { font: 12px/1 var(--mono); color: var(--gold); text-align: right; min-width: 5em; }
+.ctl input[type=range], .ctl select { grid-column: 1 / -1; width: 100%; }
+.ctl small { grid-column: 1 / -1; color: var(--ink3); font-size: 11.5px; }
+select { background: #15121a; border: 1px solid var(--rule); border-radius: 8px; padding: 6px 8px; color: var(--ink); }
+input[type=range] { accent-color: var(--gold); }
+.toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 12px 0; }
+.toggles label { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink2); cursor: pointer; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 8px; }
+.toggles input { accent-color: var(--gold); }
+.swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 8px 0 4px; }
+.sw { border-radius: 8px; padding: 26px 8px 6px; font-size: 11px; color: rgba(0,0,0,.72); border: 1px solid rgba(255,255,255,.08); }
+.find { display: flex; gap: 6px; margin: 4px 0 8px; }
+.find input { flex: 1; background: #15121a; border: 1px solid var(--rule); border-radius: 8px; padding: 6px 8px; }
+.find select { max-width: 9.5em; }
+.k { padding: 9px 0; border-bottom: 1px solid rgba(233,207,138,.08); }
+.k .kl { font-size: 13px; color: var(--ink); }
+.k .kv { font: 12.5px/1.4 var(--mono); color: #f3e2b5; margin-top: 2px; word-break: break-word; }
+.k .kc { font-size: 11px; color: var(--ink3); margin-top: 2px; }
+.k.old .kv { text-decoration: line-through; color: var(--ink3); }
+.pill { display: inline-block; font: 600 9.5px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 3px 6px 3px; border-radius: 999px; margin-left: 6px;
+  vertical-align: 2px; color: #120f0a; background: var(--c, #aaa); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 2px; margin: 6px 0 10px; }
+.legend .pill { margin: 0 4px 0 0; cursor: help; }
+.corr { padding: 10px 0; border-bottom: 1px solid rgba(233,207,138,.08); font-size: 12.5px; }
+.corr .t { font-size: 13.5px; color: var(--ink); }
+.corr .was { color: var(--ink3); text-decoration: line-through; margin-top: 3px; }
+.corr .now { color: var(--ink2); margin-top: 3px; }
+.files { margin: 0; padding: 0; list-style: none; font-size: 13px; }
+.files li { padding: 4px 0; color: var(--ink3); }
+.files li a { font-family: var(--mono); font-size: 12px; }
+kbd { font: 11px var(--mono); border: 1px solid var(--rule); border-radius: 4px; padding: 0 4px; color: var(--ink2); }
+@media (max-width: 760px) {
+  .ui { padding: 12px; }
+  .titleblock p, .warn { display: none; }
+  .readout { grid-template-columns: auto 1fr auto; padding: 8px 10px; }
+  .readout svg { width: 100%; }
+  .panel { top: auto; height: 62%; right: 8px; left: 8px; bottom: 8px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main class="stage" id="stage">
+  <div class="vignette"></div>
+  <div class="ui">
+    <div class="top">
+      <a class="brand" href="../index.html">PolyXandria <span>/ Shroud</span></a>
+      <nav class="scenes" id="scenes" aria-label="Scenes"></nav>
+      <button class="chip ghost" id="btn-contrast" title="The image darkens the linen by 18 % at most. A display stretch around the linen colour makes it easier to see; x1 is the physical image." hidden>Image contrast ×1</button>
+      <button class="chip" id="btn-panel" aria-expanded="false" aria-controls="panel">Data and controls</button>
+    </div>
+    <div class="titleblock" id="titleblock">
+      <div class="kicker" id="kicker">Shroud of Turin</div>
+      <h1 id="title">The cloth</h1>
+      <p id="blurb"></p>
+      <div class="warn"><b>Synthetic image.</b> The figure is a forward model built from published measurements, not a photograph and not a reconstruction of the man of the Shroud.</div>
+    </div>
+    <div class="bar">
+      <div class="vps" id="vps" aria-label="Viewpoints"></div>
+      <div class="readout" id="readout" hidden>
+        <div class="num"><b id="dist">–</b><span>from the face</span></div>
+        <svg id="curve" viewBox="0 0 200 64" role="img" aria-label="Chance of seeing the image against viewing distance"></svg>
+        <div class="num"><b id="pseen">–</b><span>chance an eye sees the image here</span></div>
+        <div class="note">Contrast sensitivity times the image's own contrast, calibrated to the measured 1.8 m (JJE 1984). Model, not measurement.</div>
+      </div>
+    </div>
+  </div>
+  <aside class="panel" id="panel" hidden aria-label="Data and controls">
+    <div class="tabs" role="tablist">
+      <button data-tab="lab" class="on">Lab</button><button data-tab="constants">Constants</button><button data-tab="corrections">Corrections</button><button data-tab="about">About</button>
+    </div>
+    <div class="tabbody" id="tab-lab"></div>
+    <div class="tabbody" id="tab-constants" hidden></div>
+    <div class="tabbody" id="tab-corrections" hidden></div>
+    <div class="tabbody" id="tab-about" hidden></div>
+  </aside>
+  <div class="busy" id="busy">Starting the viewer</div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="boost" color-interpolation-filters="sRGB">
+    <feComponentTransfer><feFuncR id="fR" type="linear" slope="3" intercept="-1.396"/><feFuncG id="fG" type="linear" slope="3" intercept="-1.2"/><feFuncB id="fB" type="linear" slope="3" intercept="-0.964"/></feComponentTransfer>
+  </filter></svg>
+</main>
+<script>
+(function () {
+  'use strict';
+  var XITE = '16.4.3';
+  var TAGS = { measured: '#7fd69a', fitted: '#8fcbe6', derived: '#b9a8ff', inferred: '#f0c674', hypothesis: '#d39bff', contested: '#f2905e',
+    assumption: '#d9b48a', aesthetic: '#ee93ba', historical: '#e9dfc9', tradition: '#c4b2ea', standard: '#a9b6c4', convention: '#8f99a5',
+    superseded: '#8d8276', retracted: '#d66f6f', unsupported: '#7a7a7a' };
+  var S = { scenes: null, scene: null, el: null, perception: null, lut: null, constants: null, corrections: null, lab: null, token: 0, dist: null };
+  var $ = function (q, r) { return (r || document).querySelector(q); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var getJSON = function (u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(r.status + ' ' + u); return r.json(); }); };
+  function busy(t) { $('#busy').textContent = t || ''; }
+
+  function loadScript(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
+  function loadCss(href) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l); }
+  function xite() {
+    /* the site's own copy first; outside the site (the package served on its own) X_ITE comes from jsDelivr */
+    return loadScript('../vendor/x_ite/x_ite.min.js').then(function () { loadCss('../vendor/x_ite/x_ite.css'); })
+      .catch(function () { var b = 'https://cdn.jsdelivr.net/npm/x_ite@' + XITE + '/dist/'; loadCss(b + 'x_ite.css'); return loadScript(b + 'x_ite.min.js'); });
+  }
+  function makeCanvas() {
+    var el = document.createElement('x3d-canvas'), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    el.setAttribute('splashScreen', 'false'); el.setAttribute('notifications', 'false'); el.setAttribute('contextMenu', 'false');
+    el.setAttribute('contentScale', String(dpr)); el.setAttribute('multisampling', dpr >= 2 ? '4' : '8');
+    el.setAttribute('toneMapping', 'KHR_PBR_NEUTRAL'); el.setAttribute('tabindex', '0');
+    $('#stage').insertBefore(el, $('#stage').firstChild);
+    return el;
+  }
+
+  /* ---------- perception: the same model as data/perception.json and the LOD textures ---------- */
+  function csf(f) { return 2.6 * (0.0192 + 0.114 * f) * Math.exp(-Math.pow(0.114 * f, 1.1)); }
+  function pSeen(d) {
+    var M = S.perception, b = M.bands, Sp = M.peak_sensitivity.value, Sm = M.csf.peak_value, cal = M.calibration.factor, V = 0;
+    for (var k = 0; k < b.contrast_p99.length; k++) V = Math.max(V, b.contrast_p99[k] * Sp * csf(b.peak_frequency_cycles_per_m[k] * d * Math.PI / 180) / Sm);
+    return 1 - Math.pow(2, -Math.pow(V * cal, 3.5));
+  }
+  var D0 = Math.log(0.25), D1 = Math.log(12);
+  function cx(d) { return 6 + 188 * (Math.log(Math.min(12, Math.max(0.25, d))) - D0) / (D1 - D0); }
+  function cy(p) { return 54 - 46 * p; }
+  function drawCurve() {
+    var pts = [], i, d;
+    for (i = 0; i <= 80; i++) { d = Math.exp(D0 + (D1 - D0) * i / 80); pts.push(cx(d).toFixed(1) + ',' + cy(pSeen(d)).toFixed(1)); }
+    var ticks = [0.5, 1, 2, 5, 10].map(function (t) { return '<line x1="' + cx(t) + '" x2="' + cx(t) + '" y1="54" y2="57" stroke="#7d776c"/><text x="' + cx(t) + '" y="64" fill="#7d776c" font-size="7" text-anchor="middle">' + t + ' m</text>'; }).join('');
+    $('#curve').innerHTML =
+      '<line x1="6" x2="194" y1="54" y2="54" stroke="#3a3229"/><line x1="6" x2="194" y1="' + cy(0.5) + '" y2="' + cy(0.5) + '" stroke="#3a3229" stroke-dasharray="2 3"/>' +
+      '<line x1="' + cx(1.8) + '" x2="' + cx(1.8) + '" y1="4" y2="54" stroke="#b8964a" stroke-dasharray="2 2"/>' +
+      '<text x="' + (cx(1.8) + 3) + '" y="10" fill="#b8964a" font-size="7.5">1.8 m measured</text>' + ticks +
+      '<polyline points="' + pts.join(' ') + '" fill="none" stroke="#e9cf8a" stroke-width="1.6" stroke-linejoin="round"/>' +
+      '<circle id="dot" r="4" cx="-20" cy="-20" fill="#e5751f" stroke="#fff3" stroke-width="2"/>';
+  }
+  var pending = null;
+  function onPosition(p) {
+    pending = p; if (onPosition.raf) return;
+    onPosition.raf = requestAnimationFrame(function () {
+      onPosition.raf = 0; var f = S.scene && S.scene.face_world_m; if (!f || !pending) return;
+      var d = Math.hypot(pending.x - f[0], pending.y - f[1], pending.z - f[2]), P = pSeen(d);
+      S.dist = d; $('#dist').textContent = (d < 10 ? d.toFixed(2) : d.toFixed(1)) + ' m'; $('#pseen').textContent = Math.round(P * 100) + ' %';
+      var dot = $('#dot'); if (dot) { dot.setAttribute('cx', cx(d)); dot.setAttribute('cy', cy(P)); }
+    });
+  }
+
+  /* ---------- scenes ---------- */
+  function sceneChips() {
+    $('#scenes').innerHTML = '';
+    S.scenes.forEach(function (s) {
+      var b = document.createElement('button'); b.className = 'chip'; b.textContent = s.title; b.dataset.id = s.id;
+      b.addEventListener('click', function () { show(s.id); }); $('#scenes').appendChild(b);
+    });
+  }
+  function show(id) {
+    var s = S.scenes.filter(function (x) { return x.id === id; })[0] || S.scenes[0], tok = ++S.token;
+    S.scene = s; S.lab = null;
+    if (location.hash !== '#' + s.id) history.replaceState(null, '', '#' + s.id);
+    document.querySelectorAll('#scenes .chip').forEach(function (b) { b.classList.toggle('on', b.dataset.id === s.id); });
+    $('#kicker').textContent = s.kicker; $('#title').textContent = s.title; $('#blurb').textContent = s.blurb;
+    $('#titleblock').classList.remove('dim');
+    $('#readout').hidden = !s.face_world_m; $('#dist').textContent = '–'; $('#pseen').textContent = '–';
+    $('#vps').innerHTML = '';
+    s.viewpoints.forEach(function (v, i) {
+      var b = document.createElement('button'); b.className = 'chip vp' + (i ? '' : ' on'); b.textContent = v.label; b.title = v.description; b.dataset.vp = v.def;
+      b.addEventListener('click', function () { bind(v.def); }); $('#vps').appendChild(b);
+    });
+    var el = S.el; el.setAttribute('toneMapping', (s.look && s.look.toneMapping) || 'NONE'); el.setAttribute('exposure', String((s.look && s.look.exposure) || 1));
+    busy('Loading ' + s.title.toLowerCase());
+    var t0 = performance.now();
+    return el.browser.loadURL(new X3D.MFString(s.file)).then(function () {
+      if (tok !== S.token) return;
+      busy(''); wire(s);
+      el.dataset.loadMs = Math.round(performance.now() - t0);
+      document.body.dataset.loaded = '1';
+      if (s.controls === 'lab') openPanel('lab');
+      renderLab(); setBoost(boost);
+    }).catch(function (e) { if (tok === S.token) busy('Could not load the scene: ' + e); console.error(e); });
+  }
+  function bind(name) {
+    try { S.el.browser.currentScene.getNamedNode(name).set_bind = true; } catch (e) { console.warn('no viewpoint', name, e); }
+    document.querySelectorAll('#vps .vp').forEach(function (b) { b.classList.toggle('on', b.dataset.vp === name); });
+    $('#titleblock').classList.add('dim');
+  }
+  function wire(s) {
+    var scn = S.el.browser.currentScene, near = null;
+    try { near = scn.getNamedNode('Near'); } catch (e) {}
+    if (near && s.face_world_m) near.addFieldCallback('readout', 'position_changed', onPosition);
+    if (s.controls === 'lab') { try { S.lab = scn.getNamedNode('Lab'); } catch (e) { S.lab = null; } applyLab(); }
+  }
+
+  /* ---------- display contrast: a stretch around the linen colour as rendered (screen only, never the data) ---------- */
+  var LINEN_SCREEN = [0.698, 0.600, 0.482], STEPS = [1, 3, 6], boost = 3;
+  function setBoost(k) {
+    boost = k; var s = S.scene, b = $('#btn-contrast');
+    b.hidden = !s || !(s.id === 'cloth' || s.controls === 'lab');
+    b.textContent = 'Image contrast ×' + k + (k === 1 ? ' (physical)' : ' (display)'); b.classList.toggle('on', k > 1);
+    var css = !!s && s.id === 'cloth' && k > 1;
+    $('#stage').classList.toggle('boost', css);
+    ['fR', 'fG', 'fB'].forEach(function (id, i) { var f = document.getElementById(id); f.setAttribute('slope', String(k)); f.setAttribute('intercept', (LINEN_SCREEN[i] * (1 - k)).toFixed(4)); });
+    if (s && s.controls === 'lab') { LAB.gain = k; setField('gain', k); var g = $('#c-gain'); if (g) { g.value = k; $('#o-gain').textContent = '× ' + k; } }
+  }
+
+  /* ---------- the lab ---------- */
+  var LAB = { light: "D65_daylight", lambda: 0, gain: 1, exposure: 1, dissolve: true, weave: true, negative: false, relief: false };
+  function setField(name, v) { if (S.lab) try { S.lab[name] = v; } catch (e) { console.warn(name, e); } }
+  function applyLab() {
+    if (!S.lab) return;
+    var go = function () {
+      var rows = S.lut.rgb[LAB.light], a = rows[0], b = rows[rows.length - 1];
+      setField('linen', new X3D.SFVec3f(a[0], a[1], a[2])); setField('image1', new X3D.SFVec3f(b[0], b[1], b[2]));
+      setField('lambdaNm', LAB.lambda); setField('gain', LAB.gain); setField('exposure', LAB.exposure);
+      setField('dissolve', LAB.dissolve ? 1 : 0); setField('weave', LAB.weave ? 1 : 0); setField('negative', LAB.negative ? 1 : 0); setField('relief', LAB.relief ? 4 : 0);
+    };
+    if (S.lut) go(); else getJSON('data/spectral/shroud_spectral_lut.json').then(function (j) { S.lut = j; go(); renderLab(); });
+  }
+  function hex(c) { return '#' + c.map(function (x) { x = Math.max(0, Math.min(1, x)); x = x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055; return ('0' + Math.round(x * 255).toString(16)).slice(-2); }).join(''); }
+  function renderLab() {
+    var box = $('#tab-lab'), isLab = S.scene && S.scene.controls === 'lab';
+    var eq = '<div class="eq">r(λ, h) = (a + bλ) · [1 + c (λ − λ′) h]<small>a = −0.21, b = 1.02 × 10⁻³ nm⁻¹, c = 7.78 × 10⁻⁴ nm⁻¹, λ′ = 790 nm. Fitted by Jackson, Jumper and Ercoline (1984) to STURP spectra, valid 300 to 700 nm. h runs from 0 (bare linen) to 1 (darkest image).</small></div>';
+    if (!isLab) {
+      box.innerHTML = '<h3>One equation for the colour</h3>' + eq +
+        '<p>Every colour in these scenes comes from that line: bare linen at h = 0 has a D65 luminance of 0.36, and the image only takes away light, most steeply in the blue.</p>' +
+        '<p><button class="chip on" id="go-lab">Open the spectral lab</button></p>';
+      $('#go-lab').addEventListener('click', function () { show('lab'); });
+      return;
+    }
+    var L = S.lut, opts = L ? L.illuminants.map(function (i) { return '<option value="' + esc(i.name) + '"' + (i.name === LAB.light ? ' selected' : '') + '>' + esc(i.label) + '</option>'; }).join('') : '<option>loading</option>';
+    var sw = '';
+    if (L) { var r = L.rgb[LAB.light]; sw = '<div class="swatches"><div class="sw" style="background:' + hex(r[0]) + '">bare linen, h = 0</div><div class="sw" style="background:' + hex(r[r.length - 1]) + '">darkest image, h = 1</div></div>'; }
+    box.innerHTML = '<h3>Spectral lab</h3>' + eq +
+      '<div class="ctl"><label for="c-light">Light</label><output></output><select id="c-light">' + opts + '</select>' + sw +
+      '<small>D65 and A are CIE standards; the flame and lamp lights are blackbody approximations (aesthetic).</small></div>' +
+      '<div class="ctl"><label for="c-lambda">Single wavelength</label><output id="o-lambda"></output><input type="range" id="c-lambda" min="0" max="700" step="5" value="' + LAB.lambda + '">' +
+      '<small>Slide right of 380 to see the reflectance at one wavelength in grey. The image contrast falls toward the red.</small></div>' +
+      '<div class="ctl"><label for="c-gain">Image contrast</label><output id="o-gain"></output><input type="range" id="c-gain" min="1" max="12" step="0.5" value="' + LAB.gain + '">' +
+      '<small>A display aid only: 1 is the physical image.</small></div>' +
+      '<div class="ctl"><label for="c-exp">Exposure</label><output id="o-exp"></output><input type="range" id="c-exp" min="0.6" max="3" step="0.05" value="' + LAB.exposure + '"></div>' +
+      '<div class="toggles">' +
+      '<label><input type="checkbox" id="t-dissolve"' + (LAB.dissolve ? ' checked' : '') + '>Dissolve by distance</label>' +
+      '<label><input type="checkbox" id="t-weave"' + (LAB.weave ? ' checked' : '') + '>Weave</label>' +
+      '<label><input type="checkbox" id="t-negative"' + (LAB.negative ? ' checked' : '') + '>Negative (Pia, 1898)</label>' +
+      '<label><input type="checkbox" id="t-relief"' + (LAB.relief ? ' checked' : '') + '>Relief, height ×4</label></div>' +
+      '<p>With dissolve on, each pixel keeps only the detail an eye resolves at its own distance. Walk in with the mouse wheel and watch the face sink into the cloth near 1.8 m.</p>';
+    var out = function () {
+      $('#o-lambda').textContent = LAB.lambda >= 380 ? LAB.lambda + ' nm' : 'full colour';
+      $('#o-gain').textContent = '× ' + LAB.gain; $('#o-exp').textContent = LAB.exposure.toFixed(2);
+    };
+    out();
+    $('#c-light').addEventListener('change', function (e) { LAB.light = e.target.value; applyLab(); renderLab(); });
+    $('#c-lambda').addEventListener('input', function (e) { var v = +e.target.value; LAB.lambda = v >= 380 ? v : 0; out(); setField('lambdaNm', LAB.lambda); });
+    $('#c-gain').addEventListener('input', function (e) { LAB.gain = +e.target.value; out(); setField('gain', LAB.gain); boost = LAB.gain; var b = $('#btn-contrast'); b.textContent = 'Image contrast ×' + LAB.gain + (LAB.gain === 1 ? ' (physical)' : ' (display)'); b.classList.toggle('on', LAB.gain > 1); });
+    $('#c-exp').addEventListener('input', function (e) { LAB.exposure = +e.target.value; out(); setField('exposure', LAB.exposure); });
+    [['dissolve', 1], ['weave', 1], ['negative', 1], ['relief', 4]].forEach(function (t) {
+      $('#t-' + t[0]).addEventListener('change', function (e) { LAB[t[0]] = e.target.checked; setField(t[0], e.target.checked ? t[1] : 0); });
+    });
+  }
+
+  /* ---------- constants, corrections, about ---------- */
+  function pill(tag) { return '<span class="pill" style="--c:' + (TAGS[tag] || '#aaa') + '">' + esc(tag) + '</span>'; }
+  function fmt(v) {
+    if (Array.isArray(v)) return v.map(fmt).join(', ');
+    if (typeof v === 'number') return Math.abs(v) >= 1e5 || (v !== 0 && Math.abs(v) < 1e-3) ? v.toExponential(3).replace('e', ' × 10^') : String(v);
+    return String(v);
+  }
+  function renderConstants() {
+    var box = $('#tab-constants');
+    if (!S.constants) { box.innerHTML = '<p>Loading the registry</p>'; getJSON('data/constants.json').then(function (j) { S.constants = j; renderConstants(); }); return; }
+    var C = S.constants, tags = Object.keys(C.tags);
+    box.innerHTML = '<h3>Constants registry</h3><p>' + C.constants.length + ' values, each with its unit, its epistemic tag and its sources. ' + esc(C.precedence_note) + '</p>' +
+      '<div class="legend">' + tags.map(function (t) { return '<span class="pill" style="--c:' + (TAGS[t] || '#aaa') + '" title="' + esc(C.tags[t]) + '">' + esc(t) + '</span>'; }).join('') + '</div>' +
+      '<div class="find"><input id="k-q" placeholder="Search: weave, blood, 1.8, jje" aria-label="Search the constants"><select id="k-t" aria-label="Filter by tag"><option value="">every tag</option>' +
+      tags.map(function (t) { return '<option>' + esc(t) + '</option>'; }).join('') + '</select></div><div id="k-list"></div>';
+    var draw = function () {
+      var q = $('#k-q').value.trim().toLowerCase(), t = $('#k-t').value, last = '', html = '';
+      C.constants.forEach(function (c) {
+        if (t && c.tag !== t) return;
+        var hay = (c.id + ' ' + c.label + ' ' + fmt(c.value) + ' ' + (c.note || '') + ' ' + c.citations.join(' ')).toLowerCase();
+        if (q && hay.indexOf(q) < 0) return;
+        if (c.group !== last) { html += '<h4>' + esc(c.group.replace(/_/g, ' ')) + '</h4>'; last = c.group; }
+        html += '<div class="k' + (c.tag === 'retracted' || c.tag === 'superseded' ? ' old' : '') + '"><div class="kl">' + esc(c.label) + pill(c.tag) + '</div>' +
+          '<div class="kv">' + esc(fmt(c.value)) + (c.unit ? ' ' + esc(c.unit) : '') + '</div>' +
+          '<div class="kc">' + esc(c.id) + (c.citations.length ? ' · ' + esc(c.citations.join(', ')) : '') + (c.note ? ' · ' + esc(c.note) : '') + '</div></div>';
+      });
+      $('#k-list').innerHTML = html || '<p>Nothing matches.</p>';
+    };
+    $('#k-q').addEventListener('input', draw); $('#k-t').addEventListener('change', draw); draw();
+  }
+  function renderCorrections() {
+    var box = $('#tab-corrections');
+    if (!S.corrections) { box.innerHTML = '<p>Loading the corrections</p>'; getJSON('data/corrections.json').then(function (j) { S.corrections = j; renderCorrections(); }); return; }
+    var K = S.corrections;
+    box.innerHTML = '<h3>What changed, and why</h3><p>Earlier documents disagreed or got things wrong. Every change is kept here with what it was and what replaced it; withdrawn claims stay on the record as retracted.</p>' +
+      K.corrections.map(function (c) {
+        return '<div class="corr"><div class="t">' + esc(c.topic) + pill(c.kind === 'retraction' ? 'retracted' : c.kind === 'replacement' ? 'superseded' : 'convention').replace(/>[a-z]+</, '>' + esc(c.kind) + '<') + '</div>' +
+          '<div class="was">' + esc(c.was) + '</div><div class="now">' + esc(c.now) + '</div>' +
+          (c.cite && c.cite.length ? '<div class="kc" style="color:var(--ink3);font-size:11px;margin-top:3px">' + esc(c.cite.join(', ')) + '</div>' : '') + '</div>';
+      }).join('');
+  }
+  function renderAbout() {
+    $('#tab-about').innerHTML = '<h3>What is measured here</h3>' +
+      '<p><b>Measured or fitted:</b> the linen colour and the image colour (JJE 1984 spectral fit), the cloth size (4.37 × 1.11 m before the 2002 restoration), the 3/1 herringbone with 38.3 warp and 25.4 weft threads per cm (Vial), the 3.7 cm range linking image intensity to cloth-body distance (r² 0.60), and the 1.8 m distance inside which the image is no longer seen.</p>' +
+      '<p><b>Inferred or aesthetic:</b> the figure itself, which is a mannequin draped and projected by the published distance rule; the perception model that predicts the 1.8 m threshold (it lands at 2.75 m before calibration); the lights other than D65 and A; the relief exaggeration.</p>' +
+      '<p>A measured height field needs a licensed, calibrated photograph and hand-drawn masks for the burns and patches. Until then every scene says synthetic.</p>' +
+      '<h4>Files</h4><ul class="files">' +
+      [['README.md', 'how to load everything in Blender and X3D browsers'], ['graph/INDEX.md', 'the knowledge graph, readable'], ['graph/shroud.jsonld', 'the graph as JSON-LD'],
+       ['data/constants.json', 'the registry'], ['data/corrections.json', 'corrections and retractions'], ['data/bibliography/references.bib', 'sources'],
+       ['data/spectral/shroud_spectral_lut.json', 'the colour LUT, seven lights'], ['data/perception.json', 'the dissolve model'], ['data/weave.json', 'the weave'],
+       ['maps/synthetic/h_16bit.png', 'the image field h, 16 bit'], ['blender/build_shroud.py', 'the cloth in Blender'],
+       ['blender/x3d_io.py', 'these scenes into Blender, and back out as X3D'], ['renders/blender/renders.json', 'the Blender stills and how they were shot'], ['x3d/scenes.json', 'the scenes']]
+        .map(function (f) { return '<li><a href="' + f[0] + '">' + f[0] + '</a> · ' + f[1] + '</li>'; }).join('') + '</ul>' +
+      '<h4>Keys</h4><p><kbd>h</kbd> hides the text, <kbd>1</kbd> to <kbd>6</kbd> pick a viewpoint, <kbd>d</kbd> opens this panel.</p>' +
+      '<p style="color:var(--ink3);font-size:12px">Rendered with X_ITE ' + XITE + '. Scenes are X3D 4.0, validated against the 4.0 schema.</p>';
+  }
+  function openPanel(tab) {
+    var p = $('#panel'); p.hidden = false; $('#btn-panel').setAttribute('aria-expanded', 'true');
+    if (tab) document.querySelectorAll('.tabs button').forEach(function (b) { if (b.dataset.tab === tab) b.click(); });
+  }
+  function initPanel() {
+    $('#btn-panel').addEventListener('click', function () { var p = $('#panel'); if (p.hidden) openPanel(); else { p.hidden = true; this.setAttribute('aria-expanded', 'false'); } });
+    document.querySelectorAll('.tabs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.tabs button').forEach(function (x) { x.classList.toggle('on', x === b); });
+        ['lab', 'constants', 'corrections', 'about'].forEach(function (t) { $('#tab-' + t).hidden = t !== b.dataset.tab; });
+        if (b.dataset.tab === 'constants') renderConstants();
+        if (b.dataset.tab === 'corrections') renderCorrections();
+        if (b.dataset.tab === 'about') renderAbout();
+      });
+    });
+    renderAbout();
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey || /input|select|textarea/i.test(e.target.tagName)) return;
+    if (e.key === 'h') $('#stage').classList.toggle('clean');
+    else if (e.key === 'd') $('#btn-panel').click();
+    else if (/^[1-9]$/.test(e.key) && S.scene && S.scene.viewpoints[+e.key - 1]) bind(S.scene.viewpoints[+e.key - 1].def);
+  });
+
+  /* ---------- boot ---------- */
+  initPanel();
+  $('#btn-contrast').addEventListener('click', function () { setBoost(STEPS[(STEPS.indexOf(boost) + 1) % STEPS.length]); });
+  var dim = function () { $('#titleblock').classList.add('dim'); };
+  ['pointerdown', 'wheel'].forEach(function (ev) { $('#stage').addEventListener(ev, function (e) { if (e.target.tagName === 'X3D-CANVAS' || e.target.closest('x3d-canvas')) dim(); }, { passive: true }); });
+  Promise.all([getJSON('x3d/scenes.json'), getJSON('data/perception.json'), xite()]).then(function (r) {
+    S.scenes = r[0].scenes; S.perception = r[1];
+    drawCurve(); sceneChips();
+    S.el = makeCanvas();
+    var go = function () { show((location.hash || '').slice(1)); };
+    if (S.el.browser) go(); else customElements.whenDefined('x3d-canvas').then(function () { setTimeout(go, 0); });
+    window.addEventListener('hashchange', function () { var id = location.hash.slice(1); if (!S.scene || S.scene.id !== id) show(id); });
+  }).catch(function (e) { busy('Could not start: ' + e.message); console.error(e); });
+})();
+</script>
+</body>
+</html>
