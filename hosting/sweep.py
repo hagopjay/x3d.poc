@@ -12,6 +12,7 @@ RULES = [
  ("email", r"[\w.+-]+@(?:gmail|vt|outlook|yahoo)\.[a-z.]+"),
 ]
 TEXT = {".html", ".js", ".css", ".json", ".x3d", ".md", ".txt", ".svg", ".xml"}
+IMG = (b"caBX", b"c2pa", b"jumb", b"com.anthropic")
 def main():
     root = sys.argv[1]; out = sys.argv[sys.argv.index("--json")+1] if "--json" in sys.argv else None
     hits = []
@@ -26,6 +27,13 @@ def main():
                 if name == "cost-figure" and f.endswith(".js"): continue
                 for m in re.finditer(rx, s, re.I if name == "vendor-name" and False else 0):
                     a = max(0, m.start()-50); hits.append({"rule": name, "file": os.path.relpath(p, root), "match": m.group(0)[:60], "ctx": s[a:m.end()+50].replace("\n", " ")})
+    for d, ds, fs in os.walk(root):                       # provenance metadata inside images (C2PA / JUMBF)
+        for f in fs:
+            p = os.path.join(d, f)
+            if os.path.splitext(f)[1].lower() in (".png", ".jpg", ".jpeg") and not os.path.islink(p):
+                b = open(p, "rb").read()
+                for k in IMG:
+                    if k in b: hits.append({"rule": "image-metadata", "file": os.path.relpath(p, root), "match": k.decode(), "ctx": "provenance block in image"}); break
     by = {}
     for h in hits: by[h["rule"]] = by.get(h["rule"], 0) + 1
     print("SWEEP", "FAIL" if hits else "PASS", json.dumps(by))
