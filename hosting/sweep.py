@@ -27,13 +27,15 @@ def main():
                 if name == "cost-figure" and f.endswith(".js"): continue
                 for m in re.finditer(rx, s, re.I if name == "vendor-name" and False else 0):
                     a = max(0, m.start()-50); hits.append({"rule": name, "file": os.path.relpath(p, root), "match": m.group(0)[:60], "ctx": s[a:m.end()+50].replace("\n", " ")})
-    BIN = re.compile(rb"c2pa|cabx|com\.anthropic|anthropic\.claude", re.I)        # byte pass over EVERY file, vendor/ and SVG included
+    LONG = re.compile(rb"com\.anthropic|anthropic\.claude|urn:c2pa|c2pa:manifest|xmlns:c2pa|contentauth|content credentials", re.I)   # unambiguous: any file
+    SHORT = re.compile(rb"c2pa|caBX")       # exact case, raster/SVG only: in base64 text these 4-letter strings occur by chance
     for d, ds, fs in os.walk(root):
         for f in fs:
             p = os.path.join(d, f)
             if os.path.islink(p) or f.startswith("_admin"): continue
-            b = open(p, "rb").read(); m = BIN.search(b)
-            if not m and (b[:8] == b"\x89PNG\r\n\x1a\n" or b[:2] == b"\xff\xd8") and b"jumb" in b: m = re.search(b"jumb", b)
+            b = open(p, "rb").read(); m = LONG.search(b)
+            img = b[:8] == b"\x89PNG\r\n\x1a\n" or b[:2] == b"\xff\xd8" or b"<svg" in b[:4096].lower()
+            if not m and img: m = SHORT.search(b) or (re.search(b"jumb", b) if b[:8] == b"\x89PNG\r\n\x1a\n" or b[:2] == b"\xff\xd8" else None)
             if m: hits.append({"rule": "image-metadata", "file": os.path.relpath(p, root), "match": m.group(0).decode("latin1"), "ctx": "provenance marker in file bytes"})
     by = {}
     for h in hits: by[h["rule"]] = by.get(h["rule"], 0) + 1
