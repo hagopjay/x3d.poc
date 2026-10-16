@@ -18,6 +18,7 @@ cp "$HERE/hosting/beacon.js" "$TMP/s/_b.js.src"; mv "$TMP/s/_b.js.src" "$TMP/s/_
 python3 "$HERE/hosting/sweep.py" "$TMP/s"                       # blocking: nonzero exit stops the build
 mv "$TMP/s" "$OUT/v/$V"
 if [ -n "${PREV:-}" ] && [ -d "$PREV/v" ]; then for d in "$PREV"/v/*; do n="$(basename "$d")"; [ "$n" = "$V" ] && { echo "refusing to overwrite v/$n"; exit 2; }; cp -a "$d" "$OUT/v/$n"; done; fi
+python3 "$HERE/hosting/dedupe.py" "$OUT/v"
 # root = newest release, as symlinks into v/$V (no second copy of 120 MB)
 for f in "$OUT/v/$V"/*; do ln -s "v/$V/$(basename "$f")" "$OUT/$(basename "$f")"; done
 cp "$HERE/hosting/admin.html" "$OUT/_admin.html"
