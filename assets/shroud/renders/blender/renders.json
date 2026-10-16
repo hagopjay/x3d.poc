@@ -1,0 +1,74 @@
+{
+ "generator": "blender/build_shroud.py",
+ "blender": "5.2.2 LTS",
+ "samples": 64,
+ "size": "960x540",
+ "weave": "procedural",
+ "illuminant": "D65_daylight",
+ "frames": [
+  {
+   "file": "cloth_whole_6m_physical.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_whole_6m",
+   "display_contrast": 1.0,
+   "note": "the whole cloth from 6 m, physical contrast"
+  },
+  {
+   "file": "cloth_whole_6m_contrast3.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_whole_6m",
+   "display_contrast": 3.0,
+   "note": "the same with display contrast x3"
+  },
+  {
+   "file": "face_6.0m_contrast3.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_face_6.0m",
+   "display_contrast": 3.0,
+   "note": "the face, a 0.36 m wide field, from 6 m"
+  },
+  {
+   "file": "face_1.8m_contrast3.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_face_1.8m",
+   "display_contrast": 3.0,
+   "note": "the same field from 1.8 m, the measured threshold"
+  },
+  {
+   "file": "face_1.0m_contrast3.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_face_1.0m",
+   "display_contrast": 3.0,
+   "note": "from 1.0 m"
+  },
+  {
+   "file": "face_0.5m_contrast3.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_face_0.5m",
+   "display_contrast": 3.0,
+   "note": "from 0.5 m"
+  },
+  {
+   "file": "weave_6cm.jpg",
+   "scene": "Shroud",
+   "camera": "Cam_weave_6cm",
+   "display_contrast": 1.0,
+   "note": "3 cm of linen from 6 cm, grazing light"
+  },
+  {
+   "file": "relief_whole.jpg",
+   "scene": "Shroud relief",
+   "camera": "Cam_relief_whole",
+   "display_contrast": null,
+   "note": "h as height, exaggerated"
+  },
+  {
+   "file": "relief_face.jpg",
+   "scene": "Shroud relief",
+   "camera": "Cam_relief_face",
+   "display_contrast": null,
+   "note": "the face as relief at true scale (3.7 cm range)"
+  }
+ ],
+ "note": "Body image: synthetic stand-in. Display contrast > 1 is a viewing aid, not the cloth."
+}

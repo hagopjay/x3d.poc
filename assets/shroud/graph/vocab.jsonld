@@ -1,0 +1,284 @@
+{
+ "@context": {
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ },
+ "@graph": [
+  {
+   "@id": "urn:shroud:vocab:Relic",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Relic",
+   "rdfs:comment": "A physical object venerated or studied as a relic (the Shroud, the Sudarium, the Mandylion)."
+  },
+  {
+   "@id": "urn:shroud:vocab:Artwork",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Artwork",
+   "rdfs:comment": "A painting, mosaic, icon, coin, engraving, medal or building."
+  },
+  {
+   "@id": "urn:shroud:vocab:Photograph",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Photograph",
+   "rdfs:comment": "A photographic record of a relic."
+  },
+  {
+   "@id": "urn:shroud:vocab:Person",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Person",
+   "rdfs:comment": "A person, legendary or historical, or an author."
+  },
+  {
+   "@id": "urn:shroud:vocab:Organization",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Organization",
+   "rdfs:comment": "A family, team, laboratory, religious community or standards body."
+  },
+  {
+   "@id": "urn:shroud:vocab:Place",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Place",
+   "rdfs:comment": "A city, monastery, museum or laboratory site."
+  },
+  {
+   "@id": "urn:shroud:vocab:Event",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Event",
+   "rdfs:comment": "A dated event."
+  },
+  {
+   "@id": "urn:shroud:vocab:Concept",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Concept",
+   "rdfs:comment": "An iconographic type, legend, method or idea."
+  },
+  {
+   "@id": "urn:shroud:vocab:Claim",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Claim",
+   "rdfs:comment": "A statement with an epistemic tag: measured, inferred, contested, tradition, unsupported or retracted."
+  },
+  {
+   "@id": "urn:shroud:vocab:Study",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Study",
+   "rdfs:comment": "A publication or report from the bibliography."
+  },
+  {
+   "@id": "urn:shroud:vocab:Quantity",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Quantity",
+   "rdfs:comment": "A constant from data/constants.json, with value, unit, tag and citations."
+  },
+  {
+   "@id": "urn:shroud:vocab:Correction",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Correction",
+   "rdfs:comment": "An entry of data/corrections.json: a contradiction resolved, a citation fixed, a claim retracted."
+  },
+  {
+   "@id": "urn:shroud:vocab:Document",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Document",
+   "rdfs:comment": "A project document that a constant was taken from (build plan, v3 corrections, PRD, web page)."
+  },
+  {
+   "@id": "urn:shroud:vocab:Dataset",
+   "@type": "rdfs:Class",
+   "rdfs:label": "Dataset",
+   "rdfs:comment": "A file of this package."
+  },
+  {
+   "@id": "urn:shroud:vocab:locatedAt",
+   "@type": "rdf:Property",
+   "rdfs:label": "locatedAt",
+   "rdfs:comment": "where it is or was kept"
+  },
+  {
+   "@id": "urn:shroud:vocab:heldBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "heldBy",
+   "rdfs:comment": "who holds or held it"
+  },
+  {
+   "@id": "urn:shroud:vocab:derivesFrom",
+   "@type": "rdf:Property",
+   "rdfs:label": "derivesFrom",
+   "rdfs:comment": "iconographic or legendary descent"
+  },
+  {
+   "@id": "urn:shroud:vocab:branchOf",
+   "@type": "rdf:Property",
+   "rdfs:label": "branchOf",
+   "rdfs:comment": "a branch of the lineage diagram"
+  },
+  {
+   "@id": "urn:shroud:vocab:about",
+   "@type": "rdf:Property",
+   "rdfs:label": "about",
+   "rdfs:comment": "what a claim, concept or dataset concerns"
+  },
+  {
+   "@id": "urn:shroud:vocab:describedIn",
+   "@type": "rdf:Property",
+   "rdfs:label": "describedIn",
+   "rdfs:comment": "the standard scholarly treatment"
+  },
+  {
+   "@id": "urn:shroud:vocab:proposedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "proposedBy",
+   "rdfs:comment": "who proposed a claim or method"
+  },
+  {
+   "@id": "urn:shroud:vocab:supportedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "supportedBy",
+   "rdfs:comment": "a study supporting the claim"
+  },
+  {
+   "@id": "urn:shroud:vocab:disputedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "disputedBy",
+   "rdfs:comment": "a study or person disputing the claim"
+  },
+  {
+   "@id": "urn:shroud:vocab:answeredBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "answeredBy",
+   "rdfs:comment": "a reply to the dispute"
+  },
+  {
+   "@id": "urn:shroud:vocab:examinedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "examinedBy",
+   "rdfs:comment": "a study that examined the claim"
+  },
+  {
+   "@id": "urn:shroud:vocab:madeBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "madeBy",
+   "rdfs:comment": "artist or maker"
+  },
+  {
+   "@id": "urn:shroud:vocab:instanceOf",
+   "@type": "rdf:Property",
+   "rdfs:label": "instanceOf",
+   "rdfs:comment": "the type a work belongs to"
+  },
+  {
+   "@id": "urn:shroud:vocab:depicts",
+   "@type": "rdf:Property",
+   "rdfs:label": "depicts",
+   "rdfs:comment": "what a work shows"
+  },
+  {
+   "@id": "urn:shroud:vocab:commissionedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "commissionedBy",
+   "rdfs:comment": "patron"
+  },
+  {
+   "@id": "urn:shroud:vocab:approvedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "approvedBy",
+   "rdfs:comment": "who approved it"
+  },
+  {
+   "@id": "urn:shroud:vocab:houses",
+   "@type": "rdf:Property",
+   "rdfs:label": "houses",
+   "rdfs:comment": "a building housing a relic"
+  },
+  {
+   "@id": "urn:shroud:vocab:exhibitedAt",
+   "@type": "rdf:Property",
+   "rdfs:label": "exhibitedAt",
+   "rdfs:comment": "where it was exhibited"
+  },
+  {
+   "@id": "urn:shroud:vocab:foundAt",
+   "@type": "rdf:Property",
+   "rdfs:label": "foundAt",
+   "rdfs:comment": "where it was found"
+  },
+  {
+   "@id": "urn:shroud:vocab:takenBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "takenBy",
+   "rdfs:comment": "photographer"
+  },
+  {
+   "@id": "urn:shroud:vocab:photographs",
+   "@type": "rdf:Property",
+   "rdfs:label": "photographs",
+   "rdfs:comment": "the subject of a photograph"
+  },
+  {
+   "@id": "urn:shroud:vocab:basedOn",
+   "@type": "rdf:Property",
+   "rdfs:label": "basedOn",
+   "rdfs:comment": "a source image"
+  },
+  {
+   "@id": "urn:shroud:vocab:happenedAt",
+   "@type": "rdf:Property",
+   "rdfs:label": "happenedAt",
+   "rdfs:comment": "where an event happened"
+  },
+  {
+   "@id": "urn:shroud:vocab:involves",
+   "@type": "rdf:Property",
+   "rdfs:label": "involves",
+   "rdfs:comment": "who or what took part"
+  },
+  {
+   "@id": "urn:shroud:vocab:recordedAs",
+   "@type": "rdf:Property",
+   "rdfs:label": "recordedAs",
+   "rdfs:comment": "the registry constant that records it"
+  },
+  {
+   "@id": "urn:shroud:vocab:recordedBy",
+   "@type": "rdf:Property",
+   "rdfs:label": "recordedBy",
+   "rdfs:comment": "who recorded it"
+  },
+  {
+   "@id": "urn:shroud:vocab:usesData",
+   "@type": "rdf:Property",
+   "rdfs:label": "usesData",
+   "rdfs:comment": "data a dataset uses"
+  },
+  {
+   "@id": "urn:shroud:vocab:author",
+   "@type": "rdf:Property",
+   "rdfs:label": "author",
+   "rdfs:comment": "an author of a study"
+  },
+  {
+   "@id": "urn:shroud:vocab:cites",
+   "@type": "rdf:Property",
+   "rdfs:label": "cites",
+   "rdfs:comment": "a study a constant or correction cites"
+  },
+  {
+   "@id": "urn:shroud:vocab:supersedes",
+   "@type": "rdf:Property",
+   "rdfs:label": "supersedes",
+   "rdfs:comment": "an older value it replaces"
+  },
+  {
+   "@id": "urn:shroud:vocab:affects",
+   "@type": "rdf:Property",
+   "rdfs:label": "affects",
+   "rdfs:comment": "a constant a correction changed"
+  },
+  {
+   "@id": "urn:shroud:vocab:source",
+   "@type": "rdf:Property",
+   "rdfs:label": "source",
+   "rdfs:comment": "the project document it was taken from"
+  }
+ ]
+}

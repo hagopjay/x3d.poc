@@ -1,0 +1,162 @@
+{
+ "title": "Perceptual dissolve model: why the image is not seen closer than about 1.8 m",
+ "tag": "inferred",
+ "constant": {
+  "id": "perception.dissolve_model",
+  "value": "CSF-weighted band contrast of h at the viewing distance (Mannos-Sakrison CSF, Peli band contrast), calibrated so detection crosses 50 % at 1.8 m",
+  "unit": null,
+  "tag": "inferred",
+  "citations": [
+   "mannos1974",
+   "peli1990",
+   "jje1984"
+  ]
+ },
+ "measured_target": {
+  "id": "perception.min_distance_m",
+  "value": 1.8,
+  "unit": "m",
+  "tag": "measured",
+  "citations": [
+   "jje1984"
+  ]
+ },
+ "threshold": {
+  "id": "perception.threshold_density",
+  "value": 0.004,
+  "unit": "optical density",
+  "tag": "measured",
+  "citations": [
+   "blackwell",
+   "jje1984"
+  ]
+ },
+ "luminance": {
+  "Y_linen_d65": 0.3579,
+  "Y_h1_d65": 0.2943,
+  "a": 0.1777,
+  "rule": "Y = Y_linen * (1 - a*h), exact for the JJE model (linear in h)"
+ },
+ "csf": {
+  "name": "Mannos and Sakrison 1974",
+  "formula": "S(f) = 2.6 (0.0192 + 0.114 f) exp(-(0.114 f)^1.1), f in cycles/degree",
+  "peak_cpd": 7.891,
+  "peak_value": 0.98088,
+  "citations": [
+   "mannos1974"
+  ],
+  "tag": "standard"
+ },
+ "peak_sensitivity": {
+  "value": 109.07,
+  "from": "1 / (1 - 10^-0.004): the measured threshold read as the CSF peak",
+  "tag": "derived"
+ },
+ "bands": {
+  "method": "Gaussian stack on h (large sigmas filtered on block-averaged copies), band k = G(sigma_k) - G(sigma_k+1), local contrast c_k = a*band_k / (1 - a*G(sigma_k+1)) (Peli 1990); 99th percentile over the body region",
+  "citations": [
+   "peli1990"
+  ],
+  "sigma_m": [
+   0.001075,
+   0.002151,
+   0.004302,
+   0.008604,
+   0.017207,
+   0.034414,
+   0.068828,
+   0.137656,
+   0.275313,
+   0.550625,
+   1.10125
+  ],
+  "peak_frequency_cycles_per_m": [
+   284.542,
+   142.271,
+   71.135,
+   35.568,
+   17.784,
+   8.892,
+   4.446,
+   2.223,
+   1.111,
+   0.556,
+   0.278
+  ],
+  "contrast_p99": [
+   0.00129,
+   0.00324,
+   0.00878,
+   0.01642,
+   0.03005,
+   0.05281,
+   0.0542,
+   0.06556,
+   0.05176,
+   0.02908,
+   0.00576
+  ]
+ },
+ "angular_frequency": "f_deg = f_m * distance * pi / 180",
+ "visibility": "v_k(d) = c_k * S_peak * S(f_deg) / S(peak); V(d) = max_k v_k; detection P = 1 - 2^(-(V*cal)^3.5)",
+ "prediction": {
+  "d50_m_uncalibrated": 2.752,
+  "tag": "derived",
+  "note": "Where the uncalibrated model crosses threshold, using only the measured threshold, the standard CSF and the synthetic image. It is a consistency check, not a measurement."
+ },
+ "calibration": {
+  "factor": 1.3122,
+  "tag": "fitted",
+  "note": "Multiplies the sensitivity so detection crosses 50 % at 1.8 m (one measured point)."
+ },
+ "renderer_gain": {
+  "formula": "g_k = v^3 / (1 + v^3) with v = c_k(x) * S_peak * cal * S(f_deg) / S(peak)",
+  "use": "h_seen = G(sigma_K) + sum_k g_k * band_k, per fragment; the X_ITE shader and the LOD textures use the same formula",
+  "tag": "inferred"
+ },
+ "files": [
+  "data/visibility_vs_distance.csv"
+ ],
+ "synthetic_input": "maps/synthetic/h_16bit.png",
+ "lod_textures": {
+  "tag": "inferred",
+  "levels": [
+   {
+    "distance_m": 0.5,
+    "file": "maps/synthetic/lod/perceived_00.5m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_00.5m.png"
+   },
+   {
+    "distance_m": 1.0,
+    "file": "maps/synthetic/lod/perceived_01.0m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_01.0m.png"
+   },
+   {
+    "distance_m": 1.4,
+    "file": "maps/synthetic/lod/perceived_01.4m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_01.4m.png"
+   },
+   {
+    "distance_m": 1.8,
+    "file": "maps/synthetic/lod/perceived_01.8m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_01.8m.png"
+   },
+   {
+    "distance_m": 2.5,
+    "file": "maps/synthetic/lod/perceived_02.5m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_02.5m.png"
+   },
+   {
+    "distance_m": 4.0,
+    "file": "maps/synthetic/lod/perceived_04.0m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_04.0m.png"
+   },
+   {
+    "distance_m": 8.0,
+    "file": "maps/synthetic/lod/perceived_08.0m_srgb.png",
+    "h_seen": "maps/synthetic/lod/h_seen_08.0m.png"
+   }
+  ],
+  "note": "Perceived albedo (D65) at each distance, 2x downsampled, for X3D LOD nodes; and h_seen, the perceived h before the colour lookup, for renderers that apply the LUT themselves (Blender)."
+ }
+}

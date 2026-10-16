@@ -33,7 +33,7 @@ jobs:
           npx playwright install --with-deps chromium
           (cd site && python3 -m http.server 8766 --bind 127.0.0.1 >/dev/null 2>&1 &)
           sleep 2
-          node tools/smoke.js http://127.0.0.1:8766 index.html gobbler.html materials.html drillfield.html spec-questions.html two-renderers.html
+          node tools/smoke.js http://127.0.0.1:8766 index.html gobbler.html materials.html drillfield.html spec-questions.html two-renderers.html shroud/index.html
 
       - uses: actions/configure-pages@v5
 

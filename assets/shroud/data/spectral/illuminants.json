@@ -1,0 +1,82 @@
+{
+ "illuminants": [
+  {
+   "name": "D65_daylight",
+   "kind": "CIE D65",
+   "cct_K": null,
+   "tag": "standard",
+   "label": "CIE standard daylight",
+   "white_xy": [
+    0.31272,
+    0.32903
+   ]
+  },
+  {
+   "name": "A_tungsten_2856K",
+   "kind": "CIE A",
+   "cct_K": null,
+   "tag": "standard",
+   "label": "CIE standard tungsten",
+   "white_xy": [
+    0.44758,
+    0.40745
+   ]
+  },
+  {
+   "name": "candle_1850K",
+   "kind": "blackbody",
+   "cct_K": 1850,
+   "tag": "aesthetic",
+   "label": "candle, as a 1850 K blackbody",
+   "white_xy": [
+    0.54347,
+    0.40983
+   ]
+  },
+  {
+   "name": "oil_lamp_2000K",
+   "kind": "blackbody",
+   "cct_K": 2000,
+   "tag": "aesthetic",
+   "label": "oil lamp, as a 2000 K blackbody",
+   "white_xy": [
+    0.52668,
+    0.4133
+   ]
+  },
+  {
+   "name": "halogen_3200K",
+   "kind": "blackbody",
+   "cct_K": 3200,
+   "tag": "aesthetic",
+   "label": "halogen, as a 3200 K blackbody",
+   "white_xy": [
+    0.42337,
+    0.39896
+   ]
+  },
+  {
+   "name": "strobe_5500K",
+   "kind": "blackbody",
+   "cct_K": 5500,
+   "tag": "aesthetic",
+   "label": "STURP 1978 flash, approximated by a 5500 K blackbody",
+   "white_xy": [
+    0.33245,
+    0.34107
+   ]
+  },
+  {
+   "name": "led_museum_4000K",
+   "kind": "blackbody",
+   "cct_K": 4000,
+   "tag": "aesthetic",
+   "label": "museum LED, approximated by a 4000 K blackbody",
+   "white_xy": [
+    0.38045,
+    0.37677
+   ]
+  }
+ ],
+ "note": "Blackbody stand-ins for historical light sources are aesthetic; D65 and A are CIE standards. Each row is adapted to D65, so put the illuminant's colour in the LUT row or in the light, never both."
+}

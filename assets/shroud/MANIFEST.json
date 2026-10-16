@@ -1,0 +1,399 @@
+{
+ "name": "Shroud of Turin knowledge base for X3D and Blender",
+ "created": "2026-10-16",
+ "note": "The body image is synthetic (tools/synthetic_body.py). Hashes cover every file except this one.",
+ "file_count": 78,
+ "total_bytes": 6367187,
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 16256,
+   "sha256": "2a2006c80d80fd6fe4ab95245c72dfb5e4c1c013cc26f307a298ebba98d55d59"
+  },
+  {
+   "path": "blender/build_shroud.py",
+   "bytes": 33958,
+   "sha256": "ebdc9d6e00aa7be9a1dd832210c19a9db7c8ef65fc17922599eb70e855f8eb52"
+  },
+  {
+   "path": "blender/x3d_io.py",
+   "bytes": 34318,
+   "sha256": "0a5d2ae3094baecd5d04fbfa03240dc13302adff5ce1a16e3be639864a74f79a"
+  },
+  {
+   "path": "data/bibliography/references.bib",
+   "bytes": 16669,
+   "sha256": "60b94b778381861a7b8f259ed819a840e1dafe8f9688e593f04a829a2e9df481"
+  },
+  {
+   "path": "data/bibliography/references.json",
+   "bytes": 23020,
+   "sha256": "5697fd2f54d945c526534582fe6284a8bf1d99c8f0b831e6f679ce9892ffbc45"
+  },
+  {
+   "path": "data/constants.json",
+   "bytes": 61280,
+   "sha256": "1a103e27d708deaabb7d9815b39794b6098fc1ef13ca6fd99bdbecc700dcf756"
+  },
+  {
+   "path": "data/corrections.json",
+   "bytes": 14318,
+   "sha256": "506ce47f32a76fd12a5aab30aa1813cdf37fd49e60f9f8c0e70202e8ddfb2716"
+  },
+  {
+   "path": "data/derive_report.json",
+   "bytes": 2137,
+   "sha256": "7da7b07bd17f29a97263d5586c700068eb1255fb0b1025f3d82d41e319daf23c"
+  },
+  {
+   "path": "data/dimensions.json",
+   "bytes": 2563,
+   "sha256": "069a16048597a9866a414fa9bcbeec549857caf33f20f3783737f71b88cea8ef"
+  },
+  {
+   "path": "data/height_model.json",
+   "bytes": 3776,
+   "sha256": "4256eed87110f6cd7b2bbbce1e3c9c8cbca8e5915ffcafdc0d9c35333265e7ab"
+  },
+  {
+   "path": "data/perception.json",
+   "bytes": 4270,
+   "sha256": "11935f081d1a2ba2f9accb2dd949256a51adb2d5a37f10386969ef0cd2f8083d"
+  },
+  {
+   "path": "data/spectral/illuminants.json",
+   "bytes": 1612,
+   "sha256": "60ced327c79da3f94687ffa63a9ac4117ebbdeae4fa5f768c47883198fcb3521"
+  },
+  {
+   "path": "data/spectral/jje1984_reflectance.csv",
+   "bytes": 4528,
+   "sha256": "d44c5b6c18ef4e4061a89d86afcf3b85ba66185bd9687c7a9830f9637982dd1f"
+  },
+  {
+   "path": "data/spectral/shroud_spectral_lut.csv",
+   "bytes": 107438,
+   "sha256": "89ab9665cd3d972825089f55394aec62493f605f2b0e6371e8b6ef6e947cd90f"
+  },
+  {
+   "path": "data/spectral/shroud_spectral_lut.exr",
+   "bytes": 13470,
+   "sha256": "6fa5e17cbfdfe8e40278866bb642614371c841eb70a96f7d6aea1b6741c5905a"
+  },
+  {
+   "path": "data/spectral/shroud_spectral_lut.json",
+   "bytes": 121509,
+   "sha256": "09f72b28fe7594235c96191714e414c7b7a7a2fa5675bc49c799dfff95715ebf"
+  },
+  {
+   "path": "data/spectral/shroud_spectral_lut_16bit.png",
+   "bytes": 4849,
+   "sha256": "feffdc0b6891a56d4dac928c9805a84cfc04adb1bfc5911e61ab901a2187a3ef"
+  },
+  {
+   "path": "data/visibility_vs_distance.csv",
+   "bytes": 14565,
+   "sha256": "0508b3a3d1ec471490eb2852a275ceec68812346d626ab2b0700ef49b0baf334"
+  },
+  {
+   "path": "data/weave.json",
+   "bytes": 3229,
+   "sha256": "93e66b14824a13caf36b05c2c19366e2bde044592bf9cffebc3ff2f3608b9f69"
+  },
+  {
+   "path": "graph/INDEX.md",
+   "bytes": 20533,
+   "sha256": "9f21f3da572b0dff0019c0623f3226567ba5740c2159c086f44a09d8fc3a4e85"
+  },
+  {
+   "path": "graph/curated.json",
+   "bytes": 77615,
+   "sha256": "8907d8ea96ba561db105229897b3fea287f7336833476a97e27cd3a1ead56f14"
+  },
+  {
+   "path": "graph/edges.csv",
+   "bytes": 45291,
+   "sha256": "404c635f443a91f0ddc6ea8ca7c4f24a36e8f69159e96a0590fd35ffd5f0900b"
+  },
+  {
+   "path": "graph/nodes.csv",
+   "bytes": 45989,
+   "sha256": "e32e3c32936e1ba0c0185fa65b207ef5dae0a0d253847e0c160a3c0dc6ffe423"
+  },
+  {
+   "path": "graph/shroud.jsonld",
+   "bytes": 189546,
+   "sha256": "098de195983e84b9ec8042c68269d5a47629cf6e80e6a03d15d44ec1860ef810"
+  },
+  {
+   "path": "graph/vocab.jsonld",
+   "bytes": 7609,
+   "sha256": "2baed78c9c144d046af968c04f618e1097c1dbc70d4cdb997e5de2b363f61ce2"
+  },
+  {
+   "path": "index.html",
+   "bytes": 34069,
+   "sha256": "9fecd3dbae41f59203c9ff16954cf5876d7788ebde3023d1bd25012052cd479b"
+  },
+  {
+   "path": "maps/synthetic/albedo_d65_srgb.png",
+   "bytes": 748045,
+   "sha256": "73e9c7a1896842149cf8a8b0d6ebafc2a1f7a7ccdfb49d555e39ca46501762d3"
+  },
+  {
+   "path": "maps/synthetic/bottom_m_half.exr",
+   "bytes": 250030,
+   "sha256": "2c0ff8cb51f5478ae77daf2a139c7282f9d3208c7e1413d12dad0de1fe47debe"
+  },
+  {
+   "path": "maps/synthetic/cloth_m_half.exr",
+   "bytes": 147713,
+   "sha256": "58329d660143c87603a472b46a755ada49ecdfb0fb456bbc7c7fadeb714c6fe7"
+  },
+  {
+   "path": "maps/synthetic/h_16bit.png",
+   "bytes": 922147,
+   "sha256": "ecb854f1d17d891aec9ab66908ce70b2d50eaa1b229cd91d845730a05d96f04e"
+  },
+  {
+   "path": "maps/synthetic/h_8bit_dithered_half.png",
+   "bytes": 219504,
+   "sha256": "34d1479c4c388c9f6ae59ac9c173d09132f44feec6c78b06f2eff0f4b81f0fa5"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_00.5m.png",
+   "bytes": 25877,
+   "sha256": "830da7c13c179704ee10210de57dd14bc5b43c630e059802c5c2f444efa3a810"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_01.0m.png",
+   "bytes": 34077,
+   "sha256": "8aa5fbd739c36cf899753af607f03c24b3c29c84f42f45121ce2d4a3560ddfbd"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_01.4m.png",
+   "bytes": 40173,
+   "sha256": "1dcb14def9b40225ba37f63890dd589f82613240fd9babda1efb184adc0a3402"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_01.8m.png",
+   "bytes": 45656,
+   "sha256": "5e9cbb41c47417b820c7c27da54d30067f2b7c4bfa8515009868626210f0c37c"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_02.5m.png",
+   "bytes": 52581,
+   "sha256": "48384bcd901d7d652c6956bc8ea4c5e7058f37bbf09531cf0b67078e897f5885"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_04.0m.png",
+   "bytes": 62416,
+   "sha256": "c7c4dbd512e620ee46858fe81692892f8117552668692815aa72b31051fbe4d6"
+  },
+  {
+   "path": "maps/synthetic/lod/h_seen_08.0m.png",
+   "bytes": 72874,
+   "sha256": "89587ba61495c7883764511ad2bd82511d41661dbc06d249defedd59f05c02a5"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_00.5m_srgb.png",
+   "bytes": 11631,
+   "sha256": "28925a80c8bc5a974aa55fbcee6ce732e9596ab4128822803e1ce3a35ce610ac"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_01.0m_srgb.png",
+   "bytes": 16875,
+   "sha256": "7f26a7e52e174ff9d277aca7e9ce222cb0eb71bef593d1df0bdb7073cde8610b"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_01.4m_srgb.png",
+   "bytes": 21422,
+   "sha256": "c2336236a12453e0157f3b15e1876547e01e265a8e33be7e372a2f67e4e72a28"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_01.8m_srgb.png",
+   "bytes": 24147,
+   "sha256": "42a01f4a136523c82039dbcf26ac5ca93825fff90234402d83481125f9c29799"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_02.5m_srgb.png",
+   "bytes": 29970,
+   "sha256": "c7c3f081da0c0e0c918453381a27e405d11c876f52026bb34deb2d4565708e85"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_04.0m_srgb.png",
+   "bytes": 38521,
+   "sha256": "29ba8b75f9e1c0db54c4a45a61f69f28e9f0c42137bfdff26556cecf02490f4e"
+  },
+  {
+   "path": "maps/synthetic/lod/perceived_08.0m_srgb.png",
+   "bytes": 48972,
+   "sha256": "646c1ee9a562aff108a9ada92d726448dfaebf7da42995688e336f3f207232bc"
+  },
+  {
+   "path": "maps/synthetic/mask_body.png",
+   "bytes": 13452,
+   "sha256": "8613c2aadb70584f91b033102b8190c35bb69825ec2bd1dcf3124782145746ef"
+  },
+  {
+   "path": "maps/synthetic/mask_frontal.png",
+   "bytes": 9295,
+   "sha256": "5455b91385124919d9fa4b16e3714b37f97dff1d789d080c91373fe59ad12e43"
+  },
+  {
+   "path": "maps/synthetic/preview_h.png",
+   "bytes": 64820,
+   "sha256": "7782bc10b40be04e93f8d8b59d82ff9d6a14143fa5f33969ef939d7c6b45f095"
+  },
+  {
+   "path": "maps/synthetic/tint_d65_srgb.png",
+   "bytes": 572025,
+   "sha256": "b3a81207310e119128ad96b5894c7d096dc7f7b1ce3db19e8220a103fe2dfec6"
+  },
+  {
+   "path": "maps/synthetic/top_m_half.exr",
+   "bytes": 189914,
+   "sha256": "12cf0ef4faed19d56446dbbc453cac754bee0cd9b0e387caa9ad2617a7298397"
+  },
+  {
+   "path": "maps/synthetic/z_m_half.exr",
+   "bytes": 265362,
+   "sha256": "872546d491e515e9e6a6ace0bf8283afcadd51550a283819abf958f38eedeab7"
+  },
+  {
+   "path": "maps/weave/weave_height_16bit.png",
+   "bytes": 4741,
+   "sha256": "9d662c74665564fc03887b65fc235e685b6cf908b07917ab2e561ebfb4f2b453"
+  },
+  {
+   "path": "maps/weave/weave_normal.png",
+   "bytes": 6427,
+   "sha256": "f4f020b0ed837c23c41b6557abe433a7741bf9671319a336290dc636f830b090"
+  },
+  {
+   "path": "maps/weave/weave_occlusion.png",
+   "bytes": 2686,
+   "sha256": "f3e1a11175e58c0670e1b385dc2587f40079a9b2ae0e2df00b13875761954feb"
+  },
+  {
+   "path": "maps/weave/weave_warp_on_top.png",
+   "bytes": 2332,
+   "sha256": "58d583c8394a47afc8c41e2cab7a99305c7ca7d97d304adc4f7797ef4e3c138c"
+  },
+  {
+   "path": "renders/blender/cloth_whole_6m_contrast3.jpg",
+   "bytes": 19317,
+   "sha256": "c6a2c22e987f9b002e113d5348752595fd075d6fe11d78645913c50e52973cbb"
+  },
+  {
+   "path": "renders/blender/cloth_whole_6m_physical.jpg",
+   "bytes": 17647,
+   "sha256": "c748e7bc2df14ff6c4e9f820a98a86975152884e67483e85d76aa059856f147f"
+  },
+  {
+   "path": "renders/blender/face_0.5m_contrast3.jpg",
+   "bytes": 5856,
+   "sha256": "bf3a8fbf80b9db177adeefa13cbf2238bdbc3cf57c1036b49676ab4f7a93f417"
+  },
+  {
+   "path": "renders/blender/face_1.0m_contrast3.jpg",
+   "bytes": 5924,
+   "sha256": "d3965478f59590997c95f6cdea4182c1a5f40408d50de1c6a84be733c3ad6eb4"
+  },
+  {
+   "path": "renders/blender/face_1.8m_contrast3.jpg",
+   "bytes": 6161,
+   "sha256": "f5088c5e1e483399b636bd23bfd39b00fcb061a921c84a345245d49d87c49325"
+  },
+  {
+   "path": "renders/blender/face_6.0m_contrast3.jpg",
+   "bytes": 7205,
+   "sha256": "0082cc865216c046e81189b3c543ff296523f91651d344740fd7e5df4ad7096e"
+  },
+  {
+   "path": "renders/blender/relief_face.jpg",
+   "bytes": 13369,
+   "sha256": "76548ab33c1f20823f5e325684c5acd3fbac15af4c58748f7bb434f524803def"
+  },
+  {
+   "path": "renders/blender/relief_whole.jpg",
+   "bytes": 27664,
+   "sha256": "3ae3f863b0a617c6a86e3489d14e5672e60f1c167b58600418053b294e0e7305"
+  },
+  {
+   "path": "renders/blender/renders.json",
+   "bytes": 1838,
+   "sha256": "face5838ab3973e6d3e5fca0f43c138d454986c5c427b842fb896af429639e64"
+  },
+  {
+   "path": "renders/blender/weave_6cm.jpg",
+   "bytes": 157682,
+   "sha256": "372efdd29fff43e0b00587f3b167c87c6e9166ae320e1906464f93c668f8c1cf"
+  },
+  {
+   "path": "tools/derive.py",
+   "bytes": 27370,
+   "sha256": "dea3272adcd5b6500740ff4e9162653b81d8d00c8a5f4faec295914bde983f19"
+  },
+  {
+   "path": "tools/make_graph.py",
+   "bytes": 17970,
+   "sha256": "9ece8c4db31503166a3581ac2ce10d505f0e5da8b165e774dc0798cf87d00c0f"
+  },
+  {
+   "path": "tools/make_x3d.py",
+   "bytes": 42848,
+   "sha256": "4f3da766a44b6f2d1dae929e376075da047b1f10c548ff25bc20fd1315f7288f"
+  },
+  {
+   "path": "tools/shroudlib.py",
+   "bytes": 12226,
+   "sha256": "5f2e037d97a78918a8b103e15bb29959f678e900356b5b2b3686a330a3c79682"
+  },
+  {
+   "path": "tools/synthetic_body.py",
+   "bytes": 13090,
+   "sha256": "356718fca25869d704ca0e44b5e2e61c2be0d464862f2a5a557b0ce3fcf36e06"
+  },
+  {
+   "path": "tools/validate_x3d.py",
+   "bytes": 4460,
+   "sha256": "0df877d52ddd3910cae889f3b3a5288363b0a86e22cc2117b8ae693b4fd4e81e"
+  },
+  {
+   "path": "x3d/scenes.json",
+   "bytes": 6056,
+   "sha256": "f7c31a0a1dd308cd13971a57ced704e5c7a8a68109a73fb8072e4b2160ce5481"
+  },
+  {
+   "path": "x3d/shroud_cloth.x3d",
+   "bytes": 20410,
+   "sha256": "577b2b36c61a6ba13e284102bde1fabf877ab2ac0751b7171ed9c4b5cce24b53"
+  },
+  {
+   "path": "x3d/shroud_formation.x3d",
+   "bytes": 413473,
+   "sha256": "1f26c67705b11162166476640b17879c5866fb149498a6beacfb97f3362ebbc3"
+  },
+  {
+   "path": "x3d/shroud_lab.x3d",
+   "bytes": 150140,
+   "sha256": "11620f74c6501ff3fffb7d9e43325504e2583ba4879062971aa9cb90d8c88246"
+  },
+  {
+   "path": "x3d/shroud_relief.x3d",
+   "bytes": 397474,
+   "sha256": "ed7cf779bf6bf9f74adcaa49f471c193f720e17bcb5f6517f61c2211450b45dd"
+  },
+  {
+   "path": "x3d/shroud_timeline.x3d",
+   "bytes": 78466,
+   "sha256": "24a1553696bb7a59b2d3a5aeef2dc932a7b7af5f14444277ce4ae61ad1d1ba37"
+  },
+  {
+   "path": "x3d/textures/formation_h_sepia.png",
+   "bytes": 72439,
+   "sha256": "977e405ba930882b9a37a0f7526fea3c73106920b1655298e3c2ce7c20997d94"
+  }
+ ]
+}

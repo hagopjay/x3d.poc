@@ -1,0 +1,154 @@
+{
+ "title": "How the image field h relates to cloth-body distance",
+ "h": {
+  "id": "convention.h_range",
+  "value": [
+   0,
+   1
+  ],
+  "unit": null,
+  "tag": "convention",
+  "citations": [
+   "jje1984"
+  ]
+ },
+ "models": {
+  "linear_frontal": {
+   "formula": "z = range * (1 - h)",
+   "range": {
+    "id": "distance.frontal_range_m",
+    "value": 0.037,
+    "unit": "m",
+    "tag": "fitted",
+    "citations": [
+     "jje1984"
+    ]
+   },
+   "r2": {
+    "id": "distance.frontal_r2",
+    "value": 0.6,
+    "unit": null,
+    "tag": "fitted",
+    "citations": [
+     "jje1984"
+    ]
+   },
+   "sigma": {
+    "id": "distance.frontal_sigma_m",
+    "value": 0.006,
+    "unit": "m",
+    "tag": "fitted",
+    "citations": [
+     "jje1984"
+    ]
+   },
+   "n_points": {
+    "id": "distance.frontal_n_points",
+    "value": 13,
+    "unit": null,
+    "tag": "measured",
+    "citations": [
+     "jje1984"
+    ]
+   },
+   "tag": "fitted",
+   "note": "The default everywhere in this package."
+  },
+  "exponential": {
+   "constant": {
+    "id": "distance.exponential_model",
+    "value": "z = -z0 * ln(max(h, 0.01)), z0 = 0.037 / ln(100) = 0.00803 m",
+    "unit": null,
+    "tag": "hypothesis",
+    "citations": []
+   },
+   "z0_m": 0.00803,
+   "tag": "hypothesis"
+  },
+  "dorsal": {
+   "range": {
+    "id": "distance.dorsal_range_m",
+    "value": 0.037,
+    "unit": "m",
+    "tag": "hypothesis",
+    "citations": [
+     "fazio2008"
+    ]
+   },
+   "tag": "hypothesis",
+   "note": "No measured dorsal range exists; the frontal range is reused as a placeholder."
+  },
+  "pressure": {
+   "constant": {
+    "id": "distance.pressure_ratio",
+    "value": 77,
+    "unit": "ratio",
+    "tag": "measured",
+    "citations": [
+     "jje1984"
+    ]
+   },
+   "note": "Equal frontal and dorsal amplitudes at about 77x pressure difference (JJE); 'dorsal darker = gravity' is retracted (see corrections.json)."
+  },
+  "projection": {
+   "id": "distance.vertical_collimation",
+   "value": "vertical (no lateral wrap distortion)",
+   "unit": null,
+   "tag": "inferred",
+   "citations": [
+    "jje1984"
+   ]
+  },
+  "relief_display": {
+   "id": "distance.relief_exaggeration_default",
+   "value": 4.0,
+   "unit": "x",
+   "tag": "aesthetic",
+   "citations": []
+  },
+  "superseded_range": {
+   "id": "distance.range_prd_0p04",
+   "value": 0.04,
+   "unit": "m",
+   "tag": "superseded",
+   "citations": []
+  }
+ },
+ "legacy_bakers": {
+  "tag": "superseded",
+  "note": "Three earlier bakers turned photograph luminance into height (PRD Rec.709 luma, the Unity port's percentile baker, Shader of the Shroud's percentile with polarity detection). None masks blood, scorch or patches, so those become bumps. The build plan replaces them with one JJE inversion with masks, which needs the masks and a licensed photograph; until then this package uses the synthetic field below."
+ },
+ "synthetic_forward_model": {
+  "module": "tools/synthetic_body.py",
+  "tag": "aesthetic",
+  "warning": "A license-free stand-in for the measured image. Not a reconstruction of the man of the Shroud.",
+  "mannequin": {
+   "stature_m": 1.78,
+   "tag": "aesthetic",
+   "parts": "ellipsoids and tapered capsules joined by smooth minimum; supine on a flat slab"
+  },
+  "drape": {
+   "kind": "slope-limited tent over the front",
+   "slope": 0.3,
+   "smooth_m": 0.008,
+   "tag": "inferred"
+  },
+  "projection": "vertical, as JJE read the image",
+  "ranges_m": {
+   "frontal": 0.037,
+   "dorsal": 0.037
+  },
+  "soften_sigma_m": 0.00212,
+  "soften_note": "Gaussian of FWHM 5 mm, the image resolution floor (image.resolution_floor_m).",
+  "layout": {
+   "fold_v": 0.5,
+   "head_gap": 0.1,
+   "frontal_dir": 1
+  },
+  "statistics": {
+   "frontal_mean_h_on_body": 0.498,
+   "dorsal_mean_h_on_body": 0.48,
+   "frontal_fraction_h_over_0.9": 0.286
+  }
+ }
+}

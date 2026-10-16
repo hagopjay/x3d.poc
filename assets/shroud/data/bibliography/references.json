@@ -1,0 +1,1198 @@
+[
+ {
+  "id": "jje1984",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Jackson",
+    "given": "J. P."
+   },
+   {
+    "family": "Jumper",
+    "given": "E. J."
+   },
+   {
+    "family": "Ercoline",
+    "given": "W. R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1984
+    ]
+   ]
+  },
+  "title": "Correlation of image intensity on the Turin Shroud with the 3-D structure of a human body shape",
+  "container-title": "Applied Optics",
+  "volume": "23",
+  "issue": "14",
+  "page": "2244-2270",
+  "DOI": "10.1364/AO.23.002244",
+  "URL": "https://doi.org/10.1364/AO.23.002244",
+  "note": "Eq. 1 spectral model and constants; 3.7 cm intensity-distance range, r^2 0.60 for 13 points; image not discernible closer than about 180 cm; cloth thickness 345 um; pressure independence.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "fazio2008",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Fazio"
+   },
+   {
+    "family": "Mandaglio"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2008
+    ]
+   ]
+  },
+  "container-title": "Atti della Accademia Peloritana dei Pericolanti",
+  "volume": "86",
+  "issue": "2",
+  "DOI": "10.1478/C1A0802005",
+  "URL": "https://doi.org/10.1478/C1A0802005",
+  "note": "Dorsal intensity-distance slope steeper than frontal; the dorsal range is called arbitrary. Title not recorded in the project sources; see DOI.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "vial1989",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Vial",
+    "given": "G."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1989
+    ]
+   ]
+  },
+  "title": "Technical study of the Turin Shroud (English translation)",
+  "container-title": "Shroud Spectrum International",
+  "issue": "38/39",
+  "URL": "https://www.shroud.com/pdfs/ssi3839part4.pdf",
+  "note": "Main cloth 38.3 warp / 25.4 weft per cm; side strip 38.1 / 26.2; 3/1 herringbone; repeat 41 warp threads one way, 39 back; selvedges along both long edges. Title here is descriptive; see URL.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "raes1974",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Raes"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1974
+    ]
+   ]
+  },
+  "title": "Analysis report on the Raes sample (English translation)",
+  "container-title": "Shroud Spectrum International",
+  "issue": "38/39",
+  "URL": "https://www.shroud.com/pdfs/ssi3839part3.pdf",
+  "note": "Source of the 38.6 x 25.7 per cm counts that the PRD misattributed to Vial. Examination 1973-74. Title here is descriptive; see URL.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "linteum2002",
+  "type": "report",
+  "issued": {
+   "date-parts": [
+    [
+     2002
+    ]
+   ]
+  },
+  "title": "2002 restoration measurements of the Turin Shroud (Linteum report)",
+  "URL": "https://www.shroud.com/pdfs/n58part7.pdf",
+  "note": "Post-2002 size 4.415 x 1.137 m. Author not recorded in the project sources.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "freerwaters2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Freer-Waters"
+   },
+   {
+    "family": "Jull"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "npj Heritage Science",
+  "volume": "14",
+  "page": "263",
+  "DOI": "10.1038/s40494-026-02530-7",
+  "URL": "https://doi.org/10.1038/s40494-026-02530-7",
+  "note": "Re-examination of the 1988 radiocarbon fragments; its 38 x 25-26 per cm is quoted from older work, its own count is 37-41 x 26-29. Fragments consistent with the main cloth. Title not recorded in the project sources.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "fanti2004",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Fanti"
+   },
+   {
+    "family": "Maggiolo"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2004
+    ]
+   ]
+  },
+  "title": "The double superficiality of the frontal image of the Turin Shroud",
+  "container-title": "Journal of Optics A: Pure and Applied Optics",
+  "volume": "6",
+  "page": "491",
+  "DOI": "10.1088/1464-4258/6/6/001",
+  "URL": "https://doi.org/10.1088/1464-4258/6/6/001",
+  "note": "Frontal face and hands faintly present on the reverse side; dorsal image not.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "fanti2010",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Fanti",
+    "given": "G."
+   },
+   {
+    "family": "Botella",
+    "given": "J. A."
+   },
+   {
+    "family": "Di Lazzaro",
+    "given": "P."
+   },
+   {
+    "family": "Heimburger",
+    "given": "T."
+   },
+   {
+    "family": "Schneider",
+    "given": "R."
+   },
+   {
+    "family": "Svensson",
+    "given": "N."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010
+    ]
+   ]
+  },
+  "container-title": "Journal of Imaging Science and Technology",
+  "volume": "54",
+  "issue": "4",
+  "page": "040201",
+  "note": "Image coloration about 200 nm thick, confined to the primary cell wall of the outermost fibrils; yarn diameter 0.25-0.30 mm.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "dilazzaro2012",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Di Lazzaro",
+    "given": "P."
+   },
+   {
+    "family": "Murra",
+    "given": "D."
+   },
+   {
+    "family": "Santoni",
+    "given": "A."
+   },
+   {
+    "family": "Nichelatti",
+    "given": "E."
+   },
+   {
+    "family": "Baldacchini",
+    "given": "G."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2012
+    ]
+   ]
+  },
+  "container-title": "Applied Optics",
+  "volume": "51",
+  "issue": "36",
+  "page": "8567",
+  "DOI": "10.1364/AO.51.008567",
+  "URL": "https://doi.org/10.1364/AO.51.008567",
+  "note": "Table 1: Shroud-like coloration from 200-600 ArF (193 nm) pulses of 0.07-0.13 J/cm2 each, 6-13 MW/cm2 per pulse, totals about 25-40 J/cm2; 73 J/cm2 ablated the linen.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "enea2011",
+  "type": "report",
+  "author": [
+   {
+    "family": "Di Lazzaro",
+    "given": "P."
+   },
+   {
+    "family": "Murra",
+    "given": "D."
+   },
+   {
+    "family": "Santoni",
+    "given": "A."
+   },
+   {
+    "family": "Nichelatti",
+    "given": "E."
+   },
+   {
+    "family": "Baldacchini",
+    "given": "G."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  },
+  "title": "ENEA technical report RT/2011/14",
+  "note": "Source of the PRD's whole-body single-pulse power estimate (34 TW); an estimate, not a measurement.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "gilbert1980",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Gilbert"
+   },
+   {
+    "family": "Gilbert"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1980
+    ]
+   ]
+  },
+  "container-title": "Applied Optics",
+  "volume": "19",
+  "issue": "12",
+  "note": "1978 reflectance and fluorescence spectra; dense-blood curve for a future blood Y.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "pellicori1980",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Pellicori",
+    "given": "S. F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1980
+    ]
+   ]
+  },
+  "container-title": "Applied Optics",
+  "volume": "19",
+  "issue": "12",
+  "note": "1978 spectral measurements the JJE model was fitted to.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "schwalbe2023",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Schwalbe"
+   },
+   {
+    "family": "Pellicori",
+    "given": "S. F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "container-title": "International Journal of Archaeology",
+  "volume": "11",
+  "issue": "1",
+  "DOI": "10.11648/j.ija.20231101.11",
+  "URL": "https://doi.org/10.11648/j.ija.20231101.11",
+  "note": "CIE xyY reduction of the 1978 spectrophotometry: image and background clusters overlap; blood separated; scorches on a continuum.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "pellicori2025",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Pellicori",
+    "given": "S. F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "container-title": "International Journal of Archaeology",
+  "volume": "13",
+  "issue": "1",
+  "page": "63-68",
+  "DOI": "10.11648/j.ija.20251301.16",
+  "URL": "https://doi.org/10.11648/j.ija.20251301.16",
+  "note": "Photoelectric UV fluorimetry revisited; background, non-image and image areas behave differently.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "jaworski2025",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Jaworski"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "container-title": "International Journal of Archaeology",
+  "volume": "13",
+  "issue": "2",
+  "DOI": "10.11648/j.ija.20251302.15",
+  "URL": "https://doi.org/10.11648/j.ija.20251302.15",
+  "note": "Verified to exist by the build plan; its subject is not recorded in the project sources.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "miller1981",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Miller",
+    "given": "V. D."
+   },
+   {
+    "family": "Pellicori",
+    "given": "S. F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1981
+    ]
+   ]
+  },
+  "title": "Ultraviolet fluorescence photography of the Shroud of Turin",
+  "container-title": "Journal of Biological Photography",
+  "volume": "49",
+  "issue": "3",
+  "page": "71-85",
+  "note": "Background fluoresces; image quenches; dried blood non-fluorescent; serum margins fluoresce; light scorches fluoresce reddish.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "kearse2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Kearse"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "International Journal of Archaeology",
+  "volume": "14",
+  "issue": "2",
+  "page": "16-26",
+  "DOI": "10.11648/j.ija.20261402.11",
+  "URL": "https://doi.org/10.11648/j.ija.20261402.11",
+  "note": "No image under blood reproduced artificially on acid-treated linen: ordering is fact, exclusivity is not proof.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "decaro2022",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "De Caro",
+    "given": "L."
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "container-title": "Heritage",
+  "volume": "5",
+  "issue": "2",
+  "page": "860-870",
+  "note": "WAXS ageing parameter AP = 0.60 +/- 0.02; age interpretation disputed.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "damon1989",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Damon",
+    "given": "P. E."
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1989
+    ]
+   ]
+  },
+  "title": "Radiocarbon dating of the Shroud of Turin",
+  "container-title": "Nature",
+  "volume": "337",
+  "page": "611-615",
+  "note": "Oxford, Zurich and Arizona: 1260-1390 AD at 95 % confidence.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "riani2013",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Riani",
+    "given": "M."
+   },
+   {
+    "family": "Atkinson",
+    "given": "A. C."
+   },
+   {
+    "family": "Fanti",
+    "given": "G."
+   },
+   {
+    "family": "Crosilla",
+    "given": "F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  },
+  "container-title": "Statistics and Computing",
+  "volume": "23",
+  "issue": "4",
+  "page": "551-561",
+  "DOI": "10.1007/s11222-012-9329-5",
+  "URL": "https://doi.org/10.1007/s11222-012-9329-5",
+  "note": "Corrected citation: the PRD's 23:339 is wrong. Heterogeneity in the 1988 raw data.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "casabianca2019",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Casabianca",
+    "given": "T."
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "container-title": "Archaeometry",
+  "volume": "61",
+  "issue": "5",
+  "page": "1223",
+  "note": "Raw-data re-analysis; homogeneity test fails.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "moraes2025",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Moraes",
+    "given": "C."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "container-title": "Archaeometry",
+  "DOI": "10.1111/arcm.70030",
+  "URL": "https://doi.org/10.1111/arcm.70030",
+  "note": "Open-source 3D draping: a low-relief source matches the image contour better than a full body.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "casabianca2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Casabianca"
+   },
+   {
+    "family": "Marinelli"
+   },
+   {
+    "family": "Piana"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "Archaeometry",
+  "volume": "68",
+  "issue": "4",
+  "DOI": "10.1111/arcm.70109",
+  "URL": "https://doi.org/10.1111/arcm.70109",
+  "note": "Commentary disputing Moraes 2025.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "moraes2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Moraes",
+    "given": "C."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "Archaeometry",
+  "volume": "68",
+  "issue": "4",
+  "DOI": "10.1111/arcm.70112",
+  "URL": "https://doi.org/10.1111/arcm.70112",
+  "note": "Reply to the commentary.",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "barcaccia2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Barcaccia"
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "Scientific Reports",
+  "volume": "16",
+  "page": "21206",
+  "DOI": "10.1038/s41598-026-60684-7",
+  "URL": "https://doi.org/10.1038/s41598-026-60684-7",
+  "note": "First PCR-free sequencing of the 1978 samples (linen filaments, vacuum dust and a slide). Cannot date the cloth. Preprint bioRxiv 2026.03.19.712852 (the v3 review cited the preprint).",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "sagredo2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Sagredo"
+   },
+   {
+    "family": "Fabre"
+   },
+   {
+    "family": "López-Moreno"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "IEEE Transactions on Visualization and Computer Graphics",
+  "DOI": "10.1109/TVCG.2026.3676259",
+  "URL": "https://doi.org/10.1109/TVCG.2026.3676259",
+  "note": "Inverse rendering of translucent fabric; its abstract does not mention Mitsuba 3 (the v3 review assumed it).",
+  "x-verified": "build-plan-2026-09-30"
+ },
+ {
+  "id": "heller1980",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Heller",
+    "given": "J. H."
+   },
+   {
+    "family": "Adler",
+    "given": "A. D."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1980
+    ]
+   ]
+  },
+  "title": "Blood on the Shroud of Turin",
+  "container-title": "Applied Optics",
+  "volume": "19",
+  "issue": "16",
+  "page": "2742",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "heller1981",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Heller",
+    "given": "J. H."
+   },
+   {
+    "family": "Adler",
+    "given": "A. D."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1981
+    ]
+   ]
+  },
+  "title": "A chemical investigation of the Shroud of Turin",
+  "container-title": "Canadian Society of Forensic Science Journal",
+  "volume": "14",
+  "issue": "3",
+  "page": "81",
+  "note": "Hemoglobin/porphyrin, bilirubin, albumin; no image under blood.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "baimabollone1982",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Baima Bollone",
+    "given": "P. L."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1982
+    ]
+   ]
+  },
+  "note": "AB blood typing; degraded samples can false-type AB.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "kohlbeck1986",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Kohlbeck"
+   },
+   {
+    "family": "Levi-Setti"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1986
+    ]
+   ]
+  },
+  "note": "Travertine aragonite (limestone) on the cloth.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "whanger1985",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Whanger"
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1985
+    ]
+   ]
+  },
+  "note": "Polarized image overlay technique (PIOT).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "heras1998",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Heras"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "note": "Sudarium of Oviedo cross-reference (EDICES).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "frei1973",
+  "type": "report",
+  "author": [
+   {
+    "family": "Frei"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1973
+    ]
+   ]
+  },
+  "note": "Pollen claims (contested).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "filas1982",
+  "type": "report",
+  "author": [
+   {
+    "family": "Filas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1982
+    ]
+   ]
+  },
+  "note": "Coin-over-eye claims (contested).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "danin1999",
+  "type": "book",
+  "author": [
+   {
+    "family": "Danin"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1999
+    ]
+   ]
+  },
+  "note": "Plant-image claims (contested).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "barcaccia2015",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Barcaccia"
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  },
+  "note": "Earlier DNA survey of dust; counter-evidence to single-origin pollen narratives.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "sturp1981",
+  "type": "report",
+  "author": [
+   {
+    "family": "STURP"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1981
+    ]
+   ]
+  },
+  "title": "STURP summary of findings",
+  "note": "Oxidized cellulose, no pigment forming the body image, superficial coloration.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "cifra2014",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Cifra",
+    "given": "M."
+   },
+   {
+    "family": "Pospíšil",
+    "given": "P."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "container-title": "Journal of Photochemistry and Photobiology B",
+  "volume": "139",
+  "page": "2",
+  "note": "Ultra-weak photon emission 10-1000 photons/cm2/s, 350-1300 nm.",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "lehrer2014",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Lehrer",
+    "given": "P."
+   },
+   {
+    "family": "Gevirtz",
+    "given": "R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "container-title": "Frontiers in Psychology",
+  "volume": "5",
+  "page": "756",
+  "note": "Resonance breathing near 0.1 Hz (Unity audio only).",
+  "x-verified": "cited-in-prd-v2"
+ },
+ {
+  "id": "devan1982",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Devan"
+   },
+   {
+    "family": "Miller"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1982
+    ]
+   ]
+  },
+  "title": "Quantitative photography of the Shroud of Turin",
+  "note": "Lighting geometry and film characteristic curves for the 1978 photographs.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "ercoline1982",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Ercoline"
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1982
+    ]
+   ]
+  },
+  "note": "Lateral distortion of the image under draping.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "jumper1984",
+  "type": "chapter",
+  "author": [
+   {
+    "family": "Jumper"
+   },
+   {
+    "family": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1984
+    ]
+   ]
+  },
+  "container-title": "Archaeological Chemistry III (ACS Advances in Chemistry), ch. 22",
+  "note": "Stain taxonomy by location.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "blackwell",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Blackwell"
+   }
+  ],
+  "note": "Contrast threshold 0.004 density, as used by JJE 1984 for the visibility argument.",
+  "x-verified": "cited-in-v3"
+ },
+ {
+  "id": "casper",
+  "type": "book",
+  "author": [
+   {
+    "family": "Casper",
+    "given": "A."
+   }
+  ],
+  "title": "An Artful Relic: The Shroud of Turin in Baroque Italy",
+  "note": "Painted contact-relic copies of the Shroud.",
+  "x-verified": "cited-in-research"
+ },
+ {
+  "id": "belting",
+  "type": "book",
+  "author": [
+   {
+    "family": "Belting",
+    "given": "H."
+   }
+  ],
+  "title": "Likeness and Presence: A History of the Image before the Era of Art",
+  "note": "Standard reference on acheiropoieta and true images.",
+  "x-verified": "cited-in-research"
+ },
+ {
+  "id": "mccrone1996",
+  "type": "book",
+  "author": [
+   {
+    "family": "McCrone",
+    "given": "W."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1996
+    ]
+   ]
+  },
+  "title": "Judgment Day for the Shroud of Turin",
+  "note": "Red ochre and vermilion in a collagen binder; forgery hypothesis (contested by STURP).",
+  "x-verified": "cited-in-research"
+ },
+ {
+  "id": "meditations1380",
+  "type": "manuscript",
+  "issued": {
+   "date-parts": [
+    [
+     1380
+    ]
+   ]
+  },
+  "title": "Meditations on the Life of Christ",
+  "note": "Veronica narrative crystallizes around 1380.",
+  "x-verified": "cited-in-research"
+ },
+ {
+  "id": "mannos1974",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Mannos",
+    "given": "J. L."
+   },
+   {
+    "family": "Sakrison",
+    "given": "D. J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1974
+    ]
+   ]
+  },
+  "title": "The effects of a visual fidelity criterion on the encoding of images",
+  "container-title": "IEEE Transactions on Information Theory",
+  "volume": "20",
+  "issue": "4",
+  "page": "525-536",
+  "note": "Contrast sensitivity function used by the perceptual dissolve model.",
+  "x-verified": "added-for-package"
+ },
+ {
+  "id": "peli1990",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Peli",
+    "given": "E."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1990
+    ]
+   ]
+  },
+  "title": "Contrast in complex images",
+  "container-title": "Journal of the Optical Society of America A",
+  "volume": "7",
+  "issue": "10",
+  "page": "2032-2040",
+  "note": "Band-limited local contrast used by the perceptual dissolve model.",
+  "x-verified": "added-for-package"
+ },
+ {
+  "id": "cie1931",
+  "type": "standard",
+  "author": [
+   {
+    "family": "CIE"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1931
+    ]
+   ]
+  },
+  "title": "CIE 1931 2 degree standard colorimetric observer",
+  "note": "Colour-matching functions used to bake the spectral LUT (via colour-science).",
+  "x-verified": "added-for-package"
+ }
+]

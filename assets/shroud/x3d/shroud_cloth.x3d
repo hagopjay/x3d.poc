@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+ <head>
+  <component name='Navigation' level='2'/>
+  <component name='EnvironmentalSensor' level='1'/>
+  <component name='Texturing' level='2'/>
+  <component name='Shape' level='2'/>
+  <component name='Text' level='1'/>
+  <meta name='title' content='Shroud of Turin: cloth at true scale'/>
+  <meta name='description' content='The cloth with the JJE 1984 colour model, Vial&apos;s weave and the 1.8 m dissolve.'/>
+  <meta name='created' content='2026-10-16'/>
+  <meta name='creator' content='Shroud of Turin knowledge base, x3d.poc'/>
+  <meta name='generator' content='tools/make_x3d.py'/>
+  <meta name='reference' content='data/constants.json'/>
+  <meta name='license' content='Data and scenes: CC BY 4.0. The body image is synthetic (tools/synthetic_body.py).'/>
+  <meta name='warning' content='The body image in this scene is a synthetic forward model, not a photograph or a reconstruction of the man of the Shroud.'/>
+ </head>
+ <Scene>
+  <WorldInfo title='Shroud of Turin: the cloth at true scale' info='&quot;4.37 x 1.11 m (pre-2002 state), linen colour from JJE 1984, the image as JJE albedo, the weave at Vial&apos;s thread counts.&quot; &quot;The LOD swaps the image texture by viewing distance: each level is the image an eye resolves at that distance (data/perception.json).&quot; &quot;Body image: a synthetic forward model (aesthetic stand-in), not a photograph. See README.md.&quot;'>
+    <MetadataSet containerField='metadata' name='shroud' reference='data/constants.json'>
+     <MetadataString containerField='value' name='package' value='"Shroud of Turin knowledge base 1.0.0"'/>
+     <MetadataString containerField='value' name='image_source' value='"synthetic forward model (tools/synthetic_body.py), aesthetic stand-in"'/>
+     <MetadataDouble containerField='value' name='cloth_length_pre2002_m' reference='id: cloth.length_pre2002_m; tag: measured; cite: none; unit: m; Length before the 2002 restoration' value='4.37'/>
+     <MetadataDouble containerField='value' name='cloth_width_pre2002_m' reference='id: cloth.width_pre2002_m; tag: measured; cite: none; unit: m; Width before the 2002 restoration' value='1.11'/>
+     <MetadataDouble containerField='value' name='cloth_length_post2002_m' reference='id: cloth.length_post2002_m; tag: measured; cite: linteum2002; unit: m; Length after the 2002 restoration' value='4.415'/>
+     <MetadataDouble containerField='value' name='cloth_width_post2002_m' reference='id: cloth.width_post2002_m; tag: measured; cite: linteum2002; unit: m; Width after the 2002 restoration' value='1.137'/>
+     <MetadataDouble containerField='value' name='cloth_thickness_um' reference='id: cloth.thickness_um; tag: measured; cite: jje1984; unit: um; Cloth thickness' value='345'/>
+     <MetadataString containerField='value' name='weave_structure' reference='id: weave.structure; tag: measured; cite: vial1989, raes1974; unit: -; Weave structure' value='&quot;3/1 herringbone twill&quot;'/>
+     <MetadataDouble containerField='value' name='weave_warp_per_cm' reference='id: weave.warp_per_cm; tag: measured; cite: vial1989; unit: 1/cm; Warp threads per cm (main cloth)' value='38.3'/>
+     <MetadataDouble containerField='value' name='weave_weft_per_cm' reference='id: weave.weft_per_cm; tag: measured; cite: vial1989; unit: 1/cm; Weft threads per cm (main cloth)' value='25.4'/>
+     <MetadataDouble containerField='value' name='weave_band_repeat_threads' reference='id: weave.band_repeat_threads; tag: measured; cite: vial1989; unit: threads; Herringbone repeat (warp threads one way, then back)' value='41 39'/>
+     <MetadataDouble containerField='value' name='weave_band_width_cm' reference='id: weave.band_width_cm; tag: derived; cite: vial1989; unit: cm; Herringbone band width' value='1.07 1.02'/>
+     <MetadataString containerField='value' name='weave_band_orientation' reference='id: weave.band_orientation; tag: measured; cite: vial1989; unit: -; Band orientation' value='&quot;bands run lengthwise, parallel to the warp; the twill diagonal reverses across the width&quot;'/>
+     <MetadataString containerField='value' name='jje_model' reference='id: jje.model; tag: fitted; cite: jje1984; unit: -; JJE spectral model' value='&quot;r(lambda, h) = (a + b*lambda) * [1 + c*(lambda - lambda_prime)*h]&quot;'/>
+     <MetadataDouble containerField='value' name='jje_a' reference='id: jje.a; tag: fitted; cite: jje1984; unit: -; JJE a' value='-0.21'/>
+     <MetadataDouble containerField='value' name='jje_b' reference='id: jje.b; tag: fitted; cite: jje1984; unit: 1/nm; JJE b' value='0.00102'/>
+     <MetadataDouble containerField='value' name='jje_c' reference='id: jje.c; tag: fitted; cite: jje1984; unit: 1/nm; JJE c' value='0.000778'/>
+     <MetadataDouble containerField='value' name='jje_lambda_prime_nm' reference='id: jje.lambda_prime_nm; tag: fitted; cite: jje1984; unit: nm; JJE lambda prime' value='790'/>
+     <MetadataDouble containerField='value' name='image_density_range' reference='id: image.density_range; tag: measured; cite: jje1984; unit: optical density; Image density range' value='0.09'/>
+     <MetadataDouble containerField='value' name='image_attenuation_h1' reference='id: image.attenuation_h1; tag: derived; cite: jje1984; unit: ratio; Reflectance ratio at h = 1 (440, 550, 680 nm)' value='0.728 0.813 0.914'/>
+     <MetadataDouble containerField='value' name='colour_linen_d65_linear' reference='id: colour.linen_d65_linear; tag: derived; cite: jje1984; unit: linear sRGB; Background linen, linear sRGB (D65)' value='0.445 0.344 0.24'/>
+     <MetadataDouble containerField='value' name='colour_linen_d65_Y' reference='id: colour.linen_d65_Y; tag: derived; cite: jje1984; unit: -; Background linen luminance Y (D65)' value='0.358'/>
+     <MetadataDouble containerField='value' name='colour_image_max_d65_linear' reference='id: colour.image_max_d65_linear; tag: derived; cite: jje1984; unit: linear sRGB; Maximum image (h = 1), linear sRGB (D65)' value='0.392 0.278 0.174'/>
+     <MetadataDouble containerField='value' name='colour_image_tint_h1_d65' reference='id: colour.image_tint_h1_d65; tag: derived; cite: jje1984; unit: linear sRGB ratio; Image tint at h = 1 (multiplier on linen, D65)' value='0.881 0.807 0.725'/>
+     <MetadataDouble containerField='value' name='distance_frontal_range_m' reference='id: distance.frontal_range_m; tag: fitted; cite: jje1984; unit: m; Frontal intensity-distance range' value='0.037'/>
+     <MetadataDouble containerField='value' name='distance_frontal_r2' reference='id: distance.frontal_r2; tag: fitted; cite: jje1984; unit: -; Linear fit r^2' value='0.6'/>
+     <MetadataDouble containerField='value' name='distance_frontal_sigma_m' reference='id: distance.frontal_sigma_m; tag: fitted; cite: jje1984; unit: m; Residual sigma of the linear fit' value='0.006'/>
+     <MetadataString containerField='value' name='distance_linear_model' reference='id: distance.linear_model; tag: fitted; cite: jje1984; unit: -; Linear model (default)' value='&quot;z = 0.037 * (1 - h) m (frontal)&quot;'/>
+     <MetadataDouble containerField='value' name='distance_dorsal_range_m' reference='id: distance.dorsal_range_m; tag: hypothesis; cite: fazio2008; unit: m; Dorsal intensity-distance range' value='0.037'/>
+     <MetadataDouble containerField='value' name='perception_min_distance_m' reference='id: perception.min_distance_m; tag: measured; cite: jje1984; unit: m; Image not discernible closer than' value='1.8'/>
+     <MetadataDouble containerField='value' name='image_resolution_floor_m' reference='id: image.resolution_floor_m; tag: measured; cite: jje1984; unit: m; Finest image detail' value='0.005'/>
+     <MetadataDouble containerField='value' name='dating_c14_1988_ad' reference='id: dating.c14_1988_ad; tag: measured; cite: damon1989; unit: year AD; Radiocarbon range (95 %)' value='1260 1390'/>
+    </MetadataSet>
+  </WorldInfo>
+  <NavigationInfo type='"EXAMINE" "ANY"' headlight='false' visibilityLimit='120'/>
+  <Background skyColor='0.035 0.03 0.027'/>
+  <Viewpoint DEF='V_whole' description='The whole cloth at 5.5 m, hung as it is shown in Turin' position='0 0 5.5' orientation='0 0 1 0' centerOfRotation='0 0 0' fieldOfView='0.8000'/>
+  <Viewpoint DEF='V_frontal' description='The frontal image at 3 m' position='1 0 3' orientation='0.00000 0.00000 1.00000 1.57080' centerOfRotation='1 0 0' fieldOfView='0.7029'/>
+  <Viewpoint DEF='V_face_6' description='The face from 6 m: the image is clear' position='0.22 0 6' orientation='0.00000 0.00000 1.00000 1.57080' centerOfRotation='0.22 0 0' fieldOfView='0.1663'/>
+  <Viewpoint DEF='V_face_18' description='The face from 1.8 m: the measured threshold' position='0.22 0 1.8' orientation='0.00000 0.00000 1.00000 1.57080' centerOfRotation='0.22 0 0' fieldOfView='0.5419'/>
+  <Viewpoint DEF='V_face_10' description='The face from 1 m: the image has dissolved into the cloth' position='0.22 0 1' orientation='0.00000 0.00000 1.00000 1.57080' centerOfRotation='0.22 0 0' fieldOfView='0.9273'/>
+  <Viewpoint DEF='V_weave' description='The weave from 0.3 m, a 4 cm field: 38.3 warp and 25.4 weft threads per cm' position='0.22 0.03 0.3' orientation='0.00000 0.00000 1.00000 1.57080' centerOfRotation='0.22 0.03 0' fieldOfView='0.1331'/>
+  <DirectionalLight DEF='Key' direction='0.42 -0.5 -0.76' intensity='4.6' color='1 0.94 0.86'/>
+  <DirectionalLight DEF='Fill' direction='-0.55 0.35 -0.76' intensity='1.15' color='0.86 0.9 1'/>
+  <ProximitySensor DEF='Near' size='400 400 400'/>
+  <Transform DEF='Backing' translation='0 0 -0.012'><Shape><Appearance><PhysicalMaterial baseColor='0.045 0.05 0.07' metallic='0' roughness='0.95'/></Appearance><Box size='4.75 1.45 0.02'/></Shape></Transform>
+  <Transform DEF='ScaleBar' translation='-2.185 -0.655 0.003'>
+   <Transform translation='0.5 0 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='1 0.004 0.002'/></Shape></Transform>
+   <Transform translation='0 0.015 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.03 0.002'/></Shape></Transform>
+   <Transform translation='0.1 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.2 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.3 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.4 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.5 0.01 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.02 0.002'/></Shape></Transform>
+   <Transform translation='0.6 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.7 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.8 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='0.9 0.006 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.012 0.002'/></Shape></Transform>
+   <Transform translation='1 0.015 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Box size='0.003 0.03 0.002'/></Shape></Transform>
+   <Transform translation='0.5 -0.045 0'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.91 0.81 0.54'/></Appearance><Text string='&quot;1 m&quot;'><FontStyle family='&quot;SERIF&quot;' style='PLAIN' size='0.045' justify='&quot;MIDDLE&quot; &quot;MIDDLE&quot;'/></Text></Shape></Transform>
+  </Transform>
+  <Transform translation='1.02 0.635 0.003'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.72 0.59 0.29'/></Appearance><Text string='&quot;FRONTAL&quot;'><FontStyle family='&quot;SANS&quot;' style='BOLD' size='0.05' justify='&quot;MIDDLE&quot; &quot;MIDDLE&quot;'/></Text></Shape></Transform>
+  <Transform translation='-1.02 0.635 0.003'><Shape><Appearance><Material diffuseColor='0 0 0' emissiveColor='0.72 0.59 0.29'/></Appearance><Text string='&quot;DORSAL&quot;'><FontStyle family='&quot;SANS&quot;' style='BOLD' size='0.05' justify='&quot;MIDDLE&quot; &quot;MIDDLE&quot;'/></Text></Shape></Transform>
+  <Transform DEF='Hang' rotation='0.57735 0.57735 0.57735 2.0944'>
+   <Transform DEF='ClothOrigin' translation='-0.555 0 -2.185'>
+    <LOD DEF='Dissolve' center='0.555 0 2.405' range='0.707 1.183 1.587 2.121 3.162 5.657'>
+      <Shape DEF='Seen_00_5m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_00.5m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture DEF='WeaveNormal' containerField='normalTexture' url='&quot;../maps/weave/weave_normal.png&quot;'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='16' boundaryModeS='REPEAT' boundaryModeT='REPEAT'/></ImageTexture>
+         <ImageTexture DEF='WeaveAO' containerField='occlusionTexture' url='&quot;../maps/weave/weave_occlusion.png&quot;'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='16' boundaryModeS='REPEAT' boundaryModeT='REPEAT'/></ImageTexture>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet DEF='Cloth' coordIndex='0 2 3 1 -1' solid='false'><Coordinate point='0 0 0 1.11 0 0 0 0 4.37 1.11 0 4.37'/><MultiTextureCoordinate containerField='texCoord'><TextureCoordinate mapping='body' point='0 0 1 0 0 1 1 1'/><TextureCoordinate mapping='weave' point='0 0 53.1412 0 0 213.4577 53.1412 213.4577'/></MultiTextureCoordinate></IndexedFaceSet>
+      </Shape>
+      <Shape DEF='Seen_01_0m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_01.0m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+      <Shape DEF='Seen_01_4m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_01.4m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+      <Shape DEF='Seen_01_8m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_01.8m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+      <Shape DEF='Seen_02_5m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_02.5m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+      <Shape DEF='Seen_04_0m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_04.0m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+      <Shape DEF='Seen_08_0m'>
+       <Appearance>
+        <PhysicalMaterial baseColor='1 1 1' metallic='0' roughness='0.92' baseTextureMapping='body' normalTextureMapping='weave' normalScale='0.8' occlusionTextureMapping='weave' occlusionStrength='0.55'>
+         <ImageTexture containerField='baseTexture' url='&quot;../maps/synthetic/lod/perceived_08.0m_srgb.png&quot;' repeatS='false' repeatT='false'><TextureProperties generateMipMaps='true' minificationFilter='AVG_PIXEL_AVG_MIPMAP' magnificationFilter='AVG_PIXEL' anisotropicDegree='8' boundaryModeS='CLAMP_TO_EDGE' boundaryModeT='CLAMP_TO_EDGE'/></ImageTexture>
+         <ImageTexture USE='WeaveNormal' containerField='normalTexture'/>
+         <ImageTexture USE='WeaveAO' containerField='occlusionTexture'/>
+        </PhysicalMaterial>
+       </Appearance>
+       <IndexedFaceSet USE='Cloth'/>
+      </Shape>
+    </LOD>
+   </Transform>
+  </Transform>
+ </Scene>
+</X3D>
