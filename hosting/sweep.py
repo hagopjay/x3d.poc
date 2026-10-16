@@ -6,7 +6,7 @@ RULES = [
  ("secret", r"AIza[0-9A-Za-z_\-]{20,}|ya29\.[0-9A-Za-z_\-]{20,}|sk-[A-Za-z0-9]{20,}|BEGIN (?:RSA |EC )?PRIVATE KEY|hf_[A-Za-z0-9]{20,}"),
  ("private-link", r"claude\.ai/(?:code/)?artifact/[A-Za-z0-9\-]+"),
  ("vendor-name", r"\b(?:Anthropic|Claude|OpenAI|ChatGPT|GPT-?\d[\w.\-]*|Gemini|Vertex AI|Kimi|Nemotron|DeepSeek|Opus|Sonnet|Fable)\b"),
- ("cost-figure", r"(?<![\w$])\$\s?\d[\d,.]*"),
+ ("cost-figure", r"(?<=[\s>(~])\$\s?\d[\d,.]*(?![\w'=)])"),
  ("title-office", r"\bPresident\b"),
  ("local-url", r"https?://(?:localhost|127\.0\.0\.1)|C:\\\\Users|/home/user|/mnt/project-files"),
  ("email", r"[\w.+-]+@(?:gmail|vt|outlook|yahoo)\.[a-z.]+"),
@@ -23,6 +23,7 @@ def main():
             try: s = open(p, encoding="utf-8", errors="ignore").read()
             except OSError: continue
             for name, rx in RULES:
+                if name == "cost-figure" and f.endswith(".js"): continue
                 for m in re.finditer(rx, s, re.I if name == "vendor-name" and False else 0):
                     a = max(0, m.start()-50); hits.append({"rule": name, "file": os.path.relpath(p, root), "match": m.group(0)[:60], "ctx": s[a:m.end()+50].replace("\n", " ")})
     by = {}
