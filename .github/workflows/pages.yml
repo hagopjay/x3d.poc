@@ -48,13 +48,7 @@ jobs:
         run: |
           (cd site && python3 -m http.server 8766 --bind 127.0.0.1 >/dev/null 2>&1 &)
           sleep 2
-          timeout --kill-after=10 900 node tools/smoke.js http://127.0.0.1:8766 index.html gobbler.html materials.html drillfield.html spec-questions.html two-renderers.html shroud/index.html
-
-      # A browser crash shows up here as a segfault line.
-      - name: Kernel log after a failed smoke test
-        if: failure()
-        continue-on-error: true
-        run: sudo dmesg | tail -30
+          node tools/smoke.js http://127.0.0.1:8766 index.html gobbler.html materials.html drillfield.html spec-questions.html two-renderers.html shroud/index.html physics-conformance.html
 
       # Pull requests from forks get a read-only token, so only the build and smoke test run for them.
       - uses: actions/configure-pages@v5
