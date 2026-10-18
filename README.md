@@ -8,7 +8,7 @@ Materials, Spec questions) on one shared engine. Plain X3D 4.0 and the 4.1 draft
   five X3D 4.0 scenes with their own viewer page (served at `shroud/`), and Blender scripts. Its README says how to load it.
 - `src/`     the page generator and shared engine (`common.js`, `common.css`).
 - `tools/`   `assemble.sh` builds the site; `smoke.js` loads each page headless; `shoot.js` and `poster2.js` take screenshots.
-- `.github/workflows/pages.yml`  builds, smoke-tests, and deploys to GitHub Pages on a push to `main`.
+- `.github/workflows/pages.yml`  builds, smoke-tests, and deploys to GitHub Pages on a push to `site/pages-actions`; pull requests into that branch are built and smoke-tested but never deployed.
 
 Local build and run:
 
