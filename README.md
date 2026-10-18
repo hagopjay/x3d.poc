@@ -10,7 +10,7 @@ Materials, Spec questions, Physics and fidelity) on one shared engine. Plain X3D
 - `assets/gifts/physics/`  data and the baked-ball scene for the Physics and fidelity page (`physics-data.json`, `ball.x3d`, about 17 KB).
   `tools/build_physics_data.py` regenerates them from the physics stress test and the export conformance suite runs.
 - `tools/`   `assemble.sh` builds the site; `smoke.js` loads each page headless; `shoot.js` and `poster2.js` take screenshots.
-- `.github/workflows/pages.yml`  builds, smoke-tests, and deploys to GitHub Pages on a push to `main`.
+- `.github/workflows/pages.yml`  builds, smoke-tests, and deploys to GitHub Pages on a push to `site/pages-actions`; pull requests into that branch are built and smoke-tested but never deployed.
 
 Local build and run:
 

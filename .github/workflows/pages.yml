@@ -1,8 +1,13 @@
 name: Build and deploy the demos
 
 on:
+  # The Pages environment only accepts deployments from site/pages-actions (see Settings > Environments), and
+  # Pages is sourced from that branch, so that is the branch to build and deploy. Pull requests into it get the
+  # build and smoke test but never deploy.
   push:
-    branches: [main]
+    branches: [site/pages-actions]
+  pull_request:
+    branches: [site/pages-actions]
   workflow_dispatch:
 
 permissions:
@@ -11,12 +16,15 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  # One group per ref: a pull request run must not cancel a deployment in progress on the branch.
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Backstop: a wedged browser must fail the run, not hold a runner for hours (one smoke test once ran 2h41m before being cancelled).
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -27,22 +35,33 @@ jobs:
       - name: Assemble the site
         run: bash tools/assemble.sh site
 
-      - name: Smoke test (each page must load its scene)
+      - name: Install Playwright and Chromium
         run: |
           npm install --no-save --no-audit --no-fund playwright@1.49.1
           npx playwright install --with-deps chromium
+
+      - name: Smoke test (each page must load its scene)
+        env:
+          # Playwright's full Chromium in new headless mode. The default chromium-headless-shell build segfaults on index.html
+          # and gobbler.html on these runners and leaves the page hanging; see the header of tools/smoke.js.
+          SMOKE_BROWSER: chromium
+        run: |
           (cd site && python3 -m http.server 8766 --bind 127.0.0.1 >/dev/null 2>&1 &)
           sleep 2
           node tools/smoke.js http://127.0.0.1:8766 index.html gobbler.html materials.html drillfield.html spec-questions.html two-renderers.html shroud/index.html physics-conformance.html
 
+      # Pull requests from forks get a read-only token, so only the build and smoke test run for them.
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
 
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: site
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

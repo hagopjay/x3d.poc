@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the PolyXandria demo site: a master index and one landing page per demo.
 Facts are pulled from the Gifts page's own DATA block, so every number on these pages is one the Gifts page already carries."""
-import html, json, os, re, shutil, sys
+import html, json, os, re, shutil, struct, sys
 
 ROOT = sys.argv[1]                      # demo-site directory (assets already copied in)
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -12,6 +12,58 @@ src = open(os.path.join(ROOT, 'gifts.html'), encoding='utf-8').read()
 DATA = json.loads(re.search(r'var DATA = (\{.*?\});\s*\n', src, re.S).group(1))
 G = {g['num']: g for g in DATA['gifts']}
 esc = html.escape
+
+
+# Absolute URLs are required by link-preview crawlers (og:image, canonical). Override for a fork or a custom domain.
+SITE_URL = os.environ.get('SITE_URL', 'https://hagopjay.github.io/x3d.poc/').rstrip('/') + '/'
+
+
+def img_size(path):
+    """(width, height) of a PNG or JPEG read from its header, or None. Standard library only, so CI needs no image package."""
+    try:
+        with open(path, 'rb') as f:
+            head = f.read(24)
+            if head[:8] == b'\x89PNG\r\n\x1a\n':
+                return struct.unpack('>II', head[16:24])
+            if head[:2] != b'\xff\xd8':
+                return None
+            f.seek(2)
+            while True:
+                b = f.read(1)
+                if not b:
+                    return None
+                if b != b'\xff':
+                    continue
+                m = f.read(1)
+                while m == b'\xff':
+                    m = f.read(1)
+                if not m:
+                    return None
+                t = m[0]
+                if t in (0x01, 0xD8) or 0xD0 <= t <= 0xD7:      # markers without a length
+                    continue
+                n = struct.unpack('>H', f.read(2))[0]
+                if 0xC0 <= t <= 0xCF and t not in (0xC4, 0xC8, 0xCC):   # start-of-frame: precision, height, width
+                    h, w = struct.unpack('>HH', f.read(5)[1:5])
+                    return (w, h)
+                f.seek(n - 2, 1)
+    except (OSError, struct.error):
+        return None
+
+
+def share_cards(fn, title, desc, poster):
+    """Open Graph and Twitter card tags so a pasted link shows the demo's poster, title and one-line description."""
+    url = SITE_URL + fn
+    t = [('property', 'og:type', 'website'), ('property', 'og:site_name', 'PolyXandria'), ('property', 'og:title', title),
+         ('property', 'og:description', desc), ('property', 'og:url', url), ('name', 'twitter:card', 'summary_large_image')]
+    if poster:
+        t.append(('property', 'og:image', SITE_URL + poster))
+        size = img_size(os.path.join(ROOT, poster))
+        if size:
+            t += [('property', 'og:image:width', str(size[0])), ('property', 'og:image:height', str(size[1]))]
+        t.append(('property', 'og:image:alt', title))
+    tags = ''.join('<meta %s="%s" content="%s">' % (k, n, esc(v)) for k, n, v in t)
+    return '<link rel="canonical" href="%s">%s' % (esc(url), tags)
 
 
 def facts_html(rows):
@@ -34,7 +86,7 @@ NAV = [('index.html', 'All demos'), ('gobbler.html', 'Gobbler'), ('pantheon.html
        ('shroud/index.html', 'Shroud'), ('physics-conformance.html', 'Physics')]
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>%(title)s · PolyXandria</title><meta name="description" content="%(desc)s">
+<title>%(title)s · PolyXandria</title><meta name="description" content="%(desc)s">%(cards)s
 <link rel="stylesheet" href="vendor/x_ite/x_ite.css"><link rel="stylesheet" href="common.css">
 <script src="vendor/x_ite/x_ite.min.js"></script><script src="common.js"></script></head><body>'''
 
@@ -64,7 +116,8 @@ def page(fn, d):
     cta = d.get('cta', '')
     if d.get('links'):
         cta += '<p style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap">%s</p>' % ''.join('<a class="chip on" target="_blank" rel="noopener" href="%s">%s</a>' % (esc(u), esc(t)) for t, u in d['links'])
-    parts = [HEAD % {'title': esc(d['title']), 'desc': esc(d['tag'])}]
+    parts = [HEAD % {'title': esc(d['title']), 'desc': esc(d['tag']),
+                    'cards': share_cards(fn, d['title'] + ' · PolyXandria', d['tag'], d.get('poster'))}]
     parts.append(STAGE % {'poster': poster, 'kicker': esc(d['kicker']), 'h1': d['h1'], 'tag': esc(d['tag']), 'cta': cta, 'nav': nav(fn),
                           'buttons': (BTNS if cfg.get('tour') else BTNS_NOTOUR), 'hint': esc(d.get('hint', 'Drag to orbit · scroll to zoom'))})
     body = ['<main>']
@@ -341,7 +394,9 @@ CARDS = [
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
-idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
+INDEX_DESC = 'PolyXandria: live X3D demos. Splats, terrain, stars, Blender and the browser rendering the same file, all plain X3D.'
+idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos',
+               'cards': share_cards('index.html', 'PolyXandria · live X3D demos', INDEX_DESC, 'gifts/gobbler-poster.jpg')}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
                     'tag': 'Eleven demos: splats, terrain, stars, the Shroud of Turin, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
