@@ -31,7 +31,7 @@ SHARED = [
 
 NAV = [('index.html', 'All demos'), ('gobbler.html', 'Gobbler'), ('pantheon.html', 'Pantheon'), ('giza.html', 'Giza'), ('powers-of-ten.html', 'Powers of ten'),
        ('drillfield.html', 'Drillfield'), ('two-renderers.html', 'Two renderers'), ('materials.html', 'Materials'), ('spec-questions.html', 'Spec questions'), ('osiris-shaft.html', 'Osiris Shaft'),
-       ('shroud/index.html', 'Shroud')]
+       ('shroud/index.html', 'Shroud'), ('physics-conformance.html', 'Physics')]
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%(title)s · PolyXandria</title><meta name="description" content="%(desc)s">
@@ -302,6 +302,26 @@ DEMOS['osiris-shaft.html'] = dict(
     foot=DEFAULT_FOOT + ' The Osiris Shaft geometry is a schematic built from published depth diagrams; it is not a survey. Claims in the field log are tagged by evidence status.',
 )
 
+# ---- Physics and fidelity: the stress-test results and the 194-case export scoreboard, with the baked Z13 ball live.
+_sys.path.insert(0, HERE)
+import physics_page as _phy
+_PD = json.load(open(os.path.join(ROOT, 'gifts', 'physics', 'physics-data.json'), encoding='utf-8'))
+DEMOS['physics-conformance.html'] = dict(
+    title='Physics and fidelity: what survives X3D', kicker='Demo 12 · Physics stress test · export conformance', h1='What survives <em>X3D</em>',
+    tag='A rigid-body drop baked into keyframes, the stress-test scores behind it, and the 194-case scoreboard for the Blender exporter.',
+    poster='gifts/physics/poster.jpg', hint='Drag to orbit · the ball is a PositionInterpolator, not a simulation',
+    say='The motion arrived. The physics did not.',
+    lead='Blender simulated this drop. The exporter sampled it into %d keys, and X_ITE replays them. Only the motion crosses: the rigid body, joints and collision shape are lost on every path tested, which is why the Physics Preservation Index is %s out of 100.' %
+         (_PD['ball']['keys'], _phy.fnum(_PD['composites'][0]['value'], 3)),
+    facts=_phy.facts(_PD), cardTitle='Where the numbers come from',
+    cfg=dict(scene='gifts/physics/ball.x3d', look=dict(toneMapping='KHR_PBR_NEUTRAL', exposure=1.1), darkDefault=False,
+             viewpoints=[['Side', 'Side view'], ['Landing', 'Landing']],
+             tour=dict(center=[-0.3, 2.4, 0], target=[-0.3, 2.2, 0], r0=9, r1=6, e0=4, e1=15, duration=36, spin=0.04, loop='pingpong', fov=0.78)),
+    extra=_phy.extra(_PD),
+    js="""(function(){var o=document.getElementById('hint'),base=o.textContent,last='';(function tick(){try{var y=PX.el.browser.currentScene.getNamedNode('Ball').translation.y.toFixed(2);
+ if(y!==last){last=y;o.textContent=base+' · ball height '+y+' m';}}catch(e){}requestAnimationFrame(tick)})()})();""",
+)
+
 for fn, d in DEMOS.items():
     page(fn, d)
 
@@ -317,15 +337,16 @@ CARDS = [
     ('spec-questions.html', 'gifts/repros/profile-tables.png', '08', 'Questions for the spec', 'Six click-to-load repro pairs, framed as questions.', ['Validator', 'For the group']),
     ('osiris-shaft.html', 'gifts/osiris-poster.jpg', '10', 'The Osiris Shaft', 'A spooky descent beneath Giza. Every claim tagged: fact, theory, or nobody knows. Flip between two surveys that disagree.', ['Mystery', 'Schematic']),
     ('shroud/index.html', 'gifts/shroud-poster.jpg', '11', 'The Shroud of Turin', 'Linen coloured from the 1978 spectra, the weave at its true thread count, and an image that fades inside 1.8 m, on a synthetic figure. Five scenes, a knowledge graph, Blender scripts.', ['X3D 4.0', 'Measured']),
+    ('physics-conformance.html', 'gifts/physics/poster.jpg', '12', 'Physics and fidelity', 'A rigid-body drop baked into keyframes, the stress-test scores, and the 194-case export scoreboard.', ['X3D 4.0', 'Measured']),
 ]
 SOON = [('Sphinx', 'Synthetic and real-photo splats side by side, with the era wipe.'), ('Shaft of Osiris', 'The shaft at Giza, in the same scene as Khufu.')]
 
 idx = [HEAD % {'title': 'Demos', 'desc': 'PolyXandria: live X3D demos'}]
 idx.append(STAGE % {'poster': '<img class="poster" alt="" src="gifts/gobbler-poster.jpg">', 'kicker': 'PolyXandria · live X3D', 'h1': 'Something is <em>awake</em> in the scene graph',
-                    'tag': 'Ten demos: splats, terrain, stars, the Shroud of Turin, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
+                    'tag': 'Eleven demos: splats, terrain, stars, the Shroud of Turin, Blender and the browser rendering the same file. All of it plain X3D you can open and check.',
                     'cta': '<p style="margin-top:22px"><a class="chip on" href="#demos" style="display:inline-block">Enter the demos ↓</a></p>',
                     'nav': nav('index.html'), 'buttons': BTNS, 'hint': 'Lights are out. Move the pointer to find it.'}.copy())
-idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Ten demos</h2><div class="grid">')
+idx.append('<main><section class="band" id="demos"><div class="wrap"><h2>Eleven demos</h2><div class="grid">')
 for h, img, n, t, p, tags in CARDS:
     ext = ' target="_blank" rel="noopener"' if h.startswith('http') else ''
     idx.append('<a class="card" href="%s"%s><div class="img" style="background-image:url(%s)"></div><div class="tx"><div class="n">Demo %s</div><h3>%s</h3><p>%s</p><div class="tags">%s</div></div></a>' %
